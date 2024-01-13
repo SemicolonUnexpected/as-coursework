@@ -1,4 +1,5 @@
-﻿using AS_Coursework.Custom_Controls;
+﻿using AS_Coursework._Helpers;
+using AS_Coursework.Custom_Controls;
 using AS_Coursework.Model.Data;
 using AS_Coursework.Model.Users;
 
@@ -11,10 +12,12 @@ public partial class formRanks : Form {
         // Required by the designer and sets up the form and its controls
         InitializeComponent();
 
+        // Set the style to allow for fast painting to reduce flicker
         SetStyle(ControlStyles.UserPaint | ControlStyles.OptimizedDoubleBuffer | ControlStyles.AllPaintingInWmPaint, true);
 
         _user = user;
 
+        // List of ranking to iterate through later
         _rankViews = new List<Ranking>() {
             ranking1,
             ranking2,
@@ -28,9 +31,12 @@ public partial class formRanks : Form {
             ranking10,
         };
 
+        // Read in the users details for display
         lblUsername.Text = _user.AuthenticationDetails.Username;
-        customPictureFrame1.Image = _user.FunctionalDetails.ProfileImage.Image;
-        customPictureFrame1.ImagePortion = _user.FunctionalDetails.ProfileImage.ImagePortion;
+        pbUserProfile.Image = _user.FunctionalDetails.ProfileImage.Image;
+        pbUserProfile.ImagePortion = _user.FunctionalDetails.ProfileImage.ImagePortion;
+        lblExperience.Text = _user.FunctionalDetails.Experience.ToString() + " xp";
+        lblRank.Text = $"#{DataManager.GetUserIndex(user => user.AuthenticationDetails.Username == _user.AuthenticationDetails.Username) + 1}";
 
         DisplayRanks();
 
@@ -40,22 +46,29 @@ public partial class formRanks : Form {
     protected override void OnResize(EventArgs e) {
         base.OnResize(e);
 
-        
+        // Center components
+        lblExperience.CenterX();
+        lblRank.CenterX();
+        lblExperienceTitle.CenterX();
+        lblRankTitle.CenterX();
+        lblUsername.CenterX();
+        pbUserProfile.CenterX();
 
+        // Resize ranks if they are not null
         if (_rankViews is not null) foreach (Ranking rankView in _rankViews) rankView.Width = pnlScoreboard.Width - rankView.Margin.Horizontal;
     }
 
     private void DisplayRanks() {
         for (int i = 0; i < _rankViews.Count; i++) {
             Ranking rankView = _rankViews[i];
-            (string username, string experience) = TryGetRank(i);
+            DataManager.GetUser(i, out User? user);
 
-            rankView.Name = username;
-            rankView.ExperienceText = experience;
+            rankView.UsernameText = user is null ? "" : user.AuthenticationDetails.Username;
+            rankView.ExperienceText = user is null ? "" : user.FunctionalDetails.Experience.ToString() + " xp";
         }
     }
 
-    private (string username, string experience) TryGetRank(int index) {
-        throw new NotImplementedException();
+    private void formRanks_Load(object sender, EventArgs e) {
+
     }
 }

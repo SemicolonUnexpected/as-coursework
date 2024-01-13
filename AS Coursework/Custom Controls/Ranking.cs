@@ -40,9 +40,10 @@ public partial class Ranking : UserControl {
     protected override void OnResize(EventArgs e) {
         base.OnResize(e);
 
-
+        // This sets the username label to the maximum size, assuming the experience label is of constant size
         lblUsername.MaximumSize = new Size(Width - lblExperience.Width, lblUsername.Height);
+        // Positions the labels relative to the margins on the controls
         lblUsername.Location = new Point(lblUsername.Margin.Left, lblUsername.Location.Y);
-        lblExperience.Location = new Point(lblUsername.Right + lblUsername.Margin.Right, (Height - lblExperience.Height) / 2);
+        lblExperience.Location = new Point(Width - lblExperience.Width - lblExperience.Margin.Right, (Height - lblExperience.Height) / 2);
     }
 }

@@ -46,7 +46,7 @@
             MinimumSize = new Size(1222, 956);
             Name = "formMaster";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "FormMain";
+            Text = "ChemQuiz";
             ResumeLayout(false);
         }
 

@@ -1,4 +1,5 @@
-﻿using AS_Coursework.Model.Users;
+﻿using AS_Coursework.Custom_Controls;
+using AS_Coursework.Model.Users;
 using System.Net.Mail;
 
 namespace AS_Coursework.Model.Data;
@@ -13,10 +14,15 @@ internal static class DataManager {
             user = _users[index];
             return true;
         }
-        catch (IndexOutOfRangeException) {
+        catch (ArgumentOutOfRangeException) {
             user = null;
-            return true;
+            return false;
         }
+    }
+
+    public static int GetUserIndex(Predicate<User> predicate) {
+        _users.Sort();
+        return _users.FindIndex(predicate);
     }
 
     public static User? GetUser(int index) {
@@ -32,6 +38,8 @@ internal static class DataManager {
     }
 
     private static void ReadIn() {
+        if (!File.Exists(PATH)) File.Create(PATH);
+
         using StreamReader reader = new(PATH);
 
         string text = reader.ReadToEnd();
@@ -69,7 +77,7 @@ internal static class DataManager {
             ExceptionLogger.LogException(e, "There was an error reading user data");
 
             // Display the error only the first time
-            MessageBox.Show("There was an error loading user data, please contact an admin");
+            CustomMessageBox.Show("Error", "There was an error loading user data, please contact an admin");
         }
 
         // Add the root user if they dont exist

@@ -22,7 +22,8 @@
         /// Required method for Designer support - do not modify 
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent() {
+        private void InitializeComponent()
+        {
             rect1 = new CustomRectangle();
             lblExperience = new Label();
             lblUsername = new Label();
@@ -53,7 +54,8 @@
             lblExperience.BackColor = Color.FromArgb(20, 20, 50);
             lblExperience.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lblExperience.ForeColor = Color.White;
-            lblExperience.Location = new Point(445, 19);
+            lblExperience.Location = new Point(441, 19);
+            lblExperience.Margin = new Padding(25, 0, 25, 0);
             lblExperience.MinimumSize = new Size(200, 19);
             lblExperience.Name = "lblExperience";
             lblExperience.Size = new Size(200, 34);
@@ -69,7 +71,8 @@
             lblUsername.BackColor = Color.FromArgb(20, 20, 50);
             lblUsername.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lblUsername.ForeColor = Color.White;
-            lblUsername.Location = new Point(78, 19);
+            lblUsername.Location = new Point(25, 19);
+            lblUsername.Margin = new Padding(25, 0, 25, 0);
             lblUsername.MinimumSize = new Size(350, 34);
             lblUsername.Name = "lblUsername";
             lblUsername.Size = new Size(350, 34);

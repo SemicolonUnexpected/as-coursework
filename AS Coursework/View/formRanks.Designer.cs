@@ -35,12 +35,12 @@
             ranking2 = new Custom_Controls.Ranking();
             ranking1 = new Custom_Controls.Ranking();
             pnl = new Custom_Controls.CustomRectangle();
-            lblUsername = new Label();
-            customPictureFrame1 = new Custom_Controls.PictureFrame();
             lblExperience = new Label();
             lblRank = new Label();
             lblRankTitle = new Label();
-            label2 = new Label();
+            lblExperienceTitle = new Label();
+            lblUsername = new Label();
+            pbUserProfile = new Custom_Controls.PictureFrame();
             pnlScoreboard.SuspendLayout();
             pnl.SuspendLayout();
             SuspendLayout();
@@ -187,7 +187,7 @@
             ranking1.Name = "ranking1";
             ranking1.Size = new Size(676, 70);
             ranking1.TabIndex = 0;
-            ranking1.UsernameText = "";
+            ranking1.UsernameText = "hi";
             // 
             // pnl
             // 
@@ -195,12 +195,12 @@
             pnl.BackColor = Color.FromArgb(30, 30, 70);
             pnl.BorderColor = Color.White;
             pnl.BorderWidth = 0;
-            pnl.Controls.Add(label2);
+            pnl.Controls.Add(lblExperience);
             pnl.Controls.Add(lblRank);
             pnl.Controls.Add(lblRankTitle);
-            pnl.Controls.Add(lblExperience);
+            pnl.Controls.Add(lblExperienceTitle);
             pnl.Controls.Add(lblUsername);
-            pnl.Controls.Add(customPictureFrame1);
+            pnl.Controls.Add(pbUserProfile);
             pnl.CornerRadius = 20;
             pnl.Location = new Point(756, 25);
             pnl.Margin = new Padding(25);
@@ -209,49 +209,18 @@
             pnl.TabIndex = 2;
             pnl.Text = "pnlProfile";
             // 
-            // lblUsername
-            // 
-            lblUsername.Anchor = AnchorStyles.Top;
-            lblUsername.AutoEllipsis = true;
-            lblUsername.AutoSize = true;
-            lblUsername.Font = new Font("Bahnschrift", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            lblUsername.ForeColor = Color.White;
-            lblUsername.Location = new Point(77, 335);
-            lblUsername.Margin = new Padding(25, 0, 25, 25);
-            lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(185, 43);
-            lblUsername.TabIndex = 3;
-            lblUsername.Text = "Username";
-            // 
-            // customPictureFrame1
-            // 
-            customPictureFrame1.BorderColorOne = Color.FromArgb(0, 100, 255);
-            customPictureFrame1.BorderColorTwo = Color.FromArgb(50, 200, 255);
-            customPictureFrame1.BorderWidth = 25;
-            customPictureFrame1.GradientAngle = 45;
-            customPictureFrame1.GradientRectangle = new Rectangle(0, 0, 350, 350);
-            customPictureFrame1.Image = Resources.Icons.User;
-            customPictureFrame1.ImagePortion = new Rectangle(-256, -256, 1024, 1024);
-            customPictureFrame1.Location = new Point(25, 25);
-            customPictureFrame1.Margin = new Padding(25);
-            customPictureFrame1.Name = "customPictureFrame1";
-            customPictureFrame1.Size = new Size(285, 285);
-            customPictureFrame1.TabIndex = 0;
-            customPictureFrame1.Text = "pbProfile";
-            // 
             // lblExperience
             // 
-            lblExperience.Anchor = AnchorStyles.Top;
             lblExperience.AutoEllipsis = true;
             lblExperience.AutoSize = true;
-            lblExperience.Font = new Font("Bahnschrift", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            lblExperience.Font = new Font("Bahnschrift", 40F, FontStyle.Regular, GraphicsUnit.Point);
             lblExperience.ForeColor = Color.White;
-            lblExperience.Location = new Point(66, 642);
-            lblExperience.Margin = new Padding(25);
+            lblExperience.Location = new Point(98, 710);
+            lblExperience.Margin = new Padding(25, 0, 25, 25);
             lblExperience.Name = "lblExperience";
-            lblExperience.Size = new Size(185, 43);
-            lblExperience.TabIndex = 4;
-            lblExperience.Text = "Username";
+            lblExperience.Size = new Size(117, 96);
+            lblExperience.TabIndex = 7;
+            lblExperience.Text = "#1";
             // 
             // lblRank
             // 
@@ -279,18 +248,49 @@
             lblRankTitle.TabIndex = 6;
             lblRankTitle.Text = "Rank";
             // 
-            // label2
+            // lblExperienceTitle
             // 
-            label2.AutoEllipsis = true;
-            label2.AutoSize = true;
-            label2.Font = new Font("Bahnschrift", 40F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.ForeColor = Color.White;
-            label2.Location = new Point(98, 710);
-            label2.Margin = new Padding(25, 0, 25, 25);
-            label2.Name = "label2";
-            label2.Size = new Size(117, 96);
-            label2.TabIndex = 7;
-            label2.Text = "#1";
+            lblExperienceTitle.Anchor = AnchorStyles.Top;
+            lblExperienceTitle.AutoEllipsis = true;
+            lblExperienceTitle.AutoSize = true;
+            lblExperienceTitle.Font = new Font("Bahnschrift", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            lblExperienceTitle.ForeColor = Color.White;
+            lblExperienceTitle.Location = new Point(66, 642);
+            lblExperienceTitle.Margin = new Padding(25);
+            lblExperienceTitle.Name = "lblExperienceTitle";
+            lblExperienceTitle.Size = new Size(199, 43);
+            lblExperienceTitle.TabIndex = 4;
+            lblExperienceTitle.Text = "Experience";
+            // 
+            // lblUsername
+            // 
+            lblUsername.Anchor = AnchorStyles.Top;
+            lblUsername.AutoEllipsis = true;
+            lblUsername.AutoSize = true;
+            lblUsername.Font = new Font("Bahnschrift", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            lblUsername.ForeColor = Color.White;
+            lblUsername.Location = new Point(77, 335);
+            lblUsername.Margin = new Padding(25, 0, 25, 25);
+            lblUsername.Name = "lblUsername";
+            lblUsername.Size = new Size(185, 43);
+            lblUsername.TabIndex = 3;
+            lblUsername.Text = "Username";
+            // 
+            // pbUserProfile
+            // 
+            pbUserProfile.BorderColorOne = Color.FromArgb(0, 100, 255);
+            pbUserProfile.BorderColorTwo = Color.FromArgb(50, 200, 255);
+            pbUserProfile.BorderWidth = 25;
+            pbUserProfile.GradientAngle = 45;
+            pbUserProfile.GradientRectangle = new Rectangle(0, 0, 350, 350);
+            pbUserProfile.Image = Resources.Icons.User;
+            pbUserProfile.ImagePortion = new Rectangle(-256, -256, 1024, 1024);
+            pbUserProfile.Location = new Point(25, 25);
+            pbUserProfile.Margin = new Padding(25);
+            pbUserProfile.Name = "pbUserProfile";
+            pbUserProfile.Size = new Size(285, 285);
+            pbUserProfile.TabIndex = 0;
+            pbUserProfile.Text = "pbProfile";
             // 
             // formRanks
             // 
@@ -302,7 +302,7 @@
             Controls.Add(pnlScoreboard);
             FormBorderStyle = FormBorderStyle.None;
             Name = "formRanks";
-            Text = "formUserHome";
+            Load += formRanks_Load;
             pnlScoreboard.ResumeLayout(false);
             pnl.ResumeLayout(false);
             pnl.PerformLayout();
@@ -312,7 +312,7 @@
         #endregion
         private Custom_Controls.CustomRectangle pnlScoreboard;
         private Custom_Controls.CustomRectangle pnl;
-        private Custom_Controls.PictureFrame customPictureFrame1;
+        private Custom_Controls.PictureFrame pbUserProfile;
         private Custom_Controls.Ranking ranking7;
         private Custom_Controls.Ranking ranking6;
         private Custom_Controls.Ranking ranking5;
@@ -324,8 +324,8 @@
         private Custom_Controls.Ranking ranking9;
         private Custom_Controls.Ranking ranking8;
         private Label lblUsername;
+        private Label lblExperienceTitle;
         private Label lblExperience;
-        private Label label2;
         private Label lblRank;
         private Label lblRankTitle;
     }
