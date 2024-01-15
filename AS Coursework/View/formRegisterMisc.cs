@@ -70,7 +70,7 @@ namespace AS_Coursework.View {
 
         private bool CheckNamesOk() {
             // Set the text to error text if the forename or surname field is empty
-            string personalDetailsError = (string.IsNullOrEmpty(tbForename.Text), string.IsNullOrEmpty(tbSurname.Text)) switch {
+            string personalDetailsError = (string.IsNullOrWhiteSpace(tbForename.Text), string.IsNullOrWhiteSpace(tbSurname.Text)) switch {
                 (true, true) => "Fill in your forename and surname",
                 (true, false) => "Fill in your forename",
                 (false, true) => "Fill in your surname",
@@ -101,8 +101,8 @@ namespace AS_Coursework.View {
             string emailError = "";
 
             // Set the text to error text if the email is invalid or empty
-            if (string.IsNullOrEmpty(tbEmail.Text)) emailError = "Fill in your email";
-            else if (!MailAddress.TryCreate(tbEmail.Text, out _)) emailError = "Please fill in a vaild e-mail";
+            if (string.IsNullOrWhiteSpace(tbEmail.Text)) emailError = "Fill in your email";
+            else if (!MailAddress.TryCreate(tbEmail.Text, out _)) emailError = "Please fill in a vaild email";
 
             // Fix formatting
             lblEmailError.Text = emailError;
@@ -113,6 +113,8 @@ namespace AS_Coursework.View {
 
         // Display the next registration subform if the details are correct
         private void btnNext_Click(object sender, EventArgs e) {
+            // Use a single ampersand here to ensure all the checks are evaluated
+            // This ensures the error text is displayed for all incorrect fields
             if (CheckDateOfBirthOk() & CheckNamesOk() & CheckGenderOk() & CheckEmailOk()) (((ActiveForm as formMaster)?.ChildView) as RegisterView)?.DisplayNextRegisterView();
         }
 
@@ -133,8 +135,13 @@ namespace AS_Coursework.View {
         }
 
         private static int CalculateAge(DateTime dateOfBirth) {
+            // Unfortunately we cannot use cannot subtract the two DateTimes an use the resulting TimeSpan.
+            // The amount of years that has passed is lost when converting from DateTime -> TimeSpan
             DateTime today = DateTime.Today;
+            // Calculate the age as the difference in year from the birth year to this year
             int age = today.Year - dateOfBirth.Year;
+            // This calculation of the age can be wrong if the user is born in a month that occurs before the month this year
+            // If this is the case, correct is by subtracting one
             if (dateOfBirth.Date > today.AddYears(-age)) age--;
             return age;
         }

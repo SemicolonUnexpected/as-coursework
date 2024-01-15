@@ -274,7 +274,7 @@ public partial class CustomTextbox : UserControl {
     }
 
     private void TrySetPlaceholderText() {
-        if (string.IsNullOrWhiteSpace(tb.Text) && PlaceholderText != "") {
+        if (string.IsNullOrEmpty(tb.Text) && PlaceholderText != "") {
             _isPlaceholderText = true;
             tb.Text = PlaceholderText;
             tb.ForeColor = PlaceholderTextColor;

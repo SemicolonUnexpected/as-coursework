@@ -40,7 +40,7 @@ namespace AS_Coursework.View {
             string usernameError = "";
 
             // Set the text to error text if the username field is empty or the username is taken
-            if (string.IsNullOrEmpty(tbUsername.Text)) usernameError = "Please fill in a username";
+            if (string.IsNullOrWhiteSpace(tbUsername.Text)) usernameError = "Please fill in a username";
             else if (DataManager.UserExists(tbUsername.Text)) usernameError = "Username already taken";
 
             lblUsernameError.Text = usernameError;
@@ -53,7 +53,7 @@ namespace AS_Coursework.View {
             string passwordError = "";
 
             // Set the text to error text if the password field is empty or the password requirements are not met
-            if (string.IsNullOrEmpty(tbPassword.Text)) passwordError = "Please create a password";
+            if (string.IsNullOrWhiteSpace(tbPassword.Text)) passwordError = "Please create a password";
             else if (GetRequirements(tbPassword.Text).Count < Enum.GetNames(typeof(PasswordRequirements)).Length) passwordError = "Please pick a stronger password";
 
             lblPasswordError.Text = passwordError;
@@ -65,8 +65,8 @@ namespace AS_Coursework.View {
         private bool CheckConfirmPasswordOk() {
             string confirmPasswordError = "";
 
-            // Set the text to error text if the _ has not confirmed their password or password field and confirm password field do not match 
-            if (string.IsNullOrEmpty(tbConfirmPassword.Text)) confirmPasswordError = "Please confirm your password";
+            // Set the text to error text if the user has not confirmed their password or password field and confirm password field do not match 
+            if (string.IsNullOrWhiteSpace(tbConfirmPassword.Text)) confirmPasswordError = "Please confirm your password";
             else if (tbPassword.Text != tbConfirmPassword.Text) confirmPasswordError = "Passwords did not match";
 
             lblConfirmPasswordError.Text = confirmPasswordError;
@@ -94,7 +94,7 @@ namespace AS_Coursework.View {
             (((ActiveForm as formMaster)!.ChildView) as RegisterView)!.DisplayPreviousForm();
         }
 
-        // Display the next reistration subform if the _ has filled in all the fields
+        // Display the next reistration subform if the user has filled in all the fields
         private void btnDone_Click(object sender, EventArgs e) {
             if (CheckUsernameOk() & CheckPasswordOk() & CheckConfirmPasswordOk()) {
                 ((ActiveForm as formMaster)!.ChildView as RegisterView)!.DisplayNextRegisterView();
@@ -111,7 +111,7 @@ namespace AS_Coursework.View {
             pbSpecialCharacters.Image = requirements.Contains(PasswordRequirements.SpecialChars) ? Resources.Icons.Green_Tick_Circle : Resources.Icons.Red_Cross_Circle;
         }
 
-        // Allow the _ to see their password by clicking the eye icon in the picturebox
+        // Allow the user to see their password by clicking the eye icon in the picturebox
         private void pbPasswordView_MouseDown(object sender, MouseEventArgs e) {
             pbPasswordView.Image = Resources.Icons.Eye_crossed;
             tbPassword.UsePasswordChar = false;

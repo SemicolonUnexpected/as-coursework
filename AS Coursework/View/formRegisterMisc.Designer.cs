@@ -284,6 +284,7 @@
         }
 
         #endregion
+
         private DateTimePicker dtpDateOfBirth;
         private Custom_Controls.CustomTextbox tbForename;
         private Custom_Controls.CustomTextbox tbSurname;

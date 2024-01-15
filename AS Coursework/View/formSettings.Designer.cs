@@ -25,21 +25,25 @@
         private void InitializeComponent() {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formSettings));
             pbUserProfile = new Custom_Controls.PictureFrame();
-            btnLogin = new Custom_Controls.CustomButton();
-            customButton1 = new Custom_Controls.CustomButton();
+            btnProfilePicturePrevious = new Custom_Controls.CustomButton();
+            btnProfilePictureNext = new Custom_Controls.CustomButton();
             pnlProfilePicture = new Panel();
             pnlAccount = new Custom_Controls.CustomRectangle();
-            label7 = new Label();
-            customTextbox3 = new Custom_Controls.CustomTextbox();
-            customButton6 = new Custom_Controls.CustomButton();
-            label8 = new Label();
-            label5 = new Label();
-            customTextbox2 = new Custom_Controls.CustomTextbox();
-            customButton5 = new Custom_Controls.CustomButton();
-            label6 = new Label();
+            lblChangeSurnameTitle = new Label();
+            tbNewSurname = new Custom_Controls.CustomTextbox();
+            btnChangeSurname = new Custom_Controls.CustomButton();
+            lblChangeSurnameError = new Label();
+            lblChangeForename = new Label();
+            tbNewForename = new Custom_Controls.CustomTextbox();
+            btnChangeForename = new Custom_Controls.CustomButton();
+            lblChangeForenameError = new Label();
             lblAccountTitle = new Label();
             lblChangeEmailTitle = new Label();
             tbNewEmail = new Custom_Controls.CustomTextbox();
+            lblSurnameDetail = new Label();
+            lblForenameDetail = new Label();
+            lblEmailDetail = new Label();
+            lblUsernameDetail = new Label();
             lblChangeUsernameTitle = new Label();
             btnChangeEmail = new Custom_Controls.CustomButton();
             tbNewUsername = new Custom_Controls.CustomTextbox();
@@ -47,12 +51,12 @@
             btnChangeUsername = new Custom_Controls.CustomButton();
             lblChangeUsernameError = new Label();
             pnlDangerZone = new Custom_Controls.CustomRectangle();
-            customButton2 = new Custom_Controls.CustomButton();
+            btnDeleteAccount = new Custom_Controls.CustomButton();
             lblConfirmPasswordError = new Label();
             lblDangerZoneDescription = new Label();
             lblDangerZoneTitle = new Label();
             lblPasswordError = new Label();
-            btnDeleteAccount = new Custom_Controls.CustomButton();
+            btnResetScore = new Custom_Controls.CustomButton();
             tbNewPassword = new Custom_Controls.CustomTextbox();
             pbPasswordView = new PictureBox();
             tbConfirmPassword = new Custom_Controls.CustomTextbox();
@@ -101,56 +105,56 @@
             pbUserProfile.TabIndex = 0;
             pbUserProfile.Text = "pbProfile";
             // 
-            // btnLogin
+            // btnProfilePicturePrevious
             // 
-            btnLogin.Anchor = AnchorStyles.Top;
-            btnLogin.BackColor = Color.FromArgb(0, 150, 255);
-            btnLogin.BorderColor = Color.White;
-            btnLogin.BorderWidth = 2;
-            btnLogin.CornerRadius = 20;
-            btnLogin.FlatAppearance.BorderSize = 0;
-            btnLogin.FlatStyle = FlatStyle.Flat;
-            btnLogin.Font = new Font("Consolas", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            btnLogin.ForeColor = Color.White;
-            btnLogin.Image = null;
-            btnLogin.ImageSize = new Size(150, 40);
-            btnLogin.Location = new Point(44, 310);
-            btnLogin.Margin = new Padding(0);
-            btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(60, 60);
-            btnLogin.TabIndex = 3;
-            btnLogin.Text = "<";
-            btnLogin.UseVisualStyleBackColor = false;
+            btnProfilePicturePrevious.Anchor = AnchorStyles.Top;
+            btnProfilePicturePrevious.BackColor = Color.FromArgb(0, 150, 255);
+            btnProfilePicturePrevious.BorderColor = Color.White;
+            btnProfilePicturePrevious.BorderWidth = 2;
+            btnProfilePicturePrevious.CornerRadius = 20;
+            btnProfilePicturePrevious.FlatAppearance.BorderSize = 0;
+            btnProfilePicturePrevious.FlatStyle = FlatStyle.Flat;
+            btnProfilePicturePrevious.Font = new Font("Consolas", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            btnProfilePicturePrevious.ForeColor = Color.White;
+            btnProfilePicturePrevious.Image = null;
+            btnProfilePicturePrevious.ImageSize = new Size(150, 40);
+            btnProfilePicturePrevious.Location = new Point(44, 310);
+            btnProfilePicturePrevious.Margin = new Padding(0);
+            btnProfilePicturePrevious.Name = "btnProfilePicturePrevious";
+            btnProfilePicturePrevious.Size = new Size(60, 60);
+            btnProfilePicturePrevious.TabIndex = 3;
+            btnProfilePicturePrevious.Text = "<";
+            btnProfilePicturePrevious.UseVisualStyleBackColor = false;
             // 
-            // customButton1
+            // btnProfilePictureNext
             // 
-            customButton1.Anchor = AnchorStyles.Top;
-            customButton1.BackColor = Color.FromArgb(0, 150, 255);
-            customButton1.BorderColor = Color.White;
-            customButton1.BorderWidth = 2;
-            customButton1.CornerRadius = 20;
-            customButton1.FlatAppearance.BorderSize = 0;
-            customButton1.FlatStyle = FlatStyle.Flat;
-            customButton1.Font = new Font("Consolas", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            customButton1.ForeColor = Color.White;
-            customButton1.Image = null;
-            customButton1.ImageSize = new Size(150, 40);
-            customButton1.Location = new Point(184, 312);
-            customButton1.Margin = new Padding(0);
-            customButton1.Name = "customButton1";
-            customButton1.Size = new Size(60, 60);
-            customButton1.TabIndex = 3;
-            customButton1.Tag = "";
-            customButton1.Text = ">";
-            customButton1.UseVisualStyleBackColor = false;
+            btnProfilePictureNext.Anchor = AnchorStyles.Top;
+            btnProfilePictureNext.BackColor = Color.FromArgb(0, 150, 255);
+            btnProfilePictureNext.BorderColor = Color.White;
+            btnProfilePictureNext.BorderWidth = 2;
+            btnProfilePictureNext.CornerRadius = 20;
+            btnProfilePictureNext.FlatAppearance.BorderSize = 0;
+            btnProfilePictureNext.FlatStyle = FlatStyle.Flat;
+            btnProfilePictureNext.Font = new Font("Consolas", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            btnProfilePictureNext.ForeColor = Color.White;
+            btnProfilePictureNext.Image = null;
+            btnProfilePictureNext.ImageSize = new Size(150, 40);
+            btnProfilePictureNext.Location = new Point(184, 312);
+            btnProfilePictureNext.Margin = new Padding(0);
+            btnProfilePictureNext.Name = "btnProfilePictureNext";
+            btnProfilePictureNext.Size = new Size(60, 60);
+            btnProfilePictureNext.TabIndex = 3;
+            btnProfilePictureNext.Tag = "";
+            btnProfilePictureNext.Text = ">";
+            btnProfilePictureNext.UseVisualStyleBackColor = false;
             // 
             // pnlProfilePicture
             // 
             pnlProfilePicture.Anchor = AnchorStyles.None;
             pnlProfilePicture.Controls.Add(pbUserProfile);
-            pnlProfilePicture.Controls.Add(btnLogin);
-            pnlProfilePicture.Controls.Add(customButton1);
-            pnlProfilePicture.Location = new Point(44, 23);
+            pnlProfilePicture.Controls.Add(btnProfilePicturePrevious);
+            pnlProfilePicture.Controls.Add(btnProfilePictureNext);
+            pnlProfilePicture.Location = new Point(44, 29);
             pnlProfilePicture.Margin = new Padding(0);
             pnlProfilePicture.Name = "pnlProfilePicture";
             pnlProfilePicture.Size = new Size(300, 384);
@@ -158,21 +162,25 @@
             // 
             // pnlAccount
             // 
-            pnlAccount.Anchor = AnchorStyles.Top;
+            pnlAccount.Anchor = AnchorStyles.None;
             pnlAccount.BackColor = Color.FromArgb(30, 30, 70);
             pnlAccount.BorderColor = Color.White;
             pnlAccount.BorderWidth = 0;
-            pnlAccount.Controls.Add(label7);
-            pnlAccount.Controls.Add(customTextbox3);
-            pnlAccount.Controls.Add(customButton6);
-            pnlAccount.Controls.Add(label8);
-            pnlAccount.Controls.Add(label5);
-            pnlAccount.Controls.Add(customTextbox2);
-            pnlAccount.Controls.Add(customButton5);
-            pnlAccount.Controls.Add(label6);
+            pnlAccount.Controls.Add(lblChangeSurnameTitle);
+            pnlAccount.Controls.Add(tbNewSurname);
+            pnlAccount.Controls.Add(btnChangeSurname);
+            pnlAccount.Controls.Add(lblChangeSurnameError);
+            pnlAccount.Controls.Add(lblChangeForename);
+            pnlAccount.Controls.Add(tbNewForename);
+            pnlAccount.Controls.Add(btnChangeForename);
+            pnlAccount.Controls.Add(lblChangeForenameError);
             pnlAccount.Controls.Add(lblAccountTitle);
             pnlAccount.Controls.Add(lblChangeEmailTitle);
             pnlAccount.Controls.Add(tbNewEmail);
+            pnlAccount.Controls.Add(lblSurnameDetail);
+            pnlAccount.Controls.Add(lblForenameDetail);
+            pnlAccount.Controls.Add(lblEmailDetail);
+            pnlAccount.Controls.Add(lblUsernameDetail);
             pnlAccount.Controls.Add(lblChangeUsernameTitle);
             pnlAccount.Controls.Add(btnChangeEmail);
             pnlAccount.Controls.Add(tbNewUsername);
@@ -180,152 +188,156 @@
             pnlAccount.Controls.Add(btnChangeUsername);
             pnlAccount.Controls.Add(lblChangeUsernameError);
             pnlAccount.CornerRadius = 20;
-            pnlAccount.Location = new Point(402, 23);
+            pnlAccount.Location = new Point(402, 29);
             pnlAccount.Margin = new Padding(20);
             pnlAccount.Name = "pnlAccount";
-            pnlAccount.Size = new Size(544, 848);
+            pnlAccount.Size = new Size(544, 868);
             pnlAccount.TabIndex = 5;
             pnlAccount.Text = "customRectangle1";
             // 
-            // label7
+            // lblChangeSurnameTitle
             // 
-            label7.Anchor = AnchorStyles.None;
-            label7.AutoSize = true;
-            label7.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label7.ForeColor = Color.White;
-            label7.Location = new Point(25, 625);
-            label7.Margin = new Padding(25, 0, 25, 0);
-            label7.MaximumSize = new Size(450, 0);
-            label7.Name = "label7";
-            label7.Size = new Size(245, 34);
-            label7.TabIndex = 14;
-            label7.Text = "Change username";
-            label7.TextAlign = ContentAlignment.MiddleCenter;
+            lblChangeSurnameTitle.Anchor = AnchorStyles.Left;
+            lblChangeSurnameTitle.AutoSize = true;
+            lblChangeSurnameTitle.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            lblChangeSurnameTitle.ForeColor = Color.White;
+            lblChangeSurnameTitle.Location = new Point(25, 724);
+            lblChangeSurnameTitle.Margin = new Padding(25, 0, 25, 0);
+            lblChangeSurnameTitle.MaximumSize = new Size(450, 0);
+            lblChangeSurnameTitle.Name = "lblChangeSurnameTitle";
+            lblChangeSurnameTitle.Size = new Size(230, 34);
+            lblChangeSurnameTitle.TabIndex = 14;
+            lblChangeSurnameTitle.Text = "Change surname";
+            lblChangeSurnameTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // customTextbox3
+            // tbNewSurname
             // 
-            customTextbox3.Anchor = AnchorStyles.None;
-            customTextbox3.BackColor = Color.FromArgb(30, 30, 70);
-            customTextbox3.BorderColor = Color.White;
-            customTextbox3.BorderFocusColor = Color.White;
-            customTextbox3.BorderSize = 4;
-            customTextbox3.CustomBorderStyle = Custom_Controls.CustomTextbox.CustomTextboxBorderStyle.Underlined;
-            customTextbox3.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            customTextbox3.ForeColor = Color.White;
-            customTextbox3.IsMultiline = false;
-            customTextbox3.Location = new Point(25, 676);
-            customTextbox3.Margin = new Padding(25, 0, 25, 0);
-            customTextbox3.Name = "customTextbox3";
-            customTextbox3.Padding = new Padding(8, 9, 8, 9);
-            customTextbox3.PlaceholderText = "New username";
-            customTextbox3.PlaceholderTextColor = Color.White;
-            customTextbox3.ShortcutEnabled = true;
-            customTextbox3.Size = new Size(344, 48);
-            customTextbox3.TabIndex = 15;
-            customTextbox3.UsePasswordChar = false;
+            tbNewSurname.Anchor = AnchorStyles.Left;
+            tbNewSurname.BackColor = Color.FromArgb(30, 30, 70);
+            tbNewSurname.BorderColor = Color.White;
+            tbNewSurname.BorderFocusColor = Color.White;
+            tbNewSurname.BorderSize = 4;
+            tbNewSurname.CustomBorderStyle = Custom_Controls.CustomTextbox.CustomTextboxBorderStyle.Underlined;
+            tbNewSurname.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            tbNewSurname.ForeColor = Color.White;
+            tbNewSurname.IsMultiline = false;
+            tbNewSurname.Location = new Point(25, 764);
+            tbNewSurname.Margin = new Padding(25, 0, 25, 0);
+            tbNewSurname.Name = "tbNewSurname";
+            tbNewSurname.Padding = new Padding(8, 9, 8, 9);
+            tbNewSurname.PlaceholderText = "New surname";
+            tbNewSurname.PlaceholderTextColor = Color.White;
+            tbNewSurname.ShortcutEnabled = true;
+            tbNewSurname.Size = new Size(344, 48);
+            tbNewSurname.TabIndex = 15;
+            tbNewSurname.UsePasswordChar = false;
             // 
-            // customButton6
+            // btnChangeSurname
             // 
-            customButton6.BackColor = Color.FromArgb(0, 150, 255);
-            customButton6.BorderColor = Color.White;
-            customButton6.BorderWidth = 2;
-            customButton6.CornerRadius = 20;
-            customButton6.FlatAppearance.BorderSize = 0;
-            customButton6.FlatStyle = FlatStyle.Popup;
-            customButton6.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            customButton6.ForeColor = Color.BlanchedAlmond;
-            customButton6.Image = null;
-            customButton6.ImageSize = new Size(150, 40);
-            customButton6.Location = new Point(419, 674);
-            customButton6.Margin = new Padding(25, 0, 25, 0);
-            customButton6.Name = "customButton6";
-            customButton6.Size = new Size(100, 50);
-            customButton6.TabIndex = 13;
-            customButton6.Text = "Done";
-            customButton6.UseVisualStyleBackColor = false;
+            btnChangeSurname.Anchor = AnchorStyles.Right;
+            btnChangeSurname.BackColor = Color.FromArgb(0, 150, 255);
+            btnChangeSurname.BorderColor = Color.White;
+            btnChangeSurname.BorderWidth = 2;
+            btnChangeSurname.CornerRadius = 20;
+            btnChangeSurname.FlatAppearance.BorderSize = 0;
+            btnChangeSurname.FlatStyle = FlatStyle.Popup;
+            btnChangeSurname.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            btnChangeSurname.ForeColor = Color.BlanchedAlmond;
+            btnChangeSurname.Image = null;
+            btnChangeSurname.ImageSize = new Size(150, 40);
+            btnChangeSurname.Location = new Point(419, 762);
+            btnChangeSurname.Margin = new Padding(25, 0, 25, 0);
+            btnChangeSurname.Name = "btnChangeSurname";
+            btnChangeSurname.Size = new Size(100, 50);
+            btnChangeSurname.TabIndex = 13;
+            btnChangeSurname.Text = "Done";
+            btnChangeSurname.UseVisualStyleBackColor = false;
+            btnChangeSurname.Click += btnChangeSurname_Click;
             // 
-            // label8
+            // lblChangeSurnameError
             // 
-            label8.Anchor = AnchorStyles.None;
-            label8.AutoSize = true;
-            label8.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label8.ForeColor = Color.Red;
-            label8.Location = new Point(229, 746);
-            label8.Name = "label8";
-            label8.Size = new Size(70, 29);
-            label8.TabIndex = 16;
-            label8.Text = "Error";
-            label8.TextAlign = ContentAlignment.MiddleCenter;
+            lblChangeSurnameError.Anchor = AnchorStyles.None;
+            lblChangeSurnameError.AutoSize = true;
+            lblChangeSurnameError.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblChangeSurnameError.ForeColor = Color.Red;
+            lblChangeSurnameError.Location = new Point(229, 824);
+            lblChangeSurnameError.Name = "lblChangeSurnameError";
+            lblChangeSurnameError.Size = new Size(70, 29);
+            lblChangeSurnameError.TabIndex = 16;
+            lblChangeSurnameError.Text = "Error";
+            lblChangeSurnameError.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label5
+            // lblChangeForename
             // 
-            label5.Anchor = AnchorStyles.None;
-            label5.AutoSize = true;
-            label5.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label5.ForeColor = Color.White;
-            label5.Location = new Point(25, 456);
-            label5.Margin = new Padding(25, 0, 25, 0);
-            label5.MaximumSize = new Size(450, 0);
-            label5.Name = "label5";
-            label5.Size = new Size(245, 34);
-            label5.TabIndex = 10;
-            label5.Text = "Change username";
-            label5.TextAlign = ContentAlignment.MiddleCenter;
+            lblChangeForename.Anchor = AnchorStyles.Left;
+            lblChangeForename.AutoSize = true;
+            lblChangeForename.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            lblChangeForename.ForeColor = Color.White;
+            lblChangeForename.Location = new Point(25, 574);
+            lblChangeForename.Margin = new Padding(25, 0, 25, 0);
+            lblChangeForename.MaximumSize = new Size(450, 0);
+            lblChangeForename.Name = "lblChangeForename";
+            lblChangeForename.Size = new Size(238, 34);
+            lblChangeForename.TabIndex = 10;
+            lblChangeForename.Text = "Change forename";
+            lblChangeForename.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // customTextbox2
+            // tbNewForename
             // 
-            customTextbox2.Anchor = AnchorStyles.None;
-            customTextbox2.BackColor = Color.FromArgb(30, 30, 70);
-            customTextbox2.BorderColor = Color.White;
-            customTextbox2.BorderFocusColor = Color.White;
-            customTextbox2.BorderSize = 4;
-            customTextbox2.CustomBorderStyle = Custom_Controls.CustomTextbox.CustomTextboxBorderStyle.Underlined;
-            customTextbox2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            customTextbox2.ForeColor = Color.White;
-            customTextbox2.IsMultiline = false;
-            customTextbox2.Location = new Point(25, 506);
-            customTextbox2.Margin = new Padding(25, 0, 25, 0);
-            customTextbox2.Name = "customTextbox2";
-            customTextbox2.Padding = new Padding(8, 9, 8, 9);
-            customTextbox2.PlaceholderText = "New username";
-            customTextbox2.PlaceholderTextColor = Color.White;
-            customTextbox2.ShortcutEnabled = true;
-            customTextbox2.Size = new Size(344, 48);
-            customTextbox2.TabIndex = 11;
-            customTextbox2.UsePasswordChar = false;
+            tbNewForename.Anchor = AnchorStyles.Left;
+            tbNewForename.BackColor = Color.FromArgb(30, 30, 70);
+            tbNewForename.BorderColor = Color.White;
+            tbNewForename.BorderFocusColor = Color.White;
+            tbNewForename.BorderSize = 4;
+            tbNewForename.CustomBorderStyle = Custom_Controls.CustomTextbox.CustomTextboxBorderStyle.Underlined;
+            tbNewForename.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            tbNewForename.ForeColor = Color.White;
+            tbNewForename.IsMultiline = false;
+            tbNewForename.Location = new Point(25, 624);
+            tbNewForename.Margin = new Padding(25, 0, 25, 0);
+            tbNewForename.Name = "tbNewForename";
+            tbNewForename.Padding = new Padding(8, 9, 8, 9);
+            tbNewForename.PlaceholderText = "New forename";
+            tbNewForename.PlaceholderTextColor = Color.White;
+            tbNewForename.ShortcutEnabled = true;
+            tbNewForename.Size = new Size(344, 48);
+            tbNewForename.TabIndex = 11;
+            tbNewForename.UsePasswordChar = false;
             // 
-            // customButton5
+            // btnChangeForename
             // 
-            customButton5.BackColor = Color.FromArgb(0, 150, 255);
-            customButton5.BorderColor = Color.White;
-            customButton5.BorderWidth = 0;
-            customButton5.CornerRadius = 20;
-            customButton5.FlatAppearance.BorderSize = 0;
-            customButton5.FlatStyle = FlatStyle.Popup;
-            customButton5.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            customButton5.ForeColor = Color.BlanchedAlmond;
-            customButton5.Image = null;
-            customButton5.ImageSize = new Size(150, 40);
-            customButton5.Location = new Point(419, 504);
-            customButton5.Margin = new Padding(25, 0, 25, 0);
-            customButton5.Name = "customButton5";
-            customButton5.Size = new Size(100, 50);
-            customButton5.TabIndex = 9;
-            customButton5.Text = "Done";
-            customButton5.UseVisualStyleBackColor = false;
+            btnChangeForename.Anchor = AnchorStyles.Right;
+            btnChangeForename.BackColor = Color.FromArgb(0, 150, 255);
+            btnChangeForename.BorderColor = Color.White;
+            btnChangeForename.BorderWidth = 2;
+            btnChangeForename.CornerRadius = 20;
+            btnChangeForename.FlatAppearance.BorderSize = 0;
+            btnChangeForename.FlatStyle = FlatStyle.Popup;
+            btnChangeForename.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            btnChangeForename.ForeColor = Color.BlanchedAlmond;
+            btnChangeForename.Image = null;
+            btnChangeForename.ImageSize = new Size(150, 40);
+            btnChangeForename.Location = new Point(419, 622);
+            btnChangeForename.Margin = new Padding(25, 0, 25, 0);
+            btnChangeForename.Name = "btnChangeForename";
+            btnChangeForename.Size = new Size(100, 50);
+            btnChangeForename.TabIndex = 9;
+            btnChangeForename.Text = "Done";
+            btnChangeForename.UseVisualStyleBackColor = false;
+            btnChangeForename.Click += btnChangeForename_Click;
             // 
-            // label6
+            // lblChangeForenameError
             // 
-            label6.Anchor = AnchorStyles.None;
-            label6.AutoSize = true;
-            label6.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            label6.ForeColor = Color.Red;
-            label6.Location = new Point(229, 576);
-            label6.Name = "label6";
-            label6.Size = new Size(70, 29);
-            label6.TabIndex = 12;
-            label6.Text = "Error";
-            label6.TextAlign = ContentAlignment.MiddleCenter;
+            lblChangeForenameError.Anchor = AnchorStyles.None;
+            lblChangeForenameError.AutoSize = true;
+            lblChangeForenameError.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblChangeForenameError.ForeColor = Color.Red;
+            lblChangeForenameError.Location = new Point(229, 684);
+            lblChangeForenameError.Name = "lblChangeForenameError";
+            lblChangeForenameError.Size = new Size(70, 29);
+            lblChangeForenameError.TabIndex = 12;
+            lblChangeForenameError.Text = "Error";
+            lblChangeForenameError.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblAccountTitle
             // 
@@ -342,11 +354,11 @@
             // 
             // lblChangeEmailTitle
             // 
-            lblChangeEmailTitle.Anchor = AnchorStyles.None;
+            lblChangeEmailTitle.Anchor = AnchorStyles.Left;
             lblChangeEmailTitle.AutoSize = true;
             lblChangeEmailTitle.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lblChangeEmailTitle.ForeColor = Color.White;
-            lblChangeEmailTitle.Location = new Point(20, 291);
+            lblChangeEmailTitle.Location = new Point(20, 434);
             lblChangeEmailTitle.Margin = new Padding(25, 0, 25, 0);
             lblChangeEmailTitle.MaximumSize = new Size(450, 0);
             lblChangeEmailTitle.Name = "lblChangeEmailTitle";
@@ -357,7 +369,7 @@
             // 
             // tbNewEmail
             // 
-            tbNewEmail.Anchor = AnchorStyles.None;
+            tbNewEmail.Anchor = AnchorStyles.Left;
             tbNewEmail.BackColor = Color.FromArgb(30, 30, 70);
             tbNewEmail.BorderColor = Color.White;
             tbNewEmail.BorderFocusColor = Color.White;
@@ -366,7 +378,7 @@
             tbNewEmail.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             tbNewEmail.ForeColor = Color.White;
             tbNewEmail.IsMultiline = false;
-            tbNewEmail.Location = new Point(20, 336);
+            tbNewEmail.Location = new Point(20, 474);
             tbNewEmail.Margin = new Padding(25, 0, 25, 0);
             tbNewEmail.Name = "tbNewEmail";
             tbNewEmail.Padding = new Padding(8, 9, 8, 9);
@@ -377,13 +389,77 @@
             tbNewEmail.TabIndex = 1;
             tbNewEmail.UsePasswordChar = false;
             // 
+            // lblSurnameDetail
+            // 
+            lblSurnameDetail.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            lblSurnameDetail.AutoSize = true;
+            lblSurnameDetail.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            lblSurnameDetail.ForeColor = Color.White;
+            lblSurnameDetail.Location = new Point(25, 234);
+            lblSurnameDetail.Margin = new Padding(25, 0, 25, 0);
+            lblSurnameDetail.MaximumSize = new Size(494, 34);
+            lblSurnameDetail.MinimumSize = new Size(494, 34);
+            lblSurnameDetail.Name = "lblSurnameDetail";
+            lblSurnameDetail.Size = new Size(494, 34);
+            lblSurnameDetail.TabIndex = 1;
+            lblSurnameDetail.Text = "Surname :";
+            lblSurnameDetail.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lblForenameDetail
+            // 
+            lblForenameDetail.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            lblForenameDetail.AutoSize = true;
+            lblForenameDetail.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            lblForenameDetail.ForeColor = Color.White;
+            lblForenameDetail.Location = new Point(25, 185);
+            lblForenameDetail.Margin = new Padding(25, 0, 25, 0);
+            lblForenameDetail.MaximumSize = new Size(494, 34);
+            lblForenameDetail.MinimumSize = new Size(494, 34);
+            lblForenameDetail.Name = "lblForenameDetail";
+            lblForenameDetail.Size = new Size(494, 34);
+            lblForenameDetail.TabIndex = 1;
+            lblForenameDetail.Text = "Forename :";
+            lblForenameDetail.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lblEmailDetail
+            // 
+            lblEmailDetail.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            lblEmailDetail.AutoSize = true;
+            lblEmailDetail.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            lblEmailDetail.ForeColor = Color.White;
+            lblEmailDetail.Location = new Point(25, 133);
+            lblEmailDetail.Margin = new Padding(25, 0, 25, 0);
+            lblEmailDetail.MaximumSize = new Size(494, 34);
+            lblEmailDetail.MinimumSize = new Size(494, 34);
+            lblEmailDetail.Name = "lblEmailDetail";
+            lblEmailDetail.Size = new Size(494, 34);
+            lblEmailDetail.TabIndex = 1;
+            lblEmailDetail.Text = "Email : ";
+            lblEmailDetail.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // lblUsernameDetail
+            // 
+            lblUsernameDetail.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            lblUsernameDetail.AutoSize = true;
+            lblUsernameDetail.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            lblUsernameDetail.ForeColor = Color.White;
+            lblUsernameDetail.Location = new Point(25, 83);
+            lblUsernameDetail.Margin = new Padding(25, 0, 25, 0);
+            lblUsernameDetail.MaximumSize = new Size(494, 34);
+            lblUsernameDetail.MinimumSize = new Size(494, 34);
+            lblUsernameDetail.Name = "lblUsernameDetail";
+            lblUsernameDetail.Size = new Size(494, 34);
+            lblUsernameDetail.TabIndex = 1;
+            lblUsernameDetail.Text = "Username : ";
+            lblUsernameDetail.TextAlign = ContentAlignment.MiddleLeft;
+            // 
             // lblChangeUsernameTitle
             // 
-            lblChangeUsernameTitle.Anchor = AnchorStyles.None;
+            lblChangeUsernameTitle.Anchor = AnchorStyles.Left;
             lblChangeUsernameTitle.AutoSize = true;
             lblChangeUsernameTitle.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lblChangeUsernameTitle.ForeColor = Color.White;
-            lblChangeUsernameTitle.Location = new Point(25, 116);
+            lblChangeUsernameTitle.Location = new Point(25, 293);
             lblChangeUsernameTitle.Margin = new Padding(25, 0, 25, 0);
             lblChangeUsernameTitle.MaximumSize = new Size(450, 0);
             lblChangeUsernameTitle.Name = "lblChangeUsernameTitle";
@@ -394,6 +470,7 @@
             // 
             // btnChangeEmail
             // 
+            btnChangeEmail.Anchor = AnchorStyles.Right;
             btnChangeEmail.BackColor = Color.FromArgb(0, 150, 255);
             btnChangeEmail.BorderColor = Color.White;
             btnChangeEmail.BorderWidth = 2;
@@ -404,17 +481,18 @@
             btnChangeEmail.ForeColor = Color.BlanchedAlmond;
             btnChangeEmail.Image = null;
             btnChangeEmail.ImageSize = new Size(150, 40);
-            btnChangeEmail.Location = new Point(419, 334);
+            btnChangeEmail.Location = new Point(419, 472);
             btnChangeEmail.Margin = new Padding(25, 0, 25, 0);
             btnChangeEmail.Name = "btnChangeEmail";
             btnChangeEmail.Size = new Size(100, 50);
             btnChangeEmail.TabIndex = 0;
             btnChangeEmail.Text = "Done";
             btnChangeEmail.UseVisualStyleBackColor = false;
+            btnChangeEmail.Click += btnChangeEmail_Click;
             // 
             // tbNewUsername
             // 
-            tbNewUsername.Anchor = AnchorStyles.None;
+            tbNewUsername.Anchor = AnchorStyles.Left;
             tbNewUsername.BackColor = Color.FromArgb(30, 30, 70);
             tbNewUsername.BorderColor = Color.White;
             tbNewUsername.BorderFocusColor = Color.White;
@@ -423,7 +501,7 @@
             tbNewUsername.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             tbNewUsername.ForeColor = Color.White;
             tbNewUsername.IsMultiline = false;
-            tbNewUsername.Location = new Point(25, 164);
+            tbNewUsername.Location = new Point(25, 344);
             tbNewUsername.Margin = new Padding(25, 0, 25, 0);
             tbNewUsername.Name = "tbNewUsername";
             tbNewUsername.Padding = new Padding(8, 9, 8, 9);
@@ -440,7 +518,7 @@
             lblChangeEmailError.AutoSize = true;
             lblChangeEmailError.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblChangeEmailError.ForeColor = Color.Red;
-            lblChangeEmailError.Location = new Point(224, 406);
+            lblChangeEmailError.Location = new Point(224, 535);
             lblChangeEmailError.Name = "lblChangeEmailError";
             lblChangeEmailError.Size = new Size(70, 29);
             lblChangeEmailError.TabIndex = 8;
@@ -449,6 +527,7 @@
             // 
             // btnChangeUsername
             // 
+            btnChangeUsername.Anchor = AnchorStyles.Right;
             btnChangeUsername.BackColor = Color.FromArgb(0, 150, 255);
             btnChangeUsername.BorderColor = Color.White;
             btnChangeUsername.BorderWidth = 2;
@@ -459,13 +538,14 @@
             btnChangeUsername.ForeColor = Color.BlanchedAlmond;
             btnChangeUsername.Image = null;
             btnChangeUsername.ImageSize = new Size(150, 40);
-            btnChangeUsername.Location = new Point(419, 162);
+            btnChangeUsername.Location = new Point(419, 338);
             btnChangeUsername.Margin = new Padding(25, 0, 25, 0);
             btnChangeUsername.Name = "btnChangeUsername";
             btnChangeUsername.Size = new Size(100, 50);
             btnChangeUsername.TabIndex = 0;
             btnChangeUsername.Text = "Done";
             btnChangeUsername.UseVisualStyleBackColor = false;
+            btnChangeUsername.Click += btnChangeUsername_Click;
             // 
             // lblChangeUsernameError
             // 
@@ -473,7 +553,7 @@
             lblChangeUsernameError.AutoSize = true;
             lblChangeUsernameError.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblChangeUsernameError.ForeColor = Color.Red;
-            lblChangeUsernameError.Location = new Point(224, 236);
+            lblChangeUsernameError.Location = new Point(224, 404);
             lblChangeUsernameError.Name = "lblChangeUsernameError";
             lblChangeUsernameError.Size = new Size(70, 29);
             lblChangeUsernameError.TabIndex = 8;
@@ -482,47 +562,47 @@
             // 
             // pnlDangerZone
             // 
-            pnlDangerZone.Anchor = AnchorStyles.Top;
+            pnlDangerZone.Anchor = AnchorStyles.None;
             pnlDangerZone.BackColor = Color.FromArgb(30, 30, 70);
             pnlDangerZone.BorderColor = Color.White;
             pnlDangerZone.BorderWidth = 0;
-            pnlDangerZone.Controls.Add(customButton2);
+            pnlDangerZone.Controls.Add(btnDeleteAccount);
             pnlDangerZone.Controls.Add(lblConfirmPasswordError);
             pnlDangerZone.Controls.Add(lblDangerZoneDescription);
             pnlDangerZone.Controls.Add(lblDangerZoneTitle);
             pnlDangerZone.Controls.Add(lblPasswordError);
-            pnlDangerZone.Controls.Add(btnDeleteAccount);
+            pnlDangerZone.Controls.Add(btnResetScore);
             pnlDangerZone.Controls.Add(tbNewPassword);
             pnlDangerZone.Controls.Add(tbConfirmPassword);
             pnlDangerZone.Controls.Add(pnlPasswordStrength);
             pnlDangerZone.Controls.Add(btnDone);
             pnlDangerZone.CornerRadius = 20;
-            pnlDangerZone.Location = new Point(29, 911);
+            pnlDangerZone.Location = new Point(29, 937);
             pnlDangerZone.Margin = new Padding(20);
             pnlDangerZone.Name = "pnlDangerZone";
             pnlDangerZone.Size = new Size(917, 500);
             pnlDangerZone.TabIndex = 6;
             pnlDangerZone.Text = "customRectangle1";
             // 
-            // customButton2
+            // btnDeleteAccount
             // 
-            customButton2.BackColor = Color.FromArgb(0, 150, 255);
-            customButton2.BorderColor = Color.White;
-            customButton2.BorderWidth = 2;
-            customButton2.CornerRadius = 20;
-            customButton2.FlatAppearance.BorderSize = 0;
-            customButton2.FlatStyle = FlatStyle.Popup;
-            customButton2.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            customButton2.ForeColor = Color.BlanchedAlmond;
-            customButton2.Image = null;
-            customButton2.ImageSize = new Size(150, 40);
-            customButton2.Location = new Point(119, 384);
-            customButton2.Margin = new Padding(10);
-            customButton2.Name = "customButton2";
-            customButton2.Size = new Size(235, 50);
-            customButton2.TabIndex = 4;
-            customButton2.Text = "Delete Account";
-            customButton2.UseVisualStyleBackColor = false;
+            btnDeleteAccount.BackColor = Color.FromArgb(0, 150, 255);
+            btnDeleteAccount.BorderColor = Color.White;
+            btnDeleteAccount.BorderWidth = 2;
+            btnDeleteAccount.CornerRadius = 20;
+            btnDeleteAccount.FlatAppearance.BorderSize = 0;
+            btnDeleteAccount.FlatStyle = FlatStyle.Popup;
+            btnDeleteAccount.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            btnDeleteAccount.ForeColor = Color.BlanchedAlmond;
+            btnDeleteAccount.Image = null;
+            btnDeleteAccount.ImageSize = new Size(150, 40);
+            btnDeleteAccount.Location = new Point(119, 384);
+            btnDeleteAccount.Margin = new Padding(10);
+            btnDeleteAccount.Name = "btnDeleteAccount";
+            btnDeleteAccount.Size = new Size(235, 50);
+            btnDeleteAccount.TabIndex = 4;
+            btnDeleteAccount.Text = "Delete Account";
+            btnDeleteAccount.UseVisualStyleBackColor = false;
             // 
             // lblConfirmPasswordError
             // 
@@ -577,25 +657,25 @@
             lblPasswordError.Text = "Error";
             lblPasswordError.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // btnDeleteAccount
+            // btnResetScore
             // 
-            btnDeleteAccount.BackColor = Color.FromArgb(0, 150, 255);
-            btnDeleteAccount.BorderColor = Color.White;
-            btnDeleteAccount.BorderWidth = 2;
-            btnDeleteAccount.CornerRadius = 20;
-            btnDeleteAccount.FlatAppearance.BorderSize = 0;
-            btnDeleteAccount.FlatStyle = FlatStyle.Popup;
-            btnDeleteAccount.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            btnDeleteAccount.ForeColor = Color.BlanchedAlmond;
-            btnDeleteAccount.Image = null;
-            btnDeleteAccount.ImageSize = new Size(150, 40);
-            btnDeleteAccount.Location = new Point(119, 293);
-            btnDeleteAccount.Margin = new Padding(10);
-            btnDeleteAccount.Name = "btnDeleteAccount";
-            btnDeleteAccount.Size = new Size(235, 50);
-            btnDeleteAccount.TabIndex = 0;
-            btnDeleteAccount.Text = "Reset Score";
-            btnDeleteAccount.UseVisualStyleBackColor = false;
+            btnResetScore.BackColor = Color.FromArgb(0, 150, 255);
+            btnResetScore.BorderColor = Color.White;
+            btnResetScore.BorderWidth = 2;
+            btnResetScore.CornerRadius = 20;
+            btnResetScore.FlatAppearance.BorderSize = 0;
+            btnResetScore.FlatStyle = FlatStyle.Popup;
+            btnResetScore.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            btnResetScore.ForeColor = Color.BlanchedAlmond;
+            btnResetScore.Image = null;
+            btnResetScore.ImageSize = new Size(150, 40);
+            btnResetScore.Location = new Point(119, 293);
+            btnResetScore.Margin = new Padding(10);
+            btnResetScore.Name = "btnResetScore";
+            btnResetScore.Size = new Size(235, 50);
+            btnResetScore.TabIndex = 0;
+            btnResetScore.Text = "Reset Score";
+            btnResetScore.UseVisualStyleBackColor = false;
             // 
             // tbNewPassword
             // 
@@ -778,7 +858,7 @@
             // 
             // pblAppearance
             // 
-            pblAppearance.Anchor = AnchorStyles.Top;
+            pblAppearance.Anchor = AnchorStyles.None;
             pblAppearance.BackColor = Color.FromArgb(30, 30, 70);
             pblAppearance.BorderColor = Color.White;
             pblAppearance.BorderWidth = 0;
@@ -790,7 +870,7 @@
             pblAppearance.Controls.Add(cbGender);
             pblAppearance.Controls.Add(lblDetailsTitle);
             pblAppearance.CornerRadius = 20;
-            pblAppearance.Location = new Point(29, 479);
+            pblAppearance.Location = new Point(29, 505);
             pblAppearance.Margin = new Padding(20);
             pblAppearance.Name = "pblAppearance";
             pblAppearance.Size = new Size(333, 392);
@@ -804,21 +884,22 @@
             dtpDateOfBirth.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             dtpDateOfBirth.Format = DateTimePickerFormat.Short;
             dtpDateOfBirth.Location = new Point(25, 279);
-            dtpDateOfBirth.Margin = new Padding(4);
+            dtpDateOfBirth.Margin = new Padding(25, 0, 25, 0);
             dtpDateOfBirth.Name = "dtpDateOfBirth";
-            dtpDateOfBirth.Size = new Size(281, 36);
+            dtpDateOfBirth.Size = new Size(283, 36);
             dtpDateOfBirth.TabIndex = 9;
+            dtpDateOfBirth.CloseUp += dtpDateOfBirth_CloseUp;
             // 
             // lblDateOfBirth
             // 
             lblDateOfBirth.Anchor = AnchorStyles.None;
             lblDateOfBirth.AutoSize = true;
-            lblDateOfBirth.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblDateOfBirth.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lblDateOfBirth.ForeColor = Color.White;
-            lblDateOfBirth.Location = new Point(22, 224);
-            lblDateOfBirth.Margin = new Padding(5);
+            lblDateOfBirth.Location = new Point(25, 235);
+            lblDateOfBirth.Margin = new Padding(0, 10, 0, 10);
             lblDateOfBirth.Name = "lblDateOfBirth";
-            lblDateOfBirth.Size = new Size(157, 29);
+            lblDateOfBirth.Size = new Size(185, 34);
             lblDateOfBirth.TabIndex = 10;
             lblDateOfBirth.Text = "Date of birth :";
             lblDateOfBirth.TextAlign = ContentAlignment.MiddleCenter;
@@ -829,8 +910,8 @@
             lblDateOfBirthError.AutoSize = true;
             lblDateOfBirthError.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblDateOfBirthError.ForeColor = Color.Red;
-            lblDateOfBirthError.Location = new Point(119, 324);
-            lblDateOfBirthError.Margin = new Padding(5);
+            lblDateOfBirthError.Location = new Point(119, 330);
+            lblDateOfBirthError.Margin = new Padding(0, 15, 0, 15);
             lblDateOfBirthError.Name = "lblDateOfBirthError";
             lblDateOfBirthError.Size = new Size(70, 29);
             lblDateOfBirthError.TabIndex = 11;
@@ -841,12 +922,12 @@
             // 
             lblGender.Anchor = AnchorStyles.None;
             lblGender.AutoSize = true;
-            lblGender.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblGender.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lblGender.ForeColor = Color.White;
-            lblGender.Location = new Point(20, 71);
-            lblGender.Margin = new Padding(0);
+            lblGender.Location = new Point(22, 81);
+            lblGender.Margin = new Padding(0, 10, 0, 10);
             lblGender.Name = "lblGender";
-            lblGender.Size = new Size(102, 29);
+            lblGender.Size = new Size(120, 34);
             lblGender.TabIndex = 4;
             lblGender.Text = "Gender :";
             lblGender.TextAlign = ContentAlignment.MiddleCenter;
@@ -857,7 +938,8 @@
             lblGenderError.AutoSize = true;
             lblGenderError.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblGenderError.ForeColor = Color.Red;
-            lblGenderError.Location = new Point(119, 173);
+            lblGenderError.Location = new Point(119, 177);
+            lblGenderError.Margin = new Padding(0, 15, 0, 15);
             lblGenderError.Name = "lblGenderError";
             lblGenderError.Size = new Size(70, 29);
             lblGenderError.TabIndex = 8;
@@ -869,37 +951,43 @@
             cbGender.DropDownStyle = ComboBoxStyle.DropDownList;
             cbGender.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbGender.FormattingEnabled = true;
-            cbGender.Location = new Point(20, 120);
-            cbGender.Margin = new Padding(20);
+            cbGender.Location = new Point(22, 125);
+            cbGender.Margin = new Padding(25, 0, 25, 0);
             cbGender.Name = "cbGender";
-            cbGender.Size = new Size(293, 37);
+            cbGender.Size = new Size(286, 37);
             cbGender.TabIndex = 4;
+            cbGender.SelectedIndexChanged += cbGender_SelectedIndexChanged;
             // 
             // lblUsername
             // 
+            lblUsername.Anchor = AnchorStyles.Bottom;
             lblUsername.AutoEllipsis = true;
             lblUsername.AutoSize = true;
             lblUsername.Font = new Font("Bahnschrift", 18F, FontStyle.Regular, GraphicsUnit.Point);
             lblUsername.ForeColor = Color.White;
-            lblUsername.Location = new Point(103, 420);
+            lblUsername.Location = new Point(44, 430);
             lblUsername.Margin = new Padding(25);
+            lblUsername.MaximumSize = new Size(300, 50);
+            lblUsername.MinimumSize = new Size(300, 50);
             lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(185, 43);
+            lblUsername.Size = new Size(300, 50);
             lblUsername.TabIndex = 2;
-            lblUsername.Text = "Username";
+            lblUsername.Text = "Username is far too long fo this";
+            lblUsername.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // formSettings
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(20, 20, 50);
-            ClientSize = new Size(975, 1440);
+            ClientSize = new Size(975, 1466);
             Controls.Add(lblUsername);
             Controls.Add(pblAppearance);
             Controls.Add(pnlDangerZone);
             Controls.Add(pnlAccount);
             Controls.Add(pnlProfilePicture);
             FormBorderStyle = FormBorderStyle.None;
+            MaximumSize = new Size(975, 1500);
             Name = "formSettings";
             Text = "formSettings";
             pnlProfilePicture.ResumeLayout(false);
@@ -924,8 +1012,8 @@
         #endregion
 
         private Custom_Controls.PictureFrame pbUserProfile;
-        private Custom_Controls.CustomButton btnLogin;
-        private Custom_Controls.CustomButton customButton1;
+        private Custom_Controls.CustomButton btnProfilePicturePrevious;
+        private Custom_Controls.CustomButton btnProfilePictureNext;
         private Panel pnlProfilePicture;
         private Custom_Controls.CustomRectangle pnlAccount;
         private Label lblAccountTitle;
@@ -933,7 +1021,7 @@
         private Label lblDetailsTitle;
         private Custom_Controls.CustomRectangle pblAppearance;
         private Label lblDangerZoneTitle;
-        private Custom_Controls.CustomButton btnDeleteAccount;
+        private Custom_Controls.CustomButton btnResetScore;
         private Label lblConfirmPasswordError;
         private Custom_Controls.CustomTextbox tbNewPassword;
         private PictureBox pbPasswordView;
@@ -945,12 +1033,12 @@
         private PictureBox pbSpecialCharacters;
         private PictureBox pbLettersNumbers;
         private PictureBox pbPasswordLength;
-        private Custom_Controls.CustomButton customButton2;
+        private Custom_Controls.CustomButton btnDeleteAccount;
         private Label lblPasswordError;
         private Custom_Controls.CustomTextbox tbNewUsername;
         private Label lblDangerZoneDescription;
         private Custom_Controls.CustomButton btnDone;
-        private Label label1;
+        private Label lblUsernameDetail;
         private Label lblChangeUsernameTitle;
         private Custom_Controls.CustomButton btnChangeUsername;
         private Label lblUsername;
@@ -960,18 +1048,21 @@
         private DateTimePicker dtpDateOfBirth;
         private Label lblDateOfBirth;
         private Label lblDateOfBirthError;
-        private Label label5;
-        private Custom_Controls.CustomTextbox customTextbox2;
-        private Custom_Controls.CustomButton customButton5;
-        private Label label6;
+        private Label lblChangeForename;
+        private Custom_Controls.CustomTextbox tbNewForename;
+        private Custom_Controls.CustomButton btnChangeForename;
+        private Label lblChangeForenameError;
         private Label lblChangeEmailTitle;
         private Custom_Controls.CustomTextbox tbNewEmail;
         private Custom_Controls.CustomButton btnChangeEmail;
         private Label lblChangeEmailError;
         private Label lblChangeUsernameError;
-        private Label label7;
-        private Custom_Controls.CustomTextbox customTextbox3;
-        private Custom_Controls.CustomButton customButton6;
-        private Label label8;
+        private Label lblChangeSurnameTitle;
+        private Custom_Controls.CustomTextbox tbNewSurname;
+        private Custom_Controls.CustomButton btnChangeSurname;
+        private Label lblChangeSurnameError;
+        private Label lblSurnameDetail;
+        private Label lblForenameDetail;
+        private Label lblEmailDetail;
     }
 }

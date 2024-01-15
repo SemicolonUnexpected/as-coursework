@@ -90,6 +90,7 @@
             lblText.ForeColor = Color.White;
             lblText.ImageAlign = ContentAlignment.TopCenter;
             lblText.Location = new Point(10, 10);
+            lblText.MaximumSize = new Size(558, 249);
             lblText.MinimumSize = new Size(558, 249);
             lblText.Name = "lblText";
             lblText.Size = new Size(558, 249);

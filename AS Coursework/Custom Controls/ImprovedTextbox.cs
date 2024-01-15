@@ -1,4 +1,5 @@
 ﻿namespace AS_Coursework.Custom_Controls; 
+// This class is needed for the customTextBox so that unwanted features of the default textbox can be disabled
 public partial class ImprovedTextbox : TextBox {
 
     // WndProc flags

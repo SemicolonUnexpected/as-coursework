@@ -7,6 +7,8 @@ internal static class DataManager {
     private const string PATH = "UserData.txt";
     private static List<User> _users = new();
 
+    #region User list manipulation
+
     public static bool UserExists(string username) => _users.Any(user => user.AuthenticationDetails.Username == username);
     public static User? GetUser(string username) => _users.Find(user => user.AuthenticationDetails.Username == username);
     public static bool GetUser(int index, out User? user) {
@@ -32,6 +34,12 @@ internal static class DataManager {
     public static void AddUser(User user) {
         _users.Add(user);
     }
+
+    public static int CountUsers(Predicate<User> predicate) {
+        return _users.Count(u => predicate(u));
+    }
+
+    #endregion
 
     static DataManager() {
         ReadIn();
