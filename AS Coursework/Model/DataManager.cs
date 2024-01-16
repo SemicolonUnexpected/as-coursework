@@ -35,8 +35,8 @@ internal static class DataManager {
         _users.Add(user);
     }
 
-    public static int CountUsers(Predicate<User> predicate) {
-        return _users.Count(u => predicate(u));
+    public static void DeleteUser(User user) {
+        _users.Remove(user);
     }
 
     #endregion
@@ -71,11 +71,11 @@ internal static class DataManager {
                     questionsCorrect: int.Parse(fields[7]));
 
                 MiscDetails miscData = new(
-                    forename: fields[5],
-                    surname: fields[6],
-                    email: new MailAddress(fields[7]),
-                    dateOfBirth: DateTime.Parse(fields[8]),
-                    gender: (Gender)int.Parse(fields[9]));
+                    forename: fields[8],
+                    surname: fields[9],
+                    email: new MailAddress(fields[10]),
+                    dateOfBirth: DateTime.Parse(fields[11]),
+                    gender: (Gender)int.Parse(fields[12]));
 
                 _users.Add(new User(authenticationDetails, functionalData, miscData));
             }
@@ -99,7 +99,7 @@ internal static class DataManager {
             9,
             "",
             "",
-            new MailAddress("root@root"),
+            new MailAddress("root@gmail"),
             DateTime.Now,
             Gender.PreferNotToSay));
 

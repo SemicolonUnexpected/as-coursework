@@ -1,7 +1,4 @@
-using AS_Coursework.Custom_Controls;
-using AS_Coursework.Model.Users;
 using AS_Coursework.View;
-using System.Diagnostics;
 
 namespace AS_Coursework; 
 internal static class Program {

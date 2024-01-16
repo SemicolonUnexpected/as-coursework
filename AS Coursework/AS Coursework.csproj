@@ -50,4 +50,8 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="View\Quiz\" />
+  </ItemGroup>
+
 </Project>

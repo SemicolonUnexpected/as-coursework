@@ -7,25 +7,12 @@ using AS_Coursework.Model.Users;
 namespace AS_Coursework.View {
     public partial class RegisterCredentialsView : Form {
 
-        [GeneratedRegex(@"[A-Za-z]")]
-        private static partial Regex LetterCharacter();
-        [GeneratedRegex(@"[^\w\s]")]
-        private static partial Regex SpecialCharacter();
-        [GeneratedRegex(@"\d")]
-        private static partial Regex NumberCharacter();
-
         public AuthenticationDetails AuthenticationDetails {
             get => new AuthenticationDetails(tbUsername.Text, HashManager.GetHash(tbPassword.Text, out byte[] salt), salt, false);
         }
 
         public RegisterCredentialsView() {
             InitializeComponent();
-
-            // Set the unacceptable keys in the textboxes
-            tbUsername.NotAcceptedKeys = new Keys[] {
-               Keys.Space,
-               Keys.Tab,
-            };
 
             // Set the error text to empty
             lblUsernameError.Text = "";
@@ -35,7 +22,6 @@ namespace AS_Coursework.View {
             // Call OnResize to correct formatting
             OnResize(EventArgs.Empty);
         }
-
         private bool CheckUsernameOk() {
             string usernameError = "";
 
@@ -54,7 +40,7 @@ namespace AS_Coursework.View {
 
             // Set the text to error text if the password field is empty or the password requirements are not met
             if (string.IsNullOrWhiteSpace(tbPassword.Text)) passwordError = "Please create a password";
-            else if (GetRequirements(tbPassword.Text).Count < Enum.GetNames(typeof(PasswordRequirements)).Length) passwordError = "Please pick a stronger password";
+            else if (DataValidator.GetPasswordRequirements(tbPassword.Text).Count < Enum.GetNames(typeof(DataValidator.PasswordRequirements)).Length) passwordError = "Please pick a stronger password";
 
             lblPasswordError.Text = passwordError;
             lblPasswordError.CenterX();
@@ -102,15 +88,6 @@ namespace AS_Coursework.View {
             }
         }
 
-        private void tbPassword_TextChanged(object sender, EventArgs e) {
-            string text = tbPassword.Text;
-            List<PasswordRequirements> requirements = GetRequirements(text);
-
-            pbPasswordLength.Image = requirements.Contains(PasswordRequirements.Length) ? Resources.Icons.Green_Tick_Circle : Resources.Icons.Red_Cross_Circle;
-            pbLettersNumbers.Image = requirements.Contains(PasswordRequirements.NumsAndChars) ? Resources.Icons.Green_Tick_Circle : Resources.Icons.Red_Cross_Circle;
-            pbSpecialCharacters.Image = requirements.Contains(PasswordRequirements.SpecialChars) ? Resources.Icons.Green_Tick_Circle : Resources.Icons.Red_Cross_Circle;
-        }
-
         // Allow the user to see their password by clicking the eye icon in the picturebox
         private void pbPasswordView_MouseDown(object sender, MouseEventArgs e) {
             pbPasswordView.Image = Resources.Icons.Eye_crossed;
@@ -127,26 +104,5 @@ namespace AS_Coursework.View {
         private void tbUsername_Leave(object sender, EventArgs e) => CheckUsernameOk();
 
         private void tbConfirmPassword_Leave(object sender, EventArgs e) => CheckConfirmPasswordOk();
-
-        /// <summary>
-        /// Returns the PasswordRequirements which the password meets
-        /// </summary>
-        /// <param name="password"></param>
-        /// <returns></returns>
-        private List<PasswordRequirements> GetRequirements(string password) {
-            List<PasswordRequirements> requirements = new List<PasswordRequirements>();
-
-            if (password.Length > 7) requirements.Add(PasswordRequirements.Length);
-            if (LetterCharacter().Matches(password).Count > 0 && NumberCharacter().Matches(password).Count > 0) requirements.Add(PasswordRequirements.NumsAndChars);
-            if (SpecialCharacter().Matches(password).Count > 0) requirements.Add(PasswordRequirements.SpecialChars);
-
-            return requirements;
-        }
-
-        private enum PasswordRequirements {
-            Length,
-            NumsAndChars,
-            SpecialChars
-        }
     }
 }

@@ -2,6 +2,7 @@
 using System.Net.Mail;
 using AS_Coursework._Helpers;
 using AS_Coursework.Model.Users;
+using AS_Coursework.Model.Data;
 
 namespace AS_Coursework.View {
     public partial class formRegisterMisc : Form {
@@ -58,8 +59,8 @@ namespace AS_Coursework.View {
         private bool CheckDateOfBirthOk() {
             string dateOfBirthError = "";
 
-            // Set the text to error text if the date of birth would make the _ too young
-            if (CalculateAge(dtpDateOfBirth.Value) < 16) dateOfBirthError = "You must be 16 to create an account";
+            // Set the text to error text if the date of birth would make the user too young
+            if (DataValidator.IsUserOldEnough(dtpDateOfBirth.Value)) dateOfBirthError = $"You must be {DataValidator.MINIMUM_USER_AGE} to create an account";
 
             // Fix formatting
             lblDateOfBirthError.Text = dateOfBirthError;
@@ -132,18 +133,6 @@ namespace AS_Coursework.View {
 
         private void tbEmail_Leave(object sender, EventArgs e) {
             CheckEmailOk();
-        }
-
-        private static int CalculateAge(DateTime dateOfBirth) {
-            // Unfortunately we cannot use cannot subtract the two DateTimes an use the resulting TimeSpan.
-            // The amount of years that has passed is lost when converting from DateTime -> TimeSpan
-            DateTime today = DateTime.Today;
-            // Calculate the age as the difference in year from the birth year to this year
-            int age = today.Year - dateOfBirth.Year;
-            // This calculation of the age can be wrong if the user is born in a month that occurs before the month this year
-            // If this is the case, correct is by subtracting one
-            if (dateOfBirth.Date > today.AddYears(-age)) age--;
-            return age;
         }
     }
 }

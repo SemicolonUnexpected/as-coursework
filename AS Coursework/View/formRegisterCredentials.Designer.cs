@@ -243,7 +243,6 @@
             tbPassword.Size = new Size(333, 48);
             tbPassword.TabIndex = 1;
             tbPassword.UsePasswordChar = true;
-            tbPassword.TextChanged += tbPassword_TextChanged;
             tbPassword.Leave += tbPassword_Leave;
             // 
             // pbPasswordView

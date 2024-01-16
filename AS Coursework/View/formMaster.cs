@@ -1,5 +1,4 @@
 ﻿using AS_Coursework.Model.Data;
-using AS_Coursework.Model.Users;
 using System.ComponentModel;
 
 namespace AS_Coursework.View;
@@ -9,8 +8,7 @@ public partial class formMaster : Form {
 
     public formMaster() {
         InitializeComponent();
-        DisplayFormAfterSplash(new formMainMenu(User.Empty));
-        //DisplayFormAfterSplash(new formTest());
+        DisplayFormAfterSplash(new formLogin());
     }
 
     protected override void OnClosing(CancelEventArgs e) {

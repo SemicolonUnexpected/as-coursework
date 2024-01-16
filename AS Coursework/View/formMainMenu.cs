@@ -68,8 +68,15 @@ public partial class formMainMenu : Form {
         }
 
         UserForm.Width = Width - MINIMISED_MENU_WIDTH;
+
         if (_menuMinimised) MinimiseMenu();
         else MaximiseMenu();
+    }
+
+    protected override void OnResizeEnd(EventArgs e) {
+        base.OnResizeEnd(e);
+
+        MessageBox.Show("Test");
     }
 
     #region Menu formatting
@@ -79,7 +86,7 @@ public partial class formMainMenu : Form {
         if (_menuMinimised) MinimiseMenu();
         else MaximiseMenu();
     }
-
+    
     private void MinimiseMenu() {
         pnlMenuStrip.Width = MINIMISED_MENU_WIDTH;
 
@@ -156,7 +163,7 @@ public partial class formMainMenu : Form {
     #endregion
 
     public void ScrollUserView(int value) {
-        sb.Value += value;
+        sb.Value -= value;
     }
 
     private void sb_ValueChanged(object sender, EventArgs e) {

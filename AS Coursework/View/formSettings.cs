@@ -1,7 +1,9 @@
 ﻿using AS_Coursework._Helpers;
+using AS_Coursework.Custom_Controls;
 using AS_Coursework.Model.Data;
 using AS_Coursework.Model.Users;
 using System.Net.Mail;
+using AS_Coursework.Model.Security;
 
 namespace AS_Coursework.View;
 public partial class formSettings : Form {
@@ -52,6 +54,8 @@ public partial class formSettings : Form {
         lblGender.CenterX();
         lblDateOfBirthError.CenterX();
     }
+
+    #region Data validation and user detail updates
 
     private void btnChangeUsername_Click(object sender, EventArgs e) {
         string newUsername = tbNewUsername.Text;
@@ -110,6 +114,61 @@ public partial class formSettings : Form {
     }
 
     private void dtpDateOfBirth_CloseUp(object sender, EventArgs e) {
-        
+        // Set the text to error text if the date of birth would make the user too young
+        if (DataValidator.IsUserOldEnough(dtpDateOfBirth.Value)) {
+            lblDateOfBirthError.Text = $"You must be {DataValidator.MINIMUM_USER_AGE} to create an account";
+            lblDateOfBirthError.CenterX();
+            return;
+        }
+
+        _user.MiscDetails.DateOfBirth = dtpDateOfBirth.Value;
     }
+
+    private void btnResetExperience_Click(object sender, EventArgs e) {
+        if (CustomMessageBox.Show("Reset score", "Are you sure you want to reset your score?") == DialogResult.OK) _user.FunctionalDetails.Experience = 0;
+    }
+
+    private void btnDeleteAccount_Click(object sender, EventArgs e) {
+        if (CustomMessageBox.Show("Delete account", "Are you sure you want to delete your account. You cannot revert this action and will be instantly logged out") == DialogResult.OK) {
+            DataManager.DeleteUser(_user);
+        }
+    }
+    private bool CheckPasswordOk() {
+        string passwordError = "";
+
+        // Set the text to error text if the password field is empty or the password requirements are not met
+        if (string.IsNullOrWhiteSpace(tbNewPassword.Text)) passwordError = "Please create a password";
+        else if (DataValidator.GetPasswordRequirements(tbNewPassword.Text).Count < Enum.GetNames(typeof(DataValidator.PasswordRequirements)).Length) passwordError = "Please pick a stronger password";
+
+        lblPasswordError.Text = passwordError;
+        lblPasswordError.CenterX();
+
+        return passwordError == "";
+    }
+
+    private bool CheckConfirmPasswordOk() {
+        string confirmPasswordError = "";
+
+        // Set the text to error text if the user has not confirmed their password or password field and confirm password field do not match 
+        if (string.IsNullOrWhiteSpace(tbConfirmPassword.Text)) confirmPasswordError = "Please confirm your password";
+        else if (tbNewPassword.Text != tbConfirmPassword.Text) confirmPasswordError = "Passwords did not match";
+
+        lblConfirmPasswordError.Text = confirmPasswordError;
+        lblConfirmPasswordError.CenterX();
+
+        return confirmPasswordError == "";
+    }
+
+    private void btnChangePassword_Click(object sender, EventArgs e) {
+        if (CheckPasswordOk() & CheckConfirmPasswordOk()) {
+            byte[] newHashedPassword = HashManager.GetHash(tbNewPassword.Text, out byte[] newSalt);
+
+            _user.AuthenticationDetails.HashedPassword = newHashedPassword;
+            _user.AuthenticationDetails.Salt = newSalt;
+
+            CustomMessageBox.Show("Passord changed", "Your password has been updated. Do not forget it.");
+        }
+    }
+
+    #endregion
 }

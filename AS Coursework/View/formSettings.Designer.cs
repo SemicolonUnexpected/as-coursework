@@ -56,7 +56,7 @@
             lblDangerZoneDescription = new Label();
             lblDangerZoneTitle = new Label();
             lblPasswordError = new Label();
-            btnResetScore = new Custom_Controls.CustomButton();
+            btnResetExperience = new Custom_Controls.CustomButton();
             tbNewPassword = new Custom_Controls.CustomTextbox();
             pbPasswordView = new PictureBox();
             tbConfirmPassword = new Custom_Controls.CustomTextbox();
@@ -67,7 +67,7 @@
             pbSpecialCharacters = new PictureBox();
             pbLettersNumbers = new PictureBox();
             pbPasswordLength = new PictureBox();
-            btnDone = new Custom_Controls.CustomButton();
+            btnChangePassword = new Custom_Controls.CustomButton();
             lblDetailsTitle = new Label();
             pblAppearance = new Custom_Controls.CustomRectangle();
             dtpDateOfBirth = new DateTimePicker();
@@ -571,11 +571,11 @@
             pnlDangerZone.Controls.Add(lblDangerZoneDescription);
             pnlDangerZone.Controls.Add(lblDangerZoneTitle);
             pnlDangerZone.Controls.Add(lblPasswordError);
-            pnlDangerZone.Controls.Add(btnResetScore);
+            pnlDangerZone.Controls.Add(btnResetExperience);
             pnlDangerZone.Controls.Add(tbNewPassword);
             pnlDangerZone.Controls.Add(tbConfirmPassword);
             pnlDangerZone.Controls.Add(pnlPasswordStrength);
-            pnlDangerZone.Controls.Add(btnDone);
+            pnlDangerZone.Controls.Add(btnChangePassword);
             pnlDangerZone.CornerRadius = 20;
             pnlDangerZone.Location = new Point(29, 937);
             pnlDangerZone.Margin = new Padding(20);
@@ -596,13 +596,14 @@
             btnDeleteAccount.ForeColor = Color.BlanchedAlmond;
             btnDeleteAccount.Image = null;
             btnDeleteAccount.ImageSize = new Size(150, 40);
-            btnDeleteAccount.Location = new Point(119, 384);
+            btnDeleteAccount.Location = new Point(105, 378);
             btnDeleteAccount.Margin = new Padding(10);
             btnDeleteAccount.Name = "btnDeleteAccount";
-            btnDeleteAccount.Size = new Size(235, 50);
+            btnDeleteAccount.Size = new Size(255, 50);
             btnDeleteAccount.TabIndex = 4;
-            btnDeleteAccount.Text = "Delete Account";
+            btnDeleteAccount.Text = "Delete account";
             btnDeleteAccount.UseVisualStyleBackColor = false;
+            btnDeleteAccount.Click += btnDeleteAccount_Click;
             // 
             // lblConfirmPasswordError
             // 
@@ -657,25 +658,26 @@
             lblPasswordError.Text = "Error";
             lblPasswordError.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // btnResetScore
+            // btnResetExperience
             // 
-            btnResetScore.BackColor = Color.FromArgb(0, 150, 255);
-            btnResetScore.BorderColor = Color.White;
-            btnResetScore.BorderWidth = 2;
-            btnResetScore.CornerRadius = 20;
-            btnResetScore.FlatAppearance.BorderSize = 0;
-            btnResetScore.FlatStyle = FlatStyle.Popup;
-            btnResetScore.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            btnResetScore.ForeColor = Color.BlanchedAlmond;
-            btnResetScore.Image = null;
-            btnResetScore.ImageSize = new Size(150, 40);
-            btnResetScore.Location = new Point(119, 293);
-            btnResetScore.Margin = new Padding(10);
-            btnResetScore.Name = "btnResetScore";
-            btnResetScore.Size = new Size(235, 50);
-            btnResetScore.TabIndex = 0;
-            btnResetScore.Text = "Reset Score";
-            btnResetScore.UseVisualStyleBackColor = false;
+            btnResetExperience.BackColor = Color.FromArgb(0, 150, 255);
+            btnResetExperience.BorderColor = Color.White;
+            btnResetExperience.BorderWidth = 2;
+            btnResetExperience.CornerRadius = 20;
+            btnResetExperience.FlatAppearance.BorderSize = 0;
+            btnResetExperience.FlatStyle = FlatStyle.Popup;
+            btnResetExperience.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            btnResetExperience.ForeColor = Color.BlanchedAlmond;
+            btnResetExperience.Image = null;
+            btnResetExperience.ImageSize = new Size(150, 40);
+            btnResetExperience.Location = new Point(105, 293);
+            btnResetExperience.Margin = new Padding(10);
+            btnResetExperience.Name = "btnResetExperience";
+            btnResetExperience.Size = new Size(255, 50);
+            btnResetExperience.TabIndex = 0;
+            btnResetExperience.Text = "Reset experience";
+            btnResetExperience.UseVisualStyleBackColor = false;
+            btnResetExperience.Click += btnResetExperience_Click;
             // 
             // tbNewPassword
             // 
@@ -823,25 +825,26 @@
             pbPasswordLength.TabIndex = 0;
             pbPasswordLength.TabStop = false;
             // 
-            // btnDone
+            // btnChangePassword
             // 
-            btnDone.BackColor = Color.FromArgb(0, 150, 255);
-            btnDone.BorderColor = Color.White;
-            btnDone.BorderWidth = 2;
-            btnDone.CornerRadius = 20;
-            btnDone.FlatAppearance.BorderSize = 0;
-            btnDone.FlatStyle = FlatStyle.Popup;
-            btnDone.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            btnDone.ForeColor = Color.BlanchedAlmond;
-            btnDone.Image = null;
-            btnDone.ImageSize = new Size(150, 40);
-            btnDone.Location = new Point(797, 430);
-            btnDone.Margin = new Padding(20);
-            btnDone.Name = "btnDone";
-            btnDone.Size = new Size(100, 50);
-            btnDone.TabIndex = 0;
-            btnDone.Text = "Done";
-            btnDone.UseVisualStyleBackColor = false;
+            btnChangePassword.BackColor = Color.FromArgb(0, 150, 255);
+            btnChangePassword.BorderColor = Color.White;
+            btnChangePassword.BorderWidth = 2;
+            btnChangePassword.CornerRadius = 20;
+            btnChangePassword.FlatAppearance.BorderSize = 0;
+            btnChangePassword.FlatStyle = FlatStyle.Popup;
+            btnChangePassword.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            btnChangePassword.ForeColor = Color.BlanchedAlmond;
+            btnChangePassword.Image = null;
+            btnChangePassword.ImageSize = new Size(150, 40);
+            btnChangePassword.Location = new Point(797, 430);
+            btnChangePassword.Margin = new Padding(20);
+            btnChangePassword.Name = "btnChangePassword";
+            btnChangePassword.Size = new Size(100, 50);
+            btnChangePassword.TabIndex = 0;
+            btnChangePassword.Text = "Done";
+            btnChangePassword.UseVisualStyleBackColor = false;
+            btnChangePassword.Click += btnChangePassword_Click;
             // 
             // lblDetailsTitle
             // 
@@ -1021,7 +1024,7 @@
         private Label lblDetailsTitle;
         private Custom_Controls.CustomRectangle pblAppearance;
         private Label lblDangerZoneTitle;
-        private Custom_Controls.CustomButton btnResetScore;
+        private Custom_Controls.CustomButton btnResetExperience;
         private Label lblConfirmPasswordError;
         private Custom_Controls.CustomTextbox tbNewPassword;
         private PictureBox pbPasswordView;
@@ -1037,7 +1040,7 @@
         private Label lblPasswordError;
         private Custom_Controls.CustomTextbox tbNewUsername;
         private Label lblDangerZoneDescription;
-        private Custom_Controls.CustomButton btnDone;
+        private Custom_Controls.CustomButton btnChangePassword;
         private Label lblUsernameDetail;
         private Label lblChangeUsernameTitle;
         private Custom_Controls.CustomButton btnChangeUsername;
