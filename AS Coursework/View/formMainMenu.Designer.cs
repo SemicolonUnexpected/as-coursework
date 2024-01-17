@@ -210,6 +210,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "formMainMenu";
             Text = "HomeView";
+            ResizeEnd += formMainMenu_ResizeEnd;
             pnlMenuStrip.ResumeLayout(false);
             ResumeLayout(false);
         }

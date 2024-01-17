@@ -16,9 +16,22 @@ public partial class formSettings : Form {
         // Set the minimum date of birth to 100 years ago
         dtpDateOfBirth.MinDate = DateTime.Today.Subtract(new TimeSpan(100 * 365, 0, 0, 0, 0));
 
+        // Set the date time picker's value to the current time
+        dtpDateOfBirth.Value = DateTime.Now;
+
         // Setup the gender options which can be found in the StringToGender dictionary
         cbGender.Items.AddRange(new string[] { "Male", "Female", "Other", "Prefer not to say" });
 
+        // Remove all the error placeholder text
+        lblChangeUsernameError.Text = "";
+        lblChangeEmailError.Text = "";
+        lblChangeForenameError.Text = "";
+        lblChangeSurnameError.Text = "";
+        lblChangeDateOfBirthError.Text = "";
+        lblPasswordError.Text = "";
+        lblConfirmPasswordError.Text = "";
+
+        cbGender.SelectedIndexChanged += cbGender_SelectedIndexChanged;
         PopulateDataDisplay();
     }
 
@@ -52,20 +65,22 @@ public partial class formSettings : Form {
 
         // Center every error message horizontally in the pnlDetails
         lblGender.CenterX();
-        lblDateOfBirthError.CenterX();
+        lblChangeDateOfBirthError.CenterX();
     }
 
     #region Data validation and user detail updates
 
-    private void btnChangeUsername_Click(object sender, EventArgs e) {
+    private void btnChangeUsername_Click(object? sender, EventArgs e) {
         string newUsername = tbNewUsername.Text;
 
         if (string.IsNullOrWhiteSpace(newUsername)) {
             lblChangeUsernameError.Text = "Please fill in a username";
+            lblChangeUsernameError.CenterX();
             return;
         }
         if (DataManager.UserExists(newUsername)) {
             lblChangeUsernameError.Text = "This username is already taken";
+            lblChangeUsernameError.CenterX();
             return;
         }
 
@@ -73,11 +88,12 @@ public partial class formSettings : Form {
         PopulateDataDisplay();
     }
 
-    private void btnChangeEmail_Click(object sender, EventArgs e) {
+    private void btnChangeEmail_Click(object? sender, EventArgs e) {
         bool emailValid = MailAddress.TryCreate(tbNewEmail.Text, out MailAddress? newEmail);
 
         if (!emailValid || newEmail is null) {
             lblChangeEmailError.Text = "Email invalid";
+            lblChangeEmailError.CenterX();
             return;
         }
 
@@ -85,11 +101,12 @@ public partial class formSettings : Form {
         PopulateDataDisplay();
     }
 
-    private void btnChangeForename_Click(object sender, EventArgs e) {
+    private void btnChangeForename_Click(object? sender, EventArgs e) {
         string newForename = tbNewForename.Text;
 
         if (string.IsNullOrWhiteSpace(newForename)) {
             lblChangeForenameError.Text = "Please fill in a forename";
+            lblChangeForenameError.CenterX();
             return;
         }
 
@@ -97,11 +114,12 @@ public partial class formSettings : Form {
         PopulateDataDisplay();
     }
 
-    private void btnChangeSurname_Click(object sender, EventArgs e) {
+    private void btnChangeSurname_Click(object? sender, EventArgs e) {
         string newSurname = tbNewForename.Text;
 
         if (string.IsNullOrWhiteSpace(newSurname)) {
             lblChangeSurnameError.Text = "Please fill in a forename";
+            lblChangeSurnameError.CenterX();
             return;
         }
 
@@ -109,26 +127,29 @@ public partial class formSettings : Form {
         PopulateDataDisplay();
     }
 
-    private void cbGender_SelectedIndexChanged(object sender, EventArgs e) {
+    private void cbGender_SelectedIndexChanged(object? sender, EventArgs e) {
         _user.MiscDetails.Gender = (Gender)cbGender.SelectedIndex;
+        CustomMessageBox.Show("Gender", "Gender changed");
     }
 
-    private void dtpDateOfBirth_CloseUp(object sender, EventArgs e) {
+    private void dtpDateOfBirth_CloseUp(object? sender, EventArgs e) {
         // Set the text to error text if the date of birth would make the user too young
         if (DataValidator.IsUserOldEnough(dtpDateOfBirth.Value)) {
-            lblDateOfBirthError.Text = $"You must be {DataValidator.MINIMUM_USER_AGE} to create an account";
-            lblDateOfBirthError.CenterX();
+            lblChangeDateOfBirthError.Text = $"You must be {DataValidator.MINIMUM_USER_AGE} to create an account";
+            lblChangeDateOfBirthError.CenterX();
+            dtpDateOfBirth.Value = DateTime.Now;
             return;
         }
 
         _user.MiscDetails.DateOfBirth = dtpDateOfBirth.Value;
+        CustomMessageBox.Show("Date of birth", "Date of birth changed");
     }
 
-    private void btnResetExperience_Click(object sender, EventArgs e) {
+    private void btnResetExperience_Click(object? sender, EventArgs e) {
         if (CustomMessageBox.Show("Reset score", "Are you sure you want to reset your score?") == DialogResult.OK) _user.FunctionalDetails.Experience = 0;
     }
 
-    private void btnDeleteAccount_Click(object sender, EventArgs e) {
+    private void btnDeleteAccount_Click(object? sender, EventArgs e) {
         if (CustomMessageBox.Show("Delete account", "Are you sure you want to delete your account. You cannot revert this action and will be instantly logged out") == DialogResult.OK) {
             DataManager.DeleteUser(_user);
         }
@@ -159,7 +180,7 @@ public partial class formSettings : Form {
         return confirmPasswordError == "";
     }
 
-    private void btnChangePassword_Click(object sender, EventArgs e) {
+    private void btnChangePassword_Click(object? sender, EventArgs e) {
         if (CheckPasswordOk() & CheckConfirmPasswordOk()) {
             byte[] newHashedPassword = HashManager.GetHash(tbNewPassword.Text, out byte[] newSalt);
 

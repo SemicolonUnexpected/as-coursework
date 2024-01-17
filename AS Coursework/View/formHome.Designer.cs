@@ -30,6 +30,7 @@
             lblExperienceRemainder = new Label();
             lblLevelTitle = new Label();
             pnlRank = new Custom_Controls.CustomRectangle();
+            pnl = new Panel();
             lblRank = new Label();
             lblRankTitle = new Label();
             lblUsername = new Label();
@@ -40,14 +41,16 @@
             lblAnswers = new Label();
             pnlLevel.SuspendLayout();
             pnlRank.SuspendLayout();
+            pnl.SuspendLayout();
             pnlAccuracy.SuspendLayout();
             SuspendLayout();
             // 
             // pbUserProfile
             // 
-            pbUserProfile.Anchor = AnchorStyles.Top;
+            pbUserProfile.Anchor = AnchorStyles.None;
             pbUserProfile.BorderColorOne = Color.FromArgb(0, 100, 255);
             pbUserProfile.BorderColorTwo = Color.FromArgb(50, 200, 255);
+            pbUserProfile.BorderStyle = Custom_Controls.PictureFrame.BorderType.Circle;
             pbUserProfile.BorderWidth = 30;
             pbUserProfile.GradientAngle = 45;
             pbUserProfile.GradientRectangle = new Rectangle(0, 0, 350, 350);
@@ -61,7 +64,7 @@
             // 
             // pnlLevel
             // 
-            pnlLevel.Anchor = AnchorStyles.Top;
+            pnlLevel.Anchor = AnchorStyles.None;
             pnlLevel.BackColor = Color.FromArgb(30, 30, 70);
             pnlLevel.BorderColor = Color.White;
             pnlLevel.BorderWidth = 0;
@@ -135,11 +138,11 @@
             // 
             // pnlRank
             // 
-            pnlRank.Anchor = AnchorStyles.Top;
+            pnlRank.Anchor = AnchorStyles.None;
             pnlRank.BackColor = Color.FromArgb(30, 30, 70);
             pnlRank.BorderColor = Color.White;
             pnlRank.BorderWidth = 0;
-            pnlRank.Controls.Add(lblRank);
+            pnlRank.Controls.Add(pnl);
             pnlRank.Controls.Add(lblRankTitle);
             pnlRank.CornerRadius = 20;
             pnlRank.Location = new Point(657, 550);
@@ -149,16 +152,24 @@
             pnlRank.TabIndex = 1;
             pnlRank.Text = "customRectangle1";
             // 
+            // pnl
+            // 
+            pnl.Controls.Add(lblRank);
+            pnl.Location = new Point(0, 82);
+            pnl.Name = "pnl";
+            pnl.Size = new Size(300, 181);
+            pnl.TabIndex = 3;
+            // 
             // lblRank
             // 
             lblRank.AutoEllipsis = true;
             lblRank.AutoSize = true;
-            lblRank.Font = new Font("Bahnschrift", 40F, FontStyle.Regular, GraphicsUnit.Point);
+            lblRank.Font = new Font("Bahnschrift", 25F, FontStyle.Regular, GraphicsUnit.Point);
             lblRank.ForeColor = Color.White;
-            lblRank.Location = new Point(77, 118);
+            lblRank.Location = new Point(80, 6);
             lblRank.Margin = new Padding(25);
             lblRank.Name = "lblRank";
-            lblRank.Size = new Size(117, 96);
+            lblRank.Size = new Size(73, 60);
             lblRank.TabIndex = 2;
             lblRank.Text = "#1";
             // 
@@ -177,7 +188,7 @@
             // 
             // lblUsername
             // 
-            lblUsername.Anchor = AnchorStyles.Top;
+            lblUsername.Anchor = AnchorStyles.None;
             lblUsername.AutoEllipsis = true;
             lblUsername.AutoSize = true;
             lblUsername.Font = new Font("Bahnschrift", 18F, FontStyle.Regular, GraphicsUnit.Point);
@@ -190,7 +201,7 @@
             // 
             // pnlAccuracy
             // 
-            pnlAccuracy.Anchor = AnchorStyles.Top;
+            pnlAccuracy.Anchor = AnchorStyles.None;
             pnlAccuracy.BackColor = Color.FromArgb(30, 30, 70);
             pnlAccuracy.BorderColor = Color.White;
             pnlAccuracy.BorderWidth = 0;
@@ -279,6 +290,8 @@
             pnlLevel.PerformLayout();
             pnlRank.ResumeLayout(false);
             pnlRank.PerformLayout();
+            pnl.ResumeLayout(false);
+            pnl.PerformLayout();
             pnlAccuracy.ResumeLayout(false);
             pnlAccuracy.PerformLayout();
             ResumeLayout(false);
@@ -302,5 +315,6 @@
         private Label lblCorrect;
         private Label lblAnswers;
         private Label lblLevel;
+        private Panel pnl;
     }
 }

@@ -49,6 +49,7 @@ public partial class formMainMenu : Form {
         if (UserFormBaseHeight <= Height) {
             // Hide the scroll bar if the form is big enough and scale the form appropriately
             sb.Hide();
+            UserForm.Height = pnlUserViewHolder.Height;
         }
         else {
             // Show the scroll bar when the form is too small to see the whole user view and scale the form appropriately
@@ -60,11 +61,13 @@ public partial class formMainMenu : Form {
             int thumbHeight = Height - sbRange;
 
             // Ensure the form is not minimised before making this check to avoid an exception
-            if ((ActiveForm as formMaster)?.WindowState != FormWindowState.Minimized)
-                sb.ThumbSize = new Size(sb.ThumbSize.Width, Math.Clamp(thumbHeight, 30, Height - sb.ChannelPadding.Vertical));
+            if ((ActiveForm as formMaster)?.WindowState != FormWindowState.Minimized) sb.ThumbSize = new Size(sb.ThumbSize.Width, Math.Clamp(thumbHeight, 30, Height - sb.ChannelPadding.Vertical));
 
             // Set the scroll bar value to the correct position
             sb.Value = 0;
+
+            // Scale the UserForm
+            UserForm.Height = (int)UserFormBaseHeight!;
         }
 
         UserForm.Width = Width - MINIMISED_MENU_WIDTH;
@@ -86,7 +89,7 @@ public partial class formMainMenu : Form {
         if (_menuMinimised) MinimiseMenu();
         else MaximiseMenu();
     }
-    
+
     private void MinimiseMenu() {
         pnlMenuStrip.Width = MINIMISED_MENU_WIDTH;
 
@@ -170,5 +173,9 @@ public partial class formMainMenu : Form {
         if (UserForm is null) return;
         UserForm.Location = new Point(_menuMinimised ? 0 : -125, -sb.Value);
         Refresh();
+    }
+
+    private void formMainMenu_ResizeEnd(object sender, EventArgs e) {
+        MessageBox.Show("Test");
     }
 }

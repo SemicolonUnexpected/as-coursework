@@ -72,9 +72,8 @@
             pblAppearance = new Custom_Controls.CustomRectangle();
             dtpDateOfBirth = new DateTimePicker();
             lblDateOfBirth = new Label();
-            lblDateOfBirthError = new Label();
+            lblChangeDateOfBirthError = new Label();
             lblGender = new Label();
-            lblGenderError = new Label();
             cbGender = new ComboBox();
             lblUsername = new Label();
             pnlProfilePicture.SuspendLayout();
@@ -94,6 +93,7 @@
             pbUserProfile.Anchor = AnchorStyles.Top;
             pbUserProfile.BorderColorOne = Color.FromArgb(0, 100, 255);
             pbUserProfile.BorderColorTwo = Color.FromArgb(50, 200, 255);
+            pbUserProfile.BorderStyle = Custom_Controls.PictureFrame.BorderType.Circle;
             pbUserProfile.BorderWidth = 30;
             pbUserProfile.GradientAngle = 45;
             pbUserProfile.GradientRectangle = new Rectangle(0, 0, 350, 350);
@@ -867,9 +867,8 @@
             pblAppearance.BorderWidth = 0;
             pblAppearance.Controls.Add(dtpDateOfBirth);
             pblAppearance.Controls.Add(lblDateOfBirth);
-            pblAppearance.Controls.Add(lblDateOfBirthError);
+            pblAppearance.Controls.Add(lblChangeDateOfBirthError);
             pblAppearance.Controls.Add(lblGender);
-            pblAppearance.Controls.Add(lblGenderError);
             pblAppearance.Controls.Add(cbGender);
             pblAppearance.Controls.Add(lblDetailsTitle);
             pblAppearance.CornerRadius = 20;
@@ -907,19 +906,19 @@
             lblDateOfBirth.Text = "Date of birth :";
             lblDateOfBirth.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // lblDateOfBirthError
+            // lblChangeDateOfBirthError
             // 
-            lblDateOfBirthError.Anchor = AnchorStyles.None;
-            lblDateOfBirthError.AutoSize = true;
-            lblDateOfBirthError.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblDateOfBirthError.ForeColor = Color.Red;
-            lblDateOfBirthError.Location = new Point(119, 330);
-            lblDateOfBirthError.Margin = new Padding(0, 15, 0, 15);
-            lblDateOfBirthError.Name = "lblDateOfBirthError";
-            lblDateOfBirthError.Size = new Size(70, 29);
-            lblDateOfBirthError.TabIndex = 11;
-            lblDateOfBirthError.Text = "Error";
-            lblDateOfBirthError.TextAlign = ContentAlignment.MiddleCenter;
+            lblChangeDateOfBirthError.Anchor = AnchorStyles.None;
+            lblChangeDateOfBirthError.AutoSize = true;
+            lblChangeDateOfBirthError.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            lblChangeDateOfBirthError.ForeColor = Color.Red;
+            lblChangeDateOfBirthError.Location = new Point(119, 330);
+            lblChangeDateOfBirthError.Margin = new Padding(0, 15, 0, 15);
+            lblChangeDateOfBirthError.Name = "lblChangeDateOfBirthError";
+            lblChangeDateOfBirthError.Size = new Size(70, 29);
+            lblChangeDateOfBirthError.TabIndex = 11;
+            lblChangeDateOfBirthError.Text = "Error";
+            lblChangeDateOfBirthError.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblGender
             // 
@@ -934,20 +933,6 @@
             lblGender.TabIndex = 4;
             lblGender.Text = "Gender :";
             lblGender.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // lblGenderError
-            // 
-            lblGenderError.Anchor = AnchorStyles.None;
-            lblGenderError.AutoSize = true;
-            lblGenderError.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblGenderError.ForeColor = Color.Red;
-            lblGenderError.Location = new Point(119, 177);
-            lblGenderError.Margin = new Padding(0, 15, 0, 15);
-            lblGenderError.Name = "lblGenderError";
-            lblGenderError.Size = new Size(70, 29);
-            lblGenderError.TabIndex = 8;
-            lblGenderError.Text = "Error";
-            lblGenderError.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // cbGender
             // 
@@ -1046,11 +1031,10 @@
         private Custom_Controls.CustomButton btnChangeUsername;
         private Label lblUsername;
         private Label lblGender;
-        private Label lblGenderError;
         private ComboBox cbGender;
         private DateTimePicker dtpDateOfBirth;
         private Label lblDateOfBirth;
-        private Label lblDateOfBirthError;
+        private Label lblChangeDateOfBirthError;
         private Label lblChangeForename;
         private Custom_Controls.CustomTextbox tbNewForename;
         private Custom_Controls.CustomButton btnChangeForename;

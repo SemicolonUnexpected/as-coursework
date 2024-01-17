@@ -25,6 +25,11 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Images.resx</DependentUpon>
     </Compile>
+    <Compile Update="Resources\QuizImages.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>QuizImages.resx</DependentUpon>
+    </Compile>
     <Compile Update="Resources\UserProfileImages.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -44,14 +49,14 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Images.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Update="Resources\QuizImages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>QuizImages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="Resources\UserProfileImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>UserProfileImages.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="View\Quiz\" />
   </ItemGroup>
 
 </Project>
