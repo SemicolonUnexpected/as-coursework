@@ -31,13 +31,15 @@
             lblQuestionTitle = new Label();
             lblQuestionText = new Label();
             pb = new Custom_Controls.PicturePanel();
-            btnChangeForename = new Custom_Controls.CustomButton();
+            btnSubmitNext = new Custom_Controls.CustomButton();
+            lblCorrectness = new Label();
             pnlAnswer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbSpecialCharacters).BeginInit();
             SuspendLayout();
             // 
             // customTextbox1
             // 
+            customTextbox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             customTextbox1.BackColor = Color.FromArgb(20, 20, 50);
             customTextbox1.BorderColor = Color.White;
             customTextbox1.BorderFocusColor = Color.White;
@@ -46,25 +48,25 @@
             customTextbox1.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             customTextbox1.ForeColor = Color.White;
             customTextbox1.IsMultiline = false;
-            customTextbox1.Location = new Point(107, 39);
-            customTextbox1.Margin = new Padding(25);
+            customTextbox1.Location = new Point(100, 9);
+            customTextbox1.Margin = new Padding(10);
             customTextbox1.Name = "customTextbox1";
             customTextbox1.Padding = new Padding(7);
             customTextbox1.PlaceholderText = "";
             customTextbox1.PlaceholderTextColor = Color.White;
             customTextbox1.ShortcutEnabled = true;
-            customTextbox1.Size = new Size(443, 49);
+            customTextbox1.Size = new Size(490, 49);
             customTextbox1.TabIndex = 0;
             customTextbox1.UsePasswordChar = false;
             // 
             // lblAnswerTitle
             // 
-            lblAnswerTitle.Anchor = AnchorStyles.Left;
+            lblAnswerTitle.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lblAnswerTitle.AutoSize = true;
             lblAnswerTitle.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lblAnswerTitle.ForeColor = Color.White;
-            lblAnswerTitle.Location = new Point(25, 39);
-            lblAnswerTitle.Margin = new Padding(25, 0, 25, 0);
+            lblAnswerTitle.Location = new Point(10, 17);
+            lblAnswerTitle.Margin = new Padding(10);
             lblAnswerTitle.MaximumSize = new Size(450, 0);
             lblAnswerTitle.Name = "lblAnswerTitle";
             lblAnswerTitle.Size = new Size(70, 34);
@@ -75,22 +77,22 @@
             // pnlAnswer
             // 
             pnlAnswer.Anchor = AnchorStyles.None;
-            pnlAnswer.Controls.Add(btnChangeForename);
+            pnlAnswer.Controls.Add(btnSubmitNext);
             pnlAnswer.Controls.Add(pbSpecialCharacters);
             pnlAnswer.Controls.Add(lblAnswerTitle);
             pnlAnswer.Controls.Add(customTextbox1);
             pnlAnswer.Location = new Point(87, 657);
             pnlAnswer.Margin = new Padding(25);
             pnlAnswer.Name = "pnlAnswer";
-            pnlAnswer.Size = new Size(800, 100);
+            pnlAnswer.Size = new Size(800, 69);
             pnlAnswer.TabIndex = 12;
             // 
             // pbSpecialCharacters
             // 
-            pbSpecialCharacters.Anchor = AnchorStyles.None;
+            pbSpecialCharacters.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             pbSpecialCharacters.Image = (Image)resources.GetObject("pbSpecialCharacters.Image");
-            pbSpecialCharacters.Location = new Point(617, 39);
-            pbSpecialCharacters.Margin = new Padding(6);
+            pbSpecialCharacters.Location = new Point(610, 17);
+            pbSpecialCharacters.Margin = new Padding(10);
             pbSpecialCharacters.Name = "pbSpecialCharacters";
             pbSpecialCharacters.Size = new Size(35, 35);
             pbSpecialCharacters.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -125,7 +127,7 @@
             lblQuestionText.Name = "lblQuestionText";
             lblQuestionText.Size = new Size(800, 100);
             lblQuestionText.TabIndex = 11;
-            lblQuestionText.Text = "Question text";
+            lblQuestionText.Text = "Question text\r\nAnd another test line\r\nThird line\r\n\r\n";
             lblQuestionText.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pb
@@ -140,26 +142,42 @@
             pb.TabIndex = 13;
             pb.Text = "picturePanel1";
             // 
-            // btnChangeForename
+            // btnSubmitNext
             // 
-            btnChangeForename.Anchor = AnchorStyles.Right;
-            btnChangeForename.BackColor = Color.FromArgb(0, 150, 255);
-            btnChangeForename.BorderColor = Color.White;
-            btnChangeForename.BorderWidth = 2;
-            btnChangeForename.CornerRadius = 20;
-            btnChangeForename.FlatAppearance.BorderSize = 0;
-            btnChangeForename.FlatStyle = FlatStyle.Popup;
-            btnChangeForename.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            btnChangeForename.ForeColor = Color.BlanchedAlmond;
-            btnChangeForename.Image = null;
-            btnChangeForename.ImageSize = new Size(150, 40);
-            btnChangeForename.Location = new Point(659, 24);
-            btnChangeForename.Margin = new Padding(25, 0, 25, 0);
-            btnChangeForename.Name = "btnChangeForename";
-            btnChangeForename.Size = new Size(116, 50);
-            btnChangeForename.TabIndex = 14;
-            btnChangeForename.Text = "Submit";
-            btnChangeForename.UseVisualStyleBackColor = false;
+            btnSubmitNext.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnSubmitNext.BackColor = Color.FromArgb(0, 150, 255);
+            btnSubmitNext.BorderColor = Color.White;
+            btnSubmitNext.BorderWidth = 2;
+            btnSubmitNext.CornerRadius = 20;
+            btnSubmitNext.FlatAppearance.BorderSize = 0;
+            btnSubmitNext.FlatStyle = FlatStyle.Popup;
+            btnSubmitNext.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            btnSubmitNext.ForeColor = Color.BlanchedAlmond;
+            btnSubmitNext.Image = null;
+            btnSubmitNext.ImageSize = new Size(150, 40);
+            btnSubmitNext.Location = new Point(665, 8);
+            btnSubmitNext.Margin = new Padding(10);
+            btnSubmitNext.Name = "btnSubmitNext";
+            btnSubmitNext.Size = new Size(116, 50);
+            btnSubmitNext.TabIndex = 14;
+            btnSubmitNext.Text = "Submit";
+            btnSubmitNext.UseVisualStyleBackColor = false;
+            btnSubmitNext.Click += btnSubmitNext_Click;
+            // 
+            // lblCorrectness
+            // 
+            lblCorrectness.Anchor = AnchorStyles.Left;
+            lblCorrectness.AutoSize = true;
+            lblCorrectness.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            lblCorrectness.ForeColor = Color.White;
+            lblCorrectness.Location = new Point(429, 741);
+            lblCorrectness.Margin = new Padding(25, 0, 25, 0);
+            lblCorrectness.MaximumSize = new Size(450, 0);
+            lblCorrectness.Name = "lblCorrectness";
+            lblCorrectness.Size = new Size(109, 34);
+            lblCorrectness.TabIndex = 11;
+            lblCorrectness.Text = "Correct";
+            lblCorrectness.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // TextQuestion
             // 
@@ -169,6 +187,7 @@
             ClientSize = new Size(975, 800);
             Controls.Add(pb);
             Controls.Add(pnlAnswer);
+            Controls.Add(lblCorrectness);
             Controls.Add(lblQuestionText);
             Controls.Add(lblQuestionTitle);
             FormBorderStyle = FormBorderStyle.None;
@@ -190,6 +209,7 @@
         private Label lblQuestionTitle;
         private Label lblQuestionText;
         private Custom_Controls.PicturePanel pb;
-        private Custom_Controls.CustomButton btnChangeForename;
+        private Custom_Controls.CustomButton btnSubmitNext;
+        private Label lblCorrectness;
     }
 }
