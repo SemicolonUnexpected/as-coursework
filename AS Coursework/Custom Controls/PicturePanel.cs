@@ -7,7 +7,7 @@ namespace AS_Coursework.Custom_Controls;
 public partial class PicturePanel : Control {
 
     private Image? _image;
-    [Category("Image")]
+    [Category("Image"), Description("The image that will be displayed in the picture panel. The image portion is automatically updated when the image is set")]
     public Image? Image {
         get => _image;
         set {

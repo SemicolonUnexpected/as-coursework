@@ -23,18 +23,17 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TextQuestion));
             customTextbox1 = new Custom_Controls.CustomTextbox();
             lblAnswerTitle = new Label();
             pnlAnswer = new Panel();
-            pbSpecialCharacters = new PictureBox();
+            btnSubmitNext = new Custom_Controls.CustomButton();
+            pbIsCorrect = new PictureBox();
             lblQuestionTitle = new Label();
             lblQuestionText = new Label();
             pb = new Custom_Controls.PicturePanel();
-            btnSubmitNext = new Custom_Controls.CustomButton();
-            lblCorrectness = new Label();
+            lblIsCorrect = new Label();
             pnlAnswer.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbSpecialCharacters).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pbIsCorrect).BeginInit();
             SuspendLayout();
             // 
             // customTextbox1
@@ -78,26 +77,47 @@
             // 
             pnlAnswer.Anchor = AnchorStyles.None;
             pnlAnswer.Controls.Add(btnSubmitNext);
-            pnlAnswer.Controls.Add(pbSpecialCharacters);
+            pnlAnswer.Controls.Add(pbIsCorrect);
             pnlAnswer.Controls.Add(lblAnswerTitle);
             pnlAnswer.Controls.Add(customTextbox1);
-            pnlAnswer.Location = new Point(87, 657);
+            pnlAnswer.Location = new Point(87, 625);
             pnlAnswer.Margin = new Padding(25);
             pnlAnswer.Name = "pnlAnswer";
             pnlAnswer.Size = new Size(800, 69);
             pnlAnswer.TabIndex = 12;
             // 
-            // pbSpecialCharacters
+            // btnSubmitNext
             // 
-            pbSpecialCharacters.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            pbSpecialCharacters.Image = (Image)resources.GetObject("pbSpecialCharacters.Image");
-            pbSpecialCharacters.Location = new Point(610, 17);
-            pbSpecialCharacters.Margin = new Padding(10);
-            pbSpecialCharacters.Name = "pbSpecialCharacters";
-            pbSpecialCharacters.Size = new Size(35, 35);
-            pbSpecialCharacters.SizeMode = PictureBoxSizeMode.StretchImage;
-            pbSpecialCharacters.TabIndex = 12;
-            pbSpecialCharacters.TabStop = false;
+            btnSubmitNext.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnSubmitNext.BackColor = Color.FromArgb(0, 150, 255);
+            btnSubmitNext.BorderColor = Color.White;
+            btnSubmitNext.BorderWidth = 2;
+            btnSubmitNext.CornerRadius = 20;
+            btnSubmitNext.FlatAppearance.BorderSize = 0;
+            btnSubmitNext.FlatStyle = FlatStyle.Popup;
+            btnSubmitNext.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            btnSubmitNext.ForeColor = Color.BlanchedAlmond;
+            btnSubmitNext.Image = null;
+            btnSubmitNext.ImageSize = new Size(150, 40);
+            btnSubmitNext.Location = new Point(665, 8);
+            btnSubmitNext.Margin = new Padding(10);
+            btnSubmitNext.Name = "btnSubmitNext";
+            btnSubmitNext.Size = new Size(116, 50);
+            btnSubmitNext.TabIndex = 14;
+            btnSubmitNext.Text = "Submit";
+            btnSubmitNext.UseVisualStyleBackColor = false;
+            btnSubmitNext.Click += btnSubmitNext_Click;
+            // 
+            // pbIsCorrect
+            // 
+            pbIsCorrect.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            pbIsCorrect.Location = new Point(610, 17);
+            pbIsCorrect.Margin = new Padding(10);
+            pbIsCorrect.Name = "pbIsCorrect";
+            pbIsCorrect.Size = new Size(35, 35);
+            pbIsCorrect.SizeMode = PictureBoxSizeMode.StretchImage;
+            pbIsCorrect.TabIndex = 12;
+            pbIsCorrect.TabStop = false;
             // 
             // lblQuestionTitle
             // 
@@ -122,12 +142,12 @@
             lblQuestionText.ForeColor = Color.White;
             lblQuestionText.Location = new Point(87, 532);
             lblQuestionText.Margin = new Padding(25, 25, 25, 0);
-            lblQuestionText.MaximumSize = new Size(800, 100);
-            lblQuestionText.MinimumSize = new Size(800, 100);
+            lblQuestionText.MaximumSize = new Size(800, 68);
+            lblQuestionText.MinimumSize = new Size(800, 68);
             lblQuestionText.Name = "lblQuestionText";
-            lblQuestionText.Size = new Size(800, 100);
+            lblQuestionText.Size = new Size(800, 68);
             lblQuestionText.TabIndex = 11;
-            lblQuestionText.Text = "Question text\r\nAnd another test line\r\nThird line\r\n\r\n";
+            lblQuestionText.Text = "Two lines of question text. The questions wont be much longer than this hopefully";
             lblQuestionText.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pb
@@ -142,42 +162,21 @@
             pb.TabIndex = 13;
             pb.Text = "picturePanel1";
             // 
-            // btnSubmitNext
+            // lblIsCorrect
             // 
-            btnSubmitNext.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btnSubmitNext.BackColor = Color.FromArgb(0, 150, 255);
-            btnSubmitNext.BorderColor = Color.White;
-            btnSubmitNext.BorderWidth = 2;
-            btnSubmitNext.CornerRadius = 20;
-            btnSubmitNext.FlatAppearance.BorderSize = 0;
-            btnSubmitNext.FlatStyle = FlatStyle.Popup;
-            btnSubmitNext.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            btnSubmitNext.ForeColor = Color.BlanchedAlmond;
-            btnSubmitNext.Image = null;
-            btnSubmitNext.ImageSize = new Size(150, 40);
-            btnSubmitNext.Location = new Point(665, 8);
-            btnSubmitNext.Margin = new Padding(10);
-            btnSubmitNext.Name = "btnSubmitNext";
-            btnSubmitNext.Size = new Size(116, 50);
-            btnSubmitNext.TabIndex = 14;
-            btnSubmitNext.Text = "Submit";
-            btnSubmitNext.UseVisualStyleBackColor = false;
-            btnSubmitNext.Click += btnSubmitNext_Click;
-            // 
-            // lblCorrectness
-            // 
-            lblCorrectness.Anchor = AnchorStyles.Left;
-            lblCorrectness.AutoSize = true;
-            lblCorrectness.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lblCorrectness.ForeColor = Color.White;
-            lblCorrectness.Location = new Point(429, 741);
-            lblCorrectness.Margin = new Padding(25, 0, 25, 0);
-            lblCorrectness.MaximumSize = new Size(450, 0);
-            lblCorrectness.Name = "lblCorrectness";
-            lblCorrectness.Size = new Size(109, 34);
-            lblCorrectness.TabIndex = 11;
-            lblCorrectness.Text = "Correct";
-            lblCorrectness.TextAlign = ContentAlignment.MiddleCenter;
+            lblIsCorrect.Anchor = AnchorStyles.None;
+            lblIsCorrect.AutoSize = true;
+            lblIsCorrect.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            lblIsCorrect.ForeColor = Color.White;
+            lblIsCorrect.Location = new Point(87, 718);
+            lblIsCorrect.Margin = new Padding(25, 25, 25, 0);
+            lblIsCorrect.MaximumSize = new Size(800, 68);
+            lblIsCorrect.MinimumSize = new Size(800, 68);
+            lblIsCorrect.Name = "lblIsCorrect";
+            lblIsCorrect.Size = new Size(800, 68);
+            lblIsCorrect.TabIndex = 11;
+            lblIsCorrect.Text = "Incorrect. Better luck next time. The correct answer was: this very very long sentence to stress test the textbox size\r\n";
+            lblIsCorrect.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // TextQuestion
             // 
@@ -187,7 +186,7 @@
             ClientSize = new Size(975, 800);
             Controls.Add(pb);
             Controls.Add(pnlAnswer);
-            Controls.Add(lblCorrectness);
+            Controls.Add(lblIsCorrect);
             Controls.Add(lblQuestionText);
             Controls.Add(lblQuestionTitle);
             FormBorderStyle = FormBorderStyle.None;
@@ -195,7 +194,7 @@
             Text = "TextQuestion";
             pnlAnswer.ResumeLayout(false);
             pnlAnswer.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pbSpecialCharacters).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pbIsCorrect).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -205,11 +204,11 @@
         private Custom_Controls.CustomTextbox customTextbox1;
         private Label lblAnswerTitle;
         private Panel pnlAnswer;
-        private PictureBox pbSpecialCharacters;
+        private PictureBox pbIsCorrect;
         private Label lblQuestionTitle;
         private Label lblQuestionText;
         private Custom_Controls.PicturePanel pb;
         private Custom_Controls.CustomButton btnSubmitNext;
-        private Label lblCorrectness;
+        private Label lblIsCorrect;
     }
 }

@@ -22,5 +22,13 @@ namespace AS_Coursework.View {
         private void lblUsername_Click(object sender, EventArgs e) {
 
         }
+
+        private void lblQuizInfo_Click(object sender, EventArgs e) {
+
+        }
+
+        private void customButton3_Click(object sender, EventArgs e) {
+
+        }
     }
 }

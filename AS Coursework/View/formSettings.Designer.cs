@@ -35,7 +35,6 @@
             lblChangeSurnameError = new Label();
             lblChangeForename = new Label();
             tbNewForename = new Custom_Controls.CustomTextbox();
-            btnChangeForename = new Custom_Controls.CustomButton();
             lblChangeForenameError = new Label();
             lblAccountTitle = new Label();
             lblChangeEmailTitle = new Label();
@@ -76,6 +75,7 @@
             lblGender = new Label();
             cbGender = new ComboBox();
             lblUsername = new Label();
+            btnChangeForename = new Custom_Controls.CustomButton();
             pnlProfilePicture.SuspendLayout();
             pnlAccount.SuspendLayout();
             pnlDangerZone.SuspendLayout();
@@ -303,28 +303,6 @@
             tbNewForename.Size = new Size(344, 48);
             tbNewForename.TabIndex = 11;
             tbNewForename.UsePasswordChar = false;
-            // 
-            // btnChangeForename
-            // 
-            btnChangeForename.Anchor = AnchorStyles.Right;
-            btnChangeForename.BackColor = Color.FromArgb(0, 150, 255);
-            btnChangeForename.BorderColor = Color.White;
-            btnChangeForename.BorderWidth = 2;
-            btnChangeForename.CornerRadius = 20;
-            btnChangeForename.FlatAppearance.BorderSize = 0;
-            btnChangeForename.FlatStyle = FlatStyle.Popup;
-            btnChangeForename.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            btnChangeForename.ForeColor = Color.BlanchedAlmond;
-            btnChangeForename.Image = null;
-            btnChangeForename.ImageSize = new Size(150, 40);
-            btnChangeForename.Location = new Point(419, 622);
-            btnChangeForename.Margin = new Padding(25, 0, 25, 0);
-            btnChangeForename.Name = "btnChangeForename";
-            btnChangeForename.Size = new Size(100, 50);
-            btnChangeForename.TabIndex = 9;
-            btnChangeForename.Text = "Done";
-            btnChangeForename.UseVisualStyleBackColor = false;
-            btnChangeForename.Click += btnChangeForename_Click;
             // 
             // lblChangeForenameError
             // 
@@ -963,6 +941,28 @@
             lblUsername.Text = "Username is far too long fo this";
             lblUsername.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // btnChangeForename
+            // 
+            btnChangeForename.Anchor = AnchorStyles.Right;
+            btnChangeForename.BackColor = Color.FromArgb(0, 150, 255);
+            btnChangeForename.BorderColor = Color.White;
+            btnChangeForename.BorderWidth = 2;
+            btnChangeForename.CornerRadius = 20;
+            btnChangeForename.FlatAppearance.BorderSize = 0;
+            btnChangeForename.FlatStyle = FlatStyle.Popup;
+            btnChangeForename.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            btnChangeForename.ForeColor = Color.BlanchedAlmond;
+            btnChangeForename.Image = null;
+            btnChangeForename.ImageSize = new Size(150, 40);
+            btnChangeForename.Location = new Point(419, 622);
+            btnChangeForename.Margin = new Padding(25, 0, 25, 0);
+            btnChangeForename.Name = "btnChangeForename";
+            btnChangeForename.Size = new Size(100, 50);
+            btnChangeForename.TabIndex = 9;
+            btnChangeForename.Text = "Done";
+            btnChangeForename.UseVisualStyleBackColor = false;
+            btnChangeForename.Click += btnChangeForename_Click;
+            // 
             // formSettings
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -1037,7 +1037,6 @@
         private Label lblChangeDateOfBirthError;
         private Label lblChangeForename;
         private Custom_Controls.CustomTextbox tbNewForename;
-        private Custom_Controls.CustomButton btnChangeForename;
         private Label lblChangeForenameError;
         private Label lblChangeEmailTitle;
         private Custom_Controls.CustomTextbox tbNewEmail;
@@ -1051,5 +1050,6 @@
         private Label lblSurnameDetail;
         private Label lblForenameDetail;
         private Label lblEmailDetail;
+        private Custom_Controls.CustomButton btnChangeForename;
     }
 }
