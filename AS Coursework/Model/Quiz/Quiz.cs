@@ -1,8 +1,8 @@
-﻿namespace AS_Coursework.Model.Quiz; 
-internal class Quiz {
-    private List<Question> _questions;
-    private QuizStyle _quizStyle;
-    private const int QUESTION_COUNT = 1;
+﻿namespace AS_Coursework.Model.Quiz;
+public class Quiz {
+    private readonly QuizStyle _quizStyle;
+    private readonly List<Question> _questions;
+    private int _index = -1;
 
     public Quiz(QuizStyle quizStyle) {
         _quizStyle = quizStyle;
@@ -10,33 +10,29 @@ internal class Quiz {
         PopulateQuiz(quizStyle);
     }
 
-#pragma warning disable
-    private void PopulateQuiz(QuizStyle quizStyle) {
-        _questions = quizStyle switch {
-            QuizStyle.All => GenerateAllQuestions(QUESTION_COUNT),
-            QuizStyle.MultipleChoice => GenerateMultipleChoice(QUESTION_COUNT),
-            QuizStyle.Text => GenerateText(QUESTION_COUNT),
-            QuizStyle.FillTheBlanks => GenerateFillTheBlanks(QUESTION_COUNT),
-        };
-        
-        List<Question> GenerateAllQuestions(int questionCount) {
-            throw new NotImplementedException();
-        }
+    public int Length { get => _questions.Count; }
 
-        List<Question> GenerateMultipleChoice(int questionCount) {
-            throw new NotImplementedException();
-        }
-
-        List<Question> GenerateText(int questionCount) {
-            throw new NotImplementedException();
-        }
-
-        List<Question> GenerateFillTheBlanks(int questionCount) {
-            throw new NotImplementedException();
-        }
+    public Question NextQuestion() {
+        _index += 1;
+        return _questions[_index];
     }
-#pragma warning enable
+/*
+    private List<Question> PopulateQuiz(QuizStyle quizStyle, int questionCount) => quizStyle switch {
+        QuizStyle.All => PickAll(questionCount),
+        QuizStyle.MultipleChoice => PickMultipleChoice(questionCount),
+        QuizStyle.Text => PickText(questionCount),
+        QuizStyle.FillTheBlanks => PickFillTheBlanks(questionCount),
+        QuizStyle.FlashCards => PickFlashcards(questionCount),
+        QuizStyle.Equations => PickEquations(questionCount),
+    };
 
+    private List<Question> PickAll(int questionCount) { }
+    private List<Question> PickMultipleChoice(int questionCount) { }
+    private List<Question> PickText(int  questionCount) { }
+    private List<Question> PickFillTheBlanks(int questionCount) { }
+    private List<Question> PickFlashcards(int questionCount) { }
+    private List<Question> PickEquations(int questionCount) { }
+*/
     // The modern variation of the Fisher-Yates Shuffle
     private void ShuffleList<T>(List<T> list) {
         Random random = new();
@@ -48,14 +44,12 @@ internal class Quiz {
         }
     }
 
-    public Question NextQuestion() {
-        return null;
-    }
-
     public enum QuizStyle {
         All,
         MultipleChoice,
         Text,
-        FillTheBlanks
+        FillTheBlanks,
+        FlashCards,
+        Equations
     }
 }

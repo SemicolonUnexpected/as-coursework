@@ -1,8 +1,8 @@
 ﻿namespace AS_Coursework.Model.Quiz; 
-public class QuizQuestionEventArgs : EventArgs {
-    public bool Correct { init; get; }
+public class QuizQuestionEventArgs<TAnswer> : EventArgs {
+    public TAnswer Answer { init; get; }
 
-    public QuizQuestionEventArgs(bool correct) {
-        Correct = correct;
+    public QuizQuestionEventArgs(TAnswer answer) {
+        Answer = answer;
     }
 }

@@ -1,5 +1,5 @@
 ﻿namespace AS_Coursework.Model.Quiz; 
-internal abstract class Question<TAnswer> {
+public abstract class Question {
 
     public string QuestionName { get; init; }
 
@@ -7,6 +7,6 @@ internal abstract class Question<TAnswer> {
         QuestionName = questionName;
     }
 
-    public abstract IQuestionForm DisplayQuestion();
-    public abstract bool AnswerCorrect(TAnswer answer);
+    public abstract bool CheckAnswer(TAnswer answer);
+    public abstract Form DisplayQuestion();
 }

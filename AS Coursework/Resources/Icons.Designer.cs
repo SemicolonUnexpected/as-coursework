@@ -73,6 +73,16 @@ namespace AS_Coursework.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cross {
+            get {
+                object obj = ResourceManager.GetObject("cross", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Eye {
             get {
                 object obj = ResourceManager.GetObject("Eye", resourceCulture);
@@ -166,6 +176,16 @@ namespace AS_Coursework.Resources {
         internal static System.Drawing.Bitmap Sign_out {
             get {
                 object obj = ResourceManager.GetObject("Sign_out", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap swap {
+            get {
+                object obj = ResourceManager.GetObject("swap", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

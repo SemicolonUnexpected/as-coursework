@@ -1,4 +1,4 @@
-﻿namespace AS_Coursework.View {
+﻿namespace AS_Coursework.View.QuizView {
     partial class formQuizMenu {
         /// <summary>
         /// Required designer variable.
@@ -20,15 +20,15 @@
 
         /// <summary>
         /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
+        /// the contents of this m
         /// </summary>
         private void InitializeComponent() {
             lblUsername = new Label();
             pbUserProfile = new Custom_Controls.PictureFrame();
             pnlUserProfile = new Panel();
             lblQuizInfo = new Label();
-            btnStartQuizAllQuestions = new Custom_Controls.CustomButton();
-            customButton1 = new Custom_Controls.CustomButton();
+            btnAllQuestions = new Custom_Controls.CustomButton();
+            btnEquations = new Custom_Controls.CustomButton();
             btnFlashcards = new Custom_Controls.CustomButton();
             btnTextQuestions = new Custom_Controls.CustomButton();
             btnFillTheBlanks = new Custom_Controls.CustomButton();
@@ -95,49 +95,49 @@
             lblQuizInfo.TabIndex = 6;
             lblQuizInfo.Text = "Welcome to the quiz. Select a quiz below to begin. You gain expeience for each question you answer correctly";
             lblQuizInfo.TextAlign = ContentAlignment.MiddleCenter;
-            lblQuizInfo.Click += lblQuizInfo_Click;
             // 
-            // btnStartQuizAllQuestions
+            // btnAllQuestions
             // 
-            btnStartQuizAllQuestions.Anchor = AnchorStyles.Right;
-            btnStartQuizAllQuestions.BackColor = Color.FromArgb(0, 150, 255);
-            btnStartQuizAllQuestions.BorderColor = Color.White;
-            btnStartQuizAllQuestions.BorderWidth = 2;
-            btnStartQuizAllQuestions.CornerRadius = 20;
-            btnStartQuizAllQuestions.FlatAppearance.BorderSize = 0;
-            btnStartQuizAllQuestions.FlatStyle = FlatStyle.Popup;
-            btnStartQuizAllQuestions.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            btnStartQuizAllQuestions.ForeColor = Color.BlanchedAlmond;
-            btnStartQuizAllQuestions.Image = null;
-            btnStartQuizAllQuestions.ImageSize = new Size(150, 40);
-            btnStartQuizAllQuestions.Location = new Point(502, 343);
-            btnStartQuizAllQuestions.Margin = new Padding(25);
-            btnStartQuizAllQuestions.Name = "btnStartQuizAllQuestions";
-            btnStartQuizAllQuestions.Size = new Size(250, 75);
-            btnStartQuizAllQuestions.TabIndex = 10;
-            btnStartQuizAllQuestions.Text = "All questions";
-            btnStartQuizAllQuestions.UseVisualStyleBackColor = false;
+            btnAllQuestions.Anchor = AnchorStyles.Right;
+            btnAllQuestions.BackColor = Color.FromArgb(0, 150, 255);
+            btnAllQuestions.BorderColor = Color.White;
+            btnAllQuestions.BorderWidth = 2;
+            btnAllQuestions.CornerRadius = 20;
+            btnAllQuestions.FlatAppearance.BorderSize = 0;
+            btnAllQuestions.FlatStyle = FlatStyle.Popup;
+            btnAllQuestions.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAllQuestions.ForeColor = Color.BlanchedAlmond;
+            btnAllQuestions.Image = null;
+            btnAllQuestions.ImageSize = new Size(150, 40);
+            btnAllQuestions.Location = new Point(502, 343);
+            btnAllQuestions.Margin = new Padding(25);
+            btnAllQuestions.Name = "btnAllQuestions";
+            btnAllQuestions.Size = new Size(250, 75);
+            btnAllQuestions.TabIndex = 0;
+            btnAllQuestions.Text = "All questions";
+            btnAllQuestions.UseVisualStyleBackColor = false;
+            btnAllQuestions.Click += btnAllQuestions_Click;
             // 
-            // customButton1
+            // btnEquations
             // 
-            customButton1.Anchor = AnchorStyles.Right;
-            customButton1.BackColor = Color.FromArgb(0, 150, 255);
-            customButton1.BorderColor = Color.White;
-            customButton1.BorderWidth = 2;
-            customButton1.CornerRadius = 20;
-            customButton1.FlatAppearance.BorderSize = 0;
-            customButton1.FlatStyle = FlatStyle.Popup;
-            customButton1.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            customButton1.ForeColor = Color.BlanchedAlmond;
-            customButton1.Image = null;
-            customButton1.ImageSize = new Size(150, 40);
-            customButton1.Location = new Point(802, 593);
-            customButton1.Margin = new Padding(25);
-            customButton1.Name = "customButton1";
-            customButton1.Size = new Size(250, 75);
-            customButton1.TabIndex = 11;
-            customButton1.Text = "Done";
-            customButton1.UseVisualStyleBackColor = false;
+            btnEquations.Anchor = AnchorStyles.Right;
+            btnEquations.BackColor = Color.FromArgb(0, 150, 255);
+            btnEquations.BorderColor = Color.White;
+            btnEquations.BorderWidth = 2;
+            btnEquations.CornerRadius = 20;
+            btnEquations.FlatAppearance.BorderSize = 0;
+            btnEquations.FlatStyle = FlatStyle.Popup;
+            btnEquations.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            btnEquations.ForeColor = Color.BlanchedAlmond;
+            btnEquations.Image = null;
+            btnEquations.ImageSize = new Size(150, 40);
+            btnEquations.Location = new Point(802, 593);
+            btnEquations.Margin = new Padding(25);
+            btnEquations.Name = "btnEquations";
+            btnEquations.Size = new Size(250, 75);
+            btnEquations.TabIndex = 5;
+            btnEquations.Text = "Equations";
+            btnEquations.UseVisualStyleBackColor = false;
             // 
             // btnFlashcards
             // 
@@ -156,7 +156,7 @@
             btnFlashcards.Margin = new Padding(25);
             btnFlashcards.Name = "btnFlashcards";
             btnFlashcards.Size = new Size(250, 75);
-            btnFlashcards.TabIndex = 12;
+            btnFlashcards.TabIndex = 1;
             btnFlashcards.Text = "Flashcards";
             btnFlashcards.UseVisualStyleBackColor = false;
             // 
@@ -177,10 +177,9 @@
             btnTextQuestions.Margin = new Padding(25);
             btnTextQuestions.Name = "btnTextQuestions";
             btnTextQuestions.Size = new Size(250, 75);
-            btnTextQuestions.TabIndex = 13;
+            btnTextQuestions.TabIndex = 2;
             btnTextQuestions.Text = "Typing";
             btnTextQuestions.UseVisualStyleBackColor = false;
-            btnTextQuestions.Click += customButton3_Click;
             // 
             // btnFillTheBlanks
             // 
@@ -199,7 +198,7 @@
             btnFillTheBlanks.Margin = new Padding(25);
             btnFillTheBlanks.Name = "btnFillTheBlanks";
             btnFillTheBlanks.Size = new Size(250, 75);
-            btnFillTheBlanks.TabIndex = 14;
+            btnFillTheBlanks.TabIndex = 3;
             btnFillTheBlanks.Text = "Fill the blanks";
             btnFillTheBlanks.UseVisualStyleBackColor = false;
             // 
@@ -220,7 +219,7 @@
             btnMultipleChoiceQuestions.Margin = new Padding(25);
             btnMultipleChoiceQuestions.Name = "btnMultipleChoiceQuestions";
             btnMultipleChoiceQuestions.Size = new Size(250, 75);
-            btnMultipleChoiceQuestions.TabIndex = 15;
+            btnMultipleChoiceQuestions.TabIndex = 4;
             btnMultipleChoiceQuestions.Text = "Multiple choice";
             btnMultipleChoiceQuestions.UseVisualStyleBackColor = false;
             // 
@@ -234,14 +233,13 @@
             Controls.Add(btnFillTheBlanks);
             Controls.Add(btnTextQuestions);
             Controls.Add(btnFlashcards);
-            Controls.Add(customButton1);
-            Controls.Add(btnStartQuizAllQuestions);
+            Controls.Add(btnEquations);
+            Controls.Add(btnAllQuestions);
             Controls.Add(lblQuizInfo);
             Controls.Add(pnlUserProfile);
             FormBorderStyle = FormBorderStyle.None;
             Name = "formQuizMenu";
             Text = "formUserHome";
-            Load += formQuizMenu_Load;
             pnlUserProfile.ResumeLayout(false);
             pnlUserProfile.PerformLayout();
             ResumeLayout(false);
@@ -254,8 +252,8 @@
         private Custom_Controls.PictureFrame pbUserProfile;
         private Panel pnlUserProfile;
         private Label lblQuizInfo;
-        private Custom_Controls.CustomButton btnStartQuizAllQuestions;
-        private Custom_Controls.CustomButton customButton1;
+        private Custom_Controls.CustomButton btnAllQuestions;
+        private Custom_Controls.CustomButton btnEquations;
         private Custom_Controls.CustomButton btnFlashcards;
         private Custom_Controls.CustomButton btnTextQuestions;
         private Custom_Controls.CustomButton btnFillTheBlanks;

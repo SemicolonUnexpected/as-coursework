@@ -8,9 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AS_Coursework.View {
-    public partial class formQuiz : Form {
-        public formQuiz() {
+namespace AS_Coursework.View.QuizView {
+    public partial class formEquationQuestion : Form {
+        public formEquationQuestion() {
             InitializeComponent();
         }
     }

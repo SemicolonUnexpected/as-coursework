@@ -1,7 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 
 namespace AS_Coursework.Model.Quiz; 
-internal class TextQuestion : Question<string> {
+public class TextQuestion : Question {
     public string CorrectAnswer { get; init; }
     public Regex CorrectAnswerRegex { get; init; }
 
@@ -10,11 +10,15 @@ internal class TextQuestion : Question<string> {
         CorrectAnswerRegex = correctAnswerRegex;
     }
 
-    public override IQuestionForm DisplayQuestion() {
+    public override Form DisplayQuestion() {
         throw new NotImplementedException();
     }
 
-    public override bool AnswerCorrect(string answer) {
+    public override bool AnswerCorrect<string>(string answer) {
         return CorrectAnswerRegex.IsMatch(answer);
+    }
+
+    public override bool AnswerCorrect<TAnswer>(TAnswer answer) {
+        throw new NotImplementedException();
     }
 }
