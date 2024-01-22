@@ -1,2 +1,2 @@
-# AS-Coursework
+# AS Coursework
 I hate AS Coursework
