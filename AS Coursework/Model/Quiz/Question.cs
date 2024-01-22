@@ -7,6 +7,5 @@ public abstract class Question {
         QuestionName = questionName;
     }
 
-    public abstract bool CheckAnswer(TAnswer answer);
     public abstract Form DisplayQuestion();
 }

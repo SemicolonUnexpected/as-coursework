@@ -2,19 +2,19 @@
 using AS_Coursework.Model.Quiz;
 
 namespace AS_Coursework.View.QuizView;
-public partial class formTextQuestion : Form, IQuestionForm<string> {
+public partial class formTextQuestion : Form, IQuestionForm<TextQuestion> {
     private bool _questionAnswered = false;
-    private string _correctAnswer;
+    public TextQuestion Question { get; init; }
 
-    public event EventHandler<QuizQuestionEventArgs<string>>? QuestionAnswered;
     public event EventHandler? NextQuestion;
+    public event EventHandler<QuestionAnsweredEventArgs>? QuestionAnswered;
 
-    public formTextQuestion(string questionName, string question, string correctAnswer) {
+    public formTextQuestion(TextQuestion textQuestion) {
         InitializeComponent();
 
-        lblQuestionTitle.Text = questionName;
-        lblQuestionText.Text = question;
-        _correctAnswer = correctAnswer;
+        lblQuestionTitle.Text = textQuestion.QuestionName;
+        lblQuestionText.Text = textQuestion.Question;
+        Question = textQuestion;
 
         // Hide the image as it is not required
         pb.Dispose();
@@ -25,12 +25,15 @@ public partial class formTextQuestion : Form, IQuestionForm<string> {
         lblIsCorrect.Text = "";
     }
 
-    public formTextQuestion(string questionName, string question, string correctAnswer, Image image) {
+    public formTextQuestion(ImageTextQuestion imageTextQuestion) {
         InitializeComponent();
 
-        lblQuestionTitle.Text = questionName;
-        lblQuestionText.Text = question;
-        _correctAnswer = correctAnswer;
+        lblQuestionTitle.Text = imageTextQuestion.QuestionName;
+        lblQuestionText.Text = imageTextQuestion.Question;
+        Question = imageTextQuestion;
+
+        // Setup the image
+        pb.Image = imageTextQuestion.Image;
 
         // Clear placeholder text
         lblIsCorrect.Text = "";
@@ -58,14 +61,12 @@ public partial class formTextQuestion : Form, IQuestionForm<string> {
         }
         else {
             pbIsCorrect.Image = Resources.Icons.Red_Cross_Circle;
-            lblIsCorrect.Text = $"Incorrect, better luck next time. The correct answer was: {_correctAnswer}";
+            lblIsCorrect.Text = $"Incorrect, better luck next time. The correct answer was: {Question.CorrectAnswer}";
         }
     }
 
     private void btnSubmitNext_Click(object sender, EventArgs e) {
         if (!_questionAnswered) {
-            // Submit the answer to the question manager with this event
-            QuestionAnswered?.Invoke(sender, new QuizQuestionEventArgs<string>(tbAnswer.Text));
             tbAnswer.Enabled = false;
             _questionAnswered = true;
         }

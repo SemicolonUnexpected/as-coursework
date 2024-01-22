@@ -1,24 +1,23 @@
 ﻿using System.Text.RegularExpressions;
+using AS_Coursework.View.QuizView;
 
-namespace AS_Coursework.Model.Quiz; 
+namespace AS_Coursework.Model.Quiz;
 public class TextQuestion : Question {
+    public string Question { get; init; }
     public string CorrectAnswer { get; init; }
-    public Regex CorrectAnswerRegex { get; init; }
+    private readonly Regex _correctAnswerRegex;
 
-    public TextQuestion(string questionName, string correctAnswer, Regex correctAnswerRegex) : base(questionName) {
+    public TextQuestion(string questionName, string question, string correctAnswer, Regex correctAnswerRegex) : base(questionName) {
+        Question = question;
         CorrectAnswer = correctAnswer;
-        CorrectAnswerRegex = correctAnswerRegex;
+        _correctAnswerRegex = correctAnswerRegex;
     }
 
     public override Form DisplayQuestion() {
-        throw new NotImplementedException();
+        return new formTextQuestion(this);
     }
 
-    public override bool AnswerCorrect<string>(string answer) {
-        return CorrectAnswerRegex.IsMatch(answer);
-    }
-
-    public override bool AnswerCorrect<TAnswer>(TAnswer answer) {
-        throw new NotImplementedException();
+    public bool CheckAnswer(string answer) {
+        return _correctAnswerRegex.IsMatch(answer);
     }
 }

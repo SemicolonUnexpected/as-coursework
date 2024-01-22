@@ -1,7 +1,5 @@
-﻿using AS_Coursework.Model.Quiz;
-
-namespace AS_Coursework.View.QuizView;
-public partial class formMultipleChoiceQuestion : Form, IQuestionForm {
+﻿namespace AS_Coursework.View.QuizView;
+public partial class formMultipleChoiceQuestion : Form {
     public formMultipleChoiceQuestion(string optionOne, string optionTwo, string optionThree, string optionFour) {
         InitializeComponent();
 
