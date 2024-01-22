@@ -25,7 +25,7 @@
         private void InitializeComponent() {
             lblQuestionTitle = new Label();
             btnOptionFour = new Custom_Controls.CustomButton();
-            btnOption3 = new Custom_Controls.CustomButton();
+            btnOptionThree = new Custom_Controls.CustomButton();
             btnOptionTwo = new Custom_Controls.CustomButton();
             btnOptionOne = new Custom_Controls.CustomButton();
             lblQuestionText = new Label();
@@ -71,24 +71,24 @@
             // 
             // btnOption3
             // 
-            btnOption3.Anchor = AnchorStyles.Right;
-            btnOption3.BackColor = Color.FromArgb(0, 150, 255);
-            btnOption3.BorderColor = Color.White;
-            btnOption3.BorderWidth = 2;
-            btnOption3.CornerRadius = 20;
-            btnOption3.FlatAppearance.BorderSize = 0;
-            btnOption3.FlatStyle = FlatStyle.Popup;
-            btnOption3.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            btnOption3.ForeColor = Color.BlanchedAlmond;
-            btnOption3.Image = null;
-            btnOption3.ImageSize = new Size(150, 40);
-            btnOption3.Location = new Point(143, 509);
-            btnOption3.Margin = new Padding(25);
-            btnOption3.Name = "btnOption3";
-            btnOption3.Size = new Size(300, 150);
-            btnOption3.TabIndex = 14;
-            btnOption3.Text = "Typing";
-            btnOption3.UseVisualStyleBackColor = false;
+            btnOptionThree.Anchor = AnchorStyles.Right;
+            btnOptionThree.BackColor = Color.FromArgb(0, 150, 255);
+            btnOptionThree.BorderColor = Color.White;
+            btnOptionThree.BorderWidth = 2;
+            btnOptionThree.CornerRadius = 20;
+            btnOptionThree.FlatAppearance.BorderSize = 0;
+            btnOptionThree.FlatStyle = FlatStyle.Popup;
+            btnOptionThree.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            btnOptionThree.ForeColor = Color.BlanchedAlmond;
+            btnOptionThree.Image = null;
+            btnOptionThree.ImageSize = new Size(150, 40);
+            btnOptionThree.Location = new Point(143, 509);
+            btnOptionThree.Margin = new Padding(25);
+            btnOptionThree.Name = "btnOption3";
+            btnOptionThree.Size = new Size(300, 150);
+            btnOptionThree.TabIndex = 14;
+            btnOptionThree.Text = "Typing";
+            btnOptionThree.UseVisualStyleBackColor = false;
             // 
             // btnOptionTwo
             // 
@@ -196,7 +196,7 @@
             Controls.Add(btnNext);
             Controls.Add(lblQuestionText);
             Controls.Add(btnOptionFour);
-            Controls.Add(btnOption3);
+            Controls.Add(btnOptionThree);
             Controls.Add(btnOptionTwo);
             Controls.Add(btnOptionOne);
             Controls.Add(lblQuestionTitle);
@@ -211,7 +211,7 @@
 
         private Label lblQuestionTitle;
         private Custom_Controls.CustomButton btnOptionFour;
-        private Custom_Controls.CustomButton btnOption3;
+        private Custom_Controls.CustomButton btnOptionThree;
         private Custom_Controls.CustomButton btnOptionTwo;
         private Custom_Controls.CustomButton btnOptionOne;
         private Label lblQuestionText;

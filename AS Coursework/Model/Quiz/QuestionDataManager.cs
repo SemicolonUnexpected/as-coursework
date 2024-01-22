@@ -12,12 +12,15 @@ public static class QuestionDataManager {
     public static List<TextQuestion> Equations { get; private set; }
 
     static QuestionDataManager() {
-
+        ReadIn();
     }
 
     private static void ReadIn() {
-
+        ReadInTextQuestions();
     }
+
+    private static readonly Dictionary<string, Image> nameToImage = new() {
+    };
 
     private static void ReadInTextQuestions() {
         MultipleChoice = new List<TextQuestion>();
@@ -28,7 +31,7 @@ public static class QuestionDataManager {
         string[] lines = text.Split("\n");
 
         foreach (string line in lines) {
-            string[] fields = line.Split(", ");
+            string[] fields = line.Split(",");
 
             if (fields.Length == 4) {
                 MultipleChoice.Add(new TextQuestion(
@@ -37,9 +40,19 @@ public static class QuestionDataManager {
                     fields[2],
                     new System.Text.RegularExpressions.Regex(fields[3])));
             }
-            else {
-
+            else if (fields.Length == 5) {
+                throw new NotImplementedException();
+                /*
+                MultipleChoice.Add(new ImageTextQuestion(
+                    fields[0],
+                    fields[1],
+                    fields[2],
+                    new System.Text.RegularExpressions.Regex(fields[3]),
+                    Resources.QuizImages.
+                    ));
+                */
             }
+            else throw new IOException("Could not read the file, the question format was incorrect");
         }
     }
 }
