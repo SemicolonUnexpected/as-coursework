@@ -8,12 +8,14 @@ public partial class formMultipleChoiceQuestion : Form, IQuestionForm<MultipleCh
     public MultipleChoiceQuestion Question { get; init; }
     private readonly Random _random = new();
 
-    private CustomButton _correctButton;
+    private CustomButton? _correctButton;
     public formMultipleChoiceQuestion(MultipleChoiceQuestion multipleChoiceQuestion) {
         InitializeComponent();
 
         btnNext.Visible = false;
         Question = multipleChoiceQuestion;
+
+        SetupQuestionsAnswers();
     }
 
     public event EventHandler? NextQuestion;
@@ -38,22 +40,18 @@ public partial class formMultipleChoiceQuestion : Form, IQuestionForm<MultipleCh
         }
     }
 
-    private void btnCorrect(object? sender, EventArgs e) {
-        QuestionAnswered?.Invoke(this, new QuestionAnsweredEventArgs(true, 1));
-        btnNext.Visible = true;
-    }
-
     private void btnClick(object? sender, EventArgs e) {
         CustomButton btn = (CustomButton)sender!;
         if (sender!.Equals(_correctButton)) {
             btn.BackColor = Color.Green;
+            QuestionAnswered?.Invoke(this, new QuestionAnsweredEventArgs(true, 1));
         }
         else {
             btn.BackColor = Color.Red;
             _correctButton.BackColor = Color.Green;
+            QuestionAnswered?.Invoke(this, new QuestionAnsweredEventArgs(false, 0));
         }
 
-        QuestionAnswered?.Invoke(this, new QuestionAnsweredEventArgs(false, 0));
         btnNext.Visible = true;
     }
 

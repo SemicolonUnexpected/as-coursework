@@ -68,8 +68,9 @@
             btnOptionFour.TabIndex = 15;
             btnOptionFour.Text = "Fill the blanks";
             btnOptionFour.UseVisualStyleBackColor = false;
+            btnOptionFour.Click += btnClick;
             // 
-            // btnOption3
+            // btnOptionThree
             // 
             btnOptionThree.Anchor = AnchorStyles.Right;
             btnOptionThree.BackColor = Color.FromArgb(0, 150, 255);
@@ -84,11 +85,12 @@
             btnOptionThree.ImageSize = new Size(150, 40);
             btnOptionThree.Location = new Point(143, 509);
             btnOptionThree.Margin = new Padding(25);
-            btnOptionThree.Name = "btnOption3";
+            btnOptionThree.Name = "btnOptionThree";
             btnOptionThree.Size = new Size(300, 150);
             btnOptionThree.TabIndex = 14;
             btnOptionThree.Text = "Typing";
             btnOptionThree.UseVisualStyleBackColor = false;
+            btnOptionThree.Click += btnClick;
             // 
             // btnOptionTwo
             // 
@@ -110,6 +112,7 @@
             btnOptionTwo.TabIndex = 13;
             btnOptionTwo.Text = "Flashcards";
             btnOptionTwo.UseVisualStyleBackColor = false;
+            btnOptionTwo.Click += btnClick;
             // 
             // btnOptionOne
             // 
@@ -131,6 +134,7 @@
             btnOptionOne.TabIndex = 12;
             btnOptionOne.Text = "All questions";
             btnOptionOne.UseVisualStyleBackColor = false;
+            btnOptionOne.Click += btnClick;
             // 
             // lblQuestionText
             // 
@@ -138,12 +142,12 @@
             lblQuestionText.AutoSize = true;
             lblQuestionText.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lblQuestionText.ForeColor = Color.White;
-            lblQuestionText.Location = new Point(70, 194);
+            lblQuestionText.Location = new Point(70, 132);
             lblQuestionText.Margin = new Padding(25, 25, 25, 20);
             lblQuestionText.MaximumSize = new Size(800, 68);
-            lblQuestionText.MinimumSize = new Size(800, 68);
+            lblQuestionText.MinimumSize = new Size(800, 102);
             lblQuestionText.Name = "lblQuestionText";
-            lblQuestionText.Size = new Size(800, 68);
+            lblQuestionText.Size = new Size(800, 102);
             lblQuestionText.TabIndex = 16;
             lblQuestionText.Text = "Two lines of question text. The questions wont be much longer than this hopefully";
             lblQuestionText.TextAlign = ContentAlignment.MiddleCenter;

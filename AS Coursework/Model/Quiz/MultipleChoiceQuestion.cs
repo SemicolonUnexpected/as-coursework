@@ -12,6 +12,6 @@ public class MultipleChoiceQuestion : Question {
     }
 
     public override Form DisplayQuestion() {
-        return new formMultipleChoiceQuestion();
+        return new formMultipleChoiceQuestion(this);
     }
 }

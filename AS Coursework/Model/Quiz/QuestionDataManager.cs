@@ -1,15 +1,15 @@
 ﻿namespace AS_Coursework.Model.Quiz;
 public static class QuestionDataManager {
     private const string PATH_MULTIPLECHOICE = "questions/multiplechoice.txt";
-    public static List<TextQuestion> MultipleChoice { get; private set; }
+    public static List<Question> MultipleChoice { get; private set; }
     private const string PATH_TEXT = "questions/text.txt";
-    public static List<TextQuestion> Text { get; private set; }
+    public static List<Question> Text { get; private set; }
     private const string PATH_FLASHCARD = "questions/flashcard.txt";
-    public static List<TextQuestion> Flashcard { get; private set; }
+    public static List<Question> Flashcard { get; private set; }
     private const string PATH_FILLTHEBLANKS = "questions/filltheblanks.txt";
-    public static List<TextQuestion> FillTheBlanks { get; private set; } 
+    public static List<Question> FillTheBlanks { get; private set; } 
     private const string PATH_EQUATIONS = "questions/equations.txt";
-    public static List<TextQuestion> Equations { get; private set; }
+    public static List<Question> Equation { get; private set; }
 
     static QuestionDataManager() {
         ReadIn();
@@ -23,7 +23,7 @@ public static class QuestionDataManager {
     };
 
     private static void ReadInTextQuestions() {
-        MultipleChoice = new List<TextQuestion>();
+        MultipleChoice = new List<Question>();
 
         using StreamReader reader = new StreamReader(PATH_TEXT);
 

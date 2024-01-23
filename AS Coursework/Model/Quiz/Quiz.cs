@@ -1,46 +1,51 @@
-﻿namespace AS_Coursework.Model.Quiz;
+﻿using AS_Coursework._Helpers;
+
+namespace AS_Coursework.Model.Quiz;
 public class Quiz {
-    private readonly QuizStyle _quizStyle;
     private readonly List<Question> _questions;
     private int _index = -1;
 
     public Quiz(QuizStyle quizStyle) {
-        _quizStyle = quizStyle;
-
-        PopulateQuiz(quizStyle);
+        _questions = PopulateQuiz(quizStyle, 10);
     }
 
     public int Length { get => _questions.Count; }
 
-    public Question NextQuestion() {
-        _index += 1;
-        return _questions[_index];
+    public int TotalExperienceAllocation => _questions.Sum(x => x.ExperienceAllocation);
+
+    public bool NextQuestion(out Form? questionForm) {
+        if (_index < Length) {
+            questionForm = _questions[_index].DisplayQuestion();
+            _index++;
+            return true;
+        }
+        else {
+            questionForm = null;
+            return false;
+        }
     }
-/*
+
     private List<Question> PopulateQuiz(QuizStyle quizStyle, int questionCount) => quizStyle switch {
-        QuizStyle.All => PickAll(questionCount),
-        QuizStyle.MultipleChoice => PickMultipleChoice(questionCount),
-        QuizStyle.Text => PickText(questionCount),
-        QuizStyle.FillTheBlanks => PickFillTheBlanks(questionCount),
-        QuizStyle.FlashCards => PickFlashcards(questionCount),
-        QuizStyle.Equations => PickEquations(questionCount),
+        QuizStyle.All => PickQuestions(QuestionDataManager.MultipleChoice, questionCount),
+        QuizStyle.MultipleChoice => PickQuestions(QuestionDataManager.MultipleChoice, questionCount),
+        QuizStyle.Text => PickQuestions(QuestionDataManager.Text, questionCount),
+        QuizStyle.FillTheBlanks => PickQuestions(QuestionDataManager.FillTheBlanks, questionCount),
+        QuizStyle.FlashCard => PickQuestions(QuestionDataManager.Flashcard, questionCount),
+        QuizStyle.Equation => PickQuestions(QuestionDataManager.Equation, questionCount),
+        _ => throw new NotImplementedException(),
     };
 
-    private List<Question> PickAll(int questionCount) { }
-    private List<Question> PickMultipleChoice(int questionCount) { }
-    private List<Question> PickText(int  questionCount) { }
-    private List<Question> PickFillTheBlanks(int questionCount) { }
-    private List<Question> PickFlashcards(int questionCount) { }
-    private List<Question> PickEquations(int questionCount) { }
-*/
-    // The modern variation of the Fisher-Yates Shuffle
+    private List<Question> PickQuestions(List<Question> questionSource, int questionCount) {
+        questionSource.Shuffle();
+        return questionSource.Take(questionCount).ToList();
+    }
 
     public enum QuizStyle {
         All,
         MultipleChoice,
         Text,
         FillTheBlanks,
-        FlashCards,
-        Equations
+        FlashCard,
+        Equation
     }
 }
