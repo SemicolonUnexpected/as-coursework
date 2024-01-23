@@ -1,9 +1,14 @@
-﻿using AS_Coursework.Custom_Controls;
+﻿using AS_Coursework._Helpers;
+using AS_Coursework.Custom_Controls;
 using AS_Coursework.Model.Quiz;
+using System.Security.AccessControl;
 
 namespace AS_Coursework.View.QuizView;
 public partial class formMultipleChoiceQuestion : Form, IQuestionForm<MultipleChoiceQuestion> {
     public MultipleChoiceQuestion Question { get; init; }
+    private readonly Random _random = new();
+
+    private CustomButton _correctButton;
     public formMultipleChoiceQuestion(MultipleChoiceQuestion multipleChoiceQuestion) {
         InitializeComponent();
 
@@ -14,29 +19,41 @@ public partial class formMultipleChoiceQuestion : Form, IQuestionForm<MultipleCh
     public event EventHandler? NextQuestion;
     public event EventHandler<QuestionAnsweredEventArgs>? QuestionAnswered;
 
-
     private void SetupQuestionsAnswers() {
-        Random random = new();
+        _correctButton = _random.Next(0, 4) switch {
+            0 => btnOptionOne,
+            1 => btnOptionTwo,
+            2 => btnOptionThree,
+            _ => btnOptionFour,
+        };
 
-        int answerPosition = random.Next(0, 4);
-        switch (answerPosition) {
-            case 0:
-                btnOptionOne.Text = Question.CorrectAnswer;
-                break;
-            case 1:
-                btnOptionTwo.Text = Question.CorrectAnswer;
-                break;
-            case 2:
-                btnOptionThree.Text = Question.CorrectAnswer;
-                break;
-            case 3:
-                btnOptionFour.Text = Question.CorrectAnswer;
-                break;
+        List<CustomButton> buttons = new() { btnOptionOne, btnOptionTwo, btnOptionThree, btnOptionFour };
+        Question.IncorrectAnswers.Shuffle();
+        Queue<string> incorrectAnswers = new Queue<string>(Question.IncorrectAnswers.Take(3).ToList());
+
+        foreach (CustomButton button in buttons) {
+            if (!button.Equals(_correctButton)) {
+                button.Text = incorrectAnswers.Dequeue();
+            }
         }
     }
 
-    private void btnCorrect(CustomButton sender, EventArgs e) {
-        sender.BackColor = Color.Green;
+    private void btnCorrect(object? sender, EventArgs e) {
+        QuestionAnswered?.Invoke(this, new QuestionAnsweredEventArgs(true, 1));
+        btnNext.Visible = true;
+    }
+
+    private void btnClick(object? sender, EventArgs e) {
+        CustomButton btn = (CustomButton)sender!;
+        if (sender!.Equals(_correctButton)) {
+            btn.BackColor = Color.Green;
+        }
+        else {
+            btn.BackColor = Color.Red;
+            _correctButton.BackColor = Color.Green;
+        }
+
+        QuestionAnswered?.Invoke(this, new QuestionAnsweredEventArgs(false, 0));
         btnNext.Visible = true;
     }
 

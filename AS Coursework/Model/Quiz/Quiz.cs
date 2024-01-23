@@ -34,15 +34,6 @@ public class Quiz {
     private List<Question> PickEquations(int questionCount) { }
 */
     // The modern variation of the Fisher-Yates Shuffle
-    private void ShuffleList<T>(List<T> list) {
-        Random random = new();
-        T[] array = list.ToArray();
-
-        for (int i = 0; i < array.Length; i++) {
-            int j = random.Next(i, array.Length);
-            (array[i], array[j]) = (array[j], array[i]);
-        }
-    }
 
     public enum QuizStyle {
         All,
