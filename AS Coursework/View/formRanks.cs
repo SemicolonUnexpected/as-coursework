@@ -5,17 +5,16 @@ using AS_Coursework.Model.Users;
 
 namespace AS_Coursework.View;
 public partial class formRanks : Form {
-    private User _user;
     private List<Ranking> _rankViews;
 
-    public formRanks(User user) {
+    public formRanks() {
         // Required by the designer and sets up the form and its controls
         InitializeComponent();
 
         // Set the style to allow for fast painting to reduce flicker
         SetStyle(ControlStyles.UserPaint | ControlStyles.OptimizedDoubleBuffer | ControlStyles.AllPaintingInWmPaint, true);
 
-        _user = user;
+        User user = User.ActiveUser!;
 
         // List of ranking to iterate through later
         _rankViews = new List<Ranking>() {
@@ -32,11 +31,11 @@ public partial class formRanks : Form {
         };
 
         // Read in the users details for display
-        lblUsername.Text = _user.AuthenticationDetails.Username;
-        pbUserProfile.Image = _user.FunctionalDetails.ProfileImage.Image;
-        pbUserProfile.ImagePortion = _user.FunctionalDetails.ProfileImage.ImagePortion;
-        lblExperience.Text = _user.FunctionalDetails.Experience.ToString() + " xp";
-        lblRank.Text = $"#{DataManager.GetUserIndex(user => user.AuthenticationDetails.Username == _user.AuthenticationDetails.Username) + 1}";
+        lblUsername.Text = user.AuthenticationDetails.Username;
+        pbUserProfile.Image = user.FunctionalDetails.ProfileImage.Image;
+        pbUserProfile.ImagePortion = user.FunctionalDetails.ProfileImage.ImagePortion;
+        lblExperience.Text = user.FunctionalDetails.Experience.ToString() + " xp";
+        lblRank.Text = $"#{DataManager.GetUserIndex(user => user.AuthenticationDetails.Username == user.AuthenticationDetails.Username) + 1}";
 
         DisplayRanks();
 
@@ -66,9 +65,5 @@ public partial class formRanks : Form {
             rankView.UsernameText = user is null ? "" : user.AuthenticationDetails.Username;
             rankView.ExperienceText = user is null ? "" : user.FunctionalDetails.Experience.ToString() + " xp";
         }
-    }
-
-    private void formRanks_Load(object sender, EventArgs e) {
-
     }
 }

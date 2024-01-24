@@ -1,39 +1,45 @@
-﻿using AS_Coursework.Model.Quiz;
+﻿using AS_Coursework._Helpers;
+using AS_Coursework.Model.Quiz;
 
 namespace AS_Coursework.View.QuizView;
-public partial class formFlashcardQuestion : Form, IQuestionForm {
+public partial class formFlashcardQuestion : Form, IQuestionForm<FlashcardQuestion> {
     private bool _isFrontSide = true;
-    private string _frontSide;
-    private string _backSide;
-    public formFlashcardQuestion(string frontSide, string backSide) {
+
+    public FlashcardQuestion Question { get; init; }
+
+    public formFlashcardQuestion(FlashcardQuestion flashcardQuestion) {
         InitializeComponent();
 
-        _frontSide = frontSide;
-        _backSide = backSide;
+        Question = flashcardQuestion;
 
         // Initialise text
-        lblFlashcardText.Text = frontSide;
+        lblFlashcardText.Text = Question.FrontSide;
     }
 
-    public event EventHandler<QuizQuestionEventArgs<bool>>? QuestionAnswered;
+    protected override void OnResize(EventArgs e) {
+        base.OnResize(e);
+
+        lblQuestionTitle.CenterX();
+        pnlFlashcard.CenterX();
+        btnSwitchSides.CenterX();
+        pnlButtons.CenterX();
+    }
+
     public event EventHandler? NextQuestion;
-
-    public void DisplayAnswerCorrectness(bool isCorrect) {
-        throw new NotImplementedException();
-    }
 
     private void btnSwitchSides_Click(object sender, EventArgs e) {
         _isFrontSide = !_isFrontSide;
 
         if (_isFrontSide) {
-            lblFlashcardText.Text = _frontSide;
+            lblFlashcardText.Text = Question.FrontSide;
         }
         else {
-            lblFlashcardText.Text = _backSide;
+            lblFlashcardText.Text = Question.BackSide;
         }
     }
 
-    private void btnNext_Click(object sender, EventArgs e) {
-        NextQuestion?.Invoke(this, EventArgs.Empty);
+    private void btnKnown_Click(object sender, EventArgs e) {
+        Question.Answered(true);
+        NextQuestion?.Invoke(null, EventArgs.Empty);
     }
 }

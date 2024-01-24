@@ -5,9 +5,7 @@ using static AS_Coursework.Model.LoginResult;
 
 namespace AS_Coursework.Model.Login;
 internal static class LoginManager {
-    public static LoginResult Login(string username, string password, out User? user) {
-        user = null;
-
+    public static LoginResult Login(string username, string password) {
         if (password == string.Empty || username == string.Empty) return FieldsEmpty;
         if (!DataManager.UserExists(username)) return UsernameNotFound;
 
@@ -16,7 +14,7 @@ internal static class LoginManager {
         if (selectedUser is null) throw new NullReferenceException(nameof(selectedUser));
 
         if (HashManager.VerifyHashEquality(password, selectedUser.AuthenticationDetails.HashedPassword, selectedUser.AuthenticationDetails.Salt)) {
-            user = selectedUser;
+            User.ActiveUser = selectedUser;
             return SuccessfulLogin;
         }
 

@@ -3,9 +3,10 @@ using AS_Coursework.View.QuizView;
 
 namespace AS_Coursework.Model.Quiz;
 public class TextQuestion : Question {
+    private readonly Regex _correctAnswerRegex;
+
     public string Question { get; init; }
     public string CorrectAnswer { get; init; }
-    private readonly Regex _correctAnswerRegex;
 
     public TextQuestion(string questionName, string question, string correctAnswer, Regex correctAnswerRegex) : base(questionName) {
         Question = question;
@@ -18,6 +19,8 @@ public class TextQuestion : Question {
     }
 
     public bool CheckAnswer(string answer) {
-        return _correctAnswerRegex.IsMatch(answer);
+        bool isCorrect =  _correctAnswerRegex.IsMatch(answer);
+        AllocatedExperience = isCorrect ? 1 : 0;
+        return isCorrect;
     }
 }

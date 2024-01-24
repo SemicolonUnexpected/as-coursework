@@ -8,10 +8,10 @@ using AS_Coursework.Model.Security;
 namespace AS_Coursework.View;
 public partial class formSettings : Form {
     User _user;
-    public formSettings(User user) {
+    public formSettings() {
         InitializeComponent();
 
-        _user = user;
+        _user = User.ActiveUser!; // For conciseness
 
         // Set the minimum date of birth to 100 years ago
         dtpDateOfBirth.MinDate = DateTime.Today.Subtract(new TimeSpan(100 * 365, 0, 0, 0, 0));

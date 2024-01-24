@@ -1,5 +1,6 @@
 ﻿using AS_Coursework.Custom_Controls;
 using AS_Coursework.Model.Users;
+using AS_Coursework.View.QuizView;
 
 namespace AS_Coursework.View;
 public partial class formMainMenu : Form {
@@ -8,7 +9,6 @@ public partial class formMainMenu : Form {
     private const int MINIMISED_MENU_WIDTH = 75;
 
     private bool _menuMinimised = true;
-    private readonly User _user;
     private Form? _userForm;
     private int? _userFormBaseHeight;
 
@@ -25,16 +25,15 @@ public partial class formMainMenu : Form {
         get => _userFormBaseHeight;
     }
 
-    public formMainMenu(User user) {
+    public formMainMenu() {
         InitializeComponent();
 
         SetStyle(ControlStyles.UserPaint | ControlStyles.OptimizedDoubleBuffer | ControlStyles.AllPaintingInWmPaint, true);
 
-        _user = user;
-        if (!_user.AuthenticationDetails.IsAdmin) miAdmin.Hide();
+        if (!User.ActiveUser.AuthenticationDetails.IsAdmin) miAdmin.Hide();
 
         // Display the initial use form
-        DisplayUserForm(new formHome(_user));
+        DisplayUserForm(new formHome());
 
         // Call the OnResize event to ensure that the form is formatted correctly
         OnResize(EventArgs.Empty);
@@ -132,22 +131,22 @@ public partial class formMainMenu : Form {
     // Menu navigation 
     private void miHome_MenuClick(object sender, EventArgs e) {
         MinimiseMenu();
-        if (UserForm is not formHome) DisplayUserForm(new formHome(_user));
+        if (UserForm is not formHome) DisplayUserForm(new formHome());
     }
 
     private void miQuiz_MenuClick(object sender, EventArgs e) {
         MinimiseMenu();
-        if (UserForm is not formQuizMenu) DisplayUserForm(new formQuizMenu(_user));
+        if (UserForm is not formQuizMenu) DisplayUserForm(new formQuizMenu());
     }
 
     private void miRanks_Click(object sender, EventArgs e) {
         MinimiseMenu();
-        if (UserForm is not formRanks) DisplayUserForm(new formRanks(_user));
+        if (UserForm is not formRanks) DisplayUserForm(new formRanks());
     }
 
     private void miSettings_MenuClick(object sender, EventArgs e) {
         MinimiseMenu();
-        if (UserForm is not formSettings) DisplayUserForm(new formSettings(_user));
+        if (UserForm is not formSettings) DisplayUserForm(new formSettings());
     }
 
     private void miSignOut_MenuClick(object sender, EventArgs e) {

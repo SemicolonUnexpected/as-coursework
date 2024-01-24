@@ -8,6 +8,8 @@ public class User : IComparable<User> {
     // For testing purposes
     public static readonly User Empty = new("", Array.Empty<byte>(), Array.Empty<byte>(), false, 0, 0, 0, 0, "", "", new MailAddress("test@test"), DateTime.Now, 0);
 
+    public static User? ActiveUser { get; set; }
+
     public AuthenticationDetails AuthenticationDetails { get; set; }
     public FunctionalDetails FunctionalDetails { get; set; }
     public MiscDetails MiscDetails { get; set; }

@@ -5,13 +5,13 @@ public class Quiz {
     private readonly List<Question> _questions;
     private int _index = -1;
 
-    public Quiz(QuizStyle quizStyle) {
-        _questions = PopulateQuiz(quizStyle, 10);
+    public Quiz(QuizStyle quizStyle, int questionCount = 10) {
+        _questions = PopulateQuiz(quizStyle, questionCount);
     }
 
     public int Length { get => _questions.Count; }
-
-    public int TotalExperienceAllocation => _questions.Sum(x => x.ExperienceAllocation);
+    public int AmountCorrect => _questions.Count(x => x.Correct is true);
+    public int TotalExperienceAllocation => _questions.Sum(x => x.AllocatedExperience);
 
     public bool NextQuestion(out Form? questionForm) {
         if (_index < Length) {

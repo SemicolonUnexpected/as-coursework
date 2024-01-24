@@ -92,12 +92,12 @@ public partial class formLogin : Form {
     }
 
     private void AttemptLogin() {
-        LoginResult result = LoginManager.Login(tbUsername.Text, tbPassword.Text, out User? user);
+        LoginResult result = LoginManager.Login(tbUsername.Text, tbPassword.Text);
 
         // Display the correct error message or navigate to the user's home
         switch (result) {
             case LoginResult.SuccessfulLogin:
-                (ActiveForm as formMaster)?.DisplayForm(new formMainMenu(user!));
+                (ActiveForm as formMaster)?.DisplayForm(new formMainMenu());
                 break;
             case LoginResult.UsernameNotFound:
             case LoginResult.PasswordIncorrect:

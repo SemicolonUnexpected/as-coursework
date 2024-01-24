@@ -9,6 +9,7 @@ public partial class formTextQuestion : Form, IQuestionForm<TextQuestion> {
     public event EventHandler? NextQuestion;
     public event EventHandler<QuestionAnsweredEventArgs>? QuestionAnswered;
 
+    // Two constructors to allow use of images
     public formTextQuestion(TextQuestion textQuestion) {
         InitializeComponent();
 
@@ -65,10 +66,16 @@ public partial class formTextQuestion : Form, IQuestionForm<TextQuestion> {
         }
     }
 
+    // Check and display the answer correctness
     private void btnSubmitNext_Click(object sender, EventArgs e) {
         if (!_questionAnswered) {
             tbAnswer.Enabled = false;
             _questionAnswered = true;
+
+            Question.CheckAnswer(tbAnswer.Text);
+
+            DisplayAnswerCorrectness((bool)Question.Correct!);
+            btnSubmitNext.Text = "Next";
         }
         else {
             // Tell listeners that the next question has been requested

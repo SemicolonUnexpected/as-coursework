@@ -3,10 +3,8 @@ using AS_Coursework.Model.Users;
 
 namespace AS_Coursework.View;
 public partial class formHome : Form {
-    private readonly User _user;
-    public formHome(User user) {
+    public formHome() {
         InitializeComponent();
-        _user = user;
 
         SetupDisplayText();
 
@@ -14,17 +12,19 @@ public partial class formHome : Form {
     }
 
     private void SetupDisplayText() {
-        pbUserProfile.Image = _user.FunctionalDetails.ProfileImage.Image;
-        pbUserProfile.ImagePortion = _user.FunctionalDetails.ProfileImage.ImagePortion;
+        User user = User.ActiveUser!; // For conciseness
 
-        lblUsername.Text = _user.AuthenticationDetails.Username;
+        pbUserProfile.Image = user.FunctionalDetails.ProfileImage.Image;
+        pbUserProfile.ImagePortion = user.FunctionalDetails.ProfileImage.ImagePortion;
 
-        lblExperienceRemainder.Text = $"{_user.FunctionalDetails.LeftOverExperience} xp";
-        pbLevel.Progress = (float)_user.FunctionalDetails.LeftOverExperience / 100;
+        lblUsername.Text = user.AuthenticationDetails.Username;
 
-        lblAnswers.Text = $"Questions answered - {_user.FunctionalDetails.QuestionsAnswered}";
-        lblCorrect.Text = $"Questions correct - {_user.FunctionalDetails.QuestionsCorrect}";
-        lblPercentageAccuracy.Text = $"Percentage accuracy - {_user.FunctionalDetails.PercentageAccuracy} %";
+        lblExperienceRemainder.Text = $"{user.FunctionalDetails.LeftOverExperience} xp";
+        pbLevel.Progress = (float)user.FunctionalDetails.LeftOverExperience / 100;
+
+        lblAnswers.Text = $"Questions answered - {user.FunctionalDetails.QuestionsAnswered}";
+        lblCorrect.Text = $"Questions correct - {user.FunctionalDetails.QuestionsCorrect}";
+        lblPercentageAccuracy.Text = $"Percentage accuracy - {user.FunctionalDetails.PercentageAccuracy} %";
 
         lblRank.Text = $"#{1}";
     }

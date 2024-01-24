@@ -27,12 +27,12 @@
             pbUserProfile = new Custom_Controls.PictureFrame();
             pnlUserProfile = new Panel();
             lblQuizInfo = new Label();
-            btnAllQuestions = new Custom_Controls.CustomButton();
+            btnAll = new Custom_Controls.CustomButton();
             btnEquations = new Custom_Controls.CustomButton();
             btnFlashcards = new Custom_Controls.CustomButton();
-            btnTextQuestions = new Custom_Controls.CustomButton();
+            btnText = new Custom_Controls.CustomButton();
             btnFillTheBlanks = new Custom_Controls.CustomButton();
-            btnMultipleChoiceQuestions = new Custom_Controls.CustomButton();
+            btnMultipleChoice = new Custom_Controls.CustomButton();
             pnlUserProfile.SuspendLayout();
             SuspendLayout();
             // 
@@ -98,25 +98,25 @@
             // 
             // btnAllQuestions
             // 
-            btnAllQuestions.Anchor = AnchorStyles.Right;
-            btnAllQuestions.BackColor = Color.FromArgb(0, 150, 255);
-            btnAllQuestions.BorderColor = Color.White;
-            btnAllQuestions.BorderWidth = 2;
-            btnAllQuestions.CornerRadius = 20;
-            btnAllQuestions.FlatAppearance.BorderSize = 0;
-            btnAllQuestions.FlatStyle = FlatStyle.Popup;
-            btnAllQuestions.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            btnAllQuestions.ForeColor = Color.BlanchedAlmond;
-            btnAllQuestions.Image = null;
-            btnAllQuestions.ImageSize = new Size(150, 40);
-            btnAllQuestions.Location = new Point(502, 343);
-            btnAllQuestions.Margin = new Padding(25);
-            btnAllQuestions.Name = "btnAllQuestions";
-            btnAllQuestions.Size = new Size(250, 75);
-            btnAllQuestions.TabIndex = 0;
-            btnAllQuestions.Text = "All questions";
-            btnAllQuestions.UseVisualStyleBackColor = false;
-            btnAllQuestions.Click += btnAllQuestions_Click;
+            btnAll.Anchor = AnchorStyles.Right;
+            btnAll.BackColor = Color.FromArgb(0, 150, 255);
+            btnAll.BorderColor = Color.White;
+            btnAll.BorderWidth = 2;
+            btnAll.CornerRadius = 20;
+            btnAll.FlatAppearance.BorderSize = 0;
+            btnAll.FlatStyle = FlatStyle.Popup;
+            btnAll.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAll.ForeColor = Color.BlanchedAlmond;
+            btnAll.Image = null;
+            btnAll.ImageSize = new Size(150, 40);
+            btnAll.Location = new Point(502, 343);
+            btnAll.Margin = new Padding(25);
+            btnAll.Name = "btnAllQuestions";
+            btnAll.Size = new Size(250, 75);
+            btnAll.TabIndex = 0;
+            btnAll.Text = "All questions";
+            btnAll.UseVisualStyleBackColor = false;
+            btnAll.Click += btnAllQuestions_Click;
             // 
             // btnEquations
             // 
@@ -162,24 +162,24 @@
             // 
             // btnTextQuestions
             // 
-            btnTextQuestions.Anchor = AnchorStyles.Right;
-            btnTextQuestions.BackColor = Color.FromArgb(0, 150, 255);
-            btnTextQuestions.BorderColor = Color.White;
-            btnTextQuestions.BorderWidth = 2;
-            btnTextQuestions.CornerRadius = 20;
-            btnTextQuestions.FlatAppearance.BorderSize = 0;
-            btnTextQuestions.FlatStyle = FlatStyle.Popup;
-            btnTextQuestions.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            btnTextQuestions.ForeColor = Color.BlanchedAlmond;
-            btnTextQuestions.Image = null;
-            btnTextQuestions.ImageSize = new Size(150, 40);
-            btnTextQuestions.Location = new Point(502, 468);
-            btnTextQuestions.Margin = new Padding(25);
-            btnTextQuestions.Name = "btnTextQuestions";
-            btnTextQuestions.Size = new Size(250, 75);
-            btnTextQuestions.TabIndex = 2;
-            btnTextQuestions.Text = "Typing";
-            btnTextQuestions.UseVisualStyleBackColor = false;
+            btnText.Anchor = AnchorStyles.Right;
+            btnText.BackColor = Color.FromArgb(0, 150, 255);
+            btnText.BorderColor = Color.White;
+            btnText.BorderWidth = 2;
+            btnText.CornerRadius = 20;
+            btnText.FlatAppearance.BorderSize = 0;
+            btnText.FlatStyle = FlatStyle.Popup;
+            btnText.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            btnText.ForeColor = Color.BlanchedAlmond;
+            btnText.Image = null;
+            btnText.ImageSize = new Size(150, 40);
+            btnText.Location = new Point(502, 468);
+            btnText.Margin = new Padding(25);
+            btnText.Name = "btnTextQuestions";
+            btnText.Size = new Size(250, 75);
+            btnText.TabIndex = 2;
+            btnText.Text = "Typing";
+            btnText.UseVisualStyleBackColor = false;
             // 
             // btnFillTheBlanks
             // 
@@ -204,24 +204,24 @@
             // 
             // btnMultipleChoiceQuestions
             // 
-            btnMultipleChoiceQuestions.Anchor = AnchorStyles.Right;
-            btnMultipleChoiceQuestions.BackColor = Color.FromArgb(0, 150, 255);
-            btnMultipleChoiceQuestions.BorderColor = Color.White;
-            btnMultipleChoiceQuestions.BorderWidth = 2;
-            btnMultipleChoiceQuestions.CornerRadius = 20;
-            btnMultipleChoiceQuestions.FlatAppearance.BorderSize = 0;
-            btnMultipleChoiceQuestions.FlatStyle = FlatStyle.Popup;
-            btnMultipleChoiceQuestions.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            btnMultipleChoiceQuestions.ForeColor = Color.BlanchedAlmond;
-            btnMultipleChoiceQuestions.Image = null;
-            btnMultipleChoiceQuestions.ImageSize = new Size(150, 40);
-            btnMultipleChoiceQuestions.Location = new Point(502, 593);
-            btnMultipleChoiceQuestions.Margin = new Padding(25);
-            btnMultipleChoiceQuestions.Name = "btnMultipleChoiceQuestions";
-            btnMultipleChoiceQuestions.Size = new Size(250, 75);
-            btnMultipleChoiceQuestions.TabIndex = 4;
-            btnMultipleChoiceQuestions.Text = "Multiple choice";
-            btnMultipleChoiceQuestions.UseVisualStyleBackColor = false;
+            btnMultipleChoice.Anchor = AnchorStyles.Right;
+            btnMultipleChoice.BackColor = Color.FromArgb(0, 150, 255);
+            btnMultipleChoice.BorderColor = Color.White;
+            btnMultipleChoice.BorderWidth = 2;
+            btnMultipleChoice.CornerRadius = 20;
+            btnMultipleChoice.FlatAppearance.BorderSize = 0;
+            btnMultipleChoice.FlatStyle = FlatStyle.Popup;
+            btnMultipleChoice.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            btnMultipleChoice.ForeColor = Color.BlanchedAlmond;
+            btnMultipleChoice.Image = null;
+            btnMultipleChoice.ImageSize = new Size(150, 40);
+            btnMultipleChoice.Location = new Point(502, 593);
+            btnMultipleChoice.Margin = new Padding(25);
+            btnMultipleChoice.Name = "btnMultipleChoiceQuestions";
+            btnMultipleChoice.Size = new Size(250, 75);
+            btnMultipleChoice.TabIndex = 4;
+            btnMultipleChoice.Text = "Multiple choice";
+            btnMultipleChoice.UseVisualStyleBackColor = false;
             // 
             // formQuizMenu
             // 
@@ -229,12 +229,12 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(20, 20, 50);
             ClientSize = new Size(1125, 900);
-            Controls.Add(btnMultipleChoiceQuestions);
+            Controls.Add(btnMultipleChoice);
             Controls.Add(btnFillTheBlanks);
-            Controls.Add(btnTextQuestions);
+            Controls.Add(btnText);
             Controls.Add(btnFlashcards);
             Controls.Add(btnEquations);
-            Controls.Add(btnAllQuestions);
+            Controls.Add(btnAll);
             Controls.Add(lblQuizInfo);
             Controls.Add(pnlUserProfile);
             FormBorderStyle = FormBorderStyle.None;
@@ -252,11 +252,11 @@
         private Custom_Controls.PictureFrame pbUserProfile;
         private Panel pnlUserProfile;
         private Label lblQuizInfo;
-        private Custom_Controls.CustomButton btnAllQuestions;
+        private Custom_Controls.CustomButton btnAll;
         private Custom_Controls.CustomButton btnEquations;
         private Custom_Controls.CustomButton btnFlashcards;
-        private Custom_Controls.CustomButton btnTextQuestions;
+        private Custom_Controls.CustomButton btnText;
         private Custom_Controls.CustomButton btnFillTheBlanks;
-        private Custom_Controls.CustomButton btnMultipleChoiceQuestions;
+        private Custom_Controls.CustomButton btnMultipleChoice;
     }
 }

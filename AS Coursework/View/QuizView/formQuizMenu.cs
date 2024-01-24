@@ -3,21 +3,26 @@ using AS_Coursework.Model.Quiz;
 
 namespace AS_Coursework.View.QuizView;
 public partial class formQuizMenu : Form {
-    private readonly User _user;
-    public formQuizMenu(User user) {
+    public formQuizMenu() {
         InitializeComponent();
 
-        _user = user;
-
-        lblUsername.Text = _user.AuthenticationDetails.Username;
-        pbUserProfile.Image = _user.FunctionalDetails.ProfileImage.Image;
+        lblUsername.Text = User.ActiveUser!.AuthenticationDetails.Username;
+        pbUserProfile.Image = User.ActiveUser!.FunctionalDetails.ProfileImage.Image;
     }
 
     private void btnAllQuestions_Click(object sender, EventArgs e) {
-
+        Quiz.QuizStyle quizStyle = nameof(sender) switch {
+            nameof(btnAll) => Quiz.QuizStyle.All,
+            nameof(btnText) => Quiz.QuizStyle.Text,
+            nameof(btnMultipleChoice) => Quiz.QuizStyle.MultipleChoice,
+            nameof(btnFillTheBlanks) => Quiz.QuizStyle.FillTheBlanks,
+            nameof(btnFlashcards) => Quiz.QuizStyle.FlashCard,
+            nameof(btnEquations) => Quiz.QuizStyle.Equation,
+            _ => throw new NotImplementedException()
+        };
     }
 
     private void StartQuiz(Quiz.QuizStyle quizStyle) {
-        (ActiveForm as formMaster)?.DisplayForm(new formQuiz(_user));
+        (ActiveForm as formMaster)?.DisplayForm(new formQuiz(quizStyle));
     }
 }
