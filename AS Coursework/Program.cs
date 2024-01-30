@@ -1,4 +1,5 @@
 using AS_Coursework.View;
+using AS_Coursework.Model.Quiz;
 
 namespace AS_Coursework; 
 internal static class Program {
@@ -11,6 +12,16 @@ internal static class Program {
         // see https://aka.ms/applicationconfiguration.
 
         ApplicationConfiguration.Initialize();
-        Application.Run(new formMaster());
+
+        Question question = new MatchingQuestion("Test question", new Dictionary<string, string> {
+            { "1", "One" },
+            { "2", "Two" },
+            { "3", "Three" },
+            { "4", "Four" },
+        });
+
+
+        Application.Run(question.DisplayQuestion());
+        // Application.Run(new formMaster());
     }
 }

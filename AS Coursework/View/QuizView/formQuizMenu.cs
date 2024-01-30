@@ -15,7 +15,7 @@ public partial class formQuizMenu : Form {
             nameof(btnAll) => Quiz.QuizStyle.All,
             nameof(btnText) => Quiz.QuizStyle.Text,
             nameof(btnMultipleChoice) => Quiz.QuizStyle.MultipleChoice,
-            nameof(btnFillTheBlanks) => Quiz.QuizStyle.FillTheBlanks,
+            nameof(btnFillTheBlanks) => Quiz.QuizStyle.Matching,
             nameof(btnFlashcards) => Quiz.QuizStyle.FlashCard,
             nameof(btnEquations) => Quiz.QuizStyle.Equation,
             _ => throw new NotImplementedException()

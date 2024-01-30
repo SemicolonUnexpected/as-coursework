@@ -31,6 +31,7 @@
             lblAnswerTitle = new Label();
             tbAnswer = new Custom_Controls.CustomTextbox();
             lblQuestionText = new Label();
+            chemistryCharachterKeypad1 = new Custom_Controls.ChemistryCharachterKeypad();
             pnlAnswer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbIsCorrect).BeginInit();
             SuspendLayout();
@@ -73,7 +74,7 @@
             pnlAnswer.Controls.Add(pbIsCorrect);
             pnlAnswer.Controls.Add(lblAnswerTitle);
             pnlAnswer.Controls.Add(tbAnswer);
-            pnlAnswer.Location = new Point(80, 335);
+            pnlAnswer.Location = new Point(87, 221);
             pnlAnswer.Margin = new Padding(25);
             pnlAnswer.Name = "pnlAnswer";
             pnlAnswer.Size = new Size(800, 69);
@@ -99,6 +100,7 @@
             btnSubmitNext.TabIndex = 14;
             btnSubmitNext.Text = "Submit";
             btnSubmitNext.UseVisualStyleBackColor = false;
+            btnSubmitNext.Click += btnSubmitNext_Click;
             // 
             // pbIsCorrect
             // 
@@ -154,7 +156,7 @@
             lblQuestionText.AutoSize = true;
             lblQuestionText.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lblQuestionText.ForeColor = Color.White;
-            lblQuestionText.Location = new Point(87, 205);
+            lblQuestionText.Location = new Point(80, 108);
             lblQuestionText.Margin = new Padding(25, 25, 25, 20);
             lblQuestionText.MaximumSize = new Size(800, 68);
             lblQuestionText.MinimumSize = new Size(800, 68);
@@ -164,12 +166,25 @@
             lblQuestionText.Text = "Two lines of question text. The questions wont be much longer than this hopefully";
             lblQuestionText.TextAlign = ContentAlignment.MiddleCenter;
             // 
+            // chemistryCharachterKeypad1
+            // 
+            chemistryCharachterKeypad1.BackColor = Color.FromArgb(20, 20, 50);
+            chemistryCharachterKeypad1.ForeColor = Color.White;
+            chemistryCharachterKeypad1.Location = new Point(205, 320);
+            chemistryCharachterKeypad1.Margin = new Padding(5);
+            chemistryCharachterKeypad1.Name = "chemistryCharachterKeypad1";
+            chemistryCharachterKeypad1.Padding = new Padding(5);
+            chemistryCharachterKeypad1.Size = new Size(520, 435);
+            chemistryCharachterKeypad1.TabIndex = 15;
+            chemistryCharachterKeypad1.CharacterClicked += chemistryCharachterKeypad1_CharacterClicked;
+            // 
             // formEquationQuestion
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(20, 20, 50);
             ClientSize = new Size(975, 900);
+            Controls.Add(chemistryCharachterKeypad1);
             Controls.Add(pnlAnswer);
             Controls.Add(lblQuestionText);
             Controls.Add(lblIsCorrect);
@@ -194,5 +209,6 @@
         private Label lblAnswerTitle;
         private Custom_Controls.CustomTextbox tbAnswer;
         private Label lblQuestionText;
+        private Custom_Controls.ChemistryCharachterKeypad chemistryCharachterKeypad1;
     }
 }

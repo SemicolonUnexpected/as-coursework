@@ -28,8 +28,9 @@ namespace AS_Coursework.View {
             // Set the minimum date of birth to 100 years ago
             dtpDateOfBirth.MinDate = DateTime.Today.Subtract(new TimeSpan(100 * 365, 0, 0, 0, 0));
 
-            // Setup the gender options which can be found in the StringToGender dictionary
+            // Setup the gender options which can be found in the StringToGender dictionary and deselect everything
             cbGender.Items.AddRange(new string[] { "Male", "Female", "Other", "Prefer not to say" });
+            cbGender.SelectedIndex = -1;
 
             // Call the OnResize event to ensure that the form is formatted correctly
             OnResize(EventArgs.Empty);

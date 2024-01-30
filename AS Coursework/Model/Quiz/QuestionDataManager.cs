@@ -7,7 +7,7 @@ public static class QuestionDataManager {
     private const string PATH_FLASHCARD = "questions/flashcard.txt";
     public static List<Question> Flashcard { get; private set; }
     private const string PATH_FILLTHEBLANKS = "questions/filltheblanks.txt";
-    public static List<Question> FillTheBlanks { get; private set; } 
+    public static List<Question> Matching { get; private set; } 
     private const string PATH_EQUATIONS = "questions/equations.txt";
     public static List<Question> Equation { get; private set; }
 

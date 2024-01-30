@@ -302,7 +302,6 @@
             Controls.Add(pnlScoreboard);
             FormBorderStyle = FormBorderStyle.None;
             Name = "formRanks";
-            Load += formRanks_Load;
             pnlScoreboard.ResumeLayout(false);
             pnl.ResumeLayout(false);
             pnl.PerformLayout();

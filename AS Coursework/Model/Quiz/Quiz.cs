@@ -29,7 +29,7 @@ public class Quiz {
         QuizStyle.All => PickQuestions(QuestionDataManager.MultipleChoice, questionCount),
         QuizStyle.MultipleChoice => PickQuestions(QuestionDataManager.MultipleChoice, questionCount),
         QuizStyle.Text => PickQuestions(QuestionDataManager.Text, questionCount),
-        QuizStyle.FillTheBlanks => PickQuestions(QuestionDataManager.FillTheBlanks, questionCount),
+        QuizStyle.Matching => PickQuestions(QuestionDataManager.Matching, questionCount),
         QuizStyle.FlashCard => PickQuestions(QuestionDataManager.Flashcard, questionCount),
         QuizStyle.Equation => PickQuestions(QuestionDataManager.Equation, questionCount),
         _ => throw new NotImplementedException(),
@@ -44,7 +44,7 @@ public class Quiz {
         All,
         MultipleChoice,
         Text,
-        FillTheBlanks,
+        Matching,
         FlashCard,
         Equation
     }

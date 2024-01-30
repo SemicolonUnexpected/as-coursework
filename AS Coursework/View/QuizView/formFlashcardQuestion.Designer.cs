@@ -78,7 +78,7 @@
             pnlFlashcard.BorderWidth = 0;
             pnlFlashcard.Controls.Add(lblFlashcardText);
             pnlFlashcard.CornerRadius = 20;
-            pnlFlashcard.Location = new Point(79, 127);
+            pnlFlashcard.Location = new Point(79, 116);
             pnlFlashcard.Margin = new Padding(20);
             pnlFlashcard.Name = "pnlFlashcard";
             pnlFlashcard.Size = new Size(800, 550);
