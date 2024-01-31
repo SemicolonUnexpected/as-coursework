@@ -13,6 +13,20 @@ public partial class formSettings : Form {
 
         _user = User.ActiveUser!; // For conciseness
 
+        Initialise();
+    }
+
+    // Create the settings page for a specific user
+    // This is necessary for the settings page
+    public formSettings(User user) {
+        InitializeComponent();
+
+        _user = user; // For conciseness
+
+        Initialise();
+    }
+
+    private void Initialise() {
         // Set the minimum date of birth to 100 years ago
         dtpDateOfBirth.MinDate = DateTime.Today.Subtract(new TimeSpan(100 * 365, 0, 0, 0, 0));
 

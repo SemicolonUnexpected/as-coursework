@@ -1,7 +1,6 @@
 ﻿using AS_Coursework._Helpers;
 using AS_Coursework.Model;
 using AS_Coursework.Model.Login;
-using AS_Coursework.Model.Users;
 
 namespace AS_Coursework.View;
 public partial class formLogin : Form {
@@ -49,7 +48,7 @@ public partial class formLogin : Form {
         btnLogin.CenterX();
     }
 
-    // Allow the _ to see their password by clicking the eye icon in the picturebox
+    // Allow the user to see their password by clicking the eye icon in the picturebox
     private void pbPasswordView_MouseDown(object sender, MouseEventArgs e) {
         pbPasswordView.Image = Resources.Icons.Eye_crossed;
         tbPassword.UsePasswordChar = false;
@@ -60,7 +59,7 @@ public partial class formLogin : Form {
         tbPassword.UsePasswordChar = true;
     }
 
-    // Underline the font in the register label when the _ hovers over it
+    // Underline the font in the register label when the user hovers over it
     private void lblRegister_MouseEnter(object sender, EventArgs e) {
         lblRegister.Font = new Font(lblRegister.Font, FontStyle.Underline);
     }

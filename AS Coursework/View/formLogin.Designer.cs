@@ -55,9 +55,9 @@
             pnlLeft.Controls.Add(tbUsername);
             pnlLeft.Dock = DockStyle.Left;
             pnlLeft.Location = new Point(0, 0);
-            pnlLeft.Margin = new Padding(3, 4, 3, 4);
+            pnlLeft.Margin = new Padding(2, 3, 2, 3);
             pnlLeft.Name = "pnlLeft";
-            pnlLeft.Size = new Size(462, 1000);
+            pnlLeft.Size = new Size(308, 650);
             pnlLeft.TabIndex = 0;
             pnlLeft.TabStop = true;
             // 
@@ -67,15 +67,17 @@
             btnLogin.BackColor = Color.FromArgb(0, 150, 255);
             btnLogin.BorderColor = Color.White;
             btnLogin.BorderWidth = 2;
-            btnLogin.CornerRadius = 20;
+            btnLogin.CornerRadius = 15;
             btnLogin.FlatAppearance.BorderSize = 0;
             btnLogin.FlatStyle = FlatStyle.Flat;
             btnLogin.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(168, 540);
-            btnLogin.Margin = new Padding(28, 31, 28, 31);
+            btnLogin.Image = null;
+            btnLogin.ImageSize = new Size(150, 40);
+            btnLogin.Location = new Point(112, 352);
+            btnLogin.Margin = new Padding(19, 21, 19, 21);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(100, 50);
+            btnLogin.Size = new Size(100, 40);
             btnLogin.TabIndex = 3;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = false;
@@ -87,9 +89,10 @@
             lblError.AutoSize = true;
             lblError.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblError.ForeColor = Color.Red;
-            lblError.Location = new Point(32, 641);
+            lblError.Location = new Point(21, 419);
+            lblError.Margin = new Padding(2, 0, 2, 0);
             lblError.Name = "lblError";
-            lblError.Size = new Size(0, 29);
+            lblError.Size = new Size(0, 19);
             lblError.TabIndex = 0;
             lblError.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -99,10 +102,11 @@
             lblRegister.AutoSize = true;
             lblRegister.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblRegister.ForeColor = Color.White;
-            lblRegister.Location = new Point(32, 729);
-            lblRegister.MaximumSize = new Size(416, 0);
+            lblRegister.Location = new Point(21, 478);
+            lblRegister.Margin = new Padding(2, 0, 2, 0);
+            lblRegister.MaximumSize = new Size(277, 0);
             lblRegister.Name = "lblRegister";
-            lblRegister.Size = new Size(414, 87);
+            lblRegister.Size = new Size(252, 57);
             lblRegister.TabIndex = 5;
             lblRegister.Text = "Don't have an account? Click here and register now\r\n\r\n";
             lblRegister.TextAlign = ContentAlignment.MiddleCenter;
@@ -116,9 +120,10 @@
             lblLoginTitle.AutoSize = true;
             lblLoginTitle.Font = new Font("Bahnschrift", 20F, FontStyle.Regular, GraphicsUnit.Point);
             lblLoginTitle.ForeColor = Color.White;
-            lblLoginTitle.Location = new Point(149, 155);
+            lblLoginTitle.Location = new Point(99, 95);
+            lblLoginTitle.Margin = new Padding(2, 0, 2, 0);
             lblLoginTitle.Name = "lblLoginTitle";
-            lblLoginTitle.Size = new Size(119, 48);
+            lblLoginTitle.Size = new Size(82, 33);
             lblLoginTitle.TabIndex = 0;
             lblLoginTitle.Text = "Login";
             // 
@@ -134,14 +139,14 @@
             tbPassword.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             tbPassword.ForeColor = Color.White;
             tbPassword.IsMultiline = false;
-            tbPassword.Location = new Point(64, 430);
-            tbPassword.Margin = new Padding(28, 31, 28, 31);
+            tbPassword.Location = new Point(43, 279);
+            tbPassword.Margin = new Padding(19, 21, 19, 21);
             tbPassword.Name = "tbPassword";
-            tbPassword.Padding = new Padding(8, 9, 39, 9);
+            tbPassword.Padding = new Padding(5, 6, 26, 6);
             tbPassword.PlaceholderText = "Password";
             tbPassword.PlaceholderTextColor = Color.White;
             tbPassword.ShortcutEnabled = false;
-            tbPassword.Size = new Size(333, 48);
+            tbPassword.Size = new Size(222, 33);
             tbPassword.TabIndex = 1;
             tbPassword.UsePasswordChar = true;
             tbPassword.KeyDown += tbPassword_KeyDown;
@@ -170,14 +175,14 @@
             tbUsername.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             tbUsername.ForeColor = Color.White;
             tbUsername.IsMultiline = false;
-            tbUsername.Location = new Point(64, 312);
-            tbUsername.Margin = new Padding(28, 31, 28, 31);
+            tbUsername.Location = new Point(43, 200);
+            tbUsername.Margin = new Padding(19, 21, 19, 21);
             tbUsername.Name = "tbUsername";
-            tbUsername.Padding = new Padding(8, 9, 8, 9);
+            tbUsername.Padding = new Padding(5, 6, 5, 6);
             tbUsername.PlaceholderText = "Username";
             tbUsername.PlaceholderTextColor = Color.White;
             tbUsername.ShortcutEnabled = false;
-            tbUsername.Size = new Size(333, 48);
+            tbUsername.Size = new Size(222, 33);
             tbUsername.TabIndex = 0;
             tbUsername.UsePasswordChar = false;
             // 
@@ -185,20 +190,20 @@
             // 
             pnlLeftGradOne.BackColor = Color.FromArgb(30, 30, 70);
             pnlLeftGradOne.Dock = DockStyle.Left;
-            pnlLeftGradOne.Location = new Point(462, 0);
-            pnlLeftGradOne.Margin = new Padding(3, 4, 3, 4);
+            pnlLeftGradOne.Location = new Point(308, 0);
+            pnlLeftGradOne.Margin = new Padding(2, 3, 2, 3);
             pnlLeftGradOne.Name = "pnlLeftGradOne";
-            pnlLeftGradOne.Size = new Size(33, 1000);
+            pnlLeftGradOne.Size = new Size(22, 650);
             pnlLeftGradOne.TabIndex = 0;
             // 
             // pnlLeftGradTwo
             // 
             pnlLeftGradTwo.BackColor = Color.FromArgb(40, 40, 90);
             pnlLeftGradTwo.Dock = DockStyle.Left;
-            pnlLeftGradTwo.Location = new Point(495, 0);
-            pnlLeftGradTwo.Margin = new Padding(3, 4, 3, 4);
+            pnlLeftGradTwo.Location = new Point(330, 0);
+            pnlLeftGradTwo.Margin = new Padding(2, 3, 2, 3);
             pnlLeftGradTwo.Name = "pnlLeftGradTwo";
-            pnlLeftGradTwo.Size = new Size(33, 1000);
+            pnlLeftGradTwo.Size = new Size(22, 650);
             pnlLeftGradTwo.TabIndex = 0;
             // 
             // pnlWelcomeTitle
@@ -221,7 +226,7 @@
             lblWelcome.ForeColor = Color.White;
             lblWelcome.Location = new Point(5, 74);
             lblWelcome.Name = "lblWelcome";
-            lblWelcome.Size = new Size(182, 48);
+            lblWelcome.Size = new Size(124, 33);
             lblWelcome.TabIndex = 3;
             lblWelcome.Text = "Welcome";
             // 
@@ -241,7 +246,7 @@
             lblQuizName.ForeColor = Color.White;
             lblQuizName.Location = new Point(5, 13);
             lblQuizName.Name = "lblQuizName";
-            lblQuizName.Size = new Size(211, 48);
+            lblQuizName.Size = new Size(144, 33);
             lblQuizName.TabIndex = 3;
             lblQuizName.Text = "Chem Quiz";
             // 
@@ -250,25 +255,25 @@
             pbBackground.Dock = DockStyle.Fill;
             pbBackground.Image = Resources.Images.Flasks_close_up;
             pbBackground.ImagePortion = new Rectangle(1380, 0, 972, 1440);
-            pbBackground.Location = new Point(528, 0);
-            pbBackground.Margin = new Padding(3, 4, 3, 4);
+            pbBackground.Location = new Point(352, 0);
+            pbBackground.Margin = new Padding(2, 3, 2, 3);
             pbBackground.Name = "pbBackground";
-            pbBackground.Size = new Size(672, 1000);
+            pbBackground.Size = new Size(468, 650);
             pbBackground.TabIndex = 0;
             pbBackground.Text = "customPictureBox1";
             // 
             // formLogin
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(0, 150, 255);
-            ClientSize = new Size(1200, 1000);
+            ClientSize = new Size(820, 650);
             Controls.Add(pbBackground);
             Controls.Add(pnlLeftGradTwo);
             Controls.Add(pnlLeftGradOne);
             Controls.Add(pnlLeft);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
+            Margin = new Padding(2, 3, 2, 3);
             Name = "formLogin";
             Text = "LoginView";
             pnlLeft.ResumeLayout(false);

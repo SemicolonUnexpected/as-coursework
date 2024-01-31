@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AS_Coursework.View {
-    public partial class formAdmin : Form {
-        public formAdmin() {
+    public partial class formAdminMenu : Form {
+        public formAdminMenu() {
             InitializeComponent();
         }
     }

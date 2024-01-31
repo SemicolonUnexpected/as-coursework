@@ -24,7 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             lbl = new Label();
-            pb = new Custom_Controls.PicturePanel();
+            pb = new PicturePanel();
             SuspendLayout();
             // 
             // lbl
@@ -32,9 +32,10 @@
             lbl.AutoSize = true;
             lbl.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lbl.ForeColor = Color.White;
-            lbl.Location = new Point(80, 23);
+            lbl.Location = new Point(56, 14);
+            lbl.Margin = new Padding(2, 0, 2, 0);
             lbl.Name = "lbl";
-            lbl.Size = new Size(88, 34);
+            lbl.Size = new Size(59, 23);
             lbl.TabIndex = 0;
             lbl.Text = "Home";
             // 
@@ -42,21 +43,23 @@
             // 
             pb.Image = Resources.Icons.Home;
             pb.ImagePortion = new Rectangle(0, 0, 512, 512);
-            pb.Location = new Point(20, 20);
+            pb.Location = new Point(17, 11);
+            pb.Margin = new Padding(2);
             pb.Name = "pb";
-            pb.Size = new Size(40, 40);
+            pb.Size = new Size(30, 30);
             pb.TabIndex = 1;
             pb.Text = "customPicturePanel1";
             // 
             // MenuItem
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(30, 30, 70);
             Controls.Add(pb);
             Controls.Add(lbl);
+            Margin = new Padding(2);
             Name = "MenuItem";
-            Size = new Size(200, 80);
+            Size = new Size(140, 48);
             ResumeLayout(false);
             PerformLayout();
         }

@@ -72,6 +72,7 @@
             // 
             // pnlUserProfile
             // 
+            pnlUserProfile.Anchor = AnchorStyles.None;
             pnlUserProfile.Controls.Add(lblUsername);
             pnlUserProfile.Controls.Add(pbUserProfile);
             pnlUserProfile.Location = new Point(34, 168);
@@ -82,7 +83,7 @@
             // 
             // lblQuizInfo
             // 
-            lblQuizInfo.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            lblQuizInfo.Anchor = AnchorStyles.None;
             lblQuizInfo.AutoSize = true;
             lblQuizInfo.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lblQuizInfo.ForeColor = Color.White;
@@ -96,9 +97,9 @@
             lblQuizInfo.Text = "Welcome to the quiz. Select a quiz below to begin. You gain expeience for each question you answer correctly";
             lblQuizInfo.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // btnAllQuestions
+            // btnAll
             // 
-            btnAll.Anchor = AnchorStyles.Right;
+            btnAll.Anchor = AnchorStyles.None;
             btnAll.BackColor = Color.FromArgb(0, 150, 255);
             btnAll.BorderColor = Color.White;
             btnAll.BorderWidth = 2;
@@ -111,7 +112,7 @@
             btnAll.ImageSize = new Size(150, 40);
             btnAll.Location = new Point(502, 343);
             btnAll.Margin = new Padding(25);
-            btnAll.Name = "btnAllQuestions";
+            btnAll.Name = "btnAll";
             btnAll.Size = new Size(250, 75);
             btnAll.TabIndex = 0;
             btnAll.Text = "All questions";
@@ -120,7 +121,7 @@
             // 
             // btnEquations
             // 
-            btnEquations.Anchor = AnchorStyles.Right;
+            btnEquations.Anchor = AnchorStyles.None;
             btnEquations.BackColor = Color.FromArgb(0, 150, 255);
             btnEquations.BorderColor = Color.White;
             btnEquations.BorderWidth = 2;
@@ -141,7 +142,7 @@
             // 
             // btnFlashcards
             // 
-            btnFlashcards.Anchor = AnchorStyles.Right;
+            btnFlashcards.Anchor = AnchorStyles.None;
             btnFlashcards.BackColor = Color.FromArgb(0, 150, 255);
             btnFlashcards.BorderColor = Color.White;
             btnFlashcards.BorderWidth = 2;
@@ -160,9 +161,9 @@
             btnFlashcards.Text = "Flashcards";
             btnFlashcards.UseVisualStyleBackColor = false;
             // 
-            // btnTextQuestions
+            // btnText
             // 
-            btnText.Anchor = AnchorStyles.Right;
+            btnText.Anchor = AnchorStyles.None;
             btnText.BackColor = Color.FromArgb(0, 150, 255);
             btnText.BorderColor = Color.White;
             btnText.BorderWidth = 2;
@@ -175,7 +176,7 @@
             btnText.ImageSize = new Size(150, 40);
             btnText.Location = new Point(502, 468);
             btnText.Margin = new Padding(25);
-            btnText.Name = "btnTextQuestions";
+            btnText.Name = "btnText";
             btnText.Size = new Size(250, 75);
             btnText.TabIndex = 2;
             btnText.Text = "Typing";
@@ -183,7 +184,7 @@
             // 
             // btnFillTheBlanks
             // 
-            btnFillTheBlanks.Anchor = AnchorStyles.Right;
+            btnFillTheBlanks.Anchor = AnchorStyles.None;
             btnFillTheBlanks.BackColor = Color.FromArgb(0, 150, 255);
             btnFillTheBlanks.BorderColor = Color.White;
             btnFillTheBlanks.BorderWidth = 2;
@@ -202,9 +203,9 @@
             btnFillTheBlanks.Text = "Fill the blanks";
             btnFillTheBlanks.UseVisualStyleBackColor = false;
             // 
-            // btnMultipleChoiceQuestions
+            // btnMultipleChoice
             // 
-            btnMultipleChoice.Anchor = AnchorStyles.Right;
+            btnMultipleChoice.Anchor = AnchorStyles.None;
             btnMultipleChoice.BackColor = Color.FromArgb(0, 150, 255);
             btnMultipleChoice.BorderColor = Color.White;
             btnMultipleChoice.BorderWidth = 2;
@@ -217,7 +218,7 @@
             btnMultipleChoice.ImageSize = new Size(150, 40);
             btnMultipleChoice.Location = new Point(502, 593);
             btnMultipleChoice.Margin = new Padding(25);
-            btnMultipleChoice.Name = "btnMultipleChoiceQuestions";
+            btnMultipleChoice.Name = "btnMultipleChoice";
             btnMultipleChoice.Size = new Size(250, 75);
             btnMultipleChoice.TabIndex = 4;
             btnMultipleChoice.Text = "Multiple choice";

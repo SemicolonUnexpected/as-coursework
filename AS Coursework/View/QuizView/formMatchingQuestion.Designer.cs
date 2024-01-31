@@ -101,8 +101,9 @@
             // 
             lbl1.Anchor = AnchorStyles.None;
             lbl1.AutoSize = true;
+            lbl1.BackColor = Color.White;
             lbl1.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl1.ForeColor = Color.White;
+            lbl1.ForeColor = Color.Black;
             lbl1.Location = new Point(0, 0);
             lbl1.Margin = new Padding(25, 25, 25, 20);
             lbl1.MaximumSize = new Size(265, 47);
@@ -128,8 +129,9 @@
             // 
             lbl2.Anchor = AnchorStyles.None;
             lbl2.AutoSize = true;
+            lbl2.BackColor = Color.White;
             lbl2.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl2.ForeColor = Color.White;
+            lbl2.ForeColor = Color.Black;
             lbl2.Location = new Point(0, 0);
             lbl2.Margin = new Padding(25, 25, 25, 20);
             lbl2.MaximumSize = new Size(265, 47);
@@ -177,8 +179,9 @@
             // 
             lbl3.Anchor = AnchorStyles.None;
             lbl3.AutoSize = true;
+            lbl3.BackColor = Color.White;
             lbl3.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl3.ForeColor = Color.White;
+            lbl3.ForeColor = Color.Black;
             lbl3.Location = new Point(0, 0);
             lbl3.Margin = new Padding(25, 25, 25, 20);
             lbl3.MaximumSize = new Size(265, 47);
@@ -226,8 +229,9 @@
             // 
             lbl4.Anchor = AnchorStyles.None;
             lbl4.AutoSize = true;
+            lbl4.BackColor = Color.White;
             lbl4.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl4.ForeColor = Color.White;
+            lbl4.ForeColor = Color.Black;
             lbl4.Location = new Point(0, 0);
             lbl4.Margin = new Padding(25, 25, 25, 20);
             lbl4.MaximumSize = new Size(265, 47);

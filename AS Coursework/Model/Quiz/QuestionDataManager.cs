@@ -11,6 +11,20 @@ public static class QuestionDataManager {
     private const string PATH_EQUATIONS = "questions/equations.txt";
     public static List<Question> Equation { get; private set; }
 
+    public static List<Question> All {
+        get {
+            List<Question> result = new();
+
+            result.AddRange(MultipleChoice);
+            result .AddRange(Text);
+            result.AddRange(Flashcard);
+            result.AddRange(Matching);
+            result.AddRange(Equation);
+
+            return result;
+        }
+    }
+
     static QuestionDataManager() {
         ReadIn();
     }

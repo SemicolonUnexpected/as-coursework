@@ -5,8 +5,8 @@ using AS_Coursework.View.QuizView;
 namespace AS_Coursework.View;
 public partial class formMainMenu : Form {
 
-    private const int MENU_WIDTH = 200;
-    private const int MINIMISED_MENU_WIDTH = 75;
+    private const int MENU_WIDTH = 140;
+    private const int MINIMISED_MENU_WIDTH = 50;
 
     private bool _menuMinimised = true;
     private Form? _userForm;
@@ -25,15 +25,16 @@ public partial class formMainMenu : Form {
         get => _userFormBaseHeight;
     }
 
-    public formMainMenu() {
+    public formMainMenu(bool openAdmin = false) {
         InitializeComponent();
 
         SetStyle(ControlStyles.UserPaint | ControlStyles.OptimizedDoubleBuffer | ControlStyles.AllPaintingInWmPaint, true);
 
-        if (!User.ActiveUser.AuthenticationDetails.IsAdmin) miAdmin.Hide();
+        // Only show the admin page if the current user is an admin
+        if (!User.ActiveUser!.AuthenticationDetails.IsAdmin) miAdmin.Hide();
 
         // Display the initial use form
-        DisplayUserForm(new formHome());
+        DisplayUserForm(openAdmin ? new formHome() : new formAdminMenu());
 
         // Call the OnResize event to ensure that the form is formatted correctly
         OnResize(EventArgs.Empty);
@@ -159,7 +160,7 @@ public partial class formMainMenu : Form {
 
     private void miAdmin_MenuClick(object sender, EventArgs e) {
         MinimiseMenu();
-        if (UserForm is not formAdmin) DisplayUserForm(new formAdmin());
+        if (UserForm is not formAdminMenu) DisplayUserForm(new formAdminMenu());
     }
 
     #endregion

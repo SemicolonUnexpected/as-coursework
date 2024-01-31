@@ -31,19 +31,19 @@
             pnlFormHolder.BackColor = Color.FromArgb(20, 20, 50);
             pnlFormHolder.Dock = DockStyle.Fill;
             pnlFormHolder.Location = new Point(0, 0);
-            pnlFormHolder.Margin = new Padding(3, 4, 3, 4);
+            pnlFormHolder.Margin = new Padding(2, 3, 2, 3);
             pnlFormHolder.Name = "pnlFormHolder";
-            pnlFormHolder.Size = new Size(1200, 900);
+            pnlFormHolder.Size = new Size(800, 600);
             pnlFormHolder.TabIndex = 0;
             // 
             // formMaster
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1200, 900);
+            ClientSize = new Size(800, 600);
             Controls.Add(pnlFormHolder);
-            Margin = new Padding(3, 4, 3, 4);
-            MinimumSize = new Size(1222, 956);
+            Margin = new Padding(2, 3, 2, 3);
+            MinimumSize = new Size(814, 639);
             Name = "formMaster";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ChemQuiz";

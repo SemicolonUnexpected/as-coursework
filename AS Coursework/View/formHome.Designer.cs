@@ -51,14 +51,15 @@
             pbUserProfile.BorderColorOne = Color.FromArgb(0, 100, 255);
             pbUserProfile.BorderColorTwo = Color.FromArgb(50, 200, 255);
             pbUserProfile.BorderStyle = Custom_Controls.PictureFrame.BorderType.Circle;
-            pbUserProfile.BorderWidth = 30;
+            pbUserProfile.BorderWidth = 15;
             pbUserProfile.GradientAngle = 45;
-            pbUserProfile.GradientRectangle = new Rectangle(0, 0, 350, 350);
+            pbUserProfile.GradientRectangle = new Rectangle(0, 0, 222, 222);
             pbUserProfile.Image = Resources.Icons.User;
             pbUserProfile.ImagePortion = new Rectangle(-256, -256, 1024, 1024);
-            pbUserProfile.Location = new Point(312, 50);
+            pbUserProfile.Location = new Point(236, 11);
+            pbUserProfile.Margin = new Padding(2, 2, 2, 2);
             pbUserProfile.Name = "pbUserProfile";
-            pbUserProfile.Size = new Size(350, 350);
+            pbUserProfile.Size = new Size(222, 222);
             pbUserProfile.TabIndex = 0;
             pbUserProfile.Text = "pbProfile";
             // 
@@ -73,10 +74,10 @@
             pnlLevel.Controls.Add(lblExperienceRemainder);
             pnlLevel.Controls.Add(lblLevelTitle);
             pnlLevel.CornerRadius = 20;
-            pnlLevel.Location = new Point(18, 550);
-            pnlLevel.Margin = new Padding(20);
+            pnlLevel.Location = new Point(13, 315);
+            pnlLevel.Margin = new Padding(14, 12, 14, 12);
             pnlLevel.Name = "pnlLevel";
-            pnlLevel.Size = new Size(300, 280);
+            pnlLevel.Size = new Size(210, 210);
             pnlLevel.TabIndex = 1;
             pnlLevel.Text = "customRectangle1";
             // 
@@ -87,10 +88,10 @@
             lblLevel.AutoSize = true;
             lblLevel.Font = new Font("Bahnschrift", 20F, FontStyle.Regular, GraphicsUnit.Point);
             lblLevel.ForeColor = Color.White;
-            lblLevel.Location = new Point(25, 118);
-            lblLevel.Margin = new Padding(25);
+            lblLevel.Location = new Point(22, 87);
+            lblLevel.Margin = new Padding(18, 15, 18, 15);
             lblLevel.Name = "lblLevel";
-            lblLevel.Size = new Size(42, 48);
+            lblLevel.Size = new Size(30, 33);
             lblLevel.TabIndex = 2;
             lblLevel.Text = "0";
             // 
@@ -100,11 +101,11 @@
             pbLevel.Angle = 0;
             pbLevel.BackingColor = Color.White;
             pbLevel.EndColor = Color.FromArgb(50, 200, 255);
-            pbLevel.Location = new Point(25, 168);
-            pbLevel.Margin = new Padding(15);
+            pbLevel.Location = new Point(18, 128);
+            pbLevel.Margin = new Padding(10, 9, 10, 9);
             pbLevel.Name = "pbLevel";
             pbLevel.Progress = 0F;
-            pbLevel.Size = new Size(240, 24);
+            pbLevel.Size = new Size(168, 14);
             pbLevel.StartColor = Color.FromArgb(0, 100, 255);
             pbLevel.TabIndex = 3;
             pbLevel.Text = "customProgressBar3";
@@ -116,10 +117,10 @@
             lblExperienceRemainder.AutoSize = true;
             lblExperienceRemainder.Font = new Font("Bahnschrift", 10F, FontStyle.Regular, GraphicsUnit.Point);
             lblExperienceRemainder.ForeColor = Color.White;
-            lblExperienceRemainder.Location = new Point(31, 190);
-            lblExperienceRemainder.Margin = new Padding(25);
+            lblExperienceRemainder.Location = new Point(22, 141);
+            lblExperienceRemainder.Margin = new Padding(18, 15, 18, 15);
             lblExperienceRemainder.Name = "lblExperienceRemainder";
-            lblExperienceRemainder.Size = new Size(21, 24);
+            lblExperienceRemainder.Size = new Size(16, 17);
             lblExperienceRemainder.TabIndex = 2;
             lblExperienceRemainder.Text = "0";
             // 
@@ -129,10 +130,10 @@
             lblLevelTitle.AutoSize = true;
             lblLevelTitle.Font = new Font("Bahnschrift", 18F, FontStyle.Regular, GraphicsUnit.Point);
             lblLevelTitle.ForeColor = Color.White;
-            lblLevelTitle.Location = new Point(25, 25);
-            lblLevelTitle.Margin = new Padding(25);
+            lblLevelTitle.Location = new Point(18, 15);
+            lblLevelTitle.Margin = new Padding(18, 15, 18, 15);
             lblLevelTitle.Name = "lblLevelTitle";
-            lblLevelTitle.Size = new Size(105, 43);
+            lblLevelTitle.Size = new Size(72, 29);
             lblLevelTitle.TabIndex = 2;
             lblLevelTitle.Text = "Level";
             // 
@@ -145,19 +146,20 @@
             pnlRank.Controls.Add(pnl);
             pnlRank.Controls.Add(lblRankTitle);
             pnlRank.CornerRadius = 20;
-            pnlRank.Location = new Point(657, 550);
-            pnlRank.Margin = new Padding(20);
+            pnlRank.Location = new Point(460, 315);
+            pnlRank.Margin = new Padding(14, 12, 14, 12);
             pnlRank.Name = "pnlRank";
-            pnlRank.Size = new Size(300, 280);
+            pnlRank.Size = new Size(210, 210);
             pnlRank.TabIndex = 1;
             pnlRank.Text = "customRectangle1";
             // 
             // pnl
             // 
             pnl.Controls.Add(lblRank);
-            pnl.Location = new Point(0, 82);
+            pnl.Location = new Point(0, 49);
+            pnl.Margin = new Padding(2, 2, 2, 2);
             pnl.Name = "pnl";
-            pnl.Size = new Size(300, 181);
+            pnl.Size = new Size(210, 138);
             pnl.TabIndex = 3;
             // 
             // lblRank
@@ -166,10 +168,10 @@
             lblRank.AutoSize = true;
             lblRank.Font = new Font("Bahnschrift", 25F, FontStyle.Regular, GraphicsUnit.Point);
             lblRank.ForeColor = Color.White;
-            lblRank.Location = new Point(80, 6);
-            lblRank.Margin = new Padding(25);
+            lblRank.Location = new Point(75, 25);
+            lblRank.Margin = new Padding(18, 15, 18, 15);
             lblRank.Name = "lblRank";
-            lblRank.Size = new Size(73, 60);
+            lblRank.Size = new Size(50, 41);
             lblRank.TabIndex = 2;
             lblRank.Text = "#1";
             // 
@@ -179,10 +181,10 @@
             lblRankTitle.AutoSize = true;
             lblRankTitle.Font = new Font("Bahnschrift", 18F, FontStyle.Regular, GraphicsUnit.Point);
             lblRankTitle.ForeColor = Color.White;
-            lblRankTitle.Location = new Point(25, 25);
-            lblRankTitle.Margin = new Padding(25);
+            lblRankTitle.Location = new Point(18, 15);
+            lblRankTitle.Margin = new Padding(18, 15, 18, 15);
             lblRankTitle.Name = "lblRankTitle";
-            lblRankTitle.Size = new Size(99, 43);
+            lblRankTitle.Size = new Size(68, 29);
             lblRankTitle.TabIndex = 2;
             lblRankTitle.Text = "Rank";
             // 
@@ -190,14 +192,15 @@
             // 
             lblUsername.Anchor = AnchorStyles.None;
             lblUsername.AutoEllipsis = true;
-            lblUsername.AutoSize = true;
             lblUsername.Font = new Font("Bahnschrift", 18F, FontStyle.Regular, GraphicsUnit.Point);
             lblUsername.ForeColor = Color.White;
-            lblUsername.Location = new Point(403, 450);
+            lblUsername.Location = new Point(21, 247);
+            lblUsername.Margin = new Padding(12);
             lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(185, 43);
+            lblUsername.Size = new Size(640, 33);
             lblUsername.TabIndex = 2;
             lblUsername.Text = "Username";
+            lblUsername.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pnlAccuracy
             // 
@@ -210,10 +213,10 @@
             pnlAccuracy.Controls.Add(lblCorrect);
             pnlAccuracy.Controls.Add(lblAnswers);
             pnlAccuracy.CornerRadius = 20;
-            pnlAccuracy.Location = new Point(337, 550);
+            pnlAccuracy.Location = new Point(236, 315);
             pnlAccuracy.Margin = new Padding(0);
             pnlAccuracy.Name = "pnlAccuracy";
-            pnlAccuracy.Size = new Size(300, 280);
+            pnlAccuracy.Size = new Size(210, 210);
             pnlAccuracy.TabIndex = 1;
             pnlAccuracy.Text = "customRectangle1";
             // 
@@ -223,10 +226,10 @@
             lblAccuracyTitle.AutoSize = true;
             lblAccuracyTitle.Font = new Font("Bahnschrift", 18F, FontStyle.Regular, GraphicsUnit.Point);
             lblAccuracyTitle.ForeColor = Color.White;
-            lblAccuracyTitle.Location = new Point(25, 25);
-            lblAccuracyTitle.Margin = new Padding(25);
+            lblAccuracyTitle.Location = new Point(18, 15);
+            lblAccuracyTitle.Margin = new Padding(18, 15, 18, 15);
             lblAccuracyTitle.Name = "lblAccuracyTitle";
-            lblAccuracyTitle.Size = new Size(166, 43);
+            lblAccuracyTitle.Size = new Size(113, 29);
             lblAccuracyTitle.TabIndex = 2;
             lblAccuracyTitle.Text = "Accuracy";
             // 
@@ -234,13 +237,12 @@
             // 
             lblPercentageAccuracy.Anchor = AnchorStyles.Left;
             lblPercentageAccuracy.AutoEllipsis = true;
-            lblPercentageAccuracy.AutoSize = true;
             lblPercentageAccuracy.Font = new Font("Bahnschrift", 10F, FontStyle.Regular, GraphicsUnit.Point);
             lblPercentageAccuracy.ForeColor = Color.White;
-            lblPercentageAccuracy.Location = new Point(31, 218);
-            lblPercentageAccuracy.Margin = new Padding(25);
+            lblPercentageAccuracy.Location = new Point(10, 140);
+            lblPercentageAccuracy.Margin = new Padding(10, 5, 10, 5);
             lblPercentageAccuracy.Name = "lblPercentageAccuracy";
-            lblPercentageAccuracy.Size = new Size(220, 24);
+            lblPercentageAccuracy.Size = new Size(190, 25);
             lblPercentageAccuracy.TabIndex = 2;
             lblPercentageAccuracy.Text = "Percentage accuracy - ";
             // 
@@ -248,13 +250,12 @@
             // 
             lblCorrect.Anchor = AnchorStyles.Left;
             lblCorrect.AutoEllipsis = true;
-            lblCorrect.AutoSize = true;
             lblCorrect.Font = new Font("Bahnschrift", 10F, FontStyle.Regular, GraphicsUnit.Point);
             lblCorrect.ForeColor = Color.White;
-            lblCorrect.Location = new Point(31, 168);
-            lblCorrect.Margin = new Padding(25);
+            lblCorrect.Location = new Point(10, 105);
+            lblCorrect.Margin = new Padding(10, 5, 10, 5);
             lblCorrect.Name = "lblCorrect";
-            lblCorrect.Size = new Size(191, 24);
+            lblCorrect.Size = new Size(190, 25);
             lblCorrect.TabIndex = 2;
             lblCorrect.Text = "Questions correct - ";
             // 
@@ -262,28 +263,28 @@
             // 
             lblAnswers.Anchor = AnchorStyles.Left;
             lblAnswers.AutoEllipsis = true;
-            lblAnswers.AutoSize = true;
             lblAnswers.Font = new Font("Bahnschrift", 10F, FontStyle.Regular, GraphicsUnit.Point);
             lblAnswers.ForeColor = Color.White;
-            lblAnswers.Location = new Point(31, 118);
-            lblAnswers.Margin = new Padding(25);
+            lblAnswers.Location = new Point(10, 70);
+            lblAnswers.Margin = new Padding(10, 5, 10, 5);
             lblAnswers.Name = "lblAnswers";
-            lblAnswers.Size = new Size(213, 24);
+            lblAnswers.Size = new Size(190, 25);
             lblAnswers.TabIndex = 2;
             lblAnswers.Text = "Questions answered - ";
             // 
             // formHome
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(20, 20, 50);
-            ClientSize = new Size(975, 900);
+            ClientSize = new Size(682, 540);
             Controls.Add(lblUsername);
             Controls.Add(pnlAccuracy);
             Controls.Add(pnlRank);
             Controls.Add(pnlLevel);
             Controls.Add(pbUserProfile);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(2, 2, 2, 2);
             Name = "formHome";
             Text = "formUserHome";
             pnlLevel.ResumeLayout(false);
@@ -295,7 +296,6 @@
             pnlAccuracy.ResumeLayout(false);
             pnlAccuracy.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
