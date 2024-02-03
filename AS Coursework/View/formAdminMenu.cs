@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using AS_Coursework.Model.Data;
 
-namespace AS_Coursework.View {
-    public partial class formAdminMenu : Form {
-        public formAdminMenu() {
-            InitializeComponent();
-        }
+namespace AS_Coursework.View; 
+public partial class formAdminMenu : Form {
+    public formAdminMenu() {
+        InitializeComponent();
+    }
+
+    private void InitialiseData() {
+        clbUserSelector.DataContext = DataManager.GetUserClone();
+        clbUserSelector.
     }
 }

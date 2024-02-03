@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="lblAdminInfo.Text" xml:space="preserve">
+    <value>Welcome to the admin menu. Here you can change who has admin permissions and access each user's settings page to change any details (such as a password reset). Checks beside each user name show if they have admin permissions. Select a users name and then click the 'View' button to see their settings page.</value>
+  </data>
 </root>

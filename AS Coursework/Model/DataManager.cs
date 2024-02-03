@@ -39,6 +39,10 @@ internal static class DataManager {
         _users.Remove(user);
     }
 
+    public static List<User> GetUserClone() {
+        return new List<User>(_users);
+    }
+
     #endregion
 
     static DataManager() {

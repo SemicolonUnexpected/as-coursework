@@ -3,7 +3,10 @@ using System.Drawing.Drawing2D;
 using System.Windows.Forms.Design;
 
 namespace AS_Coursework.Custom_Controls;
+// Allow the control to have children
 [Designer(typeof(ParentControlDesigner))]
+// Inherit from the Control class for a more lightweight control
+// Inheriting from control instead of panel also removes any nasty flickering
 public partial class CustomRectangle : Control {
 
     private Color _borderColor;
