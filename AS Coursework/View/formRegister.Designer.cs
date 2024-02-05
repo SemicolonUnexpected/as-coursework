@@ -40,23 +40,21 @@
             pnlRight.Controls.Add(pnlRegisterForm);
             pnlRight.Controls.Add(lblRegisterTitle);
             pnlRight.Dock = DockStyle.Right;
-            pnlRight.Location = new Point(497, 0);
-            pnlRight.Margin = new Padding(2, 2, 2, 2);
+            pnlRight.Location = new Point(500, 0);
+            pnlRight.Margin = new Padding(2);
             pnlRight.Name = "pnlRight";
-            pnlRight.Size = new Size(323, 650);
+            pnlRight.Size = new Size(320, 650);
             pnlRight.TabIndex = 0;
             // 
             // lblSignIn
             // 
-            lblSignIn.Anchor = AnchorStyles.None;
-            lblSignIn.AutoSize = true;
+            lblSignIn.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             lblSignIn.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblSignIn.ForeColor = Color.White;
-            lblSignIn.Location = new Point(26, 507);
-            lblSignIn.Margin = new Padding(2, 0, 2, 0);
-            lblSignIn.MaximumSize = new Size(291, 0);
+            lblSignIn.Location = new Point(7, 547);
+            lblSignIn.Margin = new Padding(5);
             lblSignIn.Name = "lblSignIn";
-            lblSignIn.Size = new Size(290, 57);
+            lblSignIn.Size = new Size(308, 57);
             lblSignIn.TabIndex = 7;
             lblSignIn.Text = "Already have an account? Click here to sign in\r\n\r\n";
             lblSignIn.TextAlign = ContentAlignment.MiddleCenter;
@@ -68,9 +66,9 @@
             // 
             pnlRegisterForm.Anchor = AnchorStyles.None;
             pnlRegisterForm.Location = new Point(0, 125);
-            pnlRegisterForm.Margin = new Padding(2, 2, 2, 2);
+            pnlRegisterForm.Margin = new Padding(2);
             pnlRegisterForm.Name = "pnlRegisterForm";
-            pnlRegisterForm.Size = new Size(323, 360);
+            pnlRegisterForm.Size = new Size(320, 400);
             pnlRegisterForm.TabIndex = 6;
             // 
             // lblRegisterTitle
@@ -79,7 +77,7 @@
             lblRegisterTitle.AutoSize = true;
             lblRegisterTitle.Font = new Font("Bahnschrift", 20F, FontStyle.Regular, GraphicsUnit.Point);
             lblRegisterTitle.ForeColor = Color.White;
-            lblRegisterTitle.Location = new Point(102, 80);
+            lblRegisterTitle.Location = new Point(102, 66);
             lblRegisterTitle.Margin = new Padding(2, 0, 2, 0);
             lblRegisterTitle.Name = "lblRegisterTitle";
             lblRegisterTitle.Size = new Size(117, 33);
@@ -90,8 +88,8 @@
             // 
             pnlRightGradTwo.BackColor = Color.FromArgb(40, 40, 90);
             pnlRightGradTwo.Dock = DockStyle.Right;
-            pnlRightGradTwo.Location = new Point(451, 0);
-            pnlRightGradTwo.Margin = new Padding(2, 2, 2, 2);
+            pnlRightGradTwo.Location = new Point(454, 0);
+            pnlRightGradTwo.Margin = new Padding(2);
             pnlRightGradTwo.Name = "pnlRightGradTwo";
             pnlRightGradTwo.Size = new Size(23, 650);
             pnlRightGradTwo.TabIndex = 4;
@@ -100,8 +98,8 @@
             // 
             pnlRightGradOne.BackColor = Color.FromArgb(30, 30, 70);
             pnlRightGradOne.Dock = DockStyle.Right;
-            pnlRightGradOne.Location = new Point(474, 0);
-            pnlRightGradOne.Margin = new Padding(2, 2, 2, 2);
+            pnlRightGradOne.Location = new Point(477, 0);
+            pnlRightGradOne.Margin = new Padding(2);
             pnlRightGradOne.Name = "pnlRightGradOne";
             pnlRightGradOne.Size = new Size(23, 650);
             pnlRightGradOne.TabIndex = 3;
@@ -112,9 +110,9 @@
             pbBackground.Image = Resources.Images.Test_Tube_and_Dropper;
             pbBackground.ImagePortion = new Rectangle(0, 0, 1042, 1334);
             pbBackground.Location = new Point(0, 0);
-            pbBackground.Margin = new Padding(2, 2, 2, 2);
+            pbBackground.Margin = new Padding(2);
             pbBackground.Name = "pbBackground";
-            pbBackground.Size = new Size(451, 650);
+            pbBackground.Size = new Size(454, 650);
             pbBackground.TabIndex = 5;
             pbBackground.Text = "customPictureBox1";
             // 
@@ -129,7 +127,7 @@
             Controls.Add(pnlRightGradOne);
             Controls.Add(pnlRight);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "RegisterView";
             Text = "LoginView";
             pnlRight.ResumeLayout(false);

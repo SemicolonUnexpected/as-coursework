@@ -58,10 +58,10 @@
             pnlPasswordStrength.Controls.Add(pbSpecialCharacters);
             pnlPasswordStrength.Controls.Add(pbLettersNumbers);
             pnlPasswordStrength.Controls.Add(pbPasswordLength);
-            pnlPasswordStrength.Location = new Point(61, 180);
-            pnlPasswordStrength.Margin = new Padding(28, 0, 28, 31);
+            pnlPasswordStrength.Location = new Point(45, 125);
+            pnlPasswordStrength.Margin = new Padding(5);
             pnlPasswordStrength.Name = "pnlPasswordStrength";
-            pnlPasswordStrength.Size = new Size(333, 182);
+            pnlPasswordStrength.Size = new Size(230, 109);
             pnlPasswordStrength.TabIndex = 1;
             // 
             // lblSpecialCharacters
@@ -70,9 +70,10 @@
             lblSpecialCharacters.AutoSize = true;
             lblSpecialCharacters.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblSpecialCharacters.ForeColor = Color.White;
-            lblSpecialCharacters.Location = new Point(59, 136);
+            lblSpecialCharacters.Location = new Point(40, 82);
+            lblSpecialCharacters.Margin = new Padding(2, 0, 2, 0);
             lblSpecialCharacters.Name = "lblSpecialCharacters";
-            lblSpecialCharacters.Size = new Size(214, 29);
+            lblSpecialCharacters.Size = new Size(146, 19);
             lblSpecialCharacters.TabIndex = 1;
             lblSpecialCharacters.Text = "Special characters";
             lblSpecialCharacters.TextAlign = ContentAlignment.MiddleCenter;
@@ -83,9 +84,10 @@
             lblLettersNumbers.AutoSize = true;
             lblLettersNumbers.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblLettersNumbers.ForeColor = Color.White;
-            lblLettersNumbers.Location = new Point(59, 74);
+            lblLettersNumbers.Location = new Point(40, 44);
+            lblLettersNumbers.Margin = new Padding(2, 0, 2, 0);
             lblLettersNumbers.Name = "lblLettersNumbers";
-            lblLettersNumbers.Size = new Size(237, 29);
+            lblLettersNumbers.Size = new Size(161, 19);
             lblLettersNumbers.TabIndex = 1;
             lblLettersNumbers.Text = "Letters and numbers";
             lblLettersNumbers.TextAlign = ContentAlignment.MiddleCenter;
@@ -96,9 +98,10 @@
             lblPasswordLength.AutoSize = true;
             lblPasswordLength.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblPasswordLength.ForeColor = Color.White;
-            lblPasswordLength.Location = new Point(59, 11);
+            lblPasswordLength.Location = new Point(40, 7);
+            lblPasswordLength.Margin = new Padding(2, 0, 2, 0);
             lblPasswordLength.Name = "lblPasswordLength";
-            lblPasswordLength.Size = new Size(241, 29);
+            lblPasswordLength.Size = new Size(165, 19);
             lblPasswordLength.TabIndex = 1;
             lblPasswordLength.Text = "Eight characters long";
             lblPasswordLength.TextAlign = ContentAlignment.MiddleCenter;
@@ -107,10 +110,10 @@
             // 
             pbSpecialCharacters.Anchor = AnchorStyles.None;
             pbSpecialCharacters.Image = (Image)resources.GetObject("pbSpecialCharacters.Image");
-            pbSpecialCharacters.Location = new Point(17, 135);
-            pbSpecialCharacters.Margin = new Padding(6);
+            pbSpecialCharacters.Location = new Point(11, 81);
+            pbSpecialCharacters.Margin = new Padding(4, 4, 4, 4);
             pbSpecialCharacters.Name = "pbSpecialCharacters";
-            pbSpecialCharacters.Size = new Size(35, 35);
+            pbSpecialCharacters.Size = new Size(20, 20);
             pbSpecialCharacters.SizeMode = PictureBoxSizeMode.StretchImage;
             pbSpecialCharacters.TabIndex = 0;
             pbSpecialCharacters.TabStop = false;
@@ -119,10 +122,10 @@
             // 
             pbLettersNumbers.Anchor = AnchorStyles.None;
             pbLettersNumbers.Image = Resources.Icons.Red_Cross_Circle;
-            pbLettersNumbers.Location = new Point(17, 73);
-            pbLettersNumbers.Margin = new Padding(6);
+            pbLettersNumbers.Location = new Point(11, 44);
+            pbLettersNumbers.Margin = new Padding(4, 4, 4, 4);
             pbLettersNumbers.Name = "pbLettersNumbers";
-            pbLettersNumbers.Size = new Size(35, 35);
+            pbLettersNumbers.Size = new Size(20, 20);
             pbLettersNumbers.SizeMode = PictureBoxSizeMode.StretchImage;
             pbLettersNumbers.TabIndex = 0;
             pbLettersNumbers.TabStop = false;
@@ -131,10 +134,10 @@
             // 
             pbPasswordLength.Anchor = AnchorStyles.None;
             pbPasswordLength.Image = (Image)resources.GetObject("pbPasswordLength.Image");
-            pbPasswordLength.Location = new Point(17, 13);
-            pbPasswordLength.Margin = new Padding(6);
+            pbPasswordLength.Location = new Point(11, 8);
+            pbPasswordLength.Margin = new Padding(4, 4, 4, 4);
             pbPasswordLength.Name = "pbPasswordLength";
-            pbPasswordLength.Size = new Size(35, 35);
+            pbPasswordLength.Size = new Size(20, 20);
             pbPasswordLength.SizeMode = PictureBoxSizeMode.StretchImage;
             pbPasswordLength.TabIndex = 0;
             pbPasswordLength.TabStop = false;
@@ -142,12 +145,12 @@
             // lblPasswordError
             // 
             lblPasswordError.Anchor = AnchorStyles.None;
-            lblPasswordError.AutoSize = true;
             lblPasswordError.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblPasswordError.ForeColor = Color.Red;
-            lblPasswordError.Location = new Point(177, 368);
+            lblPasswordError.Location = new Point(15, 244);
+            lblPasswordError.Margin = new Padding(5);
             lblPasswordError.Name = "lblPasswordError";
-            lblPasswordError.Size = new Size(70, 29);
+            lblPasswordError.Size = new Size(292, 19);
             lblPasswordError.TabIndex = 3;
             lblPasswordError.Text = "Error";
             lblPasswordError.TextAlign = ContentAlignment.MiddleCenter;
@@ -155,12 +158,12 @@
             // lblUsernameError
             // 
             lblUsernameError.Anchor = AnchorStyles.None;
-            lblUsernameError.AutoSize = true;
             lblUsernameError.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblUsernameError.ForeColor = Color.Red;
-            lblUsernameError.Location = new Point(177, 77);
+            lblUsernameError.Location = new Point(15, 55);
+            lblUsernameError.Margin = new Padding(5);
             lblUsernameError.Name = "lblUsernameError";
-            lblUsernameError.Size = new Size(70, 29);
+            lblUsernameError.Size = new Size(292, 19);
             lblUsernameError.TabIndex = 3;
             lblUsernameError.Text = "Error";
             lblUsernameError.TextAlign = ContentAlignment.MiddleCenter;
@@ -168,12 +171,12 @@
             // lblConfirmPasswordError
             // 
             lblConfirmPasswordError.Anchor = AnchorStyles.None;
-            lblConfirmPasswordError.AutoSize = true;
             lblConfirmPasswordError.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblConfirmPasswordError.ForeColor = Color.Red;
-            lblConfirmPasswordError.Location = new Point(177, 474);
+            lblConfirmPasswordError.Location = new Point(15, 314);
+            lblConfirmPasswordError.Margin = new Padding(5);
             lblConfirmPasswordError.Name = "lblConfirmPasswordError";
-            lblConfirmPasswordError.Size = new Size(70, 29);
+            lblConfirmPasswordError.Size = new Size(292, 19);
             lblConfirmPasswordError.TabIndex = 3;
             lblConfirmPasswordError.Text = "Error";
             lblConfirmPasswordError.TextAlign = ContentAlignment.MiddleCenter;
@@ -184,15 +187,17 @@
             btnBack.BackColor = Color.FromArgb(0, 150, 255);
             btnBack.BorderColor = Color.White;
             btnBack.BorderWidth = 2;
-            btnBack.CornerRadius = 20;
+            btnBack.CornerRadius = 10;
             btnBack.FlatAppearance.BorderSize = 0;
             btnBack.FlatStyle = FlatStyle.Flat;
             btnBack.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             btnBack.ForeColor = Color.White;
-            btnBack.Location = new Point(19, 531);
-            btnBack.Margin = new Padding(10);
+            btnBack.Image = null;
+            btnBack.ImageSize = new Size(150, 40);
+            btnBack.Location = new Point(14, 356);
+            btnBack.Margin = new Padding(5);
             btnBack.Name = "btnBack";
-            btnBack.Size = new Size(100, 50);
+            btnBack.Size = new Size(70, 30);
             btnBack.TabIndex = 2;
             btnBack.Text = "Back";
             btnBack.UseVisualStyleBackColor = false;
@@ -206,17 +211,17 @@
             tbConfirmPassword.BorderFocusColor = Color.White;
             tbConfirmPassword.BorderSize = 4;
             tbConfirmPassword.CustomBorderStyle = Custom_Controls.CustomTextbox.CustomTextboxBorderStyle.Underlined;
-            tbConfirmPassword.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            tbConfirmPassword.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             tbConfirmPassword.ForeColor = Color.White;
             tbConfirmPassword.IsMultiline = false;
-            tbConfirmPassword.Location = new Point(61, 407);
-            tbConfirmPassword.Margin = new Padding(28, 31, 28, 31);
+            tbConfirmPassword.Location = new Point(45, 273);
+            tbConfirmPassword.Margin = new Padding(5);
             tbConfirmPassword.Name = "tbConfirmPassword";
-            tbConfirmPassword.Padding = new Padding(8, 9, 8, 9);
+            tbConfirmPassword.Padding = new Padding(6, 5, 6, 5);
             tbConfirmPassword.PlaceholderText = "Confirm password";
             tbConfirmPassword.PlaceholderTextColor = Color.White;
             tbConfirmPassword.ShortcutEnabled = true;
-            tbConfirmPassword.Size = new Size(333, 48);
+            tbConfirmPassword.Size = new Size(230, 30);
             tbConfirmPassword.TabIndex = 1;
             tbConfirmPassword.UsePasswordChar = true;
             tbConfirmPassword.Leave += tbConfirmPassword_Leave;
@@ -230,17 +235,17 @@
             tbPassword.BorderSize = 4;
             tbPassword.Controls.Add(pbPasswordView);
             tbPassword.CustomBorderStyle = Custom_Controls.CustomTextbox.CustomTextboxBorderStyle.Underlined;
-            tbPassword.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            tbPassword.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             tbPassword.ForeColor = Color.White;
             tbPassword.IsMultiline = false;
-            tbPassword.Location = new Point(61, 113);
-            tbPassword.Margin = new Padding(28, 31, 28, 31);
+            tbPassword.Location = new Point(45, 84);
+            tbPassword.Margin = new Padding(5);
             tbPassword.Name = "tbPassword";
-            tbPassword.Padding = new Padding(8, 9, 39, 9);
+            tbPassword.Padding = new Padding(6, 5, 27, 5);
             tbPassword.PlaceholderText = "Password";
             tbPassword.PlaceholderTextColor = Color.White;
             tbPassword.ShortcutEnabled = true;
-            tbPassword.Size = new Size(333, 48);
+            tbPassword.Size = new Size(230, 30);
             tbPassword.TabIndex = 1;
             tbPassword.UsePasswordChar = true;
             tbPassword.Leave += tbPassword_Leave;
@@ -265,35 +270,38 @@
             tbUsername.BorderFocusColor = Color.White;
             tbUsername.BorderSize = 4;
             tbUsername.CustomBorderStyle = Custom_Controls.CustomTextbox.CustomTextboxBorderStyle.Underlined;
-            tbUsername.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            tbUsername.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             tbUsername.ForeColor = Color.White;
             tbUsername.IsMultiline = false;
-            tbUsername.Location = new Point(61, 21);
-            tbUsername.Margin = new Padding(28, 31, 28, 31);
+            tbUsername.Location = new Point(45, 14);
+            tbUsername.Margin = new Padding(5);
             tbUsername.Name = "tbUsername";
-            tbUsername.Padding = new Padding(8, 9, 8, 9);
+            tbUsername.Padding = new Padding(5);
             tbUsername.PlaceholderText = "Username";
             tbUsername.PlaceholderTextColor = Color.White;
             tbUsername.ShortcutEnabled = true;
-            tbUsername.Size = new Size(333, 48);
+            tbUsername.Size = new Size(230, 30);
             tbUsername.TabIndex = 1;
             tbUsername.UsePasswordChar = false;
             tbUsername.Leave += tbUsername_Leave;
             // 
             // btnDone
             // 
+            btnDone.Anchor = AnchorStyles.None;
             btnDone.BackColor = Color.FromArgb(0, 150, 255);
             btnDone.BorderColor = Color.White;
             btnDone.BorderWidth = 2;
-            btnDone.CornerRadius = 20;
+            btnDone.CornerRadius = 10;
             btnDone.FlatAppearance.BorderSize = 0;
             btnDone.FlatStyle = FlatStyle.Popup;
             btnDone.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             btnDone.ForeColor = Color.BlanchedAlmond;
-            btnDone.Location = new Point(337, 531);
-            btnDone.Margin = new Padding(10);
+            btnDone.Image = null;
+            btnDone.ImageSize = new Size(150, 40);
+            btnDone.Location = new Point(236, 356);
+            btnDone.Margin = new Padding(5);
             btnDone.Name = "btnDone";
-            btnDone.Size = new Size(100, 50);
+            btnDone.Size = new Size(70, 30);
             btnDone.TabIndex = 0;
             btnDone.Text = "Done";
             btnDone.UseVisualStyleBackColor = false;
@@ -301,13 +309,13 @@
             // 
             // RegisterCredentialsView
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(20, 20, 50);
-            ClientSize = new Size(456, 600);
+            ClientSize = new Size(320, 400);
             Controls.Add(lblConfirmPasswordError);
-            Controls.Add(lblUsernameError);
             Controls.Add(lblPasswordError);
+            Controls.Add(lblUsernameError);
             Controls.Add(btnBack);
             Controls.Add(pnlPasswordStrength);
             Controls.Add(tbConfirmPassword);
@@ -315,7 +323,7 @@
             Controls.Add(tbUsername);
             Controls.Add(btnDone);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "RegisterCredentialsView";
             Text = "RegisterMisc";
             pnlPasswordStrength.ResumeLayout(false);
@@ -327,7 +335,6 @@
             tbPassword.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbPasswordView).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
