@@ -61,7 +61,7 @@ namespace AS_Coursework.View {
             string dateOfBirthError = "";
 
             // Set the text to error text if the date of birth would make the user too young
-            if (DataValidator.IsUserOldEnough(dtpDateOfBirth.Value)) dateOfBirthError = $"You must be {DataValidator.MINIMUM_USER_AGE} to create an account";
+            if (!DataValidator.IsUserOldEnough(dtpDateOfBirth.Value)) dateOfBirthError = $"You must be {DataValidator.MINIMUM_USER_AGE} to create an account";
 
             // Fix formatting
             lblDateOfBirthError.Text = dateOfBirthError;

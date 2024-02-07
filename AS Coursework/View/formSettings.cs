@@ -45,8 +45,9 @@ public partial class formSettings : Form {
         lblPasswordError.Text = "";
         lblConfirmPasswordError.Text = "";
 
-        cbGender.SelectedIndexChanged += cbGender_SelectedIndexChanged;
         PopulateDataDisplay();
+
+        cbGender.SelectedIndexChanged += cbGender_SelectedIndexChanged;
     }
 
     // This method is called every time the user changes their data to ensure all displayed data is correct
@@ -166,6 +167,7 @@ public partial class formSettings : Form {
     private void btnDeleteAccount_Click(object? sender, EventArgs e) {
         if (CustomMessageBox.Show("Delete account", "Are you sure you want to delete your account. You cannot revert this action and will be instantly logged out") == DialogResult.OK) {
             DataManager.DeleteUser(_user);
+            (ActiveForm as formMaster)?.DisplayForm(new formLogin());
         }
     }
     private bool CheckPasswordOk() {
@@ -176,7 +178,6 @@ public partial class formSettings : Form {
         else if (DataValidator.GetPasswordRequirements(tbNewPassword.Text).Count < Enum.GetNames(typeof(DataValidator.PasswordRequirements)).Length) passwordError = "Please pick a stronger password";
 
         lblPasswordError.Text = passwordError;
-        lblPasswordError.CenterX();
 
         return passwordError == "";
     }
@@ -189,9 +190,17 @@ public partial class formSettings : Form {
         else if (tbNewPassword.Text != tbConfirmPassword.Text) confirmPasswordError = "Passwords did not match";
 
         lblConfirmPasswordError.Text = confirmPasswordError;
-        lblConfirmPasswordError.CenterX();
 
         return confirmPasswordError == "";
+    }
+
+    private void tbNewPassword_TextChanged(object sender, EventArgs e) {
+        string text = tbNewPassword.Text;
+        List<DataValidator.PasswordRequirements> requirements = DataValidator.GetPasswordRequirements(text);
+
+        pbPasswordLength.Image = requirements.Contains(DataValidator.PasswordRequirements.Length) ? Resources.Icons.Green_Tick_Circle : Resources.Icons.Red_Cross_Circle;
+        pbLettersNumbers.Image = requirements.Contains(DataValidator.PasswordRequirements.NumsAndChars) ? Resources.Icons.Green_Tick_Circle : Resources.Icons.Red_Cross_Circle;
+        pbSpecialCharacters.Image = requirements.Contains(DataValidator.PasswordRequirements.SpecialChars) ? Resources.Icons.Green_Tick_Circle : Resources.Icons.Red_Cross_Circle;
     }
 
     private void btnChangePassword_Click(object? sender, EventArgs e) {
@@ -201,7 +210,7 @@ public partial class formSettings : Form {
             _user.AuthenticationDetails.HashedPassword = newHashedPassword;
             _user.AuthenticationDetails.Salt = newSalt;
 
-            CustomMessageBox.Show("Passord changed", "Your password has been updated. Do not forget it.");
+            CustomMessageBox.Show("Password changed", "Your password has been updated. Do not forget it.");
         }
     }
 

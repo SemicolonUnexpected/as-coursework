@@ -1,5 +1,4 @@
-﻿using System.Text.RegularExpressions;
-using AS_Coursework._Helpers;
+﻿using AS_Coursework._Helpers;
 using AS_Coursework.Model.Data;
 using AS_Coursework.Model.Security;
 using AS_Coursework.Model.Users;
@@ -59,6 +58,15 @@ namespace AS_Coursework.View {
             lblConfirmPasswordError.CenterX();
 
             return confirmPasswordError == "";
+        }
+
+        private void tbPassword_TextChanged(object sender, EventArgs e) {
+            string text = tbPassword.Text;
+            List<DataValidator.PasswordRequirements> requirements = DataValidator.GetPasswordRequirements(text);
+
+            pbPasswordLength.Image = requirements.Contains(DataValidator.PasswordRequirements.Length) ? Resources.Icons.Green_Tick_Circle : Resources.Icons.Red_Cross_Circle;
+            pbLettersNumbers.Image = requirements.Contains(DataValidator.PasswordRequirements.NumsAndChars) ? Resources.Icons.Green_Tick_Circle : Resources.Icons.Red_Cross_Circle;
+            pbSpecialCharacters.Image = requirements.Contains(DataValidator.PasswordRequirements.SpecialChars) ? Resources.Icons.Green_Tick_Circle : Resources.Icons.Red_Cross_Circle;
         }
 
         protected override void OnResize(EventArgs e) {

@@ -111,7 +111,7 @@
             pbSpecialCharacters.Anchor = AnchorStyles.None;
             pbSpecialCharacters.Image = (Image)resources.GetObject("pbSpecialCharacters.Image");
             pbSpecialCharacters.Location = new Point(11, 81);
-            pbSpecialCharacters.Margin = new Padding(4, 4, 4, 4);
+            pbSpecialCharacters.Margin = new Padding(4);
             pbSpecialCharacters.Name = "pbSpecialCharacters";
             pbSpecialCharacters.Size = new Size(20, 20);
             pbSpecialCharacters.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -123,7 +123,7 @@
             pbLettersNumbers.Anchor = AnchorStyles.None;
             pbLettersNumbers.Image = Resources.Icons.Red_Cross_Circle;
             pbLettersNumbers.Location = new Point(11, 44);
-            pbLettersNumbers.Margin = new Padding(4, 4, 4, 4);
+            pbLettersNumbers.Margin = new Padding(4);
             pbLettersNumbers.Name = "pbLettersNumbers";
             pbLettersNumbers.Size = new Size(20, 20);
             pbLettersNumbers.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -135,7 +135,7 @@
             pbPasswordLength.Anchor = AnchorStyles.None;
             pbPasswordLength.Image = (Image)resources.GetObject("pbPasswordLength.Image");
             pbPasswordLength.Location = new Point(11, 8);
-            pbPasswordLength.Margin = new Padding(4, 4, 4, 4);
+            pbPasswordLength.Margin = new Padding(4);
             pbPasswordLength.Name = "pbPasswordLength";
             pbPasswordLength.Size = new Size(20, 20);
             pbPasswordLength.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -248,6 +248,7 @@
             tbPassword.Size = new Size(230, 30);
             tbPassword.TabIndex = 1;
             tbPassword.UsePasswordChar = true;
+            tbPassword.TextChanged += tbPassword_TextChanged;
             tbPassword.Leave += tbPassword_Leave;
             // 
             // pbPasswordView
@@ -323,7 +324,7 @@
             Controls.Add(tbUsername);
             Controls.Add(btnDone);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "RegisterCredentialsView";
             Text = "RegisterMisc";
             pnlPasswordStrength.ResumeLayout(false);

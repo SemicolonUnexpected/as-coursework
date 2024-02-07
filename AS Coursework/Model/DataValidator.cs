@@ -18,7 +18,7 @@ public static partial class DataValidator {
 
     // Method to calculate age for user age verification
     private static int CalculateAge(DateTime dateOfBirth) {
-        // Unfortunately we cannot use cannot subtract the two DateTimes an use the resulting TimeSpan.
+        // Unfortunately we cannot use cannot subtract the two DateTimes and use the resulting TimeSpan.
         // The amount of years that has passed is lost when converting from DateTime -> TimeSpan
         DateTime today = DateTime.Today;
         // Calculate the age as the difference in year from the birth year to this year

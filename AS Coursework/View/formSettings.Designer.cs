@@ -597,13 +597,12 @@
             // lblConfirmPasswordError
             // 
             lblConfirmPasswordError.Anchor = AnchorStyles.None;
-            lblConfirmPasswordError.AutoSize = true;
             lblConfirmPasswordError.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblConfirmPasswordError.ForeColor = Color.Red;
-            lblConfirmPasswordError.Location = new Point(438, 249);
+            lblConfirmPasswordError.Location = new Point(344, 247);
             lblConfirmPasswordError.Margin = new Padding(2, 0, 2, 0);
             lblConfirmPasswordError.Name = "lblConfirmPasswordError";
-            lblConfirmPasswordError.Size = new Size(49, 19);
+            lblConfirmPasswordError.Size = new Size(250, 19);
             lblConfirmPasswordError.TabIndex = 3;
             lblConfirmPasswordError.Text = "Error";
             lblConfirmPasswordError.TextAlign = ContentAlignment.MiddleCenter;
@@ -637,13 +636,12 @@
             // lblPasswordError
             // 
             lblPasswordError.Anchor = AnchorStyles.None;
-            lblPasswordError.AutoSize = true;
             lblPasswordError.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblPasswordError.ForeColor = Color.Red;
-            lblPasswordError.Location = new Point(438, 183);
+            lblPasswordError.Location = new Point(344, 181);
             lblPasswordError.Margin = new Padding(2, 0, 2, 0);
             lblPasswordError.Name = "lblPasswordError";
-            lblPasswordError.Size = new Size(49, 19);
+            lblPasswordError.Size = new Size(250, 19);
             lblPasswordError.TabIndex = 3;
             lblPasswordError.Text = "Error";
             lblPasswordError.TextAlign = ContentAlignment.MiddleCenter;
@@ -691,6 +689,7 @@
             tbNewPassword.Size = new Size(233, 31);
             tbNewPassword.TabIndex = 1;
             tbNewPassword.UsePasswordChar = true;
+            tbNewPassword.TextChanged += tbNewPassword_TextChanged;
             // 
             // pbPasswordView
             // 
@@ -932,19 +931,15 @@
             cbGender.Name = "cbGender";
             cbGender.Size = new Size(187, 27);
             cbGender.TabIndex = 4;
-            cbGender.SelectedIndexChanged += cbGender_SelectedIndexChanged;
             // 
             // lblUsername
             // 
             lblUsername.Anchor = AnchorStyles.None;
             lblUsername.AutoEllipsis = true;
-            lblUsername.AutoSize = true;
             lblUsername.Font = new Font("Bahnschrift", 18F, FontStyle.Regular, GraphicsUnit.Point);
             lblUsername.ForeColor = Color.White;
             lblUsername.Location = new Point(27, 287);
             lblUsername.Margin = new Padding(18, 15, 18, 15);
-            lblUsername.MaximumSize = new Size(210, 30);
-            lblUsername.MinimumSize = new Size(210, 30);
             lblUsername.Name = "lblUsername";
             lblUsername.Size = new Size(210, 30);
             lblUsername.TabIndex = 2;
@@ -981,7 +976,6 @@
             pblAppearance.ResumeLayout(false);
             pblAppearance.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion

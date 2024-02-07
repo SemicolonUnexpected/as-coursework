@@ -8,6 +8,5 @@ public partial class formAdminMenu : Form {
 
     private void InitialiseData() {
         clbUserSelector.DataContext = DataManager.GetUserClone();
-        clbUserSelector.
     }
 }

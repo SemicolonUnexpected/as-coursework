@@ -29,37 +29,37 @@ public partial class formUserSettingsViewer : Form {
     protected override void OnResize(EventArgs e) {
         base.OnResize(e);
 
-        // Avoid null references to the userform before it has been initialised
-        if (userSettingsForm is null) return;
+        //Avoid null references to the userform before it has been initialised
+        //if (userSettingsForm is null) return;
 
-        if (UserFormBaseHeight <= Height) {
-            // Hide the scroll bar if the form is big enough and scale the form appropriately
-            sb.Hide();
-            userSettingsForm.Height = pnlUserViewHolder.Height;
-        }
-        else {
-            // Show the scroll bar when the form is too small to see the whole user view and scale the form appropriately
-            sb.Show();
+        //if (UserFormBaseHeight <= Height) {
+        //    Hide the scroll bar if the form is big enough and scale the form appropriately
+        //    sb.Hide();
+        //    userSettingsForm.Height = pnlUserViewHolder.Height;
+        //}
+        //else {
+        //    Show the scroll bar when the form is too small to see the whole user view and scale the form appropriately
+        //    sb.Show();
 
-            // Scale the thumb of the scroll bar
-            sb.Maximum = userSettingsForm.Height - Height;
-            int sbRange = sb.Maximum - sb.Minimum;
-            int thumbHeight = Height - sbRange;
+        //    Scale the thumb of the scroll bar
+        //    sb.Maximum = userSettingsForm.Height - Height;
+        //    int sbRange = sb.Maximum - sb.Minimum;
+        //    int thumbHeight = Height - sbRange;
 
-            // Ensure the form is not minimised before making this check to avoid an exception
-            if ((ActiveForm as formMaster)?.WindowState != FormWindowState.Minimized) sb.ThumbSize = new Size(sb.ThumbSize.Width, Math.Clamp(thumbHeight, 30, Height - sb.ChannelPadding.Vertical));
+        //    Ensure the form is not minimised before making this check to avoid an exception
+        //    if ((ActiveForm as formMaster)?.WindowState != FormWindowState.Minimized) sb.ThumbSize = new Size(sb.ThumbSize.Width, Math.Clamp(thumbHeight, 30, Height - sb.ChannelPadding.Vertical));
 
-            // Set the scroll bar value to the correct position
-            sb.Value = 0;
+        //    Set the scroll bar value to the correct position
+        //    sb.Value = 0;
 
-            // Scale the UserForm
-            userSettingsForm.Height = (int)UserFormBaseHeight!;
-        }
+        //    Scale the UserForm
+        //    userSettingsForm.Height = (int)UserFormBaseHeight!;
+        //}
 
-        userSettingsForm.Width = Width - MINIMISED_MENU_WIDTH;
+        //userSettingsForm.Width = Width - MINIMISED_MENU_WIDTH;
 
-        if (_menuMinimised) MinimiseMenu();
-        else MaximiseMenu();
+        //if (_menuMinimised) MinimiseMenu();
+        //else MaximiseMenu();
     }
 
     private void btnExit_Click(object sender, EventArgs e) {
@@ -73,7 +73,7 @@ public partial class formUserSettingsViewer : Form {
 
     private void sb_ValueChanged(object sender, EventArgs e) {
         if (userSettingsForm is null) return;
-        userSettingsForm.Location = new Point(_menuMinimised ? 0 : -125, -sb.Value);
+        //userSettingsForm.Location = new Point(_menuMinimised ? 0 : -125, -sb.Value);
         Refresh();
     }
 

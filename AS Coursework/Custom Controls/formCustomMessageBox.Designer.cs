@@ -36,9 +36,10 @@
             pnlBottom.Controls.Add(btnOk);
             pnlBottom.Controls.Add(btnCancel);
             pnlBottom.Dock = DockStyle.Bottom;
-            pnlBottom.Location = new Point(0, 269);
+            pnlBottom.Location = new Point(0, 161);
+            pnlBottom.Margin = new Padding(2, 2, 2, 2);
             pnlBottom.Name = "pnlBottom";
-            pnlBottom.Size = new Size(578, 75);
+            pnlBottom.Size = new Size(405, 45);
             pnlBottom.TabIndex = 0;
             // 
             // btnOk
@@ -47,17 +48,17 @@
             btnOk.BackColor = Color.FromArgb(0, 150, 255);
             btnOk.BorderColor = Color.White;
             btnOk.BorderWidth = 2;
-            btnOk.CornerRadius = 20;
+            btnOk.CornerRadius = 10;
             btnOk.FlatAppearance.BorderSize = 0;
             btnOk.FlatStyle = FlatStyle.Flat;
             btnOk.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             btnOk.ForeColor = Color.White;
             btnOk.Image = null;
             btnOk.ImageSize = new Size(150, 40);
-            btnOk.Location = new Point(326, 13);
-            btnOk.Margin = new Padding(10);
+            btnOk.Location = new Point(228, 8);
+            btnOk.Margin = new Padding(7, 6, 7, 6);
             btnOk.Name = "btnOk";
-            btnOk.Size = new Size(100, 50);
+            btnOk.Size = new Size(70, 30);
             btnOk.TabIndex = 4;
             btnOk.Text = "Ok";
             btnOk.UseVisualStyleBackColor = false;
@@ -68,17 +69,17 @@
             btnCancel.BackColor = Color.FromArgb(0, 150, 255);
             btnCancel.BorderColor = Color.White;
             btnCancel.BorderWidth = 2;
-            btnCancel.CornerRadius = 20;
+            btnCancel.CornerRadius = 10;
             btnCancel.FlatAppearance.BorderSize = 0;
             btnCancel.FlatStyle = FlatStyle.Flat;
             btnCancel.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             btnCancel.ForeColor = Color.White;
             btnCancel.Image = null;
             btnCancel.ImageSize = new Size(150, 40);
-            btnCancel.Location = new Point(446, 13);
-            btnCancel.Margin = new Padding(10);
+            btnCancel.Location = new Point(312, 8);
+            btnCancel.Margin = new Padding(7, 6, 7, 6);
             btnCancel.Name = "btnCancel";
-            btnCancel.Size = new Size(110, 50);
+            btnCancel.Size = new Size(77, 30);
             btnCancel.TabIndex = 4;
             btnCancel.Text = "Cancel";
             btnCancel.UseVisualStyleBackColor = false;
@@ -89,23 +90,25 @@
             lblText.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lblText.ForeColor = Color.White;
             lblText.ImageAlign = ContentAlignment.TopCenter;
-            lblText.Location = new Point(10, 10);
-            lblText.MaximumSize = new Size(558, 249);
-            lblText.MinimumSize = new Size(558, 249);
+            lblText.Location = new Point(7, 6);
+            lblText.Margin = new Padding(2, 0, 2, 0);
+            lblText.MaximumSize = new Size(391, 149);
+            lblText.MinimumSize = new Size(391, 149);
             lblText.Name = "lblText";
-            lblText.Size = new Size(558, 249);
+            lblText.Size = new Size(391, 149);
             lblText.TabIndex = 2;
             lblText.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // formCustomMessageBox
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(20, 20, 50);
-            ClientSize = new Size(578, 344);
+            ClientSize = new Size(405, 206);
             Controls.Add(lblText);
             Controls.Add(pnlBottom);
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
+            Margin = new Padding(2, 2, 2, 2);
             Name = "formCustomMessageBox";
             StartPosition = FormStartPosition.CenterParent;
             Text = "formCustomMessageBox";
