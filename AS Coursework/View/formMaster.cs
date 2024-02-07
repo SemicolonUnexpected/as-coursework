@@ -1,6 +1,4 @@
 ﻿using AS_Coursework.Model.Data;
-using AS_Coursework.Model.Users;
-using AS_Coursework.View.QuizView;
 using System.ComponentModel;
 
 namespace AS_Coursework.View;

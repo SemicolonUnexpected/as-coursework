@@ -51,13 +51,13 @@
             pbUserProfile.BorderColorOne = Color.FromArgb(0, 100, 255);
             pbUserProfile.BorderColorTwo = Color.FromArgb(50, 200, 255);
             pbUserProfile.BorderStyle = Custom_Controls.PictureFrame.BorderType.Circle;
-            pbUserProfile.BorderWidth = 15;
+            pbUserProfile.BorderWidth = 20;
             pbUserProfile.GradientAngle = 45;
             pbUserProfile.GradientRectangle = new Rectangle(0, 0, 222, 222);
             pbUserProfile.Image = Resources.Icons.User;
             pbUserProfile.ImagePortion = new Rectangle(-256, -256, 1024, 1024);
-            pbUserProfile.Location = new Point(236, 11);
-            pbUserProfile.Margin = new Padding(2, 2, 2, 2);
+            pbUserProfile.Location = new Point(270, 41);
+            pbUserProfile.Margin = new Padding(2);
             pbUserProfile.Name = "pbUserProfile";
             pbUserProfile.Size = new Size(222, 222);
             pbUserProfile.TabIndex = 0;
@@ -74,7 +74,7 @@
             pnlLevel.Controls.Add(lblExperienceRemainder);
             pnlLevel.Controls.Add(lblLevelTitle);
             pnlLevel.CornerRadius = 20;
-            pnlLevel.Location = new Point(13, 315);
+            pnlLevel.Location = new Point(47, 345);
             pnlLevel.Margin = new Padding(14, 12, 14, 12);
             pnlLevel.Name = "pnlLevel";
             pnlLevel.Size = new Size(210, 210);
@@ -146,7 +146,7 @@
             pnlRank.Controls.Add(pnl);
             pnlRank.Controls.Add(lblRankTitle);
             pnlRank.CornerRadius = 20;
-            pnlRank.Location = new Point(460, 315);
+            pnlRank.Location = new Point(494, 345);
             pnlRank.Margin = new Padding(14, 12, 14, 12);
             pnlRank.Name = "pnlRank";
             pnlRank.Size = new Size(210, 210);
@@ -157,7 +157,7 @@
             // 
             pnl.Controls.Add(lblRank);
             pnl.Location = new Point(0, 49);
-            pnl.Margin = new Padding(2, 2, 2, 2);
+            pnl.Margin = new Padding(2);
             pnl.Name = "pnl";
             pnl.Size = new Size(210, 138);
             pnl.TabIndex = 3;
@@ -194,7 +194,7 @@
             lblUsername.AutoEllipsis = true;
             lblUsername.Font = new Font("Bahnschrift", 18F, FontStyle.Regular, GraphicsUnit.Point);
             lblUsername.ForeColor = Color.White;
-            lblUsername.Location = new Point(21, 247);
+            lblUsername.Location = new Point(55, 277);
             lblUsername.Margin = new Padding(12);
             lblUsername.Name = "lblUsername";
             lblUsername.Size = new Size(640, 33);
@@ -213,7 +213,7 @@
             pnlAccuracy.Controls.Add(lblCorrect);
             pnlAccuracy.Controls.Add(lblAnswers);
             pnlAccuracy.CornerRadius = 20;
-            pnlAccuracy.Location = new Point(236, 315);
+            pnlAccuracy.Location = new Point(270, 345);
             pnlAccuracy.Margin = new Padding(0);
             pnlAccuracy.Name = "pnlAccuracy";
             pnlAccuracy.Size = new Size(210, 210);
@@ -277,14 +277,14 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(20, 20, 50);
-            ClientSize = new Size(682, 540);
+            ClientSize = new Size(750, 600);
             Controls.Add(lblUsername);
             Controls.Add(pnlAccuracy);
             Controls.Add(pnlRank);
             Controls.Add(pnlLevel);
             Controls.Add(pbUserProfile);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "formHome";
             Text = "formUserHome";
             pnlLevel.ResumeLayout(false);

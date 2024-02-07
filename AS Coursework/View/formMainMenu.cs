@@ -17,7 +17,6 @@ public partial class formMainMenu : Form {
         set {
             _userForm = value;
             _userFormBaseHeight = value?.Height;
-            OnResize(EventArgs.Empty);
         }
     }
 
@@ -34,7 +33,7 @@ public partial class formMainMenu : Form {
         if (!User.ActiveUser!.AuthenticationDetails.IsAdmin) miAdmin.Hide();
 
         // Display the initial use form
-        DisplayUserForm(openAdmin ? new formHome() : new formAdminMenu());
+        DisplayUserForm(openAdmin ? new formAdminMenu() : new formHome());
 
         // Call the OnResize event to ensure that the form is formatted correctly
         OnResize(EventArgs.Empty);
@@ -117,8 +116,8 @@ public partial class formMainMenu : Form {
         UserForm.FormBorderStyle = FormBorderStyle.None;
         UserForm.Enabled = true;
         UserForm.Visible = true;
-        UserForm.Width = Width - 75;
-        UserForm.Location = _menuMinimised ? new Point(0, 0) : new Point(-125, 0);
+        UserForm.Width = Width - MINIMISED_MENU_WIDTH;
+        UserForm.Location = _menuMinimised ? new Point(0, 0) : new Point(MINIMISED_MENU_WIDTH - MENU_WIDTH, 0);
 
         // Display in panel
         pnlUserViewHolder.Controls.Clear();
@@ -126,6 +125,7 @@ public partial class formMainMenu : Form {
         pnlUserViewHolder.Show();
 
         // Redraw form
+        OnResize(EventArgs.Empty);
         Refresh();
     }
 
@@ -166,7 +166,8 @@ public partial class formMainMenu : Form {
     #endregion
 
     public void ScrollUserView(int value) {
-        sb.Value -= value;
+        // Only scroll when the scroll bar is active
+        if (sb.Visible) sb.Value -= value;
     }
 
     private void sb_ValueChanged(object sender, EventArgs e) {
