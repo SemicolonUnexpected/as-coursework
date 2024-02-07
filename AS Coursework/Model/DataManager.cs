@@ -1,4 +1,5 @@
-﻿using AS_Coursework.Custom_Controls;
+﻿using Csv;
+using AS_Coursework.Custom_Controls;
 using AS_Coursework.Model.Users;
 using System.Net.Mail;
 
@@ -50,45 +51,44 @@ internal static class DataManager {
     }
 
     private static void ReadIn() {
+        // ensure the file exists
         if (!File.Exists(PATH)) File.Create(PATH);
 
         using StreamReader reader = new(PATH);
 
         string text = reader.ReadToEnd();
-        string[] lines = text.Split("\n");
 
+        // Only try to parse the file if there are actually users there
         try {
-            foreach (string line in lines) {
-                string[] fields = line.Split(", ");
-
+            string?[][] fieldGroups = Parser.ParseText(text);
+            // Parse each field group, excluding the last as it will be an empty line
+            foreach (string?[] fields in fieldGroups.SkipLast(1)) {
                 // Attempt to parse the data from the file
                 AuthenticationDetails authenticationDetails = new(
-                    username: fields[0],
-                    hashedPassword: Convert.FromHexString(fields[1]),
-                    salt: Convert.FromHexString(fields[2]),
-                    isAdmin: Convert.ToBoolean(fields[3]));
+                    username: fields[0]!,
+                    hashedPassword: Convert.FromHexString(fields[1]!),
+                    salt: Convert.FromHexString(fields[2]!),
+                    isAdmin: Convert.ToBoolean(fields[3]!));
 
                 FunctionalDetails functionalData = new(
-                    experience: int.Parse(fields[4]),
-                    profileImageIndex: int.Parse(fields[5]),
-                    questionsAnswered: int.Parse(fields[6]),
-                    questionsCorrect: int.Parse(fields[7]));
+                    experience: int.Parse(fields[4]!),
+                    profileImageIndex: int.Parse(fields[5]!),
+                    questionsAnswered: int.Parse(fields[6]!),
+                    questionsCorrect: int.Parse(fields[7]!));
 
                 MiscDetails miscData = new(
-                    forename: fields[8],
-                    surname: fields[9],
-                    email: new MailAddress(fields[10]),
-                    dateOfBirth: DateTime.Parse(fields[11]),
-                    gender: (Gender)int.Parse(fields[12]));
+                    forename: fields[8]!,
+                    surname: fields[9]!,
+                    email: new MailAddress(fields[10]!),
+                    dateOfBirth: DateTime.Parse(fields[11]!),
+                    gender: (Gender)int.Parse(fields[12]!));
 
                 _users.Add(new User(authenticationDetails, functionalData, miscData));
             }
         }
         catch (Exception e) {
-            // Log the exception
+            // Log the exception and tell the user
             ExceptionLogger.LogException(e, "There was an error reading user data");
-
-            // Display the error only the first time
             CustomMessageBox.Show("Error", "There was an error loading user data, please contact an admin");
         }
 
@@ -118,9 +118,9 @@ internal static class DataManager {
 
         string output = string.Empty;
         foreach (User user in _users) {
-            output += user.ToString() + "\n";
+            output += user.GetCsvSerialisation();
         }
 
-        writer.Write(output.TrimEnd());
+        writer.Write(output);
     }
 }

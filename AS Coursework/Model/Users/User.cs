@@ -26,7 +26,30 @@ public class User : IComparable<User> {
         MiscDetails = miscData;
     }
 
-    public override string ToString() => string.Join(", ", AuthenticationDetails.ToString(), FunctionalDetails.ToString(), MiscDetails.ToString());
+    // This allows the user to be converted to a csv safe string
+    // All commas, backslashes, null values and newlines are escaped properly
+    public string GetCsvSerialisation() {
+        return Csv.Stringer.Stringify(new string?[] {
+            // Stringify all the authentication details
+            AuthenticationDetails.Username,
+            Convert.ToHexString(AuthenticationDetails.HashedPassword),
+            Convert.ToHexString(AuthenticationDetails.Salt),
+            AuthenticationDetails.IsAdmin.ToString(),
+
+            // Stringify functional details
+            FunctionalDetails.Experience.ToString(),
+            FunctionalDetails.ProfileImageIndex.ToString(),
+            FunctionalDetails.QuestionsAnswered.ToString(),
+            FunctionalDetails.QuestionsCorrect.ToString(),
+
+            // Stringify misc details
+            MiscDetails.Forename.ToString(),
+            MiscDetails.Surname.ToString(),
+            MiscDetails.Email.ToString(),
+            MiscDetails.DateOfBirth.ToString(),
+            ((int)(MiscDetails.Gender)).ToString(),
+        });
+    }
 
     public int CompareTo(User? user) => user is null ? -1 : user.FunctionalDetails.Experience.CompareTo(FunctionalDetails.Experience);
 }

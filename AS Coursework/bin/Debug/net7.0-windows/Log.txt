@@ -142,3 +142,23 @@ There was an error reading user data : System.IndexOutOfRangeException: Index wa
  ===================== 07/02/2024 17:22:56 =====================
 There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
    at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\Documents\AS-Coursework\AS Coursework\Model\DataManager.cs:line 65
+
+ ===================== 07/02/2024 18:05:47 =====================
+There was an error reading user data : System.FormatException: The input is not a valid hex string as its length is not a multiple of 2.
+   at System.Convert.FromHexString(ReadOnlySpan`1 chars)
+   at System.Convert.FromHexString(String s)
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\Documents\AS-Coursework\AS Coursework\Model\DataManager.cs:line 67
+
+ ===================== 07/02/2024 18:10:14 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\Documents\AS-Coursework\AS Coursework\Model\DataManager.cs:line 67
+
+ ===================== 07/02/2024 18:29:55 =====================
+There was an error reading user data : System.FormatException: The input is not a valid hex string as its length is not a multiple of 2.
+   at System.Convert.FromHexString(ReadOnlySpan`1 chars)
+   at System.Convert.FromHexString(String s)
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\Documents\AS-Coursework\AS Coursework\Model\DataManager.cs:line 67
+
+ ===================== 07/02/2024 18:36:05 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\Documents\AS-Coursework\AS Coursework\Model\DataManager.cs:line 67
