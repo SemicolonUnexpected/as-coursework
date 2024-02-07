@@ -1,0 +1,144 @@
+
+ ===================== 30/01/2024 11:25:53 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\AS-Coursework\AS Coursework\Model\DataManager.cs:line 61
+
+ ===================== 30/01/2024 11:35:32 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\AS-Coursework\AS Coursework\Model\DataManager.cs:line 61
+
+ ===================== 31/01/2024 10:22:59 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\AS-Coursework\AS Coursework\Model\DataManager.cs:line 61
+
+ ===================== 31/01/2024 10:24:36 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\AS-Coursework\AS Coursework\Model\DataManager.cs:line 61
+
+ ===================== 31/01/2024 11:58:50 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\AS-Coursework\AS Coursework\Model\DataManager.cs:line 61
+
+ ===================== 31/01/2024 11:59:29 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\AS-Coursework\AS Coursework\Model\DataManager.cs:line 61
+
+ ===================== 31/01/2024 12:01:33 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\AS-Coursework\AS Coursework\Model\DataManager.cs:line 61
+
+ ===================== 31/01/2024 12:03:13 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\AS-Coursework\AS Coursework\Model\DataManager.cs:line 61
+
+ ===================== 31/01/2024 12:04:51 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\AS-Coursework\AS Coursework\Model\DataManager.cs:line 61
+
+ ===================== 31/01/2024 12:07:48 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\AS-Coursework\AS Coursework\Model\DataManager.cs:line 61
+
+ ===================== 31/01/2024 12:08:23 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\AS-Coursework\AS Coursework\Model\DataManager.cs:line 61
+
+ ===================== 31/01/2024 12:09:01 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\AS-Coursework\AS Coursework\Model\DataManager.cs:line 61
+
+ ===================== 31/01/2024 12:09:27 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\AS-Coursework\AS Coursework\Model\DataManager.cs:line 61
+
+ ===================== 31/01/2024 14:55:21 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\AS-Coursework\AS Coursework\Model\DataManager.cs:line 61
+
+ ===================== 31/01/2024 14:57:57 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\AS-Coursework\AS Coursework\Model\DataManager.cs:line 61
+
+ ===================== 31/01/2024 14:58:18 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\AS-Coursework\AS Coursework\Model\DataManager.cs:line 61
+
+ ===================== 31/01/2024 14:58:41 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\AS-Coursework\AS Coursework\Model\DataManager.cs:line 61
+
+ ===================== 31/01/2024 14:59:13 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\AS-Coursework\AS Coursework\Model\DataManager.cs:line 61
+
+ ===================== 31/01/2024 14:59:55 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\AS-Coursework\AS Coursework\Model\DataManager.cs:line 61
+
+ ===================== 31/01/2024 15:00:10 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\AS-Coursework\AS Coursework\Model\DataManager.cs:line 61
+
+ ===================== 31/01/2024 15:00:36 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\AS-Coursework\AS Coursework\Model\DataManager.cs:line 61
+
+ ===================== 06/02/2024 14:25:53 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\AS-Coursework\AS Coursework\Model\DataManager.cs:line 65
+
+ ===================== 07/02/2024 16:55:27 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\Documents\AS-Coursework\AS Coursework\Model\DataManager.cs:line 65
+
+ ===================== 07/02/2024 16:56:12 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\Documents\AS-Coursework\AS Coursework\Model\DataManager.cs:line 65
+
+ ===================== 07/02/2024 16:58:36 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\Documents\AS-Coursework\AS Coursework\Model\DataManager.cs:line 65
+
+ ===================== 07/02/2024 16:59:10 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\Documents\AS-Coursework\AS Coursework\Model\DataManager.cs:line 65
+
+ ===================== 07/02/2024 17:00:50 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\Documents\AS-Coursework\AS Coursework\Model\DataManager.cs:line 65
+
+ ===================== 07/02/2024 17:02:03 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\Documents\AS-Coursework\AS Coursework\Model\DataManager.cs:line 65
+
+ ===================== 07/02/2024 17:04:42 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\Documents\AS-Coursework\AS Coursework\Model\DataManager.cs:line 65
+
+ ===================== 07/02/2024 17:07:39 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\Documents\AS-Coursework\AS Coursework\Model\DataManager.cs:line 65
+
+ ===================== 07/02/2024 17:10:06 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\Documents\AS-Coursework\AS Coursework\Model\DataManager.cs:line 65
+
+ ===================== 07/02/2024 17:11:49 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\Documents\AS-Coursework\AS Coursework\Model\DataManager.cs:line 65
+
+ ===================== 07/02/2024 17:17:07 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\Documents\AS-Coursework\AS Coursework\Model\DataManager.cs:line 65
+
+ ===================== 07/02/2024 17:18:25 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\Documents\AS-Coursework\AS Coursework\Model\DataManager.cs:line 65
+
+ ===================== 07/02/2024 17:20:49 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\Documents\AS-Coursework\AS Coursework\Model\DataManager.cs:line 65
+
+ ===================== 07/02/2024 17:22:56 =====================
+There was an error reading user data : System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at AS_Coursework.Model.Data.DataManager.ReadIn() in C:\Users\mgrac\Documents\AS-Coursework\AS Coursework\Model\DataManager.cs:line 65
