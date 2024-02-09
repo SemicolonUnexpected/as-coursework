@@ -13,6 +13,7 @@ public partial class formQuiz : Form {
     }
 
     public void DisplayQuestion(Form questionForm) {
+        questionForm.TopLevel = false;
         pnlQuestionDisplay.Controls.Clear();
         pnlQuestionDisplay.Controls.Add(questionForm);
         questionForm.Dock = DockStyle.Fill;
@@ -34,7 +35,7 @@ public partial class formQuiz : Form {
 
     private void btnExit_Click(object sender, EventArgs e) {
         if (CustomMessageBox.Show("Exit quiz", "Are you sure you want to exit the quiz?") == DialogResult.OK) {
-            (ActiveForm as formMaster)?.DisplayForm(new formMainMenu());
+            (ActiveForm as formMaster)?.DisplayForm(new formQuizFinished(_quiz));
         }
     }
 }

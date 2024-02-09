@@ -40,11 +40,11 @@
             lblQuestionTitle.AutoSize = true;
             lblQuestionTitle.Font = new Font("Bahnschrift", 20F, FontStyle.Regular, GraphicsUnit.Point);
             lblQuestionTitle.ForeColor = Color.White;
-            lblQuestionTitle.Location = new Point(344, 34);
-            lblQuestionTitle.Margin = new Padding(25);
-            lblQuestionTitle.MaximumSize = new Size(450, 0);
+            lblQuestionTitle.Location = new Point(250, 50);
+            lblQuestionTitle.Margin = new Padding(18, 15, 18, 15);
+            lblQuestionTitle.MaximumSize = new Size(315, 0);
             lblQuestionTitle.Name = "lblQuestionTitle";
-            lblQuestionTitle.Size = new Size(263, 48);
+            lblQuestionTitle.Size = new Size(180, 33);
             lblQuestionTitle.TabIndex = 11;
             lblQuestionTitle.Text = "Question Title";
             lblQuestionTitle.TextAlign = ContentAlignment.MiddleCenter;
@@ -55,17 +55,17 @@
             btnNext.BackColor = Color.FromArgb(0, 150, 255);
             btnNext.BorderColor = Color.White;
             btnNext.BorderWidth = 2;
-            btnNext.CornerRadius = 20;
+            btnNext.CornerRadius = 10;
             btnNext.FlatAppearance.BorderSize = 0;
             btnNext.FlatStyle = FlatStyle.Popup;
             btnNext.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             btnNext.ForeColor = Color.BlanchedAlmond;
             btnNext.Image = null;
             btnNext.ImageSize = new Size(150, 40);
-            btnNext.Location = new Point(300, 0);
-            btnNext.Margin = new Padding(10);
+            btnNext.Location = new Point(210, 0);
+            btnNext.Margin = new Padding(7, 6, 7, 6);
             btnNext.Name = "btnNext";
-            btnNext.Size = new Size(250, 75);
+            btnNext.Size = new Size(175, 45);
             btnNext.TabIndex = 18;
             btnNext.Text = "I don't know this";
             btnNext.UseVisualStyleBackColor = false;
@@ -78,10 +78,10 @@
             pnlFlashcard.BorderWidth = 0;
             pnlFlashcard.Controls.Add(lblFlashcardText);
             pnlFlashcard.CornerRadius = 20;
-            pnlFlashcard.Location = new Point(79, 116);
-            pnlFlashcard.Margin = new Padding(20);
+            pnlFlashcard.Location = new Point(64, 100);
+            pnlFlashcard.Margin = new Padding(14, 12, 14, 12);
             pnlFlashcard.Name = "pnlFlashcard";
-            pnlFlashcard.Size = new Size(800, 550);
+            pnlFlashcard.Size = new Size(560, 330);
             pnlFlashcard.TabIndex = 19;
             // 
             // lblFlashcardText
@@ -89,12 +89,12 @@
             lblFlashcardText.AutoSize = true;
             lblFlashcardText.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lblFlashcardText.ForeColor = Color.White;
-            lblFlashcardText.Location = new Point(20, 20);
-            lblFlashcardText.Margin = new Padding(25, 25, 25, 20);
-            lblFlashcardText.MaximumSize = new Size(760, 510);
-            lblFlashcardText.MinimumSize = new Size(760, 510);
+            lblFlashcardText.Location = new Point(14, 12);
+            lblFlashcardText.Margin = new Padding(18, 15, 18, 12);
+            lblFlashcardText.MaximumSize = new Size(532, 306);
+            lblFlashcardText.MinimumSize = new Size(532, 306);
             lblFlashcardText.Name = "lblFlashcardText";
-            lblFlashcardText.Size = new Size(760, 510);
+            lblFlashcardText.Size = new Size(532, 306);
             lblFlashcardText.TabIndex = 12;
             lblFlashcardText.Text = "Flashcard side one";
             lblFlashcardText.TextAlign = ContentAlignment.MiddleCenter;
@@ -111,11 +111,11 @@
             btnSwitchSides.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             btnSwitchSides.ForeColor = Color.BlanchedAlmond;
             btnSwitchSides.Image = Resources.Icons.swap;
-            btnSwitchSides.ImageSize = new Size(60, 60);
-            btnSwitchSides.Location = new Point(448, 696);
-            btnSwitchSides.Margin = new Padding(10);
+            btnSwitchSides.ImageSize = new Size(35, 35);
+            btnSwitchSides.Location = new Point(323, 448);
+            btnSwitchSides.Margin = new Padding(7, 6, 7, 6);
             btnSwitchSides.Name = "btnSwitchSides";
-            btnSwitchSides.Size = new Size(75, 75);
+            btnSwitchSides.Size = new Size(52, 45);
             btnSwitchSides.TabIndex = 18;
             btnSwitchSides.UseVisualStyleBackColor = false;
             btnSwitchSides.Click += btnSwitchSides_Click;
@@ -126,7 +126,7 @@
             btnKnown.BackColor = Color.FromArgb(0, 150, 255);
             btnKnown.BorderColor = Color.White;
             btnKnown.BorderWidth = 2;
-            btnKnown.CornerRadius = 20;
+            btnKnown.CornerRadius = 10;
             btnKnown.FlatAppearance.BorderSize = 0;
             btnKnown.FlatStyle = FlatStyle.Popup;
             btnKnown.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
@@ -134,9 +134,9 @@
             btnKnown.Image = null;
             btnKnown.ImageSize = new Size(150, 40);
             btnKnown.Location = new Point(0, 0);
-            btnKnown.Margin = new Padding(10);
+            btnKnown.Margin = new Padding(7, 6, 7, 6);
             btnKnown.Name = "btnKnown";
-            btnKnown.Size = new Size(250, 75);
+            btnKnown.Size = new Size(175, 45);
             btnKnown.TabIndex = 18;
             btnKnown.Text = "I know this";
             btnKnown.UseVisualStyleBackColor = false;
@@ -147,23 +147,24 @@
             pnlButtons.Anchor = AnchorStyles.None;
             pnlButtons.Controls.Add(btnNext);
             pnlButtons.Controls.Add(btnKnown);
-            pnlButtons.Location = new Point(208, 791);
-            pnlButtons.Margin = new Padding(25);
+            pnlButtons.Location = new Point(155, 505);
+            pnlButtons.Margin = new Padding(18, 15, 18, 15);
             pnlButtons.Name = "pnlButtons";
-            pnlButtons.Size = new Size(550, 75);
+            pnlButtons.Size = new Size(385, 45);
             pnlButtons.TabIndex = 20;
             // 
             // formFlashcardQuestion
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(20, 20, 50);
-            ClientSize = new Size(975, 900);
+            ClientSize = new Size(700, 600);
             Controls.Add(pnlButtons);
             Controls.Add(pnlFlashcard);
             Controls.Add(btnSwitchSides);
             Controls.Add(lblQuestionTitle);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(2, 2, 2, 2);
             Name = "formFlashcardQuestion";
             Text = "TextQuestion";
             pnlFlashcard.ResumeLayout(false);

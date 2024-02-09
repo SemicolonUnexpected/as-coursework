@@ -30,10 +30,10 @@
             // pnlQuestionDisplay
             // 
             pnlQuestionDisplay.Anchor = AnchorStyles.None;
-            pnlQuestionDisplay.Location = new Point(75, 0);
+            pnlQuestionDisplay.Location = new Point(50, 0);
             pnlQuestionDisplay.Margin = new Padding(0);
             pnlQuestionDisplay.Name = "pnlQuestionDisplay";
-            pnlQuestionDisplay.Size = new Size(975, 900);
+            pnlQuestionDisplay.Size = new Size(700, 600);
             pnlQuestionDisplay.TabIndex = 0;
             // 
             // btnExit
@@ -41,29 +41,30 @@
             btnExit.BackColor = Color.FromArgb(20, 20, 50);
             btnExit.BorderColor = Color.WhiteSmoke;
             btnExit.BorderWidth = 0;
-            btnExit.CornerRadius = 37;
+            btnExit.CornerRadius = 24;
             btnExit.FlatAppearance.BorderSize = 0;
             btnExit.FlatStyle = FlatStyle.Flat;
             btnExit.ForeColor = Color.Black;
             btnExit.Image = Resources.Icons.cross;
-            btnExit.ImageSize = new Size(40, 40);
-            btnExit.Location = new Point(1050, 0);
+            btnExit.ImageSize = new Size(30, 30);
+            btnExit.Location = new Point(750, 0);
             btnExit.Margin = new Padding(0);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(75, 75);
+            btnExit.Size = new Size(50, 50);
             btnExit.TabIndex = 1;
             btnExit.UseVisualStyleBackColor = false;
             btnExit.Click += btnExit_Click;
             // 
             // formQuiz
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(20, 20, 50);
-            ClientSize = new Size(1125, 900);
+            ClientSize = new Size(800, 600);
             Controls.Add(btnExit);
             Controls.Add(pnlQuestionDisplay);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(2, 2, 2, 2);
             Name = "formQuiz";
             Text = "formUserHome";
             ResumeLayout(false);

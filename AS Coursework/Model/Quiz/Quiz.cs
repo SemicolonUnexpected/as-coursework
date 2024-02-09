@@ -3,7 +3,7 @@
 namespace AS_Coursework.Model.Quiz;
 public class Quiz {
     private readonly List<Question> _questions;
-    private int _index = -1;
+    private int _index = 0;
 
     public Quiz(QuizStyle quizStyle, int questionCount = 10) {
         _questions = PopulateQuiz(quizStyle, questionCount);
