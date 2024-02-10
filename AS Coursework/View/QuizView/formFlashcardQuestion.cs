@@ -2,18 +2,18 @@
 using AS_Coursework.Model.Quiz;
 
 namespace AS_Coursework.View.QuizView;
-public partial class formFlashcardQuestion : Form, IQuestionForm<FlashcardQuestion> {
+public partial class formFlashcardQuestion : Form, IQuestionForm {
     private bool _isFrontSide = true;
 
-    public FlashcardQuestion Question { get; init; }
+    private FlashcardQuestion _question;
 
     public formFlashcardQuestion(FlashcardQuestion flashcardQuestion) {
         InitializeComponent();
 
-        Question = flashcardQuestion;
+        _question = flashcardQuestion;
 
         // Initialise text
-        lblFlashcardText.Text = Question.FrontSide;
+        lblFlashcardText.Text = _question.FrontSide;
     }
 
     protected override void OnResize(EventArgs e) {
@@ -31,15 +31,15 @@ public partial class formFlashcardQuestion : Form, IQuestionForm<FlashcardQuesti
         _isFrontSide = !_isFrontSide;
 
         if (_isFrontSide) {
-            lblFlashcardText.Text = Question.FrontSide;
+            lblFlashcardText.Text = _question.FrontSide;
         }
         else {
-            lblFlashcardText.Text = Question.BackSide;
+            lblFlashcardText.Text = _question.BackSide;
         }
     }
 
     private void btnKnown_Click(object sender, EventArgs e) {
-        Question.Answered(true);
+        _question.Answered(true);
         NextQuestion?.Invoke(null, EventArgs.Empty);
     }
 }

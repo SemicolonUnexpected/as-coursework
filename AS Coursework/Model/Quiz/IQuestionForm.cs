@@ -3,7 +3,6 @@
 // This also makes management of the form easier
 // It would be ideal to inherit from the form itself however this can introduce unecessary complexity
 // Inherited forms do not have automatic designer support
-public interface IQuestionForm<TQuestion> where TQuestion : Question {
+public interface IQuestionForm {
     public event EventHandler? NextQuestion;
-    public TQuestion Question { get; init; }
 }

@@ -4,8 +4,9 @@ using AS_Coursework.Model.Quiz;
 using System.Security.AccessControl;
 
 namespace AS_Coursework.View.QuizView;
-public partial class formMultipleChoiceQuestion : Form, IQuestionForm<MultipleChoiceQuestion> {
-    public MultipleChoiceQuestion Question { get; init; }
+public partial class formMultipleChoiceQuestion : Form, IQuestionForm {
+    private MultipleChoiceQuestion _question;
+
     private readonly Random _random = new();
 
     private CustomButton? _correctButton;
@@ -13,7 +14,7 @@ public partial class formMultipleChoiceQuestion : Form, IQuestionForm<MultipleCh
         InitializeComponent();
 
         btnNext.Visible = false;
-        Question = multipleChoiceQuestion;
+        _question = multipleChoiceQuestion;
 
         SetupQuestionsAnswers();
     }
@@ -30,8 +31,8 @@ public partial class formMultipleChoiceQuestion : Form, IQuestionForm<MultipleCh
         };
 
         List<CustomButton> buttons = new() { btnOptionOne, btnOptionTwo, btnOptionThree, btnOptionFour };
-        Question.IncorrectAnswers.Shuffle();
-        Queue<string> incorrectAnswers = new Queue<string>(Question.IncorrectAnswers.Take(3).ToList());
+        _question.IncorrectAnswers.Shuffle();
+        Queue<string> incorrectAnswers = new Queue<string>(_question.IncorrectAnswers.Take(3).ToList());
 
         foreach (CustomButton button in buttons) {
             if (!button.Equals(_correctButton)) {

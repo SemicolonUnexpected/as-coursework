@@ -1,13 +1,13 @@
 ﻿using AS_Coursework.Model.Quiz;
 
 namespace AS_Coursework.View.QuizView;
-public partial class formEquationQuestion : Form, IQuestionForm<EquationQuestion> {
+public partial class formEquationQuestion : Form, IQuestionForm {
     private bool _questionAnswered = false;
-    public EquationQuestion Question { get; init; }
+    private EquationQuestion _question;
 
     public formEquationQuestion(EquationQuestion question) {
         InitializeComponent();
-        Question = question;
+        _question = question;
     }
 
     public event EventHandler? NextQuestion;
@@ -20,7 +20,7 @@ public partial class formEquationQuestion : Form, IQuestionForm<EquationQuestion
         }
         else {
             pbIsCorrect.Image = Resources.Icons.Red_Cross_Circle;
-            lblIsCorrect.Text = $"Incorrect, better luck next time. The correct answer was: {Question.Equation}";
+            lblIsCorrect.Text = $"Incorrect, better luck next time. The correct answer was: {_question.Equation}";
         }
     }
 
@@ -30,9 +30,9 @@ public partial class formEquationQuestion : Form, IQuestionForm<EquationQuestion
             tbAnswer.Enabled = false;
             _questionAnswered = true;
 
-            Question.CheckAnswer(tbAnswer.Text);
+            _question.CheckAnswer(tbAnswer.Text);
 
-            DisplayAnswerCorrectness((bool)Question.Correct!);
+            DisplayAnswerCorrectness((bool)_question.Correct!);
             btnSubmitNext.Text = "Next";
         }
         else {

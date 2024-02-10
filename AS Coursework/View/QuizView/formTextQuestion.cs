@@ -2,9 +2,9 @@
 using AS_Coursework.Model.Quiz;
 
 namespace AS_Coursework.View.QuizView;
-public partial class formTextQuestion : Form, IQuestionForm<TextQuestion> {
+public partial class formTextQuestion : Form, IQuestionForm {
     private bool _questionAnswered = false;
-    public TextQuestion Question { get; init; }
+    private TextQuestion _question;
 
     public event EventHandler? NextQuestion;
     public event EventHandler<QuestionAnsweredEventArgs>? QuestionAnswered;
@@ -15,7 +15,7 @@ public partial class formTextQuestion : Form, IQuestionForm<TextQuestion> {
 
         lblQuestionTitle.Text = textQuestion.QuestionName;
         lblQuestionText.Text = textQuestion.Question;
-        Question = textQuestion;
+        _question = textQuestion;
 
         // Hide the image as it is not required
         pb.Dispose();
@@ -31,7 +31,7 @@ public partial class formTextQuestion : Form, IQuestionForm<TextQuestion> {
 
         lblQuestionTitle.Text = imageTextQuestion.QuestionName;
         lblQuestionText.Text = imageTextQuestion.Question;
-        Question = imageTextQuestion;
+        _question = imageTextQuestion;
 
         // Setup the image
         pb.Image = imageTextQuestion.Image;
@@ -62,7 +62,7 @@ public partial class formTextQuestion : Form, IQuestionForm<TextQuestion> {
         }
         else {
             pbIsCorrect.Image = Resources.Icons.Red_Cross_Circle;
-            lblIsCorrect.Text = $"Incorrect, better luck next time. The correct answer was: {Question.CorrectAnswer}";
+            lblIsCorrect.Text = $"Incorrect, better luck next time. The correct answer was: {_question.CorrectAnswer}";
         }
     }
 
@@ -72,9 +72,9 @@ public partial class formTextQuestion : Form, IQuestionForm<TextQuestion> {
             tbAnswer.Enabled = false;
             _questionAnswered = true;
 
-            Question.CheckAnswer(tbAnswer.Text);
+            _question.CheckAnswer(tbAnswer.Text);
 
-            DisplayAnswerCorrectness((bool)Question.Correct!);
+            DisplayAnswerCorrectness((bool)_question.Correct!);
             btnSubmitNext.Text = "Next";
         }
         else {

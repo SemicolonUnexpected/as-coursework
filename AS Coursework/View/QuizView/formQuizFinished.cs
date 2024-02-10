@@ -2,7 +2,7 @@
 using AS_Coursework.Model.Quiz;
 using AS_Coursework.Model.Users;
 
-namespace AS_Coursework.View.QuizView; 
+namespace AS_Coursework.View.QuizView;
 public partial class formQuizFinished : Form {
     public formQuizFinished(Quiz quiz) {
         InitializeComponent();
@@ -22,5 +22,9 @@ public partial class formQuizFinished : Form {
         lblUsername.CenterX();
         lblQuizStatistics.CenterX();
         btnExit.CenterX();
+    }
+
+    private void btnExit_Click(object sender, EventArgs e) {
+        (ActiveForm as formMaster)?.DisplayForm(new formMainMenu());
     }
 }

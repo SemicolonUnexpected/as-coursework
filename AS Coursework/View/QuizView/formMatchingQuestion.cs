@@ -3,7 +3,7 @@ using AS_Coursework._Helpers;
 using AS_Coursework.Custom_Controls;
 
 namespace AS_Coursework.View.QuizView;
-public partial class formMatchingQuestion : Form, IQuestionForm<MatchingQuestion> {
+public partial class formMatchingQuestion : Form, IQuestionForm {
     private bool _questionAnswered;
 
     // Local variables to make maniplation of the combo boxes easier
@@ -11,12 +11,12 @@ public partial class formMatchingQuestion : Form, IQuestionForm<MatchingQuestion
     private List<ComboBox> _comboBoxes;
     private List<CustomRectangle> _panels;
 
-    public MatchingQuestion Question { get; init; }
+    private MatchingQuestion _question;
 
     public formMatchingQuestion(MatchingQuestion question) {
         InitializeComponent();
 
-        Question = question;
+        _question = question;
 
         // Initailise the helper variables
         _comboBoxes = new() { cb1, cb2, cb3, cb4, };
@@ -34,7 +34,7 @@ public partial class formMatchingQuestion : Form, IQuestionForm<MatchingQuestion
 
     // Setup the options for the combo boxes
     private void InitialiseOptions() {
-        (List<string> leftHandSide, List<string> rightHandSide) = Question.GetAnswerPairs();
+        (List<string> leftHandSide, List<string> rightHandSide) = _question.GetAnswerPairs();
 
         // The left hand side and the labels will contain the keys
         // The right hand side and the combo boxes will contian the values
@@ -84,7 +84,7 @@ public partial class formMatchingQuestion : Form, IQuestionForm<MatchingQuestion
     private void DisplayAnswerCorrectness() {
         for (int i = 0; i < 4; i++) {
             // Change the corresponding panel colour depending on whether the question is correct
-            _panels[i].BackColor = Question.CheckAnswerPair(_labels[i].Text, _comboBoxes[i].SelectedValue as string) ? Color.Green : Color.Red;
+            _panels[i].BackColor = _question.CheckAnswerPair(_labels[i].Text, _comboBoxes[i].SelectedValue as string) ? Color.Green : Color.Red;
         }
     }
 }
