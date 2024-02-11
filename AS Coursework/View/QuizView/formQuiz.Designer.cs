@@ -38,6 +38,7 @@
             // 
             // btnExit
             // 
+            btnExit.Anchor = AnchorStyles.None;
             btnExit.BackColor = Color.FromArgb(20, 20, 50);
             btnExit.BorderColor = Color.WhiteSmoke;
             btnExit.BorderWidth = 0;
@@ -45,7 +46,7 @@
             btnExit.FlatAppearance.BorderSize = 0;
             btnExit.FlatStyle = FlatStyle.Flat;
             btnExit.ForeColor = Color.Black;
-            btnExit.Image = Resources.Icons.cross;
+            btnExit.Image = Resources.Icons.Icons.cross;
             btnExit.ImageSize = new Size(25, 25);
             btnExit.Location = new Point(755, 5);
             btnExit.Margin = new Padding(5);

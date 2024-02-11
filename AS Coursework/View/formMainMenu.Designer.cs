@@ -61,7 +61,7 @@
             miSignOut.BaseColor = Color.FromArgb(40, 40, 90);
             miSignOut.Dock = DockStyle.Bottom;
             miSignOut.HoverColour = Color.FromArgb(50, 50, 100);
-            miSignOut.Image = Resources.Icons.Sign_out;
+            miSignOut.Image = Resources.Icons.Icons.Sign_out;
             miSignOut.ImagePadding = 10;
             miSignOut.Location = new Point(0, 552);
             miSignOut.Margin = new Padding(1);
@@ -77,7 +77,7 @@
             miAdmin.BaseColor = Color.FromArgb(40, 40, 90);
             miAdmin.Dock = DockStyle.Top;
             miAdmin.HoverColour = Color.FromArgb(50, 50, 100);
-            miAdmin.Image = Resources.Icons.Admin;
+            miAdmin.Image = Resources.Icons.Icons.Admin;
             miAdmin.ImagePadding = 10;
             miAdmin.Location = new Point(0, 244);
             miAdmin.Margin = new Padding(1);
@@ -93,7 +93,7 @@
             miSettings.BaseColor = Color.FromArgb(40, 40, 90);
             miSettings.Dock = DockStyle.Top;
             miSettings.HoverColour = Color.FromArgb(50, 50, 100);
-            miSettings.Image = Resources.Icons.Settings;
+            miSettings.Image = Resources.Icons.Icons.Settings;
             miSettings.ImagePadding = 10;
             miSettings.Location = new Point(0, 196);
             miSettings.Margin = new Padding(1);
@@ -109,7 +109,7 @@
             miRanks.BaseColor = Color.FromArgb(40, 40, 90);
             miRanks.Dock = DockStyle.Top;
             miRanks.HoverColour = Color.FromArgb(50, 50, 100);
-            miRanks.Image = Resources.Icons.Medal;
+            miRanks.Image = Resources.Icons.Icons.Medal;
             miRanks.ImagePadding = 10;
             miRanks.Location = new Point(0, 148);
             miRanks.Margin = new Padding(1);
@@ -125,7 +125,7 @@
             miQuiz.BaseColor = Color.FromArgb(40, 40, 90);
             miQuiz.Dock = DockStyle.Top;
             miQuiz.HoverColour = Color.FromArgb(50, 50, 100);
-            miQuiz.Image = Resources.Icons.Notebook;
+            miQuiz.Image = Resources.Icons.Icons.Notebook;
             miQuiz.ImagePadding = 10;
             miQuiz.Location = new Point(0, 100);
             miQuiz.Margin = new Padding(1);
@@ -141,7 +141,7 @@
             miHome.BaseColor = Color.FromArgb(40, 40, 90);
             miHome.Dock = DockStyle.Top;
             miHome.HoverColour = Color.FromArgb(50, 50, 100);
-            miHome.Image = Resources.Icons.Home;
+            miHome.Image = Resources.Icons.Icons.Home;
             miHome.ImagePadding = 10;
             miHome.Location = new Point(0, 52);
             miHome.Margin = new Padding(1);
@@ -167,7 +167,7 @@
             miMenu.BaseColor = Color.FromArgb(40, 40, 90);
             miMenu.Dock = DockStyle.Top;
             miMenu.HoverColour = Color.FromArgb(50, 50, 100);
-            miMenu.Image = Resources.Icons.Menu_burger;
+            miMenu.Image = Resources.Icons.Icons.Menu_burger;
             miMenu.ImagePadding = 10;
             miMenu.Location = new Point(0, 0);
             miMenu.Margin = new Padding(1);

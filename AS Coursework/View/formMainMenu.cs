@@ -101,6 +101,8 @@ public partial class formMainMenu : Form {
 
         if (UserForm is null) return;
         UserForm.Location = new Point(MINIMISED_MENU_WIDTH - MENU_WIDTH, 0);
+
+        Refresh();
     }
 
     #endregion

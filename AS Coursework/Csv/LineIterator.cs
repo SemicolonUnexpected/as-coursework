@@ -1,12 +1,12 @@
 namespace Csv;
 
+// LineIterator must be a ref struct to contain a ReadOnlySpan<Char>
 internal ref struct LineIterator {
     private const string NEW_LINE_ERROR = "A line must have the newline character at the end only";
 
     public int Index { get; private set; }
 
     // Use a ReadOnlySpan (allocated on the stack) for speed
-    // This also means that the LineIterator object must be a ref struct
     public ReadOnlySpan<Char> Line { get; private init; }
 
     public LineIterator(string line) {

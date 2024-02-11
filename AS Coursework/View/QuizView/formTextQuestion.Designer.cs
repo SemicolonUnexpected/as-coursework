@@ -153,7 +153,7 @@
             // pb
             // 
             pb.Anchor = AnchorStyles.None;
-            pb.Image = Resources.Images.Flasks_close_up;
+            pb.Image = Resources.Images.Images.Flasks_close_up;
             pb.ImagePortion = new Rectangle(0, 0, 2352, 1440);
             pb.Location = new Point(197, 132);
             pb.Margin = new Padding(25);

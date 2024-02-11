@@ -69,7 +69,7 @@
             pbPasswordLength = new PictureBox();
             btnChangePassword = new Custom_Controls.CustomButton();
             lblDetailsTitle = new Label();
-            pblAppearance = new Custom_Controls.CustomRectangle();
+            pnlDetails = new Custom_Controls.CustomRectangle();
             dtpDateOfBirth = new DateTimePicker();
             lblDateOfBirth = new Label();
             lblChangeDateOfBirthError = new Label();
@@ -85,7 +85,7 @@
             ((System.ComponentModel.ISupportInitialize)pbSpecialCharacters).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbLettersNumbers).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pbPasswordLength).BeginInit();
-            pblAppearance.SuspendLayout();
+            pnlDetails.SuspendLayout();
             SuspendLayout();
             // 
             // pbUserProfile
@@ -97,7 +97,7 @@
             pbUserProfile.BorderWidth = 15;
             pbUserProfile.GradientAngle = 45;
             pbUserProfile.GradientRectangle = new Rectangle(0, 0, 222, 222);
-            pbUserProfile.Image = Resources.Icons.User;
+            pbUserProfile.Image = Resources.Icons.Icons.User;
             pbUserProfile.ImagePortion = new Rectangle(-256, -256, 1024, 1024);
             pbUserProfile.Location = new Point(0, 0);
             pbUserProfile.Margin = new Padding(2);
@@ -126,6 +126,7 @@
             btnProfilePicturePrevious.TabIndex = 3;
             btnProfilePicturePrevious.Text = "<";
             btnProfilePicturePrevious.UseVisualStyleBackColor = false;
+            btnProfilePicturePrevious.Click += btnProfilePicturePrevious_Click;
             // 
             // btnProfilePictureNext
             // 
@@ -148,6 +149,7 @@
             btnProfilePictureNext.Tag = "";
             btnProfilePictureNext.Text = ">";
             btnProfilePictureNext.UseVisualStyleBackColor = false;
+            btnProfilePictureNext.Click += btnProfilePictureNext_Click;
             // 
             // pnlProfilePicture
             // 
@@ -693,7 +695,7 @@
             // 
             // pbPasswordView
             // 
-            pbPasswordView.Image = Resources.Icons.Eye;
+            pbPasswordView.Image = Resources.Icons.Icons.Eye;
             pbPasswordView.Location = new Point(300, 8);
             pbPasswordView.Name = "pbPasswordView";
             pbPasswordView.Size = new Size(30, 30);
@@ -793,7 +795,7 @@
             // pbLettersNumbers
             // 
             pbLettersNumbers.Anchor = AnchorStyles.None;
-            pbLettersNumbers.Image = Resources.Icons.Red_Cross_Circle;
+            pbLettersNumbers.Image = Resources.Icons.Icons.Red_Cross_Circle;
             pbLettersNumbers.Location = new Point(12, 44);
             pbLettersNumbers.Margin = new Padding(4);
             pbLettersNumbers.Name = "pbLettersNumbers";
@@ -848,25 +850,25 @@
             lblDetailsTitle.TabIndex = 2;
             lblDetailsTitle.Text = "Details";
             // 
-            // pblAppearance
+            // pnlDetails
             // 
-            pblAppearance.Anchor = AnchorStyles.None;
-            pblAppearance.BackColor = Color.FromArgb(30, 30, 70);
-            pblAppearance.BorderColor = Color.White;
-            pblAppearance.BorderWidth = 0;
-            pblAppearance.Controls.Add(dtpDateOfBirth);
-            pblAppearance.Controls.Add(lblDateOfBirth);
-            pblAppearance.Controls.Add(lblChangeDateOfBirthError);
-            pblAppearance.Controls.Add(lblGender);
-            pblAppearance.Controls.Add(cbGender);
-            pblAppearance.Controls.Add(lblDetailsTitle);
-            pblAppearance.CornerRadius = 20;
-            pblAppearance.Location = new Point(21, 332);
-            pblAppearance.Margin = new Padding(12);
-            pblAppearance.Name = "pblAppearance";
-            pblAppearance.Size = new Size(223, 235);
-            pblAppearance.TabIndex = 6;
-            pblAppearance.Text = "customRectangle1";
+            pnlDetails.Anchor = AnchorStyles.None;
+            pnlDetails.BackColor = Color.FromArgb(30, 30, 70);
+            pnlDetails.BorderColor = Color.White;
+            pnlDetails.BorderWidth = 0;
+            pnlDetails.Controls.Add(dtpDateOfBirth);
+            pnlDetails.Controls.Add(lblDateOfBirth);
+            pnlDetails.Controls.Add(lblChangeDateOfBirthError);
+            pnlDetails.Controls.Add(lblGender);
+            pnlDetails.Controls.Add(cbGender);
+            pnlDetails.Controls.Add(lblDetailsTitle);
+            pnlDetails.CornerRadius = 20;
+            pnlDetails.Location = new Point(21, 332);
+            pnlDetails.Margin = new Padding(12);
+            pnlDetails.Name = "pnlDetails";
+            pnlDetails.Size = new Size(223, 235);
+            pnlDetails.TabIndex = 6;
+            pnlDetails.Text = "customRectangle1";
             // 
             // dtpDateOfBirth
             // 
@@ -953,7 +955,7 @@
             BackColor = Color.FromArgb(20, 20, 50);
             ClientSize = new Size(650, 920);
             Controls.Add(lblUsername);
-            Controls.Add(pblAppearance);
+            Controls.Add(pnlDetails);
             Controls.Add(pnlDangerZone);
             Controls.Add(pnlAccount);
             Controls.Add(pnlProfilePicture);
@@ -973,8 +975,8 @@
             ((System.ComponentModel.ISupportInitialize)pbSpecialCharacters).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbLettersNumbers).EndInit();
             ((System.ComponentModel.ISupportInitialize)pbPasswordLength).EndInit();
-            pblAppearance.ResumeLayout(false);
-            pblAppearance.PerformLayout();
+            pnlDetails.ResumeLayout(false);
+            pnlDetails.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -988,7 +990,7 @@
         private Label lblAccountTitle;
         private Custom_Controls.CustomRectangle pnlDangerZone;
         private Label lblDetailsTitle;
-        private Custom_Controls.CustomRectangle pblAppearance;
+        private Custom_Controls.CustomRectangle pnlDetails;
         private Label lblDangerZoneTitle;
         private Custom_Controls.CustomButton btnResetExperience;
         private Label lblConfirmPasswordError;

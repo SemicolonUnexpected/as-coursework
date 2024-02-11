@@ -78,7 +78,7 @@
             btnLogin.Margin = new Padding(19, 21, 19, 21);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(100, 40);
-            btnLogin.TabIndex = 3;
+            btnLogin.TabIndex = 0;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = false;
             btnLogin.Click += btnLogin_Click;
@@ -107,7 +107,7 @@
             lblRegister.MaximumSize = new Size(277, 0);
             lblRegister.Name = "lblRegister";
             lblRegister.Size = new Size(252, 57);
-            lblRegister.TabIndex = 5;
+            lblRegister.TabIndex = 0;
             lblRegister.Text = "Don't have an account? Click here and register now\r\n\r\n";
             lblRegister.TextAlign = ContentAlignment.MiddleCenter;
             lblRegister.Click += lblRegister_Click;
@@ -147,14 +147,14 @@
             tbPassword.PlaceholderTextColor = Color.White;
             tbPassword.ShortcutEnabled = false;
             tbPassword.Size = new Size(222, 33);
-            tbPassword.TabIndex = 1;
+            tbPassword.TabIndex = 2;
             tbPassword.UsePasswordChar = true;
             tbPassword.KeyDown += tbPassword_KeyDown;
             // 
             // pbPasswordView
             // 
             pbPasswordView.Anchor = AnchorStyles.None;
-            pbPasswordView.Image = Resources.Icons.Eye;
+            pbPasswordView.Image = Resources.Icons.Icons.Eye;
             pbPasswordView.Location = new Point(300, 8);
             pbPasswordView.Name = "pbPasswordView";
             pbPasswordView.Size = new Size(30, 30);
@@ -183,7 +183,7 @@
             tbUsername.PlaceholderTextColor = Color.White;
             tbUsername.ShortcutEnabled = false;
             tbUsername.Size = new Size(222, 33);
-            tbUsername.TabIndex = 0;
+            tbUsername.TabIndex = 1;
             tbUsername.UsePasswordChar = false;
             // 
             // pnlLeftGradOne
@@ -253,13 +253,14 @@
             // pbBackground
             // 
             pbBackground.Dock = DockStyle.Fill;
-            pbBackground.Image = Resources.Images.Flasks_close_up;
+            pbBackground.Image = Resources.Images.Images.Flasks_close_up;
             pbBackground.ImagePortion = new Rectangle(1380, 0, 972, 1440);
             pbBackground.Location = new Point(352, 0);
             pbBackground.Margin = new Padding(2, 3, 2, 3);
             pbBackground.Name = "pbBackground";
             pbBackground.Size = new Size(468, 650);
             pbBackground.TabIndex = 0;
+            pbBackground.TabStop = false;
             pbBackground.Text = "customPictureBox1";
             // 
             // formLogin

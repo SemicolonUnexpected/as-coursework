@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AS_Coursework.Resources {
+namespace AS_Coursework.Resources.UserProfileImages {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace AS_Coursework.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Icons {
+    internal class UserProfileImages {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Icons() {
+        internal UserProfileImages() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace AS_Coursework.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AS_Coursework.Resources.Icons", typeof(Icons).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AS_Coursework.Resources.UserProfileImages.UserProfileImages", typeof(UserProfileImages).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -63,9 +63,9 @@ namespace AS_Coursework.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Admin {
+        internal static System.Drawing.Bitmap Atom {
             get {
-                object obj = ResourceManager.GetObject("Admin", resourceCulture);
+                object obj = ResourceManager.GetObject("Atom", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,9 @@ namespace AS_Coursework.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap cross {
+        internal static System.Drawing.Bitmap Molecule {
             get {
-                object obj = ResourceManager.GetObject("cross", resourceCulture);
+                object obj = ResourceManager.GetObject("Molecule", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace AS_Coursework.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Eye {
+        internal static System.Drawing.Bitmap Scientist_1 {
             get {
-                object obj = ResourceManager.GetObject("Eye", resourceCulture);
+                object obj = ResourceManager.GetObject("Scientist_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace AS_Coursework.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Eye_crossed {
+        internal static System.Drawing.Bitmap Scientist_10 {
             get {
-                object obj = ResourceManager.GetObject("Eye_crossed", resourceCulture);
+                object obj = ResourceManager.GetObject("Scientist_10", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace AS_Coursework.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Green_Tick_Circle {
+        internal static System.Drawing.Bitmap Scientist_2 {
             get {
-                object obj = ResourceManager.GetObject("Green_Tick_Circle", resourceCulture);
+                object obj = ResourceManager.GetObject("Scientist_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace AS_Coursework.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Home {
+        internal static System.Drawing.Bitmap Scientist_3 {
             get {
-                object obj = ResourceManager.GetObject("Home", resourceCulture);
+                object obj = ResourceManager.GetObject("Scientist_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace AS_Coursework.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Medal {
+        internal static System.Drawing.Bitmap Scientist_4 {
             get {
-                object obj = ResourceManager.GetObject("Medal", resourceCulture);
+                object obj = ResourceManager.GetObject("Scientist_4", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +133,9 @@ namespace AS_Coursework.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Menu_burger {
+        internal static System.Drawing.Bitmap Scientist_5 {
             get {
-                object obj = ResourceManager.GetObject("Menu_burger", resourceCulture);
+                object obj = ResourceManager.GetObject("Scientist_5", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +143,9 @@ namespace AS_Coursework.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Notebook {
+        internal static System.Drawing.Bitmap Scientist_6 {
             get {
-                object obj = ResourceManager.GetObject("Notebook", resourceCulture);
+                object obj = ResourceManager.GetObject("Scientist_6", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +153,9 @@ namespace AS_Coursework.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Red_Cross_Circle {
+        internal static System.Drawing.Bitmap Scientist_7 {
             get {
-                object obj = ResourceManager.GetObject("Red_Cross_Circle", resourceCulture);
+                object obj = ResourceManager.GetObject("Scientist_7", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +163,9 @@ namespace AS_Coursework.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap reset {
+        internal static System.Drawing.Bitmap Scientist_8 {
             get {
-                object obj = ResourceManager.GetObject("reset", resourceCulture);
+                object obj = ResourceManager.GetObject("Scientist_8", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,39 +173,9 @@ namespace AS_Coursework.Resources {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Settings {
+        internal static System.Drawing.Bitmap Scientist_9 {
             get {
-                object obj = ResourceManager.GetObject("Settings", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Sign_out {
-            get {
-                object obj = ResourceManager.GetObject("Sign_out", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap swap {
-            get {
-                object obj = ResourceManager.GetObject("swap", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap User {
-            get {
-                object obj = ResourceManager.GetObject("User", resourceCulture);
+                object obj = ResourceManager.GetObject("Scientist_9", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -15,12 +15,12 @@ public partial class formHome : Form {
         User user = User.ActiveUser!; // For conciseness
 
         pbUserProfile.Image = user.FunctionalDetails.ProfileImage.Image;
-        pbUserProfile.ImagePortion = user.FunctionalDetails.ProfileImage.ImagePortion;
 
         lblUsername.Text = user.AuthenticationDetails.Username;
 
         lblExperienceRemainder.Text = $"{user.FunctionalDetails.LeftOverExperience} xp";
         pbLevel.Progress = (float)user.FunctionalDetails.LeftOverExperience / 100;
+        lblLevel.Text = user.FunctionalDetails.Level.ToString();
 
         lblAnswers.Text = $"Questions answered - {user.FunctionalDetails.QuestionsAnswered}";
         lblCorrect.Text = $"Questions correct - {user.FunctionalDetails.QuestionsCorrect}";

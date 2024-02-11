@@ -273,7 +273,7 @@
             btnReset.FlatAppearance.BorderSize = 0;
             btnReset.FlatStyle = FlatStyle.Flat;
             btnReset.ForeColor = Color.Black;
-            btnReset.Image = Resources.Icons.reset;
+            btnReset.Image = Resources.Icons.Icons.reset;
             btnReset.ImageSize = new Size(60, 60);
             btnReset.Location = new Point(443, 611);
             btnReset.Name = "btnReset";

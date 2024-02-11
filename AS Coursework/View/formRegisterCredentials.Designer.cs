@@ -121,7 +121,7 @@
             // pbLettersNumbers
             // 
             pbLettersNumbers.Anchor = AnchorStyles.None;
-            pbLettersNumbers.Image = Resources.Icons.Red_Cross_Circle;
+            pbLettersNumbers.Image = Resources.Icons.Icons.Red_Cross_Circle;
             pbLettersNumbers.Location = new Point(11, 44);
             pbLettersNumbers.Margin = new Padding(4);
             pbLettersNumbers.Name = "pbLettersNumbers";
@@ -253,7 +253,7 @@
             // 
             // pbPasswordView
             // 
-            pbPasswordView.Image = Resources.Icons.Eye;
+            pbPasswordView.Image = Resources.Icons.Icons.Eye;
             pbPasswordView.Location = new Point(300, 8);
             pbPasswordView.Name = "pbPasswordView";
             pbPasswordView.Size = new Size(30, 30);

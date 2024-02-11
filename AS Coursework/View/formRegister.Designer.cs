@@ -107,7 +107,7 @@
             // pbBackground
             // 
             pbBackground.Dock = DockStyle.Fill;
-            pbBackground.Image = Resources.Images.Test_Tube_and_Dropper;
+            pbBackground.Image = Resources.Images.Images.Test_Tube_and_Dropper;
             pbBackground.ImagePortion = new Rectangle(0, 0, 1042, 1334);
             pbBackground.Location = new Point(0, 0);
             pbBackground.Margin = new Padding(2);

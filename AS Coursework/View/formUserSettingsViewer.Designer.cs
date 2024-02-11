@@ -46,7 +46,7 @@
             btnExit.FlatAppearance.BorderSize = 0;
             btnExit.FlatStyle = FlatStyle.Flat;
             btnExit.ForeColor = Color.Black;
-            btnExit.Image = Resources.Icons.cross;
+            btnExit.Image = Resources.Icons.Icons.cross;
             btnExit.ImageSize = new Size(40, 40);
             btnExit.Location = new Point(750, 0);
             btnExit.Margin = new Padding(0);

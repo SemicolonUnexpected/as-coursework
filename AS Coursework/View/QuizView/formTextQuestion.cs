@@ -57,11 +57,11 @@ public partial class formTextQuestion : Form, IQuestionForm {
     public void DisplayAnswerCorrectness(bool isCorrect) {
         // Display the corresponding output depending on if the answer is correct or not
         if (isCorrect) {
-            pbIsCorrect.Image = Resources.Icons.Green_Tick_Circle;
+            pbIsCorrect.Image = Resources.Icons.Icons.Green_Tick_Circle;
             lblIsCorrect.Text = "Correct, well done!";
         }
         else {
-            pbIsCorrect.Image = Resources.Icons.Red_Cross_Circle;
+            pbIsCorrect.Image = Resources.Icons.Icons.Red_Cross_Circle;
             lblIsCorrect.Text = $"Incorrect, better luck next time. The correct answer was: {_question.CorrectAnswer}";
         }
     }

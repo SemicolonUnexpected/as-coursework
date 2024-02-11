@@ -27,9 +27,9 @@
             btnNext = new Custom_Controls.CustomButton();
             pnlFlashcard = new Custom_Controls.CustomRectangle();
             lblFlashcardText = new Label();
-            btnSwitchSides = new Custom_Controls.CustomButton();
             btnKnown = new Custom_Controls.CustomButton();
             pnlButtons = new Panel();
+            btnSwitchSides = new Custom_Controls.CustomButton();
             pnlFlashcard.SuspendLayout();
             pnlButtons.SuspendLayout();
             SuspendLayout();
@@ -69,6 +69,7 @@
             btnNext.TabIndex = 18;
             btnNext.Text = "I don't know this";
             btnNext.UseVisualStyleBackColor = false;
+            btnNext.Click += btnNext_Click;
             // 
             // pnlFlashcard
             // 
@@ -98,27 +99,6 @@
             lblFlashcardText.TabIndex = 12;
             lblFlashcardText.Text = "Flashcard side one";
             lblFlashcardText.TextAlign = ContentAlignment.MiddleCenter;
-            // 
-            // btnSwitchSides
-            // 
-            btnSwitchSides.Anchor = AnchorStyles.None;
-            btnSwitchSides.BackColor = Color.FromArgb(20, 20, 50);
-            btnSwitchSides.BorderColor = Color.FromArgb(20, 20, 50);
-            btnSwitchSides.BorderWidth = 0;
-            btnSwitchSides.CornerRadius = 37;
-            btnSwitchSides.FlatAppearance.BorderSize = 0;
-            btnSwitchSides.FlatStyle = FlatStyle.Popup;
-            btnSwitchSides.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            btnSwitchSides.ForeColor = Color.BlanchedAlmond;
-            btnSwitchSides.Image = Resources.Icons.swap;
-            btnSwitchSides.ImageSize = new Size(35, 35);
-            btnSwitchSides.Location = new Point(323, 448);
-            btnSwitchSides.Margin = new Padding(7, 6, 7, 6);
-            btnSwitchSides.Name = "btnSwitchSides";
-            btnSwitchSides.Size = new Size(52, 45);
-            btnSwitchSides.TabIndex = 18;
-            btnSwitchSides.UseVisualStyleBackColor = false;
-            btnSwitchSides.Click += btnSwitchSides_Click;
             // 
             // btnKnown
             // 
@@ -153,18 +133,38 @@
             pnlButtons.Size = new Size(385, 45);
             pnlButtons.TabIndex = 20;
             // 
+            // btnSwitchSides
+            // 
+            btnSwitchSides.Anchor = AnchorStyles.None;
+            btnSwitchSides.BackColor = Color.FromArgb(20, 20, 50);
+            btnSwitchSides.BorderColor = Color.WhiteSmoke;
+            btnSwitchSides.BorderWidth = 0;
+            btnSwitchSides.CornerRadius = 20;
+            btnSwitchSides.FlatAppearance.BorderSize = 0;
+            btnSwitchSides.FlatStyle = FlatStyle.Flat;
+            btnSwitchSides.ForeColor = Color.Black;
+            btnSwitchSides.Image = Resources.Icons.Icons.swap;
+            btnSwitchSides.ImageSize = new Size(30, 30);
+            btnSwitchSides.Location = new Point(330, 447);
+            btnSwitchSides.Margin = new Padding(5);
+            btnSwitchSides.Name = "btnSwitchSides";
+            btnSwitchSides.Size = new Size(40, 40);
+            btnSwitchSides.TabIndex = 21;
+            btnSwitchSides.UseVisualStyleBackColor = false;
+            btnSwitchSides.Click += btnSwitchSides_Click;
+            // 
             // formFlashcardQuestion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(20, 20, 50);
             ClientSize = new Size(700, 600);
+            Controls.Add(btnSwitchSides);
             Controls.Add(pnlButtons);
             Controls.Add(pnlFlashcard);
-            Controls.Add(btnSwitchSides);
             Controls.Add(lblQuestionTitle);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "formFlashcardQuestion";
             Text = "TextQuestion";
             pnlFlashcard.ResumeLayout(false);
@@ -180,8 +180,8 @@
         private Custom_Controls.CustomButton btnNext;
         private Custom_Controls.CustomRectangle pnlFlashcard;
         private Label lblFlashcardText;
-        private Custom_Controls.CustomButton btnSwitchSides;
         private Custom_Controls.CustomButton btnKnown;
         private Panel pnlButtons;
+        private Custom_Controls.CustomButton btnSwitchSides;
     }
 }

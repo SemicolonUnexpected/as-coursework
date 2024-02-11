@@ -42,4 +42,9 @@ public partial class formFlashcardQuestion : Form, IQuestionForm {
         _question.Answered(true);
         NextQuestion?.Invoke(null, EventArgs.Empty);
     }
+
+    private void btnNext_Click(object sender, EventArgs e) {
+        _question.Answered(false);
+        NextQuestion?.Invoke(null, EventArgs.Empty);
+    }
 }

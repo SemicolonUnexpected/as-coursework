@@ -64,9 +64,9 @@ namespace AS_Coursework.View {
             string text = tbPassword.Text;
             List<DataValidator.PasswordRequirements> requirements = DataValidator.GetPasswordRequirements(text);
 
-            pbPasswordLength.Image = requirements.Contains(DataValidator.PasswordRequirements.Length) ? Resources.Icons.Green_Tick_Circle : Resources.Icons.Red_Cross_Circle;
-            pbLettersNumbers.Image = requirements.Contains(DataValidator.PasswordRequirements.NumsAndChars) ? Resources.Icons.Green_Tick_Circle : Resources.Icons.Red_Cross_Circle;
-            pbSpecialCharacters.Image = requirements.Contains(DataValidator.PasswordRequirements.SpecialChars) ? Resources.Icons.Green_Tick_Circle : Resources.Icons.Red_Cross_Circle;
+            pbPasswordLength.Image = requirements.Contains(DataValidator.PasswordRequirements.Length) ? Resources.Icons.Icons.Green_Tick_Circle : Resources.Icons.Icons.Red_Cross_Circle;
+            pbLettersNumbers.Image = requirements.Contains(DataValidator.PasswordRequirements.NumsAndChars) ? Resources.Icons.Icons.Green_Tick_Circle : Resources.Icons.Icons.Red_Cross_Circle;
+            pbSpecialCharacters.Image = requirements.Contains(DataValidator.PasswordRequirements.SpecialChars) ? Resources.Icons.Icons.Green_Tick_Circle : Resources.Icons.Icons.Red_Cross_Circle;
         }
 
         protected override void OnResize(EventArgs e) {
@@ -98,12 +98,12 @@ namespace AS_Coursework.View {
 
         // Allow the user to see their password by clicking the eye icon in the picturebox
         private void pbPasswordView_MouseDown(object sender, MouseEventArgs e) {
-            pbPasswordView.Image = Resources.Icons.Eye_crossed;
+            pbPasswordView.Image = Resources.Icons.Icons.Eye_crossed;
             tbPassword.UsePasswordChar = false;
         }
 
         private void pbPasswordView_MouseUp(object sender, MouseEventArgs e) {
-            pbPasswordView.Image = Resources.Icons.Eye;
+            pbPasswordView.Image = Resources.Icons.Icons.Eye;
             tbPassword.UsePasswordChar = true;
         }
 

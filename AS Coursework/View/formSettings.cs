@@ -8,6 +8,7 @@ using AS_Coursework.Model.Security;
 namespace AS_Coursework.View;
 public partial class formSettings : Form {
     User _user;
+
     public formSettings() {
         InitializeComponent();
 
@@ -48,6 +49,8 @@ public partial class formSettings : Form {
         PopulateDataDisplay();
 
         cbGender.SelectedIndexChanged += cbGender_SelectedIndexChanged;
+
+        pbUserProfile.Image = _user.FunctionalDetails.ProfileImage.Image;
     }
 
     // This method is called every time the user changes their data to ensure all displayed data is correct
@@ -198,9 +201,9 @@ public partial class formSettings : Form {
         string text = tbNewPassword.Text;
         List<DataValidator.PasswordRequirements> requirements = DataValidator.GetPasswordRequirements(text);
 
-        pbPasswordLength.Image = requirements.Contains(DataValidator.PasswordRequirements.Length) ? Resources.Icons.Green_Tick_Circle : Resources.Icons.Red_Cross_Circle;
-        pbLettersNumbers.Image = requirements.Contains(DataValidator.PasswordRequirements.NumsAndChars) ? Resources.Icons.Green_Tick_Circle : Resources.Icons.Red_Cross_Circle;
-        pbSpecialCharacters.Image = requirements.Contains(DataValidator.PasswordRequirements.SpecialChars) ? Resources.Icons.Green_Tick_Circle : Resources.Icons.Red_Cross_Circle;
+        pbPasswordLength.Image = requirements.Contains(DataValidator.PasswordRequirements.Length) ? Resources.Icons.Icons.Green_Tick_Circle : Resources.Icons.Icons.Red_Cross_Circle;
+        pbLettersNumbers.Image = requirements.Contains(DataValidator.PasswordRequirements.NumsAndChars) ? Resources.Icons.Icons.Green_Tick_Circle : Resources.Icons.Icons.Red_Cross_Circle;
+        pbSpecialCharacters.Image = requirements.Contains(DataValidator.PasswordRequirements.SpecialChars) ? Resources.Icons.Icons.Green_Tick_Circle : Resources.Icons.Icons.Red_Cross_Circle;
     }
 
     private void btnChangePassword_Click(object? sender, EventArgs e) {
@@ -215,4 +218,14 @@ public partial class formSettings : Form {
     }
 
     #endregion
+
+    private void btnProfilePicturePrevious_Click(object sender, EventArgs e) {
+        _user.FunctionalDetails.ProfileImageIndex = _user.FunctionalDetails.ProfileImageIndex == 0 ? UserProfileImage.Images.Count - 1 : _user.FunctionalDetails.ProfileImageIndex - 1;
+        pbUserProfile.Image = _user.FunctionalDetails.ProfileImage.Image;
+    }
+
+    private void btnProfilePictureNext_Click(object sender, EventArgs e) {
+        _user.FunctionalDetails.ProfileImageIndex = _user.FunctionalDetails.ProfileImageIndex == UserProfileImage.Images.Count - 1 ? 0 : _user.FunctionalDetails.ProfileImageIndex + 1;
+        pbUserProfile.Image = _user.FunctionalDetails.ProfileImage.Image;
+    }
 }

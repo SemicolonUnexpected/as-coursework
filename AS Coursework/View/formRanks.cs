@@ -33,7 +33,6 @@ public partial class formRanks : Form {
         // Read in the users details for display
         lblUsername.Text = user.AuthenticationDetails.Username;
         pbUserProfile.Image = user.FunctionalDetails.ProfileImage.Image;
-        pbUserProfile.ImagePortion = user.FunctionalDetails.ProfileImage.ImagePortion;
         lblExperience.Text = user.FunctionalDetails.Experience.ToString() + " xp";
         lblRank.Text = $"#{DataManager.GetUserIndex(user => user.AuthenticationDetails.Username == user.AuthenticationDetails.Username) + 1}";
 

@@ -50,12 +50,12 @@ public partial class formLogin : Form {
 
     // Allow the user to see their password by clicking the eye icon in the picturebox
     private void pbPasswordView_MouseDown(object sender, MouseEventArgs e) {
-        pbPasswordView.Image = Resources.Icons.Eye_crossed;
+        pbPasswordView.Image = Resources.Icons.Icons.Eye_crossed;
         tbPassword.UsePasswordChar = false;
     }
 
     private void pbPasswordView_MouseUp(object sender, MouseEventArgs e) {
-        pbPasswordView.Image = Resources.Icons.Eye;
+        pbPasswordView.Image = Resources.Icons.Icons.Eye;
         tbPassword.UsePasswordChar = true;
     }
 

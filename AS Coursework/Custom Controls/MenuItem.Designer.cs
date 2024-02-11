@@ -41,7 +41,7 @@
             // 
             // pb
             // 
-            pb.Image = Resources.Icons.Home;
+            pb.Image = Resources.Icons.Icons.Home;
             pb.ImagePortion = new Rectangle(0, 0, 512, 512);
             pb.Location = new Point(17, 11);
             pb.Margin = new Padding(2);

@@ -15,22 +15,17 @@
 
   <ItemGroup>
     <Compile Update="Custom Controls\PictureFrame.cs" />
-    <Compile Update="Resources\Icons.Designer.cs">
-      <DependentUpon>Icons.resx</DependentUpon>
+    <Compile Update="Resources\Icons\Icons.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <DependentUpon>Icons.resx</DependentUpon>
     </Compile>
-    <Compile Update="Resources\Images.Designer.cs">
+    <Compile Update="Resources\Images\Images.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Images.resx</DependentUpon>
     </Compile>
-    <Compile Update="Resources\QuizImages.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>QuizImages.resx</DependentUpon>
-    </Compile>
-    <Compile Update="Resources\UserProfileImages.Designer.cs">
+    <Compile Update="Resources\UserProfileImages\UserProfileImages.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>UserProfileImages.resx</DependentUpon>
@@ -41,19 +36,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Resources\Icons.resx">
-      <LastGenOutput>Icons.Designer.cs</LastGenOutput>
+    <EmbeddedResource Update="Resources\Icons\Icons.resx">
       <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Icons.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Resources\Images.resx">
+    <EmbeddedResource Update="Resources\Images\Images.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Images.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Update="Resources\QuizImages.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>QuizImages.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Resources\UserProfileImages.resx">
+    <EmbeddedResource Update="Resources\UserProfileImages\UserProfileImages.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>UserProfileImages.Designer.cs</LastGenOutput>
     </EmbeddedResource>

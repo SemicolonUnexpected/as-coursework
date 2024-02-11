@@ -57,7 +57,7 @@
             pbUserProfile.BorderWidth = 20;
             pbUserProfile.GradientAngle = 45;
             pbUserProfile.GradientRectangle = new Rectangle(0, 0, 250, 250);
-            pbUserProfile.Image = Resources.Icons.User;
+            pbUserProfile.Image = Resources.Icons.Icons.User;
             pbUserProfile.ImagePortion = new Rectangle(-256, -256, 1024, 1024);
             pbUserProfile.Location = new Point(30, 131);
             pbUserProfile.Margin = new Padding(2);
