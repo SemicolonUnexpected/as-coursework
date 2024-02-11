@@ -1,4 +1,5 @@
 ﻿using AS_Coursework._Helpers;
+using AS_Coursework.Model.Data;
 using AS_Coursework.Model.Users;
 
 namespace AS_Coursework.View;
@@ -26,7 +27,7 @@ public partial class formHome : Form {
         lblCorrect.Text = $"Questions correct - {user.FunctionalDetails.QuestionsCorrect}";
         lblPercentageAccuracy.Text = $"Percentage accuracy - {user.FunctionalDetails.PercentageAccuracy} %";
 
-        lblRank.Text = $"#{1}";
+        lblRank.Text = $"Please implement me";
     }
 
     protected override void OnResize(EventArgs e) {

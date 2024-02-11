@@ -63,7 +63,7 @@ public partial class formUserSettingsViewer : Form {
     }
 
     private void btnExit_Click(object sender, EventArgs e) {
-        (ActiveForm as formMaster)?.DisplayForm(new formMainMenu(true));
+        (ActiveForm as formMaster)?.DisplayForm(new formMainMenu(new formAdminMenu()));
     }
 
     // Scrolling the settings form

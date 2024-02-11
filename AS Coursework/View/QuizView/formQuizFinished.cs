@@ -31,6 +31,6 @@ public partial class formQuizFinished : Form {
 
     // Return to the main menu when the exit button is clicked
     private void btnExit_Click(object sender, EventArgs e) {
-        (ActiveForm as formMaster)?.DisplayForm(new formMainMenu());
+        (ActiveForm as formMaster)?.DisplayForm(new formMainMenu(new formQuizMenu()));
     }
 }

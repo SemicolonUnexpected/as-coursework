@@ -24,7 +24,7 @@ public partial class formMainMenu : Form {
         get => _userFormBaseHeight;
     }
 
-    public formMainMenu(bool openAdmin = false) {
+    public formMainMenu(Form? startupForm = null) {
         InitializeComponent();
 
         SetStyle(ControlStyles.UserPaint | ControlStyles.OptimizedDoubleBuffer | ControlStyles.AllPaintingInWmPaint, true);
@@ -33,7 +33,7 @@ public partial class formMainMenu : Form {
         if (!User.ActiveUser!.AuthenticationDetails.IsAdmin) miAdmin.Hide();
 
         // Display the initial use form
-        DisplayUserForm(openAdmin ? new formAdminMenu() : new formHome());
+        DisplayUserForm(startupForm ?? new formHome());
 
         // Call the OnResize event to ensure that the form is formatted correctly
         OnResize(EventArgs.Empty);
