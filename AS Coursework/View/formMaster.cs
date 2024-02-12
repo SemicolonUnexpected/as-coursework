@@ -14,7 +14,7 @@ public partial class formMaster : Form {
 
     protected override void OnClosing(CancelEventArgs e) {
         base.OnClosing(e);
-        DataManager.Write();
+        UserDataManager.Write();
     }
 
     public void DisplayForm(Form form) {

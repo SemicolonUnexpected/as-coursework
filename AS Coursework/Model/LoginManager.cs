@@ -7,9 +7,9 @@ namespace AS_Coursework.Model.Login;
 internal static class LoginManager {
     public static LoginResult Login(string username, string password) {
         if (password == string.Empty || username == string.Empty) return FieldsEmpty;
-        if (!DataManager.UserExists(username)) return UsernameNotFound;
+        if (!UserDataManager.UserExists(username)) return UsernameNotFound;
 
-        User? selectedUser = DataManager.GetUser(username);
+        User? selectedUser = UserDataManager.GetUser(username);
 
         if (selectedUser is null) throw new NullReferenceException(nameof(selectedUser));
 

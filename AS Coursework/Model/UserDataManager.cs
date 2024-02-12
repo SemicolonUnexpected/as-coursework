@@ -4,7 +4,7 @@ using AS_Coursework.Model.Users;
 using System.Net.Mail;
 
 namespace AS_Coursework.Model.Data;
-internal static class DataManager {
+internal static class UserDataManager {
     private const string PATH = "UserData.txt";
     private static List<User> _users = new();
 
@@ -23,9 +23,14 @@ internal static class DataManager {
         }
     }
 
-    public static int GetUserIndex(Predicate<User> predicate) {
+    public static int GetUserRank(User user) {
+        // Sort the users by rank first
         _users.Sort();
-        return _users.FindIndex(predicate);
+
+        // Create a hash set of all the experience values
+        HashSet<int> rankScores = _users.Select(x => x.FunctionalDetails.Experience).ToHashSet();
+
+        return 1 + rankScores.Count(x => x > user.FunctionalDetails.Experience);
     }
 
     public static User? GetUser(int index) {
@@ -46,7 +51,7 @@ internal static class DataManager {
 
     #endregion
 
-    static DataManager() {
+    static UserDataManager() {
         ReadIn();
     }
 

@@ -7,17 +7,22 @@ public partial class formQuizFinished : Form {
     public formQuizFinished(Quiz quiz) {
         InitializeComponent();
 
+        User user = User.ActiveUser!; // For conciseness
+
         // Show the user details
-        lblUsername.Text = User.ActiveUser!.AuthenticationDetails.Username;
-        pbUserProfile.Image = User.ActiveUser!.FunctionalDetails.ProfileImage.Image;
+        lblUsername.Text = user!.AuthenticationDetails.Username;
+        pbUserProfile.Image = user!.FunctionalDetails.ProfileImage.Image;
 
         // Display the quiz statistics
         lblQuizStatistics.Text = $"Quiz complete, well done!\n\n" +
-            $"Correct: {quiz.AmountCorrect}/{quiz.Length}\n" +
+            $"Correct: {quiz.AmountCorrect}/{quiz.AmountAnswered}\n" +
             $"Experience earned: {quiz.TotalExperienceAllocation} xp";
 
-        // Give the user the experience they earned
-        User.ActiveUser.FunctionalDetails.Experience += quiz.TotalExperienceAllocation;
+        // Update the user's statistics
+        user.FunctionalDetails.Experience += quiz.TotalExperienceAllocation;
+        user.FunctionalDetails.QuestionsAnswered += quiz.AmountAnswered;
+        user.FunctionalDetails.QuestionsCorrect += quiz.AmountCorrect;
+
     }
 
     protected override void OnResize(EventArgs e) {

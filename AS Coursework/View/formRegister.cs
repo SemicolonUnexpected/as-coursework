@@ -90,7 +90,7 @@ namespace AS_Coursework.View {
 
             User user = new(authenticationDetails, functionalDetails, miscDetails);
 
-            DataManager.AddUser(user);
+            UserDataManager.AddUser(user);
         }
     }
 }

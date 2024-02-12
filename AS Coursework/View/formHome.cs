@@ -27,7 +27,7 @@ public partial class formHome : Form {
         lblCorrect.Text = $"Questions correct - {user.FunctionalDetails.QuestionsCorrect}";
         lblPercentageAccuracy.Text = $"Percentage accuracy - {user.FunctionalDetails.PercentageAccuracy} %";
 
-        lblRank.Text = $"Please implement me";
+        lblRank.Text = $"#{UserDataManager.GetUserRank(user)}";
     }
 
     protected override void OnResize(EventArgs e) {

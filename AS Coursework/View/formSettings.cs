@@ -96,7 +96,7 @@ public partial class formSettings : Form {
             lblChangeUsernameError.CenterX();
             return;
         }
-        if (DataManager.UserExists(newUsername)) {
+        if (UserDataManager.UserExists(newUsername)) {
             lblChangeUsernameError.Text = "This username is already taken";
             lblChangeUsernameError.CenterX();
             return;
@@ -169,7 +169,7 @@ public partial class formSettings : Form {
 
     private void btnDeleteAccount_Click(object? sender, EventArgs e) {
         if (CustomMessageBox.Show("Delete account", "Are you sure you want to delete your account. You cannot revert this action and will be instantly logged out") == DialogResult.OK) {
-            DataManager.DeleteUser(_user);
+            UserDataManager.DeleteUser(_user);
             (ActiveForm as formMaster)?.DisplayForm(new formLogin());
         }
     }

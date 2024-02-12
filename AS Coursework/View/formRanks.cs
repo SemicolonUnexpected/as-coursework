@@ -34,7 +34,7 @@ public partial class formRanks : Form {
         lblUsername.Text = user.AuthenticationDetails.Username;
         pbUserProfile.Image = user.FunctionalDetails.ProfileImage.Image;
         lblExperience.Text = user.FunctionalDetails.Experience.ToString() + " xp";
-        lblRank.Text = $"#{DataManager.GetUserIndex(user => user.AuthenticationDetails.Username == user.AuthenticationDetails.Username) + 1}";
+        lblRank.Text = $"#{UserDataManager.GetUserRank(user)}";
 
         DisplayRanks();
 
@@ -59,9 +59,9 @@ public partial class formRanks : Form {
     private void DisplayRanks() {
         for (int i = 0; i < _rankViews.Count; i++) {
             Ranking rankView = _rankViews[i];
-            DataManager.GetUser(i, out User? user);
+            UserDataManager.GetUser(i, out User? user);
 
-            rankView.UsernameText = user is null ? "" : user.AuthenticationDetails.Username;
+            rankView.UsernameText = user is null ? "" : $"#{UserDataManager.GetUserRank(user)} {user.AuthenticationDetails.Username}";
             rankView.ExperienceText = user is null ? "" : user.FunctionalDetails.Experience.ToString() + " xp";
         }
     }

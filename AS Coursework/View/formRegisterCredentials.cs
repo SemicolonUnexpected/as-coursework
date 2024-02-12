@@ -26,7 +26,7 @@ namespace AS_Coursework.View {
 
             // Set the text to error text if the username field is empty or the username is taken
             if (string.IsNullOrWhiteSpace(tbUsername.Text)) usernameError = "Please fill in a username";
-            else if (DataManager.UserExists(tbUsername.Text)) usernameError = "Username already taken";
+            else if (UserDataManager.UserExists(tbUsername.Text)) usernameError = "Username already taken";
 
             lblUsernameError.Text = usernameError;
             lblUsernameError.CenterX();

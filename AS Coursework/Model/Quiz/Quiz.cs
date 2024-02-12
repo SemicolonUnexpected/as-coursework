@@ -9,12 +9,12 @@ public class Quiz {
         _questions = PopulateQuiz(quizStyle, questionCount);
     }
 
-    public int Length { get => _questions.Count; }
     public int AmountCorrect => _questions.Count(x => x.Correct is true);
+    public int AmountAnswered => _questions.Count(x => x.Correct is not null);
     public int TotalExperienceAllocation => _questions.Sum(x => x.AllocatedExperience);
 
     public bool NextQuestion(out Form? questionForm) {
-        if (_index < Length) {
+        if (_index < _questions.Count) {
             questionForm = _questions[_index].DisplayQuestion();
             _index++;
             return true;
