@@ -56,7 +56,7 @@
             lblDangerZoneDescription = new Label();
             lblDangerZoneTitle = new Label();
             lblPasswordError = new Label();
-            btnResetExperience = new Custom_Controls.CustomButton();
+            btnResetStatistics = new Custom_Controls.CustomButton();
             tbNewPassword = new Custom_Controls.CustomTextbox();
             pbPasswordView = new PictureBox();
             tbConfirmPassword = new Custom_Controls.CustomTextbox();
@@ -562,7 +562,7 @@
             pnlDangerZone.Controls.Add(lblDangerZoneDescription);
             pnlDangerZone.Controls.Add(lblDangerZoneTitle);
             pnlDangerZone.Controls.Add(lblPasswordError);
-            pnlDangerZone.Controls.Add(btnResetExperience);
+            pnlDangerZone.Controls.Add(btnResetStatistics);
             pnlDangerZone.Controls.Add(tbNewPassword);
             pnlDangerZone.Controls.Add(tbConfirmPassword);
             pnlDangerZone.Controls.Add(pnlPasswordStrength);
@@ -648,26 +648,26 @@
             lblPasswordError.Text = "Error";
             lblPasswordError.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // btnResetExperience
+            // btnResetStatistics
             // 
-            btnResetExperience.BackColor = Color.FromArgb(0, 150, 255);
-            btnResetExperience.BorderColor = Color.White;
-            btnResetExperience.BorderWidth = 2;
-            btnResetExperience.CornerRadius = 10;
-            btnResetExperience.FlatAppearance.BorderSize = 0;
-            btnResetExperience.FlatStyle = FlatStyle.Popup;
-            btnResetExperience.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            btnResetExperience.ForeColor = Color.BlanchedAlmond;
-            btnResetExperience.Image = null;
-            btnResetExperience.ImageSize = new Size(150, 40);
-            btnResetExperience.Location = new Point(84, 170);
-            btnResetExperience.Margin = new Padding(7, 6, 7, 6);
-            btnResetExperience.Name = "btnResetExperience";
-            btnResetExperience.Size = new Size(178, 30);
-            btnResetExperience.TabIndex = 0;
-            btnResetExperience.Text = "Reset experience";
-            btnResetExperience.UseVisualStyleBackColor = false;
-            btnResetExperience.Click += btnResetExperience_Click;
+            btnResetStatistics.BackColor = Color.FromArgb(0, 150, 255);
+            btnResetStatistics.BorderColor = Color.White;
+            btnResetStatistics.BorderWidth = 2;
+            btnResetStatistics.CornerRadius = 10;
+            btnResetStatistics.FlatAppearance.BorderSize = 0;
+            btnResetStatistics.FlatStyle = FlatStyle.Popup;
+            btnResetStatistics.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            btnResetStatistics.ForeColor = Color.BlanchedAlmond;
+            btnResetStatistics.Image = null;
+            btnResetStatistics.ImageSize = new Size(150, 40);
+            btnResetStatistics.Location = new Point(84, 170);
+            btnResetStatistics.Margin = new Padding(7, 6, 7, 6);
+            btnResetStatistics.Name = "btnResetStatistics";
+            btnResetStatistics.Size = new Size(178, 30);
+            btnResetStatistics.TabIndex = 0;
+            btnResetStatistics.Text = "Reset statistics";
+            btnResetStatistics.UseVisualStyleBackColor = false;
+            btnResetStatistics.Click += btnReset_Click;
             // 
             // tbNewPassword
             // 
@@ -992,7 +992,7 @@
         private Label lblDetailsTitle;
         private Custom_Controls.CustomRectangle pnlDetails;
         private Label lblDangerZoneTitle;
-        private Custom_Controls.CustomButton btnResetExperience;
+        private Custom_Controls.CustomButton btnResetStatistics;
         private Label lblConfirmPasswordError;
         private Custom_Controls.CustomTextbox tbNewPassword;
         private PictureBox pbPasswordView;

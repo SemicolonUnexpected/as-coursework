@@ -7,7 +7,7 @@ using AS_Coursework.Model.Security;
 
 namespace AS_Coursework.View;
 public partial class formSettings : Form {
-    User _user;
+    readonly User _user;
 
     public formSettings() {
         InitializeComponent();
@@ -163,8 +163,12 @@ public partial class formSettings : Form {
         CustomMessageBox.Show("Date of birth", "Date of birth changed");
     }
 
-    private void btnResetExperience_Click(object? sender, EventArgs e) {
-        if (CustomMessageBox.Show("Reset score", "Are you sure you want to reset your score?") == DialogResult.OK) _user.FunctionalDetails.Experience = 0;
+    private void btnReset_Click(object? sender, EventArgs e) {
+        if (CustomMessageBox.Show("Reset score", "Are you sure you want to reset your statistics?") == DialogResult.OK) {
+            _user.FunctionalDetails.Experience = 0;
+            _user.FunctionalDetails.QuestionsAnswered = 0;
+            _user.FunctionalDetails.QuestionsCorrect = 0;
+        }
     }
 
     private void btnDeleteAccount_Click(object? sender, EventArgs e) {
