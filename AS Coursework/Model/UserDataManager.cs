@@ -45,8 +45,8 @@ internal static class UserDataManager {
         _users.Remove(user);
     }
 
-    public static List<User> GetUserClone() {
-        return new List<User>(_users);
+    public static List<string> GetUsernames() {
+        return _users.Select(x => x.AuthenticationDetails.Username).ToList();
     }
 
     #endregion

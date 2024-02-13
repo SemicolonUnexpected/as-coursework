@@ -36,10 +36,4 @@ public partial class formHome : Form {
         lblRank.Center();
         lblUsername.CenterX();
     }
-
-    protected override void OnMouseWheel(MouseEventArgs e) {
-        base.OnMouseWheel(e);
-
-        ((ActiveForm as formMaster)?.ChildView as formMainMenu)?.ScrollUserView(e.Delta);
-    }
 }

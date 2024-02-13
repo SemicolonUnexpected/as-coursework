@@ -65,13 +65,6 @@ public partial class formSettings : Form {
         dtpDateOfBirth.Value = _user.MiscDetails.DateOfBirth;
     }
 
-    // Bubble the mouse scrolling up the the formMainMenu to handle scrolling
-    protected override void OnMouseWheel(MouseEventArgs e) {
-        base.OnMouseWheel(e);
-
-        ((ActiveForm as formMaster)?.ChildView as formMainMenu)?.ScrollUserView(e.Delta);
-    }
-
     protected override void OnResize(EventArgs e) {
         base.OnResize(e);
 

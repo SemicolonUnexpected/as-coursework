@@ -16,7 +16,14 @@ public partial class formMainMenu : Form {
         get => _userForm;
         set {
             _userForm = value;
+
+            if (_userForm is null) return;
+
+            // Set the base height to allow scrolling
             _userFormBaseHeight = value?.Height;
+
+            // Subscribe to the form's mouse wheel event
+            _userForm.MouseWheel += ScrollUserView;
         }
     }
 
@@ -167,18 +174,14 @@ public partial class formMainMenu : Form {
 
     #endregion
 
-    public void ScrollUserView(int value) {
+    public void ScrollUserView(object? sender, MouseEventArgs e) {
         // Only scroll when the scroll bar is active
-        if (sb.Visible) sb.Value -= value;
+        if (sb.Visible) sb.Value -= e.Delta * sb.MouseWheelSensitivity;
     }
 
     private void sb_ValueChanged(object sender, EventArgs e) {
         if (UserForm is null) return;
         UserForm.Location = new Point(_menuMinimised ? 0 : -125, -sb.Value);
         Refresh();
-    }
-
-    private void formMainMenu_ResizeEnd(object sender, EventArgs e) {
-        MessageBox.Show("Test");
     }
 }

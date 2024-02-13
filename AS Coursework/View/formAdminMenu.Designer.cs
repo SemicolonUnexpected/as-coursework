@@ -47,10 +47,10 @@
             clbUserSelector.Anchor = AnchorStyles.None;
             clbUserSelector.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             clbUserSelector.FormattingEnabled = true;
-            clbUserSelector.Items.AddRange(new object[] { "Test ", "Test2", "Test3" });
-            clbUserSelector.Location = new Point(80, 174);
+            clbUserSelector.Items.AddRange(new object[] { "0", "11", "12", "4", "5", "6", "7", "8", "9", "Test ", "Test2", "Test3" });
+            clbUserSelector.Location = new Point(80, 224);
             clbUserSelector.Name = "clbUserSelector";
-            clbUserSelector.Size = new Size(500, 329);
+            clbUserSelector.Size = new Size(500, 279);
             clbUserSelector.TabIndex = 3;
             // 
             // btnViewUser
@@ -73,6 +73,7 @@
             btnViewUser.TabIndex = 4;
             btnViewUser.Text = "View user";
             btnViewUser.UseVisualStyleBackColor = false;
+            btnViewUser.Click += btnViewUser_Click;
             // 
             // formAdminMenu
             // 

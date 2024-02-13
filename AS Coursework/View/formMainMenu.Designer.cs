@@ -191,7 +191,7 @@
             sb.BorderColor = Color.Black;
             sb.BorderWidth = 0;
             sb.ChannelColor = Color.FromArgb(40, 40, 90);
-            sb.ChannelPadding = new Padding(5);
+            sb.ChannelPadding = new Padding(0);
             sb.Dock = DockStyle.Right;
             sb.Location = new Point(790, 0);
             sb.Margin = new Padding(2);
@@ -201,6 +201,7 @@
             sb.Name = "sb";
             sb.Size = new Size(10, 600);
             sb.TabIndex = 0;
+            sb.TabStop = false;
             sb.Text = "customScrollBar1";
             sb.ThumbColor = Color.White;
             sb.ThumbSize = new Size(15, 80);
@@ -221,7 +222,6 @@
             Margin = new Padding(2);
             Name = "formMainMenu";
             Text = "HomeView";
-            ResizeEnd += formMainMenu_ResizeEnd;
             pnlMenuStrip.ResumeLayout(false);
             ResumeLayout(false);
         }
