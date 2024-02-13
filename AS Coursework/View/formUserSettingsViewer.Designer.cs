@@ -74,7 +74,7 @@
             btnExit.Margin = new Padding(5);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(40, 40);
-            btnExit.TabIndex = 3;
+            btnExit.TabIndex = 1;
             btnExit.UseVisualStyleBackColor = false;
             btnExit.Click += btnExit_Click;
             // 

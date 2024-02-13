@@ -23,6 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formMaster));
             pnlFormHolder = new Panel();
             SuspendLayout();
             // 
@@ -42,6 +43,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 600);
             Controls.Add(pnlFormHolder);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(2, 3, 2, 3);
             MinimumSize = new Size(814, 639);
             Name = "formMaster";

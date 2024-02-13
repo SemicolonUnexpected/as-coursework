@@ -68,7 +68,7 @@
             miSignOut.MenuText = "Sign out";
             miSignOut.Name = "miSignOut";
             miSignOut.Size = new Size(140, 48);
-            miSignOut.TabIndex = 8;
+            miSignOut.TabIndex = 6;
             miSignOut.MenuClick += miSignOut_MenuClick;
             // 
             // miAdmin
@@ -84,7 +84,7 @@
             miAdmin.MenuText = "Admin";
             miAdmin.Name = "miAdmin";
             miAdmin.Size = new Size(140, 48);
-            miAdmin.TabIndex = 7;
+            miAdmin.TabIndex = 5;
             miAdmin.MenuClick += miAdmin_MenuClick;
             // 
             // miSettings
@@ -100,7 +100,7 @@
             miSettings.MenuText = "Settings";
             miSettings.Name = "miSettings";
             miSettings.Size = new Size(140, 48);
-            miSettings.TabIndex = 6;
+            miSettings.TabIndex = 4;
             miSettings.MenuClick += miSettings_MenuClick;
             // 
             // miRanks
@@ -116,7 +116,7 @@
             miRanks.MenuText = "Ranks";
             miRanks.Name = "miRanks";
             miRanks.Size = new Size(140, 48);
-            miRanks.TabIndex = 9;
+            miRanks.TabIndex = 3;
             miRanks.MenuClick += miRanks_Click;
             // 
             // miQuiz
@@ -132,7 +132,7 @@
             miQuiz.MenuText = "Quiz";
             miQuiz.Name = "miQuiz";
             miQuiz.Size = new Size(140, 48);
-            miQuiz.TabIndex = 4;
+            miQuiz.TabIndex = 2;
             miQuiz.MenuClick += miQuiz_MenuClick;
             // 
             // miHome
@@ -148,7 +148,7 @@
             miHome.MenuText = "Home";
             miHome.Name = "miHome";
             miHome.Size = new Size(140, 48);
-            miHome.TabIndex = 3;
+            miHome.TabIndex = 1;
             miHome.MenuClick += miHome_MenuClick;
             // 
             // pnlMenuDivider
@@ -174,7 +174,7 @@
             miMenu.MenuText = "Menu";
             miMenu.Name = "miMenu";
             miMenu.Size = new Size(140, 48);
-            miMenu.TabIndex = 1;
+            miMenu.TabIndex = 0;
             miMenu.MenuClick += Menu_Click;
             // 
             // pnlUserViewHolder
@@ -184,7 +184,7 @@
             pnlUserViewHolder.Margin = new Padding(2);
             pnlUserViewHolder.Name = "pnlUserViewHolder";
             pnlUserViewHolder.Size = new Size(650, 600);
-            pnlUserViewHolder.TabIndex = 1;
+            pnlUserViewHolder.TabIndex = 0;
             // 
             // sb
             // 
