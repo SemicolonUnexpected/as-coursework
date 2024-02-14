@@ -146,7 +146,7 @@ public partial class formSettings : Form {
 
     private void dtpDateOfBirth_CloseUp(object? sender, EventArgs e) {
         // Set the text to error text if the date of birth would make the user too young
-        if (DataValidator.IsUserOldEnough(dtpDateOfBirth.Value)) {
+        if (!DataValidator.IsUserOldEnough(dtpDateOfBirth.Value)) {
             lblChangeDateOfBirthError.Text = $"You must be {DataValidator.MINIMUM_USER_AGE} to have an account";
             lblChangeDateOfBirthError.CenterX();
             dtpDateOfBirth.Value = _user.MiscDetails.DateOfBirth;

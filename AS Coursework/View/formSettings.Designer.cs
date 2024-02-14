@@ -874,14 +874,19 @@
             // 
             dtpDateOfBirth.Anchor = AnchorStyles.None;
             dtpDateOfBirth.CalendarFont = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            dtpDateOfBirth.CalendarForeColor = Color.Black;
+            dtpDateOfBirth.CalendarMonthBackground = Color.White;
+            dtpDateOfBirth.CalendarTitleBackColor = Color.White;
+            dtpDateOfBirth.CalendarTitleForeColor = Color.Black;
+            dtpDateOfBirth.CalendarTrailingForeColor = Color.White;
             dtpDateOfBirth.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             dtpDateOfBirth.Format = DateTimePickerFormat.Short;
-            dtpDateOfBirth.Location = new Point(14, 156);
-            dtpDateOfBirth.Margin = new Padding(18, 0, 18, 0);
+            dtpDateOfBirth.Location = new Point(10, 156);
+            dtpDateOfBirth.Margin = new Padding(10);
             dtpDateOfBirth.Name = "dtpDateOfBirth";
-            dtpDateOfBirth.Size = new Size(187, 27);
+            dtpDateOfBirth.Size = new Size(203, 27);
             dtpDateOfBirth.TabIndex = 9;
-            dtpDateOfBirth.CloseUp += dtpDateOfBirth_CloseUp;
+            dtpDateOfBirth.Leave += dtpDateOfBirth_CloseUp;
             // 
             // lblDateOfBirth
             // 
@@ -899,13 +904,12 @@
             // lblChangeDateOfBirthError
             // 
             lblChangeDateOfBirthError.Anchor = AnchorStyles.None;
-            lblChangeDateOfBirthError.AutoSize = true;
             lblChangeDateOfBirthError.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblChangeDateOfBirthError.ForeColor = Color.Red;
-            lblChangeDateOfBirthError.Location = new Point(74, 192);
+            lblChangeDateOfBirthError.Location = new Point(14, 192);
             lblChangeDateOfBirthError.Margin = new Padding(0, 9, 0, 9);
             lblChangeDateOfBirthError.Name = "lblChangeDateOfBirthError";
-            lblChangeDateOfBirthError.Size = new Size(49, 19);
+            lblChangeDateOfBirthError.Size = new Size(187, 34);
             lblChangeDateOfBirthError.TabIndex = 11;
             lblChangeDateOfBirthError.Text = "Error";
             lblChangeDateOfBirthError.TextAlign = ContentAlignment.MiddleCenter;
@@ -929,9 +933,9 @@
             cbGender.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             cbGender.FormattingEnabled = true;
             cbGender.Location = new Point(14, 78);
-            cbGender.Margin = new Padding(18, 0, 18, 0);
+            cbGender.Margin = new Padding(10);
             cbGender.Name = "cbGender";
-            cbGender.Size = new Size(187, 27);
+            cbGender.Size = new Size(199, 27);
             cbGender.TabIndex = 4;
             // 
             // lblUsername

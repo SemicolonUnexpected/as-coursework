@@ -37,13 +37,15 @@ public partial class formAdminMenu : Form {
         ShowAdminChecks();
     }
 
-    private void clbUserSelector_ItemCheck(object sender, ItemCheckEventArgs e) {
+    private void clbUserSelector_ItemCheck(object? sender, ItemCheckEventArgs e) {
         string checkedUsername = (string)clbUserSelector.SelectedValue!;
 
         UserDataManager.GetUser(checkedUsername)!.AuthenticationDetails.IsAdmin = e.NewValue == CheckState.Checked;
     }
 
     private void ShowAdminChecks() {
+        clbUserSelector.ItemCheck -= clbUserSelector_ItemCheck;
+
         CheckedListBox.ObjectCollection collection = clbUserSelector.Items;
         for (int i = 0; i < collection.Count; i++) { 
             if (collection[i] is null) continue;
@@ -53,5 +55,7 @@ public partial class formAdminMenu : Form {
             if (UserDataManager.GetUser(username)!.AuthenticationDetails.IsAdmin) clbUserSelector.SetItemCheckState(i, CheckState.Checked);
             else clbUserSelector.SetItemCheckState(i, CheckState.Unchecked);
         }
+
+        clbUserSelector.ItemCheck += clbUserSelector_ItemCheck;
     }
 }

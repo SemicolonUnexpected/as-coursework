@@ -40,7 +40,7 @@
             lblAdminInfo.Margin = new Padding(2, 0, 2, 0);
             lblAdminInfo.Name = "lblAdminInfo";
             lblAdminInfo.Size = new Size(628, 152);
-            lblAdminInfo.TabIndex = 2;
+            lblAdminInfo.TabIndex = 0;
             lblAdminInfo.Text = resources.GetString("lblAdminInfo.Text");
             lblAdminInfo.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -98,7 +98,7 @@
             tbNewUsername.PlaceholderTextColor = Color.White;
             tbNewUsername.ShortcutEnabled = true;
             tbNewUsername.Size = new Size(367, 31);
-            tbNewUsername.TabIndex = 5;
+            tbNewUsername.TabIndex = 1;
             tbNewUsername.UsePasswordChar = false;
             // 
             // btnSearch
@@ -118,7 +118,7 @@
             btnSearch.Margin = new Padding(5);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(125, 40);
-            btnSearch.TabIndex = 4;
+            btnSearch.TabIndex = 2;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = false;
             btnSearch.Click += btnSearch_Click;
