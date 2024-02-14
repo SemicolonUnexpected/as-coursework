@@ -25,10 +25,7 @@ namespace AS_Coursework.View {
             // Set the current date of birth to today
             dtpDateOfBirth.MaxDate = DateTime.Today;
 
-            // Set the minimum date of birth to 100 years ago
-            dtpDateOfBirth.MinDate = DateTime.Today.Subtract(new TimeSpan(100 * 365, 0, 0, 0, 0));
-
-            // Setup the gender options which can be found in the StringToGender dictionary and deselect everything
+            // Setup the gender options
             cbGender.Items.AddRange(new string[] { "Male", "Female", "Other", "Prefer not to say" });
             cbGender.SelectedIndex = -1;
 

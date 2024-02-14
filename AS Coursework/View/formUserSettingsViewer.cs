@@ -28,6 +28,8 @@ public partial class formUserSettingsViewer : Form {
         InitializeComponent();
 
         DisplayUserForm(new formSettings(user));
+
+        OnResize(EventArgs.Empty);
     }
 
     // Display the user sub form in the holder panel
@@ -67,9 +69,9 @@ public partial class formUserSettingsViewer : Form {
             sb.Show();
 
             // Scale the thumb of the scroll bar
-            sb.Maximum = UserSettingsForm.Height - Height;
+            sb.Maximum = (int)UserSettingsFormBaseHeight! - pnlSettingsDisplay.Height;
             int sbRange = sb.Maximum - sb.Minimum;
-            int thumbHeight = Height - sbRange;
+            int thumbHeight = sb.Height - sbRange;
 
             // Ensure the form is not minimised before making this check to avoid an exception
             if ((ActiveForm as formMaster)?.WindowState != FormWindowState.Minimized) sb.ThumbSize = new Size(sb.ThumbSize.Width, Math.Clamp(thumbHeight, 30, Height - sb.ChannelPadding.Vertical));

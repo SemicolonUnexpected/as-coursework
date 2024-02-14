@@ -7,7 +7,8 @@ using AS_Coursework.Model.Security;
 
 namespace AS_Coursework.View;
 public partial class formSettings : Form {
-    readonly User _user;
+    private readonly User _user;
+    private readonly bool _openedAsAdmin = false;
 
     public formSettings() {
         InitializeComponent();
@@ -22,15 +23,15 @@ public partial class formSettings : Form {
     public formSettings(User user) {
         InitializeComponent();
 
+        // Tell the form that it has been opened by an admin
+        _openedAsAdmin = true;
+
         _user = user; // For conciseness
 
         Initialise();
     }
 
     private void Initialise() {
-        // Set the minimum date of birth to 100 years ago
-        dtpDateOfBirth.MinDate = DateTime.Today.Subtract(new TimeSpan(100 * 365, 0, 0, 0, 0));
-
         // Set the date time picker's value to the current time
         dtpDateOfBirth.Value = DateTime.Now;
 
@@ -146,9 +147,9 @@ public partial class formSettings : Form {
     private void dtpDateOfBirth_CloseUp(object? sender, EventArgs e) {
         // Set the text to error text if the date of birth would make the user too young
         if (DataValidator.IsUserOldEnough(dtpDateOfBirth.Value)) {
-            lblChangeDateOfBirthError.Text = $"You must be {DataValidator.MINIMUM_USER_AGE} to create an account";
+            lblChangeDateOfBirthError.Text = $"You must be {DataValidator.MINIMUM_USER_AGE} to have an account";
             lblChangeDateOfBirthError.CenterX();
-            dtpDateOfBirth.Value = DateTime.Now;
+            dtpDateOfBirth.Value = _user.MiscDetails.DateOfBirth;
             return;
         }
 
@@ -167,7 +168,7 @@ public partial class formSettings : Form {
     private void btnDeleteAccount_Click(object? sender, EventArgs e) {
         if (CustomMessageBox.Show("Delete account", "Are you sure you want to delete your account. You cannot revert this action and will be instantly logged out") == DialogResult.OK) {
             UserDataManager.DeleteUser(_user);
-            (ActiveForm as formMaster)?.DisplayForm(new formLogin());
+            (ActiveForm as formMaster)?.DisplayForm(_openedAsAdmin ? new formMainMenu(new formAdminMenu()) : new formLogin());
         }
     }
     private bool CheckPasswordOk() {
