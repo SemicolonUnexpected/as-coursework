@@ -35,9 +35,6 @@ public static class QuestionDataManager {
         ReadInEquations();
     }
 
-    private static readonly Dictionary<string, Image> nameToImage = new() {
-    };
-
     private static void ReadInMultipleChoice() {
         using StreamReader reader = new(PATH_TEXT);
 
