@@ -42,11 +42,11 @@
             lblQuestionTitle.AutoSize = true;
             lblQuestionTitle.Font = new Font("Bahnschrift", 20F, FontStyle.Regular, GraphicsUnit.Point);
             lblQuestionTitle.ForeColor = Color.White;
-            lblQuestionTitle.Location = new Point(344, 34);
-            lblQuestionTitle.Margin = new Padding(25);
-            lblQuestionTitle.MaximumSize = new Size(450, 0);
+            lblQuestionTitle.Location = new Point(241, 20);
+            lblQuestionTitle.Margin = new Padding(18, 15, 18, 15);
+            lblQuestionTitle.MaximumSize = new Size(315, 0);
             lblQuestionTitle.Name = "lblQuestionTitle";
-            lblQuestionTitle.Size = new Size(263, 48);
+            lblQuestionTitle.Size = new Size(180, 33);
             lblQuestionTitle.TabIndex = 11;
             lblQuestionTitle.Text = "Question Title";
             lblQuestionTitle.TextAlign = ContentAlignment.MiddleCenter;
@@ -57,12 +57,12 @@
             lblIsCorrect.AutoSize = true;
             lblIsCorrect.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lblIsCorrect.ForeColor = Color.White;
-            lblIsCorrect.Location = new Point(80, 785);
-            lblIsCorrect.Margin = new Padding(25);
-            lblIsCorrect.MaximumSize = new Size(800, 68);
-            lblIsCorrect.MinimumSize = new Size(800, 68);
+            lblIsCorrect.Location = new Point(56, 471);
+            lblIsCorrect.Margin = new Padding(18, 15, 18, 15);
+            lblIsCorrect.MaximumSize = new Size(560, 41);
+            lblIsCorrect.MinimumSize = new Size(560, 41);
             lblIsCorrect.Name = "lblIsCorrect";
-            lblIsCorrect.Size = new Size(800, 68);
+            lblIsCorrect.Size = new Size(560, 41);
             lblIsCorrect.TabIndex = 12;
             lblIsCorrect.Text = "Incorrect. Better luck next time. The correct answer was: this very very long sentence to stress test the textbox size\r\n";
             lblIsCorrect.TextAlign = ContentAlignment.TopCenter;
@@ -74,10 +74,10 @@
             pnlAnswer.Controls.Add(pbIsCorrect);
             pnlAnswer.Controls.Add(lblAnswerTitle);
             pnlAnswer.Controls.Add(tbAnswer);
-            pnlAnswer.Location = new Point(87, 221);
-            pnlAnswer.Margin = new Padding(25);
+            pnlAnswer.Location = new Point(61, 133);
+            pnlAnswer.Margin = new Padding(18, 15, 18, 15);
             pnlAnswer.Name = "pnlAnswer";
-            pnlAnswer.Size = new Size(800, 69);
+            pnlAnswer.Size = new Size(560, 41);
             pnlAnswer.TabIndex = 14;
             // 
             // btnSubmitNext
@@ -86,17 +86,17 @@
             btnSubmitNext.BackColor = Color.FromArgb(0, 150, 255);
             btnSubmitNext.BorderColor = Color.White;
             btnSubmitNext.BorderWidth = 2;
-            btnSubmitNext.CornerRadius = 20;
+            btnSubmitNext.CornerRadius = 10;
             btnSubmitNext.FlatAppearance.BorderSize = 0;
             btnSubmitNext.FlatStyle = FlatStyle.Popup;
             btnSubmitNext.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             btnSubmitNext.ForeColor = Color.BlanchedAlmond;
             btnSubmitNext.Image = null;
             btnSubmitNext.ImageSize = new Size(150, 40);
-            btnSubmitNext.Location = new Point(674, 9);
-            btnSubmitNext.Margin = new Padding(10);
+            btnSubmitNext.Location = new Point(472, 5);
+            btnSubmitNext.Margin = new Padding(7, 6, 7, 6);
             btnSubmitNext.Name = "btnSubmitNext";
-            btnSubmitNext.Size = new Size(116, 50);
+            btnSubmitNext.Size = new Size(81, 30);
             btnSubmitNext.TabIndex = 14;
             btnSubmitNext.Text = "Submit";
             btnSubmitNext.UseVisualStyleBackColor = false;
@@ -105,10 +105,10 @@
             // pbIsCorrect
             // 
             pbIsCorrect.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            pbIsCorrect.Location = new Point(610, 24);
-            pbIsCorrect.Margin = new Padding(10);
+            pbIsCorrect.Location = new Point(427, 14);
+            pbIsCorrect.Margin = new Padding(7, 6, 7, 6);
             pbIsCorrect.Name = "pbIsCorrect";
-            pbIsCorrect.Size = new Size(35, 35);
+            pbIsCorrect.Size = new Size(24, 21);
             pbIsCorrect.SizeMode = PictureBoxSizeMode.StretchImage;
             pbIsCorrect.TabIndex = 12;
             pbIsCorrect.TabStop = false;
@@ -119,11 +119,11 @@
             lblAnswerTitle.AutoSize = true;
             lblAnswerTitle.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lblAnswerTitle.ForeColor = Color.White;
-            lblAnswerTitle.Location = new Point(10, 10);
-            lblAnswerTitle.Margin = new Padding(10);
-            lblAnswerTitle.MaximumSize = new Size(450, 0);
+            lblAnswerTitle.Location = new Point(7, 6);
+            lblAnswerTitle.Margin = new Padding(7, 6, 7, 6);
+            lblAnswerTitle.MaximumSize = new Size(315, 0);
             lblAnswerTitle.Name = "lblAnswerTitle";
-            lblAnswerTitle.Size = new Size(70, 34);
+            lblAnswerTitle.Size = new Size(47, 23);
             lblAnswerTitle.TabIndex = 11;
             lblAnswerTitle.Text = "Ans:";
             lblAnswerTitle.TextAlign = ContentAlignment.MiddleCenter;
@@ -139,14 +139,14 @@
             tbAnswer.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             tbAnswer.ForeColor = Color.White;
             tbAnswer.IsMultiline = false;
-            tbAnswer.Location = new Point(100, 10);
-            tbAnswer.Margin = new Padding(10);
+            tbAnswer.Location = new Point(70, 6);
+            tbAnswer.Margin = new Padding(7, 6, 7, 6);
             tbAnswer.Name = "tbAnswer";
-            tbAnswer.Padding = new Padding(7);
+            tbAnswer.Padding = new Padding(5, 4, 5, 4);
             tbAnswer.PlaceholderText = "";
             tbAnswer.PlaceholderTextColor = Color.White;
             tbAnswer.ShortcutEnabled = true;
-            tbAnswer.Size = new Size(490, 49);
+            tbAnswer.Size = new Size(343, 32);
             tbAnswer.TabIndex = 0;
             tbAnswer.UsePasswordChar = false;
             // 
@@ -156,12 +156,12 @@
             lblQuestionText.AutoSize = true;
             lblQuestionText.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lblQuestionText.ForeColor = Color.White;
-            lblQuestionText.Location = new Point(80, 108);
-            lblQuestionText.Margin = new Padding(25, 25, 25, 20);
-            lblQuestionText.MaximumSize = new Size(800, 68);
-            lblQuestionText.MinimumSize = new Size(800, 68);
+            lblQuestionText.Location = new Point(56, 65);
+            lblQuestionText.Margin = new Padding(18, 15, 18, 12);
+            lblQuestionText.MaximumSize = new Size(560, 41);
+            lblQuestionText.MinimumSize = new Size(560, 41);
             lblQuestionText.Name = "lblQuestionText";
-            lblQuestionText.Size = new Size(800, 68);
+            lblQuestionText.Size = new Size(560, 41);
             lblQuestionText.TabIndex = 13;
             lblQuestionText.Text = "Two lines of question text. The questions wont be much longer than this hopefully";
             lblQuestionText.TextAlign = ContentAlignment.MiddleCenter;
@@ -170,26 +170,27 @@
             // 
             chemistryCharachterKeypad1.BackColor = Color.FromArgb(20, 20, 50);
             chemistryCharachterKeypad1.ForeColor = Color.White;
-            chemistryCharachterKeypad1.Location = new Point(205, 320);
-            chemistryCharachterKeypad1.Margin = new Padding(5);
+            chemistryCharachterKeypad1.Location = new Point(148, 192);
+            chemistryCharachterKeypad1.Margin = new Padding(4, 3, 4, 3);
             chemistryCharachterKeypad1.Name = "chemistryCharachterKeypad1";
-            chemistryCharachterKeypad1.Padding = new Padding(5);
-            chemistryCharachterKeypad1.Size = new Size(520, 435);
+            chemistryCharachterKeypad1.Padding = new Padding(4, 3, 4, 3);
+            chemistryCharachterKeypad1.Size = new Size(364, 261);
             chemistryCharachterKeypad1.TabIndex = 15;
             chemistryCharachterKeypad1.CharacterClicked += chemistryCharachterKeypad1_CharacterClicked;
             // 
             // formEquationQuestion
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(20, 20, 50);
-            ClientSize = new Size(975, 900);
+            ClientSize = new Size(682, 540);
             Controls.Add(chemistryCharachterKeypad1);
             Controls.Add(pnlAnswer);
             Controls.Add(lblQuestionText);
             Controls.Add(lblIsCorrect);
             Controls.Add(lblQuestionTitle);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(2);
             Name = "formEquationQuestion";
             Text = "TextQuestion";
             pnlAnswer.ResumeLayout(false);

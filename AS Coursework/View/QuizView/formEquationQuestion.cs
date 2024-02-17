@@ -8,6 +8,8 @@ public partial class formEquationQuestion : Form, IQuestionForm {
     public formEquationQuestion(EquationQuestion question) {
         InitializeComponent();
         _question = question;
+
+        lblQuestionText.Text = _question.Question;
     }
 
     public event EventHandler? NextQuestion;

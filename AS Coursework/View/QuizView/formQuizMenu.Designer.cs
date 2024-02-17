@@ -30,7 +30,7 @@
             btnEquations = new Custom_Controls.CustomButton();
             btnFlashcards = new Custom_Controls.CustomButton();
             btnText = new Custom_Controls.CustomButton();
-            btnFillTheBlanks = new Custom_Controls.CustomButton();
+            btnMatching = new Custom_Controls.CustomButton();
             btnMultipleChoice = new Custom_Controls.CustomButton();
             SuspendLayout();
             // 
@@ -169,27 +169,27 @@
             btnText.UseVisualStyleBackColor = false;
             btnText.Click += btnAllQuestions_Click;
             // 
-            // btnFillTheBlanks
+            // btnMatching
             // 
-            btnFillTheBlanks.Anchor = AnchorStyles.None;
-            btnFillTheBlanks.BackColor = Color.FromArgb(0, 150, 255);
-            btnFillTheBlanks.BorderColor = Color.White;
-            btnFillTheBlanks.BorderWidth = 2;
-            btnFillTheBlanks.CornerRadius = 10;
-            btnFillTheBlanks.FlatAppearance.BorderSize = 0;
-            btnFillTheBlanks.FlatStyle = FlatStyle.Popup;
-            btnFillTheBlanks.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            btnFillTheBlanks.ForeColor = Color.BlanchedAlmond;
-            btnFillTheBlanks.Image = null;
-            btnFillTheBlanks.ImageSize = new Size(150, 40);
-            btnFillTheBlanks.Location = new Point(542, 311);
-            btnFillTheBlanks.Margin = new Padding(18, 15, 18, 15);
-            btnFillTheBlanks.Name = "btnFillTheBlanks";
-            btnFillTheBlanks.Size = new Size(175, 45);
-            btnFillTheBlanks.TabIndex = 3;
-            btnFillTheBlanks.Text = "Fill the blanks";
-            btnFillTheBlanks.UseVisualStyleBackColor = false;
-            btnFillTheBlanks.Click += btnAllQuestions_Click;
+            btnMatching.Anchor = AnchorStyles.None;
+            btnMatching.BackColor = Color.FromArgb(0, 150, 255);
+            btnMatching.BorderColor = Color.White;
+            btnMatching.BorderWidth = 2;
+            btnMatching.CornerRadius = 10;
+            btnMatching.FlatAppearance.BorderSize = 0;
+            btnMatching.FlatStyle = FlatStyle.Popup;
+            btnMatching.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            btnMatching.ForeColor = Color.BlanchedAlmond;
+            btnMatching.Image = null;
+            btnMatching.ImageSize = new Size(150, 40);
+            btnMatching.Location = new Point(542, 311);
+            btnMatching.Margin = new Padding(18, 15, 18, 15);
+            btnMatching.Name = "btnMatching";
+            btnMatching.Size = new Size(175, 45);
+            btnMatching.TabIndex = 3;
+            btnMatching.Text = "Matching";
+            btnMatching.UseVisualStyleBackColor = false;
+            btnMatching.Click += btnAllQuestions_Click;
             // 
             // btnMultipleChoice
             // 
@@ -222,7 +222,7 @@
             Controls.Add(pbUserProfile);
             Controls.Add(lblUsername);
             Controls.Add(btnMultipleChoice);
-            Controls.Add(btnFillTheBlanks);
+            Controls.Add(btnMatching);
             Controls.Add(btnText);
             Controls.Add(btnFlashcards);
             Controls.Add(btnEquations);
@@ -244,7 +244,7 @@
         private Custom_Controls.CustomButton btnEquations;
         private Custom_Controls.CustomButton btnFlashcards;
         private Custom_Controls.CustomButton btnText;
-        private Custom_Controls.CustomButton btnFillTheBlanks;
+        private Custom_Controls.CustomButton btnMatching;
         private Custom_Controls.CustomButton btnMultipleChoice;
     }
 }

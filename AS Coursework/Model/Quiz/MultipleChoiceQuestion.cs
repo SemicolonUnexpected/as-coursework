@@ -12,10 +12,11 @@ public class MultipleChoiceQuestion : Question {
         IncorrectAnswers = incorrectAnswers;
     }
 
-    public void CheckAnswer(string answer) {
+    public bool CheckAnswer(string answer) {
         bool isCorrect = answer == CorrectAnswer;
         Correct = isCorrect;
-        AllocatedExperience = isCorrect ? 1 : 0;
+        AllocatedExperience = isCorrect ? 3 : 0;
+        return isCorrect;
     }
 
     public override Form DisplayQuestion() {

@@ -26,6 +26,9 @@ public partial class formMatchingQuestion : Form, IQuestionForm {
         // Display the question options
         InitialiseOptions();
 
+        // Display the title
+        lblQuestionTitle.Text = question.QuestionName;
+
         // Make sure nothing is selected at first
         btnReset_Click(null, EventArgs.Empty);
     }

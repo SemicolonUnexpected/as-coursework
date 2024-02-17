@@ -1,12 +1,11 @@
 ﻿using AS_Coursework._Helpers;
 using AS_Coursework.Custom_Controls;
 using AS_Coursework.Model.Quiz;
-using System.Security.AccessControl;
 
 namespace AS_Coursework.View.QuizView;
 public partial class formMultipleChoiceQuestion : Form, IQuestionForm {
     private MultipleChoiceQuestion _question;
-
+    private List<CustomButton> _customButtons;
     private readonly Random _random = new();
 
     private CustomButton? _correctButton;
@@ -16,11 +15,16 @@ public partial class formMultipleChoiceQuestion : Form, IQuestionForm {
         btnNext.Visible = false;
         _question = multipleChoiceQuestion;
 
+        lblQuestionTitle.Text = _question.QuestionName;
+
+        lblQuestionText.Text = _question.Question;
+
+        _customButtons = new() { btnOptionOne, btnOptionTwo, btnOptionThree, btnOptionFour };
+
         SetupQuestionsAnswers();
     }
 
     public event EventHandler? NextQuestion;
-    public event EventHandler<QuestionAnsweredEventArgs>? QuestionAnswered;
 
     private void SetupQuestionsAnswers() {
         _correctButton = _random.Next(0, 4) switch {
@@ -30,27 +34,30 @@ public partial class formMultipleChoiceQuestion : Form, IQuestionForm {
             _ => btnOptionFour,
         };
 
-        List<CustomButton> buttons = new() { btnOptionOne, btnOptionTwo, btnOptionThree, btnOptionFour };
         _question.IncorrectAnswers.Shuffle();
-        Queue<string> incorrectAnswers = new Queue<string>(_question.IncorrectAnswers.Take(3).ToList());
+        Queue<string> incorrectAnswers = new(_question.IncorrectAnswers.Take(3).ToList());
 
-        foreach (CustomButton button in buttons) {
+        foreach (CustomButton button in _customButtons) {
             if (!button.Equals(_correctButton)) {
                 button.Text = incorrectAnswers.Dequeue();
+            }
+            else {
+                button.Text = _question.CorrectAnswer;
             }
         }
     }
 
     private void btnClick(object? sender, EventArgs e) {
+        // Disable all the buttons so the user can only answer once
+        foreach (CustomButton button in _customButtons) button.Enabled = false;
+
         CustomButton btn = (CustomButton)sender!;
-        if (sender!.Equals(_correctButton)) {
+        if (_question.CheckAnswer(btn.Text)) {
             btn.BackColor = Color.Green;
-            QuestionAnswered?.Invoke(this, new QuestionAnsweredEventArgs(true, 1));
         }
         else {
             btn.BackColor = Color.Red;
-            _correctButton.BackColor = Color.Green;
-            QuestionAnswered?.Invoke(this, new QuestionAnsweredEventArgs(false, 0));
+            _correctButton!.BackColor = Color.Green;
         }
 
         btnNext.Visible = true;

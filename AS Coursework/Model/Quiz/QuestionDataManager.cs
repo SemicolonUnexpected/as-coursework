@@ -1,17 +1,18 @@
-﻿using Csv;
+﻿using Chem;
+using Csv;
 
 namespace AS_Coursework.Model.Quiz;
 public static class QuestionDataManager {
     private const string PATH_MULTIPLECHOICE = "Questions/MultipleChoice.txt";
-    public static List<Question> MultipleChoice { get; private set; }
+    public static List<Question> MultipleChoice { get; private set; } = ReadInMultipleChoice();
     private const string PATH_TEXT = "Questions/Text.txt";
-    public static List<Question> Text { get; private set; }
+    public static List<Question> Text { get; private set; } = ReadInText();
     private const string PATH_FLASHCARD = "Questions/Flashcard.txt";
     public static List<Question> Flashcard { get; private set; } = ReadInFlashcard();
     private const string PATH_MATCHING = "Questions/Matching.txt";
-    public static List<Question> Matching { get; private set; }
-    private const string PATH_EQUATIONS = "Questions/Equations.txt";
-    public static List<Question> Equation { get; private set; }
+    public static List<Question> Matching { get; private set; } = ReadInMatching();
+    private const string PATH_EQUATIONS = "Questions/Equation.txt";
+    public static List<Question> Equation { get; private set; } = ReadInEquation();
 
     public static List<Question> All {
         get {
@@ -27,44 +28,62 @@ public static class QuestionDataManager {
         }
     }
 
-    private static void ReadIn() {
-        ReadInMultipleChoice();
-        ReadInText();
-        ReadInFlashcard();
-        // ReadInMatching();
-        ReadInEquations();
-    }
-
-    private static void ReadInMultipleChoice() {
-        using StreamReader reader = new(PATH_TEXT);
+    private static List<Question> ReadInMultipleChoice() {
+        using StreamReader reader = new(PATH_MULTIPLECHOICE);
 
         string text = reader.ReadToEnd();
 
-        string[][] fieldGroups = (string[][])Parser.ParseText(text)!;
+        string[][] fieldGroups = (string[][])Parser.ParseText(text.TrimEnd())!;
+
+        List<Question> questions = new();
+
+        if (string.IsNullOrEmpty(text)) return questions;
 
         foreach (string[] fields in fieldGroups) {
-            MultipleChoice.Add(new MultipleChoiceQuestion(
+            if (fields.Length < 6) throw new QuestionDataException("A multiple choice question needs to have at least six fields");
+
+            questions.Add(new MultipleChoiceQuestion(
                 fields[0],
                 fields[1],
                 fields[2],
                 fields.TakeLast(fields.Length - 3).ToArray()));
         }
+
+        return questions;
     }
 
-    private static void ReadInText() {
+    private static List<Question> ReadInText() {
         using StreamReader reader = new(PATH_TEXT);
 
         string text = reader.ReadToEnd();
 
-        string[][] fieldGroups = (string[][])Parser.ParseText(text)!;
+        string[][] fieldGroups = (string[][])Parser.ParseText(text.TrimEnd())!;
+
+        List<Question> questions = new();
+
+        if (string.IsNullOrEmpty(text)) return questions;
 
         foreach (string[] fields in fieldGroups) {
-            Text.Add(new TextQuestion(
-                fields[0],
-                fields[1],
-                fields[2],
-                new System.Text.RegularExpressions.Regex(fields[3])));
+            if (fields.Length > 5) throw new QuestionDataException("A text question needs four fields or five fields if it is an image text question");
+
+            if (fields.Length == 4) {
+                questions.Add(new TextQuestion(
+                    fields[0],
+                    fields[1],
+                    fields[2],
+                    new System.Text.RegularExpressions.Regex(fields[3])));
+            }
+            else {
+                questions.Add(new ImageTextQuestion(
+                    fields[0],
+                    fields[1],
+                    fields[2],
+                    new System.Text.RegularExpressions.Regex(fields[3]),
+                    new Bitmap(fields[4])));
+            }
         }
+
+        return questions;
     }
 
     private static List<Question> ReadInFlashcard() {
@@ -72,10 +91,15 @@ public static class QuestionDataManager {
 
         string text = reader.ReadToEnd();
 
-        string[][] fieldGroups = (string[][]) Parser.ParseText(text)!;
+        string[][] fieldGroups = (string[][]) Parser.ParseText(text.TrimEnd())!;
 
         List<Question> questions = new();
+
+        if (string.IsNullOrEmpty(text)) return questions;
+
         foreach (string[] fields in fieldGroups) {
+            if (fields.Length != 3) throw new QuestionDataException("A flashcard needs 3 fields");
+
             questions.Add(new FlashcardQuestion(
                 fields[0],
                 fields[1],
@@ -85,31 +109,50 @@ public static class QuestionDataManager {
         return questions;
     }
 
-    private static void ReadInMatching() {
+    private static List<Question> ReadInMatching() {
         using StreamReader reader = new(PATH_MATCHING);
 
         string text = reader.ReadToEnd();
 
-        string[][] fieldGroups = (string[][])Parser.ParseText(text)!;
+        string[][] fieldGroups = (string[][])Parser.ParseText(text.TrimEnd())!;
+
+        List<Question> questions = new();
+
+        if (string.IsNullOrEmpty(text)) return questions;
 
         foreach (string[] fields in fieldGroups) {
-            //Matching.Add(new MatchingQuestion(
-            //    fields[0],
-            //    fields))
+            if (fields.Length % 2 != 1) throw new QuestionDataException("Ensure all matching question pairs are paired correctly");
+            Dictionary<string, string> answerPairs = new();
+
+            for (int i = 3; i < fields.Length; i += 2) {
+                answerPairs.Add(fields[i], fields[i + 1]);
+            }
+
+            questions.Add(new MatchingQuestion(fields[0], answerPairs));
         }
+
+        return questions;
     }
 
-    private static void ReadInEquations() {
+    private static List<Question> ReadInEquation() {
         using StreamReader reader = new(PATH_EQUATIONS);
 
         string text = reader.ReadToEnd();
 
-        string[][] fieldGroups = (string[][])Parser.ParseText(text)!;
+        string[][] fieldGroups = (string[][])Parser.ParseText(text.TrimEnd())!;
+
+        List<Question> questions = new();
+
+        if (string.IsNullOrEmpty(text)) return questions;
 
         foreach (string[] fields in fieldGroups) {
-            Equation.Add(new EquationQuestion(
+            if (fields.Length != 3) throw new QuestionDataException("An equation question requires three fields");
+            questions.Add(new EquationQuestion(
                 fields[0],
-                fields[1]));
+                fields[1],
+                new Equation(fields[2])));
         }
+
+        return questions;
     }
 }

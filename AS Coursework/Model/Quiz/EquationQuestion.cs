@@ -1,20 +1,26 @@
 ﻿using AS_Coursework.View.QuizView;
-using System.Text.RegularExpressions;
+using Chem;
 
 namespace AS_Coursework.Model.Quiz;
 public class EquationQuestion : Question {
-    public string Equation { get; private init; }
-    public EquationQuestion(string questionName, string equation) : base(questionName) {
+    public Equation Equation { get; private init; }
+    public string Question { get; private init; }
+    public EquationQuestion(string questionName, string question, Equation equation) : base(questionName) {
         Equation = equation;
+        Question = question;
     }
 
     public void CheckAnswer(string answer) {
-        // Remove any whitespace then compare the equations
-        string trimmedAnswer = Regex.Replace(answer, @"\w", ""); 
-        string trimmedEquation = Regex.Replace(answer, @"\w", ""); 
+        try {
+            Equation equation = new(answer);
 
-        Correct = trimmedAnswer == trimmedEquation;
-        AllocatedExperience = trimmedAnswer == trimmedEquation ? 0 : 1;
+            Correct = equation == Equation;
+            AllocatedExperience = equation == Equation ? 0 : 1;
+        }
+        catch(EquationSyntaxException e) {
+            Correct = false;
+            AllocatedExperience = 0;
+        }
     }
 
     public override Form DisplayQuestion() => new formEquationQuestion(this);

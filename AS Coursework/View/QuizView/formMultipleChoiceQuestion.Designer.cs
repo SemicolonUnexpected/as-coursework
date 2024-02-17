@@ -30,7 +30,6 @@
             btnOptionOne = new Custom_Controls.CustomButton();
             lblQuestionText = new Label();
             btnNext = new Custom_Controls.CustomButton();
-            lblIsCorrect = new Label();
             SuspendLayout();
             // 
             // lblQuestionTitle
@@ -39,11 +38,11 @@
             lblQuestionTitle.AutoSize = true;
             lblQuestionTitle.Font = new Font("Bahnschrift", 20F, FontStyle.Regular, GraphicsUnit.Point);
             lblQuestionTitle.ForeColor = Color.White;
-            lblQuestionTitle.Location = new Point(344, 34);
-            lblQuestionTitle.Margin = new Padding(25);
-            lblQuestionTitle.MaximumSize = new Size(450, 0);
+            lblQuestionTitle.Location = new Point(241, 20);
+            lblQuestionTitle.Margin = new Padding(18, 15, 18, 15);
+            lblQuestionTitle.MaximumSize = new Size(315, 0);
             lblQuestionTitle.Name = "lblQuestionTitle";
-            lblQuestionTitle.Size = new Size(263, 48);
+            lblQuestionTitle.Size = new Size(180, 33);
             lblQuestionTitle.TabIndex = 11;
             lblQuestionTitle.Text = "Question Title";
             lblQuestionTitle.TextAlign = ContentAlignment.MiddleCenter;
@@ -61,10 +60,10 @@
             btnOptionFour.ForeColor = Color.BlanchedAlmond;
             btnOptionFour.Image = null;
             btnOptionFour.ImageSize = new Size(150, 40);
-            btnOptionFour.Location = new Point(493, 509);
-            btnOptionFour.Margin = new Padding(25);
+            btnOptionFour.Location = new Point(345, 305);
+            btnOptionFour.Margin = new Padding(18, 15, 18, 15);
             btnOptionFour.Name = "btnOptionFour";
-            btnOptionFour.Size = new Size(300, 150);
+            btnOptionFour.Size = new Size(210, 90);
             btnOptionFour.TabIndex = 15;
             btnOptionFour.Text = "Fill the blanks";
             btnOptionFour.UseVisualStyleBackColor = false;
@@ -83,10 +82,10 @@
             btnOptionThree.ForeColor = Color.BlanchedAlmond;
             btnOptionThree.Image = null;
             btnOptionThree.ImageSize = new Size(150, 40);
-            btnOptionThree.Location = new Point(143, 509);
-            btnOptionThree.Margin = new Padding(25);
+            btnOptionThree.Location = new Point(100, 305);
+            btnOptionThree.Margin = new Padding(18, 15, 18, 15);
             btnOptionThree.Name = "btnOptionThree";
-            btnOptionThree.Size = new Size(300, 150);
+            btnOptionThree.Size = new Size(210, 90);
             btnOptionThree.TabIndex = 14;
             btnOptionThree.Text = "Typing";
             btnOptionThree.UseVisualStyleBackColor = false;
@@ -105,10 +104,10 @@
             btnOptionTwo.ForeColor = Color.BlanchedAlmond;
             btnOptionTwo.Image = null;
             btnOptionTwo.ImageSize = new Size(150, 40);
-            btnOptionTwo.Location = new Point(493, 309);
-            btnOptionTwo.Margin = new Padding(25);
+            btnOptionTwo.Location = new Point(345, 185);
+            btnOptionTwo.Margin = new Padding(18, 15, 18, 15);
             btnOptionTwo.Name = "btnOptionTwo";
-            btnOptionTwo.Size = new Size(300, 150);
+            btnOptionTwo.Size = new Size(210, 90);
             btnOptionTwo.TabIndex = 13;
             btnOptionTwo.Text = "Flashcards";
             btnOptionTwo.UseVisualStyleBackColor = false;
@@ -127,10 +126,10 @@
             btnOptionOne.ForeColor = Color.BlanchedAlmond;
             btnOptionOne.Image = null;
             btnOptionOne.ImageSize = new Size(150, 40);
-            btnOptionOne.Location = new Point(143, 309);
-            btnOptionOne.Margin = new Padding(25);
+            btnOptionOne.Location = new Point(100, 185);
+            btnOptionOne.Margin = new Padding(18, 15, 18, 15);
             btnOptionOne.Name = "btnOptionOne";
-            btnOptionOne.Size = new Size(300, 150);
+            btnOptionOne.Size = new Size(210, 90);
             btnOptionOne.TabIndex = 12;
             btnOptionOne.Text = "All questions";
             btnOptionOne.UseVisualStyleBackColor = false;
@@ -142,12 +141,12 @@
             lblQuestionText.AutoSize = true;
             lblQuestionText.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lblQuestionText.ForeColor = Color.White;
-            lblQuestionText.Location = new Point(70, 132);
-            lblQuestionText.Margin = new Padding(25, 25, 25, 20);
-            lblQuestionText.MaximumSize = new Size(800, 68);
-            lblQuestionText.MinimumSize = new Size(800, 102);
+            lblQuestionText.Location = new Point(49, 79);
+            lblQuestionText.Margin = new Padding(18, 15, 18, 12);
+            lblQuestionText.MaximumSize = new Size(560, 41);
+            lblQuestionText.MinimumSize = new Size(560, 61);
             lblQuestionText.Name = "lblQuestionText";
-            lblQuestionText.Size = new Size(800, 102);
+            lblQuestionText.Size = new Size(560, 61);
             lblQuestionText.TabIndex = 16;
             lblQuestionText.Text = "Two lines of question text. The questions wont be much longer than this hopefully";
             lblQuestionText.TextAlign = ContentAlignment.MiddleCenter;
@@ -158,45 +157,28 @@
             btnNext.BackColor = Color.FromArgb(0, 150, 255);
             btnNext.BorderColor = Color.White;
             btnNext.BorderWidth = 2;
-            btnNext.CornerRadius = 20;
+            btnNext.CornerRadius = 10;
             btnNext.FlatAppearance.BorderSize = 0;
             btnNext.FlatStyle = FlatStyle.Popup;
             btnNext.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             btnNext.ForeColor = Color.BlanchedAlmond;
             btnNext.Image = null;
             btnNext.ImageSize = new Size(150, 40);
-            btnNext.Location = new Point(840, 831);
-            btnNext.Margin = new Padding(10);
+            btnNext.Location = new Point(588, 499);
+            btnNext.Margin = new Padding(7, 6, 7, 6);
             btnNext.Name = "btnNext";
-            btnNext.Size = new Size(116, 50);
+            btnNext.Size = new Size(81, 30);
             btnNext.TabIndex = 17;
             btnNext.Text = "Next";
             btnNext.UseVisualStyleBackColor = false;
             btnNext.Click += btnNext_Click;
             // 
-            // lblIsCorrect
-            // 
-            lblIsCorrect.Anchor = AnchorStyles.None;
-            lblIsCorrect.AutoSize = true;
-            lblIsCorrect.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lblIsCorrect.ForeColor = Color.White;
-            lblIsCorrect.Location = new Point(70, 709);
-            lblIsCorrect.Margin = new Padding(25);
-            lblIsCorrect.MaximumSize = new Size(800, 68);
-            lblIsCorrect.MinimumSize = new Size(800, 68);
-            lblIsCorrect.Name = "lblIsCorrect";
-            lblIsCorrect.Size = new Size(800, 68);
-            lblIsCorrect.TabIndex = 18;
-            lblIsCorrect.Text = "Incorrect. Better luck next time. The correct answer was: this very very long sentence to stress test the textbox size\r\n";
-            lblIsCorrect.TextAlign = ContentAlignment.TopCenter;
-            // 
             // formMultipleChoiceQuestion
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(20, 20, 50);
-            ClientSize = new Size(975, 900);
-            Controls.Add(lblIsCorrect);
+            ClientSize = new Size(682, 540);
             Controls.Add(btnNext);
             Controls.Add(lblQuestionText);
             Controls.Add(btnOptionFour);
@@ -205,6 +187,7 @@
             Controls.Add(btnOptionOne);
             Controls.Add(lblQuestionTitle);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(2, 2, 2, 2);
             Name = "formMultipleChoiceQuestion";
             Text = "TextQuestion";
             ResumeLayout(false);
@@ -220,6 +203,5 @@
         private Custom_Controls.CustomButton btnOptionOne;
         private Label lblQuestionText;
         private Custom_Controls.CustomButton btnNext;
-        private Label lblIsCorrect;
     }
 }

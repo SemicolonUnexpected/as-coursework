@@ -20,15 +20,11 @@ public partial class formQuizMenu : Form {
         if (btn.Name == btnAll.Name) style = Quiz.QuizStyle.All;
         else if (btn.Name == btnText.Name) style = Quiz.QuizStyle.Text;
         else if (btn.Name == btnMultipleChoice.Name) style = Quiz.QuizStyle.MultipleChoice;
-        else if (btn.Name == btnFillTheBlanks.Name) style = Quiz.QuizStyle.Matching;
+        else if (btn.Name == btnMatching.Name) style = Quiz.QuizStyle.Matching;
         else if (btn.Name == btnFlashcards.Name) style = Quiz.QuizStyle.FlashCard;
         else if (btn.Name == btnEquations.Name) style = Quiz.QuizStyle.Equation;
         else throw new NotImplementedException();
 
         (ActiveForm as formMaster)?.DisplayForm(new formQuiz(style));        
-    }
-
-    private void StartQuiz(Quiz.QuizStyle quizStyle) {
-        (ActiveForm as formMaster)?.DisplayForm(new formQuiz(quizStyle));
     }
 }

@@ -1,0 +1,1 @@
+Halogens,What is the equation for the reaction of chlorine with water?,2NaOH + Cl_{2} -> NaCl + NaClO + H_{2}O
