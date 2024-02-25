@@ -1,10 +1,9 @@
 ﻿using AS_Coursework._Helpers;
 using AS_Coursework.View.QuizView;
-using System.Security.Policy;
 
 namespace AS_Coursework.Model.Quiz;
 public class MatchingQuestion : Question {
-    private Dictionary<string, string> _answerPairs;
+    private readonly Dictionary<string, string> _answerPairs;
     public MatchingQuestion(string questionName, Dictionary<string, string> answerPairs) : base(questionName) {
         _answerPairs = answerPairs;
     }
@@ -28,7 +27,7 @@ public class MatchingQuestion : Question {
 
     // Check an answer pair and allocate experience accordingly
     public bool CheckAnswerPair(string? key, string? value) {
-        if (Correct is null) Correct = true;
+        Correct ??= true;
 
         if (key is null || value is null) {
             Correct = false;

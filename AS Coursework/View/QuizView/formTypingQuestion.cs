@@ -2,15 +2,15 @@
 using AS_Coursework.Model.Quiz;
 
 namespace AS_Coursework.View.QuizView;
-public partial class formTextQuestion : Form, IQuestionForm {
+public partial class formTypingQuestion : Form, IQuestionForm {
     private bool _questionAnswered = false;
-    private TextQuestion _question;
+    private TypingQuestion _question;
 
     public event EventHandler? NextQuestion;
     public event EventHandler<QuestionAnsweredEventArgs>? QuestionAnswered;
 
     // Two constructors to allow use of images
-    public formTextQuestion(TextQuestion textQuestion) {
+    public formTypingQuestion(TypingQuestion textQuestion) {
         InitializeComponent();
 
         lblQuestionTitle.Text = textQuestion.QuestionName;
@@ -19,14 +19,13 @@ public partial class formTextQuestion : Form, IQuestionForm {
 
         // Hide the image as it is not required
         pb.Dispose();
-        lblQuestionText.Center();
-        lblQuestionText.Size = new Size(800, 500);
+        pnlQuestionAnswer.Center();
 
         // Clear placeholder text
         lblIsCorrect.Text = "";
     }
 
-    public formTextQuestion(ImageTextQuestion imageTextQuestion) {
+    public formTypingQuestion(ImageTypingQuestion imageTextQuestion) {
         InitializeComponent();
 
         lblQuestionTitle.Text = imageTextQuestion.QuestionName;

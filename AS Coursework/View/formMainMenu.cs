@@ -184,4 +184,8 @@ public partial class formMainMenu : Form {
         UserForm.Location = new Point(_menuMinimised ? 0 : -125, -sb.Value);
         Refresh();
     }
+
+    private void pnlMenuStrip_MouseHover(object sender, EventArgs e) {
+        MaximiseMenu();
+    }
 }

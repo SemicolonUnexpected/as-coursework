@@ -35,11 +35,10 @@
             // lblQuestionTitle
             // 
             lblQuestionTitle.Anchor = AnchorStyles.None;
-            lblQuestionTitle.AutoSize = true;
             lblQuestionTitle.Font = new Font("Bahnschrift", 20F, FontStyle.Regular, GraphicsUnit.Point);
             lblQuestionTitle.ForeColor = Color.White;
-            lblQuestionTitle.Location = new Point(241, 20);
-            lblQuestionTitle.Margin = new Padding(18, 15, 18, 15);
+            lblQuestionTitle.Location = new Point(260, 19);
+            lblQuestionTitle.Margin = new Padding(10);
             lblQuestionTitle.MaximumSize = new Size(315, 0);
             lblQuestionTitle.Name = "lblQuestionTitle";
             lblQuestionTitle.Size = new Size(180, 33);
@@ -60,8 +59,8 @@
             btnOptionFour.ForeColor = Color.BlanchedAlmond;
             btnOptionFour.Image = null;
             btnOptionFour.ImageSize = new Size(150, 40);
-            btnOptionFour.Location = new Point(345, 305);
-            btnOptionFour.Margin = new Padding(18, 15, 18, 15);
+            btnOptionFour.Location = new Point(363, 303);
+            btnOptionFour.Margin = new Padding(10);
             btnOptionFour.Name = "btnOptionFour";
             btnOptionFour.Size = new Size(210, 90);
             btnOptionFour.TabIndex = 15;
@@ -82,8 +81,8 @@
             btnOptionThree.ForeColor = Color.BlanchedAlmond;
             btnOptionThree.Image = null;
             btnOptionThree.ImageSize = new Size(150, 40);
-            btnOptionThree.Location = new Point(100, 305);
-            btnOptionThree.Margin = new Padding(18, 15, 18, 15);
+            btnOptionThree.Location = new Point(133, 303);
+            btnOptionThree.Margin = new Padding(10);
             btnOptionThree.Name = "btnOptionThree";
             btnOptionThree.Size = new Size(210, 90);
             btnOptionThree.TabIndex = 14;
@@ -104,8 +103,8 @@
             btnOptionTwo.ForeColor = Color.BlanchedAlmond;
             btnOptionTwo.Image = null;
             btnOptionTwo.ImageSize = new Size(150, 40);
-            btnOptionTwo.Location = new Point(345, 185);
-            btnOptionTwo.Margin = new Padding(18, 15, 18, 15);
+            btnOptionTwo.Location = new Point(363, 193);
+            btnOptionTwo.Margin = new Padding(10);
             btnOptionTwo.Name = "btnOptionTwo";
             btnOptionTwo.Size = new Size(210, 90);
             btnOptionTwo.TabIndex = 13;
@@ -126,8 +125,8 @@
             btnOptionOne.ForeColor = Color.BlanchedAlmond;
             btnOptionOne.Image = null;
             btnOptionOne.ImageSize = new Size(150, 40);
-            btnOptionOne.Location = new Point(100, 185);
-            btnOptionOne.Margin = new Padding(18, 15, 18, 15);
+            btnOptionOne.Location = new Point(133, 193);
+            btnOptionOne.Margin = new Padding(10);
             btnOptionOne.Name = "btnOptionOne";
             btnOptionOne.Size = new Size(210, 90);
             btnOptionOne.TabIndex = 12;
@@ -138,15 +137,12 @@
             // lblQuestionText
             // 
             lblQuestionText.Anchor = AnchorStyles.None;
-            lblQuestionText.AutoSize = true;
             lblQuestionText.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lblQuestionText.ForeColor = Color.White;
-            lblQuestionText.Location = new Point(49, 79);
-            lblQuestionText.Margin = new Padding(18, 15, 18, 12);
-            lblQuestionText.MaximumSize = new Size(560, 41);
-            lblQuestionText.MinimumSize = new Size(560, 61);
+            lblQuestionText.Location = new Point(19, 72);
+            lblQuestionText.Margin = new Padding(10);
             lblQuestionText.Name = "lblQuestionText";
-            lblQuestionText.Size = new Size(560, 61);
+            lblQuestionText.Size = new Size(662, 101);
             lblQuestionText.TabIndex = 16;
             lblQuestionText.Text = "Two lines of question text. The questions wont be much longer than this hopefully";
             lblQuestionText.TextAlign = ContentAlignment.MiddleCenter;
@@ -164,8 +160,8 @@
             btnNext.ForeColor = Color.BlanchedAlmond;
             btnNext.Image = null;
             btnNext.ImageSize = new Size(150, 40);
-            btnNext.Location = new Point(588, 499);
-            btnNext.Margin = new Padding(7, 6, 7, 6);
+            btnNext.Location = new Point(600, 551);
+            btnNext.Margin = new Padding(10);
             btnNext.Name = "btnNext";
             btnNext.Size = new Size(81, 30);
             btnNext.TabIndex = 17;
@@ -178,7 +174,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(20, 20, 50);
-            ClientSize = new Size(682, 540);
+            ClientSize = new Size(700, 600);
             Controls.Add(btnNext);
             Controls.Add(lblQuestionText);
             Controls.Add(btnOptionFour);
@@ -187,11 +183,10 @@
             Controls.Add(btnOptionOne);
             Controls.Add(lblQuestionTitle);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "formMultipleChoiceQuestion";
             Text = "TextQuestion";
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion

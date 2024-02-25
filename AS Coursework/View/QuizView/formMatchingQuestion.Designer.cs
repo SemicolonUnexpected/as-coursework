@@ -52,36 +52,37 @@
             // lblQuestionTitle
             // 
             lblQuestionTitle.Anchor = AnchorStyles.None;
-            lblQuestionTitle.AutoSize = true;
             lblQuestionTitle.Font = new Font("Bahnschrift", 20F, FontStyle.Regular, GraphicsUnit.Point);
             lblQuestionTitle.ForeColor = Color.White;
-            lblQuestionTitle.Location = new Point(252, 24);
+            lblQuestionTitle.Location = new Point(27, 24);
             lblQuestionTitle.Margin = new Padding(18, 15, 18, 15);
-            lblQuestionTitle.MaximumSize = new Size(315, 0);
             lblQuestionTitle.Name = "lblQuestionTitle";
-            lblQuestionTitle.Size = new Size(180, 33);
+            lblQuestionTitle.Size = new Size(646, 33);
             lblQuestionTitle.TabIndex = 11;
             lblQuestionTitle.Text = "Question Title";
             lblQuestionTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // cb1
             // 
+            cb1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             cb1.DropDownStyle = ComboBoxStyle.DropDownList;
-            cb1.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            cb1.FlatStyle = FlatStyle.Flat;
+            cb1.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             cb1.FormattingEnabled = true;
-            cb1.Location = new Point(374, 0);
-            cb1.Margin = new Padding(2);
+            cb1.Location = new Point(426, 0);
+            cb1.Margin = new Padding(5);
             cb1.Name = "cb1";
-            cb1.Size = new Size(185, 31);
+            cb1.Size = new Size(236, 32);
             cb1.TabIndex = 12;
             // 
             // pnlDecoration1
             // 
+            pnlDecoration1.Anchor = AnchorStyles.None;
             pnlDecoration1.BackColor = Color.FromArgb(0, 150, 255);
             pnlDecoration1.BorderColor = Color.Empty;
             pnlDecoration1.BorderWidth = 0;
             pnlDecoration1.CornerRadius = 3;
-            pnlDecoration1.Location = new Point(193, 12);
+            pnlDecoration1.Location = new Point(244, 12);
             pnlDecoration1.Margin = new Padding(2);
             pnlDecoration1.Name = "pnlDecoration1";
             pnlDecoration1.Size = new Size(175, 7);
@@ -93,22 +94,22 @@
             pnl1.Controls.Add(lbl1);
             pnl1.Controls.Add(cb1);
             pnl1.Controls.Add(pnlDecoration1);
-            pnl1.Location = new Point(74, 147);
-            pnl1.Margin = new Padding(18, 15, 18, 15);
+            pnl1.Location = new Point(19, 147);
+            pnl1.Margin = new Padding(10);
             pnl1.Name = "pnl1";
-            pnl1.Size = new Size(560, 33);
+            pnl1.Size = new Size(663, 33);
             pnl1.TabIndex = 14;
             // 
             // lbl1
             // 
-            lbl1.Anchor = AnchorStyles.None;
+            lbl1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             lbl1.BackColor = Color.White;
             lbl1.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lbl1.ForeColor = Color.Black;
             lbl1.Location = new Point(0, 0);
-            lbl1.Margin = new Padding(18, 15, 18, 12);
+            lbl1.Margin = new Padding(5);
             lbl1.Name = "lbl1";
-            lbl1.Size = new Size(186, 33);
+            lbl1.Size = new Size(237, 33);
             lbl1.TabIndex = 20;
             lbl1.Text = "Test";
             lbl1.TextAlign = ContentAlignment.MiddleCenter;
@@ -119,44 +120,47 @@
             pnl2.Controls.Add(lbl2);
             pnl2.Controls.Add(cb2);
             pnl2.Controls.Add(pnlDecoration2);
-            pnl2.Location = new Point(74, 205);
-            pnl2.Margin = new Padding(18, 15, 18, 15);
+            pnl2.Location = new Point(19, 205);
+            pnl2.Margin = new Padding(10);
             pnl2.Name = "pnl2";
-            pnl2.Size = new Size(560, 33);
+            pnl2.Size = new Size(663, 33);
             pnl2.TabIndex = 14;
             // 
             // lbl2
             // 
-            lbl2.Anchor = AnchorStyles.None;
+            lbl2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             lbl2.BackColor = Color.White;
             lbl2.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lbl2.ForeColor = Color.Black;
             lbl2.Location = new Point(0, 0);
-            lbl2.Margin = new Padding(18, 15, 18, 12);
+            lbl2.Margin = new Padding(5);
             lbl2.Name = "lbl2";
-            lbl2.Size = new Size(186, 33);
+            lbl2.Size = new Size(237, 33);
             lbl2.TabIndex = 20;
             lbl2.Text = "Test";
             lbl2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // cb2
             // 
+            cb2.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             cb2.DropDownStyle = ComboBoxStyle.DropDownList;
-            cb2.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            cb2.FlatStyle = FlatStyle.Flat;
+            cb2.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             cb2.FormattingEnabled = true;
-            cb2.Location = new Point(374, 0);
-            cb2.Margin = new Padding(2);
+            cb2.Location = new Point(426, 0);
+            cb2.Margin = new Padding(5);
             cb2.Name = "cb2";
-            cb2.Size = new Size(185, 31);
+            cb2.Size = new Size(236, 32);
             cb2.TabIndex = 12;
             // 
             // pnlDecoration2
             // 
+            pnlDecoration2.Anchor = AnchorStyles.None;
             pnlDecoration2.BackColor = Color.FromArgb(0, 150, 255);
             pnlDecoration2.BorderColor = Color.Empty;
             pnlDecoration2.BorderWidth = 0;
             pnlDecoration2.CornerRadius = 3;
-            pnlDecoration2.Location = new Point(193, 12);
+            pnlDecoration2.Location = new Point(244, 12);
             pnlDecoration2.Margin = new Padding(2);
             pnlDecoration2.Name = "pnlDecoration2";
             pnlDecoration2.Size = new Size(175, 7);
@@ -168,44 +172,47 @@
             pnl3.Controls.Add(lbl3);
             pnl3.Controls.Add(cb3);
             pnl3.Controls.Add(pnlDecoration3);
-            pnl3.Location = new Point(74, 263);
-            pnl3.Margin = new Padding(18, 15, 18, 15);
+            pnl3.Location = new Point(19, 263);
+            pnl3.Margin = new Padding(10);
             pnl3.Name = "pnl3";
-            pnl3.Size = new Size(560, 33);
+            pnl3.Size = new Size(663, 33);
             pnl3.TabIndex = 14;
             // 
             // lbl3
             // 
-            lbl3.Anchor = AnchorStyles.None;
+            lbl3.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             lbl3.BackColor = Color.White;
             lbl3.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lbl3.ForeColor = Color.Black;
             lbl3.Location = new Point(0, 0);
-            lbl3.Margin = new Padding(18, 15, 18, 12);
+            lbl3.Margin = new Padding(5);
             lbl3.Name = "lbl3";
-            lbl3.Size = new Size(186, 33);
+            lbl3.Size = new Size(237, 33);
             lbl3.TabIndex = 20;
             lbl3.Text = "Test";
             lbl3.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // cb3
             // 
+            cb3.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             cb3.DropDownStyle = ComboBoxStyle.DropDownList;
-            cb3.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            cb3.FlatStyle = FlatStyle.Flat;
+            cb3.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             cb3.FormattingEnabled = true;
-            cb3.Location = new Point(374, 0);
-            cb3.Margin = new Padding(2);
+            cb3.Location = new Point(426, 0);
+            cb3.Margin = new Padding(5);
             cb3.Name = "cb3";
-            cb3.Size = new Size(185, 31);
+            cb3.Size = new Size(236, 32);
             cb3.TabIndex = 12;
             // 
             // pnlDecoration3
             // 
+            pnlDecoration3.Anchor = AnchorStyles.None;
             pnlDecoration3.BackColor = Color.FromArgb(0, 150, 255);
             pnlDecoration3.BorderColor = Color.Empty;
             pnlDecoration3.BorderWidth = 0;
             pnlDecoration3.CornerRadius = 3;
-            pnlDecoration3.Location = new Point(193, 12);
+            pnlDecoration3.Location = new Point(244, 12);
             pnlDecoration3.Margin = new Padding(2);
             pnlDecoration3.Name = "pnlDecoration3";
             pnlDecoration3.Size = new Size(175, 7);
@@ -217,47 +224,50 @@
             pnl4.Controls.Add(lbl4);
             pnl4.Controls.Add(cb4);
             pnl4.Controls.Add(pnlDecoration4);
-            pnl4.Location = new Point(74, 322);
-            pnl4.Margin = new Padding(18, 15, 18, 15);
+            pnl4.Location = new Point(19, 322);
+            pnl4.Margin = new Padding(10);
             pnl4.Name = "pnl4";
-            pnl4.Size = new Size(560, 33);
+            pnl4.Size = new Size(662, 33);
             pnl4.TabIndex = 14;
             // 
             // lbl4
             // 
-            lbl4.Anchor = AnchorStyles.None;
+            lbl4.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             lbl4.BackColor = Color.White;
             lbl4.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lbl4.ForeColor = Color.Black;
             lbl4.Location = new Point(0, 0);
-            lbl4.Margin = new Padding(18, 15, 18, 12);
+            lbl4.Margin = new Padding(5);
             lbl4.Name = "lbl4";
-            lbl4.Size = new Size(186, 33);
+            lbl4.Size = new Size(236, 33);
             lbl4.TabIndex = 20;
             lbl4.Text = "Test";
             lbl4.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // cb4
             // 
+            cb4.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             cb4.DropDownStyle = ComboBoxStyle.DropDownList;
-            cb4.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            cb4.FlatStyle = FlatStyle.Flat;
+            cb4.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             cb4.FormattingEnabled = true;
-            cb4.Location = new Point(374, 0);
-            cb4.Margin = new Padding(2);
+            cb4.Location = new Point(426, 0);
+            cb4.Margin = new Padding(5);
             cb4.Name = "cb4";
-            cb4.Size = new Size(185, 31);
+            cb4.Size = new Size(235, 32);
             cb4.TabIndex = 12;
             // 
             // pnlDecoration4
             // 
+            pnlDecoration4.Anchor = AnchorStyles.None;
             pnlDecoration4.BackColor = Color.FromArgb(0, 150, 255);
             pnlDecoration4.BorderColor = Color.Empty;
             pnlDecoration4.BorderWidth = 0;
             pnlDecoration4.CornerRadius = 3;
-            pnlDecoration4.Location = new Point(193, 13);
+            pnlDecoration4.Location = new Point(245, 13);
             pnlDecoration4.Margin = new Padding(2);
             pnlDecoration4.Name = "pnlDecoration4";
-            pnlDecoration4.Size = new Size(175, 7);
+            pnlDecoration4.Size = new Size(174, 7);
             pnlDecoration4.TabIndex = 13;
             // 
             // btnReset
@@ -272,7 +282,7 @@
             btnReset.ForeColor = Color.Black;
             btnReset.Image = Resources.Icons.Icons.reset;
             btnReset.ImageSize = new Size(35, 35);
-            btnReset.Location = new Point(310, 367);
+            btnReset.Location = new Point(325, 367);
             btnReset.Margin = new Padding(2);
             btnReset.Name = "btnReset";
             btnReset.Size = new Size(50, 50);
@@ -293,10 +303,10 @@
             btnSubmitNext.ForeColor = Color.BlanchedAlmond;
             btnSubmitNext.Image = null;
             btnSubmitNext.ImageSize = new Size(150, 40);
-            btnSubmitNext.Location = new Point(291, 458);
+            btnSubmitNext.Location = new Point(300, 458);
             btnSubmitNext.Margin = new Padding(18, 15, 18, 15);
             btnSubmitNext.Name = "btnSubmitNext";
-            btnSubmitNext.Size = new Size(104, 34);
+            btnSubmitNext.Size = new Size(100, 46);
             btnSubmitNext.TabIndex = 19;
             btnSubmitNext.Text = "Submit";
             btnSubmitNext.UseVisualStyleBackColor = false;
@@ -307,10 +317,10 @@
             lblQuestion.Anchor = AnchorStyles.None;
             lblQuestion.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lblQuestion.ForeColor = Color.White;
-            lblQuestion.Location = new Point(64, 87);
+            lblQuestion.Location = new Point(19, 84);
             lblQuestion.Margin = new Padding(18, 15, 18, 12);
             lblQuestion.Name = "lblQuestion";
-            lblQuestion.Size = new Size(560, 41);
+            lblQuestion.Size = new Size(663, 41);
             lblQuestion.TabIndex = 20;
             lblQuestion.Text = "Match all the options below";
             lblQuestion.TextAlign = ContentAlignment.MiddleCenter;
@@ -338,7 +348,6 @@
             pnl3.ResumeLayout(false);
             pnl4.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion

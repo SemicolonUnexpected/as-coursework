@@ -77,12 +77,12 @@
             pnlAnswer.Location = new Point(61, 133);
             pnlAnswer.Margin = new Padding(18, 15, 18, 15);
             pnlAnswer.Name = "pnlAnswer";
-            pnlAnswer.Size = new Size(560, 41);
+            pnlAnswer.Size = new Size(560, 50);
             pnlAnswer.TabIndex = 14;
             // 
             // btnSubmitNext
             // 
-            btnSubmitNext.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btnSubmitNext.Anchor = AnchorStyles.None;
             btnSubmitNext.BackColor = Color.FromArgb(0, 150, 255);
             btnSubmitNext.BorderColor = Color.White;
             btnSubmitNext.BorderWidth = 2;
@@ -93,8 +93,8 @@
             btnSubmitNext.ForeColor = Color.BlanchedAlmond;
             btnSubmitNext.Image = null;
             btnSubmitNext.ImageSize = new Size(150, 40);
-            btnSubmitNext.Location = new Point(472, 5);
-            btnSubmitNext.Margin = new Padding(7, 6, 7, 6);
+            btnSubmitNext.Location = new Point(474, 10);
+            btnSubmitNext.Margin = new Padding(0, 10, 0, 10);
             btnSubmitNext.Name = "btnSubmitNext";
             btnSubmitNext.Size = new Size(81, 30);
             btnSubmitNext.TabIndex = 14;
@@ -104,33 +104,32 @@
             // 
             // pbIsCorrect
             // 
-            pbIsCorrect.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            pbIsCorrect.Location = new Point(427, 14);
-            pbIsCorrect.Margin = new Padding(7, 6, 7, 6);
+            pbIsCorrect.Anchor = AnchorStyles.None;
+            pbIsCorrect.Location = new Point(439, 10);
+            pbIsCorrect.Margin = new Padding(5);
             pbIsCorrect.Name = "pbIsCorrect";
-            pbIsCorrect.Size = new Size(24, 21);
+            pbIsCorrect.Size = new Size(30, 30);
             pbIsCorrect.SizeMode = PictureBoxSizeMode.StretchImage;
             pbIsCorrect.TabIndex = 12;
             pbIsCorrect.TabStop = false;
             // 
             // lblAnswerTitle
             // 
-            lblAnswerTitle.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            lblAnswerTitle.AutoSize = true;
+            lblAnswerTitle.Anchor = AnchorStyles.None;
             lblAnswerTitle.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lblAnswerTitle.ForeColor = Color.White;
             lblAnswerTitle.Location = new Point(7, 6);
             lblAnswerTitle.Margin = new Padding(7, 6, 7, 6);
             lblAnswerTitle.MaximumSize = new Size(315, 0);
             lblAnswerTitle.Name = "lblAnswerTitle";
-            lblAnswerTitle.Size = new Size(47, 23);
+            lblAnswerTitle.Size = new Size(56, 38);
             lblAnswerTitle.TabIndex = 11;
             lblAnswerTitle.Text = "Ans:";
             lblAnswerTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // tbAnswer
             // 
-            tbAnswer.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            tbAnswer.Anchor = AnchorStyles.None;
             tbAnswer.BackColor = Color.FromArgb(20, 20, 50);
             tbAnswer.BorderColor = Color.White;
             tbAnswer.BorderFocusColor = Color.White;
@@ -139,14 +138,14 @@
             tbAnswer.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             tbAnswer.ForeColor = Color.White;
             tbAnswer.IsMultiline = false;
-            tbAnswer.Location = new Point(70, 6);
-            tbAnswer.Margin = new Padding(7, 6, 7, 6);
+            tbAnswer.Location = new Point(70, 8);
+            tbAnswer.Margin = new Padding(0);
             tbAnswer.Name = "tbAnswer";
             tbAnswer.Padding = new Padding(5, 4, 5, 4);
             tbAnswer.PlaceholderText = "";
             tbAnswer.PlaceholderTextColor = Color.White;
             tbAnswer.ShortcutEnabled = true;
-            tbAnswer.Size = new Size(343, 32);
+            tbAnswer.Size = new Size(364, 32);
             tbAnswer.TabIndex = 0;
             tbAnswer.UsePasswordChar = false;
             // 
@@ -194,7 +193,6 @@
             Name = "formEquationQuestion";
             Text = "TextQuestion";
             pnlAnswer.ResumeLayout(false);
-            pnlAnswer.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pbIsCorrect).EndInit();
             ResumeLayout(false);
             PerformLayout();

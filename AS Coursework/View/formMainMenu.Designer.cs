@@ -54,6 +54,7 @@
             pnlMenuStrip.Name = "pnlMenuStrip";
             pnlMenuStrip.Size = new Size(140, 600);
             pnlMenuStrip.TabIndex = 0;
+            pnlMenuStrip.MouseHover += pnlMenuStrip_MouseHover;
             // 
             // miSignOut
             // 
@@ -70,6 +71,7 @@
             miSignOut.Size = new Size(140, 48);
             miSignOut.TabIndex = 6;
             miSignOut.MenuClick += miSignOut_MenuClick;
+            miSignOut.MouseHover += pnlMenuStrip_MouseHover;
             // 
             // miAdmin
             // 
@@ -86,6 +88,7 @@
             miAdmin.Size = new Size(140, 48);
             miAdmin.TabIndex = 5;
             miAdmin.MenuClick += miAdmin_MenuClick;
+            miAdmin.MouseHover += pnlMenuStrip_MouseHover;
             // 
             // miSettings
             // 
@@ -102,6 +105,7 @@
             miSettings.Size = new Size(140, 48);
             miSettings.TabIndex = 4;
             miSettings.MenuClick += miSettings_MenuClick;
+            miSettings.MouseHover += pnlMenuStrip_MouseHover;
             // 
             // miRanks
             // 
@@ -118,6 +122,7 @@
             miRanks.Size = new Size(140, 48);
             miRanks.TabIndex = 3;
             miRanks.MenuClick += miRanks_Click;
+            miRanks.MouseHover += pnlMenuStrip_MouseHover;
             // 
             // miQuiz
             // 
@@ -134,6 +139,7 @@
             miQuiz.Size = new Size(140, 48);
             miQuiz.TabIndex = 2;
             miQuiz.MenuClick += miQuiz_MenuClick;
+            miQuiz.MouseHover += pnlMenuStrip_MouseHover;
             // 
             // miHome
             // 
@@ -150,6 +156,7 @@
             miHome.Size = new Size(140, 48);
             miHome.TabIndex = 1;
             miHome.MenuClick += miHome_MenuClick;
+            miHome.MouseHover += pnlMenuStrip_MouseHover;
             // 
             // pnlMenuDivider
             // 
@@ -176,6 +183,7 @@
             miMenu.Size = new Size(140, 48);
             miMenu.TabIndex = 0;
             miMenu.MenuClick += Menu_Click;
+            miMenu.MouseHover += pnlMenuStrip_MouseHover;
             // 
             // pnlUserViewHolder
             // 

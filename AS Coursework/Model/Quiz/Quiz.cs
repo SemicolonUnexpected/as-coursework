@@ -28,7 +28,7 @@ public class Quiz {
     private List<Question> PopulateQuiz(QuizStyle quizStyle, int questionCount) => quizStyle switch {
         QuizStyle.All => PickQuestions(QuestionDataManager.All, questionCount),
         QuizStyle.MultipleChoice => PickQuestions(QuestionDataManager.MultipleChoice, questionCount),
-        QuizStyle.Text => PickQuestions(QuestionDataManager.Text, questionCount),
+        QuizStyle.Text => PickQuestions(QuestionDataManager.Typing, questionCount),
         QuizStyle.Matching => PickQuestions(QuestionDataManager.Matching, questionCount),
         QuizStyle.FlashCard => PickQuestions(QuestionDataManager.Flashcard, questionCount),
         QuizStyle.Equation => PickQuestions(QuestionDataManager.Equation, questionCount),

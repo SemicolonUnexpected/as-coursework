@@ -5,8 +5,8 @@ namespace AS_Coursework.Model.Quiz;
 public static class QuestionDataManager {
     private const string PATH_MULTIPLECHOICE = "Questions/MultipleChoice.txt";
     public static List<Question> MultipleChoice { get; private set; } = ReadInMultipleChoice();
-    private const string PATH_TEXT = "Questions/Text.txt";
-    public static List<Question> Text { get; private set; } = ReadInText();
+    private const string PATH_TYPING = "Questions/Typing.txt";
+    public static List<Question> Typing { get; private set; } = ReadInTyping();
     private const string PATH_FLASHCARD = "Questions/Flashcard.txt";
     public static List<Question> Flashcard { get; private set; } = ReadInFlashcard();
     private const string PATH_MATCHING = "Questions/Matching.txt";
@@ -19,7 +19,7 @@ public static class QuestionDataManager {
             List<Question> result = new();
 
             result.AddRange(MultipleChoice);
-            result.AddRange(Text);
+            result.AddRange(Typing);
             result.AddRange(Flashcard);
             result.AddRange(Matching);
             result.AddRange(Equation);
@@ -52,8 +52,8 @@ public static class QuestionDataManager {
         return questions;
     }
 
-    private static List<Question> ReadInText() {
-        using StreamReader reader = new(PATH_TEXT);
+    private static List<Question> ReadInTyping() {
+        using StreamReader reader = new(PATH_TYPING);
 
         string text = reader.ReadToEnd();
 
@@ -67,14 +67,14 @@ public static class QuestionDataManager {
             if (fields.Length > 5) throw new QuestionDataException("A text question needs four fields or five fields if it is an image text question");
 
             if (fields.Length == 4) {
-                questions.Add(new TextQuestion(
+                questions.Add(new TypingQuestion(
                     fields[0],
                     fields[1],
                     fields[2],
                     new System.Text.RegularExpressions.Regex(fields[3])));
             }
             else {
-                questions.Add(new ImageTextQuestion(
+                questions.Add(new ImageTypingQuestion(
                     fields[0],
                     fields[1],
                     fields[2],
@@ -122,9 +122,11 @@ public static class QuestionDataManager {
 
         foreach (string[] fields in fieldGroups) {
             if (fields.Length % 2 != 1) throw new QuestionDataException("Ensure all matching question pairs are paired correctly");
+            if (fields.Length < 9) throw new QuestionDataException("Ensure there are at least 4 answer pairs");
+
             Dictionary<string, string> answerPairs = new();
 
-            for (int i = 3; i < fields.Length; i += 2) {
+            for (int i = 1; i < fields.Length; i += 2) {
                 answerPairs.Add(fields[i], fields[i + 1]);
             }
 

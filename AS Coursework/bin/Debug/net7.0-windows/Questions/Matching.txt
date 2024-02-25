@@ -1,1 +1,2 @@
 Flame tests,Sodium ion,Orange,Potassium ion,Lilac,Calcium ion,Brick red,Lithium ion,Crimson,Copper ion,Blue-green,Barium ion,Green
+Electronic configuration,Titanium,1s²2s²2p⁶3s²3p⁶3d²4s²,Chromium,1s²2s²2p⁶3s²3p⁶3d⁵4s¹,Copper,1s²2s²2p⁶3s²3p⁶3d¹⁰4s¹,Argon,1s²2s²2p⁶3s²3p⁶
