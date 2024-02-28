@@ -9,7 +9,7 @@ internal static class HashManager {
     // Use the SHA512 algorithm
     private static readonly HashAlgorithmName _hashAlgorithm = HashAlgorithmName.SHA512;
 
-    // The number of iterations of the has algorithm. This is a large number to slow down brute force attacks
+    // The number of iterations of the hash algorithm. This is a large number to slow down brute force attacks
     private const int ITERATIONS = 100000;
 
     // The length of the salt
