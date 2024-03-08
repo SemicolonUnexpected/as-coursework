@@ -237,9 +237,9 @@
             // 
             lblPercentageAccuracy.Anchor = AnchorStyles.Left;
             lblPercentageAccuracy.AutoEllipsis = true;
-            lblPercentageAccuracy.Font = new Font("Bahnschrift", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            lblPercentageAccuracy.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblPercentageAccuracy.ForeColor = Color.White;
-            lblPercentageAccuracy.Location = new Point(10, 140);
+            lblPercentageAccuracy.Location = new Point(10, 133);
             lblPercentageAccuracy.Margin = new Padding(10, 5, 10, 5);
             lblPercentageAccuracy.Name = "lblPercentageAccuracy";
             lblPercentageAccuracy.Size = new Size(190, 25);
@@ -250,9 +250,9 @@
             // 
             lblCorrect.Anchor = AnchorStyles.Left;
             lblCorrect.AutoEllipsis = true;
-            lblCorrect.Font = new Font("Bahnschrift", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            lblCorrect.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblCorrect.ForeColor = Color.White;
-            lblCorrect.Location = new Point(10, 105);
+            lblCorrect.Location = new Point(10, 98);
             lblCorrect.Margin = new Padding(10, 5, 10, 5);
             lblCorrect.Name = "lblCorrect";
             lblCorrect.Size = new Size(190, 25);
@@ -263,9 +263,9 @@
             // 
             lblAnswers.Anchor = AnchorStyles.Left;
             lblAnswers.AutoEllipsis = true;
-            lblAnswers.Font = new Font("Bahnschrift", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            lblAnswers.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblAnswers.ForeColor = Color.White;
-            lblAnswers.Location = new Point(10, 70);
+            lblAnswers.Location = new Point(10, 63);
             lblAnswers.Margin = new Padding(10, 5, 10, 5);
             lblAnswers.Name = "lblAnswers";
             lblAnswers.Size = new Size(190, 25);

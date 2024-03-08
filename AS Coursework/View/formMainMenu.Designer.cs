@@ -24,6 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             pnlMenuStrip = new Panel();
+            menuItemHelp = new Custom_Controls.MenuItem();
             miSignOut = new Custom_Controls.MenuItem();
             miAdmin = new Custom_Controls.MenuItem();
             miSettings = new Custom_Controls.MenuItem();
@@ -40,6 +41,7 @@
             // pnlMenuStrip
             // 
             pnlMenuStrip.BackColor = Color.FromArgb(40, 40, 90);
+            pnlMenuStrip.Controls.Add(menuItemHelp);
             pnlMenuStrip.Controls.Add(miSignOut);
             pnlMenuStrip.Controls.Add(miAdmin);
             pnlMenuStrip.Controls.Add(miSettings);
@@ -54,7 +56,26 @@
             pnlMenuStrip.Name = "pnlMenuStrip";
             pnlMenuStrip.Size = new Size(140, 600);
             pnlMenuStrip.TabIndex = 0;
-            pnlMenuStrip.MouseHover += pnlMenuStrip_MouseHover;
+            pnlMenuStrip.MouseEnter += MinimiseOnMouseExit;
+            pnlMenuStrip.MouseLeave += MinimiseOnMouseExit;
+            // 
+            // menuItemHelp
+            // 
+            menuItemHelp.BackColor = Color.FromArgb(40, 40, 90);
+            menuItemHelp.BaseColor = Color.FromArgb(40, 40, 90);
+            menuItemHelp.Dock = DockStyle.Bottom;
+            menuItemHelp.HoverColour = Color.FromArgb(50, 50, 100);
+            menuItemHelp.Image = Resources.Icons.Icons.Question;
+            menuItemHelp.ImagePadding = 10;
+            menuItemHelp.Location = new Point(0, 504);
+            menuItemHelp.Margin = new Padding(1);
+            menuItemHelp.MenuText = "Help";
+            menuItemHelp.Name = "menuItemHelp";
+            menuItemHelp.Size = new Size(140, 48);
+            menuItemHelp.TabIndex = 7;
+            menuItemHelp.MenuClick += miHelp_MenuClick;
+            menuItemHelp.MouseEnter += MinimiseOnMouseExit;
+            menuItemHelp.MouseLeave += MinimiseOnMouseExit;
             // 
             // miSignOut
             // 
@@ -71,7 +92,8 @@
             miSignOut.Size = new Size(140, 48);
             miSignOut.TabIndex = 6;
             miSignOut.MenuClick += miSignOut_MenuClick;
-            miSignOut.MouseHover += pnlMenuStrip_MouseHover;
+            miSignOut.MouseEnter += MinimiseOnMouseExit;
+            miSignOut.MouseLeave += MinimiseOnMouseExit;
             // 
             // miAdmin
             // 
@@ -88,7 +110,8 @@
             miAdmin.Size = new Size(140, 48);
             miAdmin.TabIndex = 5;
             miAdmin.MenuClick += miAdmin_MenuClick;
-            miAdmin.MouseHover += pnlMenuStrip_MouseHover;
+            miAdmin.MouseEnter += MinimiseOnMouseExit;
+            miAdmin.MouseLeave += MinimiseOnMouseExit;
             // 
             // miSettings
             // 
@@ -105,7 +128,8 @@
             miSettings.Size = new Size(140, 48);
             miSettings.TabIndex = 4;
             miSettings.MenuClick += miSettings_MenuClick;
-            miSettings.MouseHover += pnlMenuStrip_MouseHover;
+            miSettings.MouseEnter += MinimiseOnMouseExit;
+            miSettings.MouseLeave += MinimiseOnMouseExit;
             // 
             // miRanks
             // 
@@ -122,7 +146,8 @@
             miRanks.Size = new Size(140, 48);
             miRanks.TabIndex = 3;
             miRanks.MenuClick += miRanks_Click;
-            miRanks.MouseHover += pnlMenuStrip_MouseHover;
+            miRanks.MouseEnter += MinimiseOnMouseExit;
+            miRanks.MouseLeave += MinimiseOnMouseExit;
             // 
             // miQuiz
             // 
@@ -139,7 +164,8 @@
             miQuiz.Size = new Size(140, 48);
             miQuiz.TabIndex = 2;
             miQuiz.MenuClick += miQuiz_MenuClick;
-            miQuiz.MouseHover += pnlMenuStrip_MouseHover;
+            miQuiz.MouseEnter += MinimiseOnMouseExit;
+            miQuiz.MouseLeave += MinimiseOnMouseExit;
             // 
             // miHome
             // 
@@ -156,7 +182,8 @@
             miHome.Size = new Size(140, 48);
             miHome.TabIndex = 1;
             miHome.MenuClick += miHome_MenuClick;
-            miHome.MouseHover += pnlMenuStrip_MouseHover;
+            miHome.MouseEnter += MinimiseOnMouseExit;
+            miHome.MouseLeave += MinimiseOnMouseExit;
             // 
             // pnlMenuDivider
             // 
@@ -183,7 +210,8 @@
             miMenu.Size = new Size(140, 48);
             miMenu.TabIndex = 0;
             miMenu.MenuClick += Menu_Click;
-            miMenu.MouseHover += pnlMenuStrip_MouseHover;
+            miMenu.MouseEnter += MinimiseOnMouseExit;
+            miMenu.MouseLeave += MinimiseOnMouseExit;
             // 
             // pnlUserViewHolder
             // 
@@ -214,7 +242,6 @@
             sb.ThumbColor = Color.White;
             sb.ThumbSize = new Size(15, 80);
             sb.Value = 0;
-            sb.ValueChanged += sb_ValueChanged;
             // 
             // formMainMenu
             // 
@@ -247,5 +274,6 @@
         private Custom_Controls.MenuItem miSignOut;
         private Custom_Controls.MenuItem miRanks;
         private Custom_Controls.CustomScrollBar sb;
+        private Custom_Controls.MenuItem menuItemHelp;
     }
 }

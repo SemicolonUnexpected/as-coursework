@@ -172,6 +172,11 @@ public partial class formMainMenu : Form {
         if (UserForm is not formAdminMenu) DisplayUserForm(new formAdminMenu());
     }
 
+    private void miHelp_MenuClick(object sender, EventArgs e) {
+        MinimiseMenu();
+        if (UserForm is not formHelp) DisplayUserForm(new formHelp());
+    }
+
     #endregion
 
     public void ScrollUserView(object? sender, MouseEventArgs e) {
@@ -185,7 +190,8 @@ public partial class formMainMenu : Form {
         Refresh();
     }
 
-    private void pnlMenuStrip_MouseHover(object sender, EventArgs e) {
-        MaximiseMenu();
+    private void MinimiseOnMouseExit(object sender, EventArgs e) {
+        if (pnlMenuStrip.ClientRectangle.Contains(PointToClient(MousePosition))) MaximiseMenu();
+        else MinimiseMenu();
     }
 }
