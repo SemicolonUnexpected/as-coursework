@@ -1,18 +1,28 @@
 ﻿using Chem;
 using Csv;
+using System.Text.RegularExpressions;
 
 namespace AS_Coursework.Model.Quiz;
 public static class QuestionDataManager {
+    private const string PATH_SETTNGS = "Questions/QuizSettings.txt";
+    public static int QuestionCount { get; private set; }
+
+    // Question data fields
     private const string PATH_MULTIPLECHOICE = "Questions/MultipleChoice.txt";
     public static List<Question> MultipleChoice { get; private set; } = ReadInMultipleChoice();
+    public static int MultipleChoiceExperienceAllocation { get; private set; }
     private const string PATH_TYPING = "Questions/Typing.txt";
     public static List<Question> Typing { get; private set; } = ReadInTyping();
+    public static int TypingExperienceAllocation { get; private set; }
     private const string PATH_FLASHCARD = "Questions/Flashcard.txt";
     public static List<Question> Flashcard { get; private set; } = ReadInFlashcard();
+    public static int FlashcardExperienceAllocation { get; private set; }
     private const string PATH_MATCHING = "Questions/Matching.txt";
     public static List<Question> Matching { get; private set; } = ReadInMatching();
+    public static int MatchingExperienceAllocation { get; private set; }
     private const string PATH_EQUATIONS = "Questions/Equation.txt";
     public static List<Question> Equation { get; private set; } = ReadInEquation();
+    public static int EquationExperienceAllocation { get; private set; }
 
     public static List<Question> All {
         get {
@@ -26,6 +36,36 @@ public static class QuestionDataManager {
 
             return result;
         }
+    }
+
+    static QuestionDataManager() {
+        ReadInSettings();
+    }
+
+    private static void ReadInSettings() {
+        using StreamReader reader = new(PATH_SETTNGS);
+
+        string text = reader.ReadToEnd();
+
+        Regex QuestionCounter = new(@"Question count : (\d+)");
+        QuestionCount = int.Parse(QuestionCounter.Match(text).Groups[1].Value);
+
+        Regex MultipleChoice = new(@"Multiple choice : (\d+)");
+        MultipleChoiceExperienceAllocation = int.Parse(MultipleChoice.Match(text).Groups[1].Value);
+
+        Regex Matching = new(@"Matching : (\d+)");
+        MatchingExperienceAllocation = int.Parse(Matching.Match(text).Groups[1].Value);
+
+        Regex Typing = new(@"Typing : (\d+)");
+        TypingExperienceAllocation = int.Parse(Typing.Match(text).Groups[1].Value);
+
+        Regex Equation = new(@"Equation : (\d+)");
+        EquationExperienceAllocation = int.Parse(Equation.Match(text).Groups[1].Value);
+
+        Regex Flashcard = new(@"Flashcard : (\d+)");
+        FlashcardExperienceAllocation = int.Parse(Flashcard.Match(text).Groups[1].Value);
+
+        MessageBox.Show($"{MultipleChoiceExperienceAllocation}");
     }
 
     private static List<Question> ReadInMultipleChoice() {
