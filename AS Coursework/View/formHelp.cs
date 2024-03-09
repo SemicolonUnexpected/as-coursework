@@ -49,6 +49,17 @@ public partial class formHelp : Form {
         To answer this question, read the question and then type the answer in the box. Once you are happy click submit.
         """;
 
+    private const string EQUATION = """
+        To answer this question, read the question then type the equation defective, balancing it unless otherwise stated. Put the reactants and products in the order they are described in the question.
+
+        Any special characters can be inserted from the keypad. Alternatively you can use the following syntax...
+
+        H_{2}SO_{4} corresponds to 
+        C_{n}H_{2n + 1} corresponds to
+        Al^{3+} corresponds to
+        F^{-} corresponds to
+        """;
+
     public formHelp() {
         InitializeComponent();
 
@@ -75,7 +86,7 @@ public partial class formHelp : Form {
             "Matching question" => MATCHING,
             "Flashcard question" => FLASHCARD,
             "Typing question" => TYPING,
-            "Equation question" => "",
+            "Equation question" => EQUATION,
             _ => ""
         };
     }
