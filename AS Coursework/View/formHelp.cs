@@ -54,10 +54,10 @@ public partial class formHelp : Form {
 
         Any special characters can be inserted from the keypad. Alternatively you can use the following syntax...
 
-        H_{2}SO_{4} corresponds to 
-        C_{n}H_{2n + 1} corresponds to
-        Al^{3+} corresponds to
-        F^{-} corresponds to
+        H_{2}SO_{4} corresponds to H₂SO₄
+        C_{n}H_{2n + 1} corresponds to CₙH₂ₙ₊₂
+        Al^{3+} corresponds to Al³⁺
+        F^{-} corresponds to F⁻
         """;
 
     public formHelp() {

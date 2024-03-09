@@ -30,6 +30,17 @@ public static class Stringer {
         return stringBuilder.ToString();
     }
 
+    public static string Stringify(string? value) {
+        StringBuilder stringBuilder = new(value);
+
+        // Replace all characters that need escaping
+        stringBuilder.Replace(@"\", @"\\");
+        stringBuilder.Replace(@",", @"\,");
+        stringBuilder.Replace("\n", @"\n");
+
+        return stringBuilder.ToString();
+    }
+
     public static string StringifyForFile(string?[][] fieldGroups) {
         StringBuilder outputFileString = new();
 

@@ -1,4 +1,5 @@
 ﻿using AS_Coursework.View.QuizView;
+using Csv;
 
 namespace AS_Coursework.Model.Quiz;
 public class FlashcardQuestion : Question {
@@ -18,4 +19,6 @@ public class FlashcardQuestion : Question {
     public override Form DisplayQuestion() {
         return new formFlashcardQuestion(this);
     }
+
+    public override string ToString() => base.ToString() + "," + Stringer.Stringify(FrontSide) + "," + Stringer.Stringify(BackSide);
 }

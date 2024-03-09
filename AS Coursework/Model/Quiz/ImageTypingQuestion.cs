@@ -2,6 +2,7 @@
 using AS_Coursework.View.QuizView;
 
 namespace AS_Coursework.Model.Quiz;
+// A class that can display an image with a text question
 public class ImageTypingQuestion : TypingQuestion {
     private string _imagePath;
 
@@ -10,8 +11,8 @@ public class ImageTypingQuestion : TypingQuestion {
             try {
                 return new Bitmap(_imagePath);
             }
-            catch (System.Exception) {
-                return new Bitmap();
+            catch (Exception) {
+                return Resources.Icons.Icons.Red_Cross_Circle;
             }
         }
     }
@@ -23,4 +24,6 @@ public class ImageTypingQuestion : TypingQuestion {
     public override Form DisplayQuestion() {
         return new formTypingQuestion(this);
     }
+
+    public override string ToString() => base.ToString() + "," + _imagePath; 
 }

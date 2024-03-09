@@ -204,7 +204,7 @@ public static class QuestionDataManager {
 
     #region Writing
     
-    private void WriteSettings() {
+    private static void WriteSettings() {
         using StreamWriter writer = new(PATH_SETTNGS);
 
         string data = $"""
@@ -219,7 +219,7 @@ public static class QuestionDataManager {
         writer.Write(data);
     }
 
-    private void WriteQuestions() {
+    private static void WriteQuestions() {
 
     }
 
