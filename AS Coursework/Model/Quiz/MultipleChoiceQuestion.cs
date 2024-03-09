@@ -1,8 +1,9 @@
 ﻿using AS_Coursework.View.QuizView;
+using Csv;
 
 namespace AS_Coursework.Model.Quiz;
 public class MultipleChoiceQuestion : Question {
-    public string Question {  get; private init; }
+    public string Question { get; private init; }
     public string CorrectAnswer { get; private init; }
     public string[] IncorrectAnswers { get; private init; }
 
@@ -22,4 +23,6 @@ public class MultipleChoiceQuestion : Question {
     public override Form DisplayQuestion() {
         return new formMultipleChoiceQuestion(this);
     }
+
+    public override string ToString() => base.ToString() + "," + Stringer.Stringify();
 }
