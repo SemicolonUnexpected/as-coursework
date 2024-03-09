@@ -202,7 +202,7 @@ public static class QuestionDataManager {
 
     #endregion
 
-    #region Writings
+    #region Writing
     
     private void WriteSettings() {
         using StreamWriter writer = new(PATH_SETTNGS);
@@ -217,6 +217,10 @@ public static class QuestionDataManager {
             """;
             
         writer.Write(data);
+    }
+
+    private void WriteQuestions() {
+
     }
 
     #endregion

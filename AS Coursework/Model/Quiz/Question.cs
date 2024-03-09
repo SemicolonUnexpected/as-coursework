@@ -1,4 +1,7 @@
-﻿namespace AS_Coursework.Model.Quiz; 
+﻿using Csv;
+
+namespace AS_Coursework.Model.Quiz; 
+
 public abstract class Question {
     public string QuestionName { get; protected init; }
     public int AllocatedExperience { get; protected set; }
@@ -9,4 +12,6 @@ public abstract class Question {
     }
 
     public abstract Form DisplayQuestion();
+
+    public override ToString() => "";
 }
