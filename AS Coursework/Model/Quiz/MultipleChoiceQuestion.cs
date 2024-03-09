@@ -13,6 +13,7 @@ public class MultipleChoiceQuestion : Question {
         IncorrectAnswers = incorrectAnswers;
     }
 
+    // Compare the strings to check the answer
     public bool CheckAnswer(string answer) {
         bool isCorrect = answer == CorrectAnswer;
         Correct = isCorrect;
@@ -20,9 +21,7 @@ public class MultipleChoiceQuestion : Question {
         return isCorrect;
     }
 
-    public override Form DisplayQuestion() {
-        return new formMultipleChoiceQuestion(this);
-    }
+    public override Form DisplayQuestion() => new formMultipleChoiceQuestion(this);
 
-    public override string ToString() => base.ToString() + "," + Stringer.Stringify();
+    public override string ToString() => base.ToString() + "," + Stringer.Stringify(Question) + "," + Stringer.Stringify(CorrectAnswer) + "," + Stringer.Stringify(IncorrectAnswers)[..^1];
 }
