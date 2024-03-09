@@ -42,6 +42,8 @@ public static class QuestionDataManager {
         ReadInSettings();
     }
 
+    #region Reading
+
     private static void ReadInSettings() {
         using StreamReader reader = new(PATH_SETTNGS);
 
@@ -197,4 +199,25 @@ public static class QuestionDataManager {
 
         return questions;
     }
+
+    #endregion
+
+    #region Writings
+    
+    private void WriteSettings() {
+        using StreamWriter writer = new(PATH_SETTNGS);
+
+        string data = $"""
+            Question count : {QuestionCount}
+            Multiple choice : {MultipleChoiceExperienceAllocation}
+            Matching : {MatchingExperienceAllocation}
+            Typing : {TypingExperienceAllocation}
+            Equation : {EquationExperienceAllocation}
+            Flashcard : {FlashcardExperienceAllocation}
+            """;
+            
+        writer.Write(data);
+    }
+
+    #endregion
 }
