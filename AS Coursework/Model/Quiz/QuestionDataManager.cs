@@ -66,8 +66,6 @@ public static class QuestionDataManager {
 
         Regex Flashcard = new(@"Flashcard : (\d+)");
         FlashcardExperienceAllocation = int.Parse(Flashcard.Match(text).Groups[1].Value);
-
-        MessageBox.Show($"{MultipleChoiceExperienceAllocation}");
     }
 
     private static List<Question> ReadInMultipleChoice() {
@@ -220,7 +218,11 @@ public static class QuestionDataManager {
     }
 
     private static void WriteQuestions() {
+        // Save the questions to the file
 
+        using(StreamWriter writer = new(PATH_EQUATIONS)) {
+
+        }
     }
 
     public static void Write() {

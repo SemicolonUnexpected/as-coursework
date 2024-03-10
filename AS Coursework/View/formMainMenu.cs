@@ -90,12 +90,6 @@ public partial class formMainMenu : Form {
 
     #region Menu formatting
 
-    private void Menu_Click(object sender, EventArgs e) {
-        _menuMinimised = !_menuMinimised;
-        if (_menuMinimised) MinimiseMenu();
-        else MaximiseMenu();
-    }
-
     private void MinimiseMenu() {
         pnlMenuStrip.Width = MINIMISED_MENU_WIDTH;
 
@@ -140,27 +134,22 @@ public partial class formMainMenu : Form {
 
     // Menu navigation 
     private void miHome_MenuClick(object sender, EventArgs e) {
-        MinimiseMenu();
         if (UserForm is not formHome) DisplayUserForm(new formHome());
     }
 
     private void miQuiz_MenuClick(object sender, EventArgs e) {
-        MinimiseMenu();
         if (UserForm is not formQuizMenu) DisplayUserForm(new formQuizMenu());
     }
 
     private void miRanks_Click(object sender, EventArgs e) {
-        MinimiseMenu();
         if (UserForm is not formRanks) DisplayUserForm(new formRanks());
     }
 
     private void miSettings_MenuClick(object sender, EventArgs e) {
-        MinimiseMenu();
         if (UserForm is not formSettings) DisplayUserForm(new formSettings());
     }
 
     private void miSignOut_MenuClick(object sender, EventArgs e) {
-        MinimiseMenu();
         DialogResult result = CustomMessageBox.Show("Sign out", "Are you sure you want to sign out?", MessageBoxButtons.OKCancel);
         if (result == DialogResult.OK) {
             (ActiveForm as formMaster)?.DisplayForm(new formLogin());
@@ -168,12 +157,10 @@ public partial class formMainMenu : Form {
     }
 
     private void miAdmin_MenuClick(object sender, EventArgs e) {
-        MinimiseMenu();
         if (UserForm is not formAdminMenu) DisplayUserForm(new formAdminMenu());
     }
 
     private void miHelp_MenuClick(object sender, EventArgs e) {
-        MinimiseMenu();
         if (UserForm is not formHelp) DisplayUserForm(new formHelp());
     }
 
@@ -190,7 +177,7 @@ public partial class formMainMenu : Form {
         Refresh();
     }
 
-    private void MinimiseOnMouseExit(object sender, EventArgs e) {
+    private void MainMenuMouseMove(object sender, EventArgs e) {
         if (pnlMenuStrip.ClientRectangle.Contains(PointToClient(MousePosition))) MaximiseMenu();
         else MinimiseMenu();
     }

@@ -1,5 +1,6 @@
 ﻿using System.Text.RegularExpressions;
 using AS_Coursework.View.QuizView;
+using Csv;
 
 namespace AS_Coursework.Model.Quiz;
 public class TypingQuestion : Question {
@@ -25,5 +26,5 @@ public class TypingQuestion : Question {
         return (bool)Correct;
     }
 
-    public override string ToString() => base.ToString() + "," + Stringer.Stringify(Question) + "," + Stringer.Stringify(CorrectAnswer) + "," + Stringer.Stringify(correctAnswerRegex);
+    public override string ToString() => base.ToString() + "," + Stringer.Stringify(Question) + "," + Stringer.Stringify(CorrectAnswer) + "," + Stringer.Stringify(_correctAnswerRegex.ToString());
 }

@@ -56,8 +56,8 @@
             pnlMenuStrip.Name = "pnlMenuStrip";
             pnlMenuStrip.Size = new Size(140, 600);
             pnlMenuStrip.TabIndex = 0;
-            pnlMenuStrip.MouseEnter += MinimiseOnMouseExit;
-            pnlMenuStrip.MouseLeave += MinimiseOnMouseExit;
+            pnlMenuStrip.MouseEnter += MainMenuMouseMove;
+            pnlMenuStrip.MouseLeave += MainMenuMouseMove;
             // 
             // menuItemHelp
             // 
@@ -74,8 +74,8 @@
             menuItemHelp.Size = new Size(140, 48);
             menuItemHelp.TabIndex = 7;
             menuItemHelp.MenuClick += miHelp_MenuClick;
-            menuItemHelp.MouseEnter += MinimiseOnMouseExit;
-            menuItemHelp.MouseLeave += MinimiseOnMouseExit;
+            menuItemHelp.MouseEnter += MainMenuMouseMove;
+            menuItemHelp.MouseLeave += MainMenuMouseMove;
             // 
             // miSignOut
             // 
@@ -92,8 +92,8 @@
             miSignOut.Size = new Size(140, 48);
             miSignOut.TabIndex = 6;
             miSignOut.MenuClick += miSignOut_MenuClick;
-            miSignOut.MouseEnter += MinimiseOnMouseExit;
-            miSignOut.MouseLeave += MinimiseOnMouseExit;
+            miSignOut.MouseEnter += MainMenuMouseMove;
+            miSignOut.MouseLeave += MainMenuMouseMove;
             // 
             // miAdmin
             // 
@@ -110,8 +110,8 @@
             miAdmin.Size = new Size(140, 48);
             miAdmin.TabIndex = 5;
             miAdmin.MenuClick += miAdmin_MenuClick;
-            miAdmin.MouseEnter += MinimiseOnMouseExit;
-            miAdmin.MouseLeave += MinimiseOnMouseExit;
+            miAdmin.MouseEnter += MainMenuMouseMove;
+            miAdmin.MouseLeave += MainMenuMouseMove;
             // 
             // miSettings
             // 
@@ -128,8 +128,8 @@
             miSettings.Size = new Size(140, 48);
             miSettings.TabIndex = 4;
             miSettings.MenuClick += miSettings_MenuClick;
-            miSettings.MouseEnter += MinimiseOnMouseExit;
-            miSettings.MouseLeave += MinimiseOnMouseExit;
+            miSettings.MouseEnter += MainMenuMouseMove;
+            miSettings.MouseLeave += MainMenuMouseMove;
             // 
             // miRanks
             // 
@@ -146,8 +146,8 @@
             miRanks.Size = new Size(140, 48);
             miRanks.TabIndex = 3;
             miRanks.MenuClick += miRanks_Click;
-            miRanks.MouseEnter += MinimiseOnMouseExit;
-            miRanks.MouseLeave += MinimiseOnMouseExit;
+            miRanks.MouseEnter += MainMenuMouseMove;
+            miRanks.MouseLeave += MainMenuMouseMove;
             // 
             // miQuiz
             // 
@@ -164,8 +164,8 @@
             miQuiz.Size = new Size(140, 48);
             miQuiz.TabIndex = 2;
             miQuiz.MenuClick += miQuiz_MenuClick;
-            miQuiz.MouseEnter += MinimiseOnMouseExit;
-            miQuiz.MouseLeave += MinimiseOnMouseExit;
+            miQuiz.MouseEnter += MainMenuMouseMove;
+            miQuiz.MouseLeave += MainMenuMouseMove;
             // 
             // miHome
             // 
@@ -182,8 +182,8 @@
             miHome.Size = new Size(140, 48);
             miHome.TabIndex = 1;
             miHome.MenuClick += miHome_MenuClick;
-            miHome.MouseEnter += MinimiseOnMouseExit;
-            miHome.MouseLeave += MinimiseOnMouseExit;
+            miHome.MouseEnter += MainMenuMouseMove;
+            miHome.MouseLeave += MainMenuMouseMove;
             // 
             // pnlMenuDivider
             // 
@@ -194,6 +194,8 @@
             pnlMenuDivider.Name = "pnlMenuDivider";
             pnlMenuDivider.Size = new Size(140, 4);
             pnlMenuDivider.TabIndex = 2;
+            pnlMenuDivider.MouseEnter += MainMenuMouseMove;
+            pnlMenuDivider.MouseLeave += MainMenuMouseMove;
             // 
             // miMenu
             // 
@@ -209,9 +211,8 @@
             miMenu.Name = "miMenu";
             miMenu.Size = new Size(140, 48);
             miMenu.TabIndex = 0;
-            miMenu.MenuClick += Menu_Click;
-            miMenu.MouseEnter += MinimiseOnMouseExit;
-            miMenu.MouseLeave += MinimiseOnMouseExit;
+            miMenu.MouseEnter += MainMenuMouseMove;
+            miMenu.MouseLeave += MainMenuMouseMove;
             // 
             // pnlUserViewHolder
             // 
@@ -242,6 +243,7 @@
             sb.ThumbColor = Color.White;
             sb.ThumbSize = new Size(15, 80);
             sb.Value = 0;
+            sb.ValueChanged += sb_ValueChanged;
             // 
             // formMainMenu
             // 
