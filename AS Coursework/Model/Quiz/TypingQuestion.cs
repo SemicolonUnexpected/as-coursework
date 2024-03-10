@@ -24,4 +24,6 @@ public class TypingQuestion : Question {
         AllocatedExperience = (bool)Correct ? 10 : 0;
         return (bool)Correct;
     }
+
+    public override string ToString() => base.ToString() + "," + Stringer.Stringify(Question) + "," + Stringer.Stringify(CorrectAnswer) + "," + Stringer.Stringify(correctAnswerRegex);
 }

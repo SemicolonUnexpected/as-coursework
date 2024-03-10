@@ -121,7 +121,7 @@ public static class QuestionDataManager {
                     fields[1],
                     fields[2],
                     new System.Text.RegularExpressions.Regex(fields[3]),
-                    new Bitmap(fields[4])));
+                    fields[4]);
             }
         }
 
