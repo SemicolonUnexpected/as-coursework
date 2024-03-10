@@ -113,15 +113,15 @@ public static class QuestionDataManager {
                     fields[0],
                     fields[1],
                     fields[2],
-                    new System.Text.RegularExpressions.Regex(fields[3])));
+                    new Regex(fields[3])));
             }
             else {
                 questions.Add(new ImageTypingQuestion(
                     fields[0],
                     fields[1],
                     fields[2],
-                    new System.Text.RegularExpressions.Regex(fields[3]),
-                    fields[4]);
+                    new Regex(fields[3]),
+                    fields[4]));
             }
         }
 

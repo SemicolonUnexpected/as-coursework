@@ -1,5 +1,7 @@
 ﻿using AS_Coursework._Helpers;
 using AS_Coursework.View.QuizView;
+using Csv;
+using System.Text;
 
 namespace AS_Coursework.Model.Quiz;
 public class MatchingQuestion : Question {
@@ -40,9 +42,20 @@ public class MatchingQuestion : Question {
         else return false;
     }
 
-    public override Form DisplayQuestion() => return new formMatchingQuestion(this);
+    public override Form DisplayQuestion() => new formMatchingQuestion(this);
 
     public override string ToString() {
-        base.ToString() + "," + 
+        StringBuilder matchingPairs = new();
+
+        foreach (string key in _answerPairs.Keys) {
+            matchingPairs.Append(Stringer.Stringify(key));
+            matchingPairs.Append(',');
+            matchingPairs.Append(Stringer.Stringify(_answerPairs[key]));
+            matchingPairs.Append(',');
+        }
+
+        matchingPairs.Remove(matchingPairs.Length - 1, 1);
+
+        return base.ToString() + "," + matchingPairs.ToString();
     }
 }
