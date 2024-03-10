@@ -223,5 +223,10 @@ public static class QuestionDataManager {
 
     }
 
+    public static void Write() {
+        WriteSettings();
+        WriteQuestions();
+    }
+
     #endregion
 }

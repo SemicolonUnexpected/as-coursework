@@ -1,4 +1,5 @@
 ﻿using AS_Coursework.Model.Data;
+using AS_Coursework.Model.Quiz;
 using System.ComponentModel;
 
 namespace AS_Coursework.View;
@@ -15,6 +16,7 @@ public partial class formMaster : Form {
     protected override void OnClosing(CancelEventArgs e) {
         base.OnClosing(e);
         UserDataManager.Write();
+        QuestionDataManager.Write();
     }
 
     public void DisplayForm(Form form) {
