@@ -167,6 +167,7 @@
             // 
             // chemistryCharachterKeypad1
             // 
+            chemistryCharachterKeypad1.Anchor = AnchorStyles.None;
             chemistryCharachterKeypad1.BackColor = Color.FromArgb(20, 20, 50);
             chemistryCharachterKeypad1.ForeColor = Color.White;
             chemistryCharachterKeypad1.Location = new Point(148, 192);

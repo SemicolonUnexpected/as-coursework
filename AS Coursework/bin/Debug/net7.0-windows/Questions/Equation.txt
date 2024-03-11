@@ -1,6 +1,6 @@
-Halogens,What is the equation for the reaction of chlorine with water?,2NaOH + Cl₂ → NaCl + NaClO + H₂O
 Atomic structure,What is the equation for the second ionisation energy of the element X? (Include state symbols),X⁺ → X²⁺ + e⁻
-Atomic structure,What is the equation for the first ionisation energy of the element X? (Include state symbols),X → X⁺ + e⁻
+Halogens,What is the equation for the reaction of chlorine with water?,2NaOH + Cl₂ → NaCl + NaClO + H₂O
 Atomic structure,What is the electronic configuration of chromium?,1s²2s²2p⁶3s²3p⁶3d⁵4s¹
 Atomic structure,What is the equation for the third ionisation energy of the element X? (Include state symbols),X²⁺ → X³⁺ + e⁻
 Atomic structure,What is the electronic configuration of copper?,1s²2s²2p⁶3s²3p⁶3d¹⁰4s¹
+Atomic structure,What is the equation for the first ionisation energy of the element X? (Include state symbols),X → X⁺ + e⁻

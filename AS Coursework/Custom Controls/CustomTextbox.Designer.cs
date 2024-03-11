@@ -35,7 +35,7 @@ namespace AS_Coursework.Custom_Controls {
             tb.Dock = DockStyle.Fill;
             tb.Location = new Point(7, 7);
             tb.Name = "tb";
-            tb.Size = new Size(236, 34);
+            tb.Size = new Size(236, 23);
             tb.TabIndex = 0;
             // 
             // CustomTextbox

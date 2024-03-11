@@ -3,6 +3,8 @@ using System.Windows.Forms.Design;
 using System.Drawing.Drawing2D;
 
 namespace AS_Coursework.Custom_Controls;
+
+// This attribute allows this control to contain child controls
 [Designer(typeof(ParentControlDesigner))]
 public partial class CustomTextbox : UserControl {
 
@@ -41,7 +43,7 @@ public partial class CustomTextbox : UserControl {
     #region Properties
 
 
-    [Category("_CustomTextbox Behaviour")]
+    [Category("_CustomTextbox Behaviour"), Description("Whether the textbox uses the password character")]
     public bool UsePasswordChar {
         get => _usePasswordChar;
         set {
@@ -91,6 +93,7 @@ public partial class CustomTextbox : UserControl {
     }
 
     [Category("_CustomTextbox Text")]
+    // Use the 'new' keyword to replace the original text property with my own improved one
     new public string Text {
         get => _isPlaceholderText ? "" : tb.Text;
         set {
@@ -100,7 +103,7 @@ public partial class CustomTextbox : UserControl {
         }
     }
 
-    [Category("_CustomTextbox Border")]
+    [Category("_CustomTextbox Border"), Description("Determines what kind of border this textbox will have.")]
     public CustomTextboxBorderStyle CustomBorderStyle {
         get => _borderStyle;
         set {
@@ -197,6 +200,7 @@ public partial class CustomTextbox : UserControl {
     }
 
     private void tb_TextChanged(object? sender, EventArgs e) {
+        // Prevent not accepted keys from being processed
         foreach (char notAccepted in _notAcceptedChars) {
             tb.Text.Replace(notAccepted.ToString(), "");
         }
@@ -208,6 +212,7 @@ public partial class CustomTextbox : UserControl {
     }
 
     private void tb_KeyDown(object? sender, KeyEventArgs e) {
+        // Prevent not accepted keys from being processed
         if (NotAcceptedKeys.Contains(e.KeyData)) {
             e.SuppressKeyPress = true;
         }
@@ -218,6 +223,7 @@ public partial class CustomTextbox : UserControl {
 
     #region Overriden methods
 
+    // The most important method - This is responsible for drawing the custom textbox
     protected override void OnPaint(PaintEventArgs e) {
         base.OnPaint(e);
 
@@ -228,7 +234,7 @@ public partial class CustomTextbox : UserControl {
         Graphics graphics = e.Graphics;
         pen.Alignment = PenAlignment.Inset;
 
-        // Draw the correct graphic for the slected border
+        // Draw the correct graphic for the selected border
         if (_borderStyle == CustomTextboxBorderStyle.Rectangle) {
             graphics.DrawRectangle(pen, 0, 0, Width - 0.5f, Height - 0.5f);
         }
@@ -237,7 +243,7 @@ public partial class CustomTextbox : UserControl {
         }
     }
 
-
+    // Ensure the control's height is correct
     protected override void OnResize(EventArgs e) {
         base.OnResize(e);
         UpdateControlHeight();
@@ -273,11 +279,17 @@ public partial class CustomTextbox : UserControl {
         }
     }
 
+    // Manager the placeholder text
     private void TrySetPlaceholderText() {
+        // Show the placeholder text if there is nothing in the textbox and it the placeholder text has been set
         if (string.IsNullOrEmpty(tb.Text) && PlaceholderText != "") {
             _isPlaceholderText = true;
+
+            // Edit the display properties of the textbox so the placeholder text looks correct
             tb.Text = PlaceholderText;
             tb.ForeColor = PlaceholderTextColor;
+
+            // Remove the password character if it has been applied
             if (UsePasswordChar) tb.UseSystemPasswordChar = false;
         }
     }
@@ -285,8 +297,12 @@ public partial class CustomTextbox : UserControl {
     private void TryRemovePlaceholderText() {
         if (_isPlaceholderText && PlaceholderText != "") {
             _isPlaceholderText = false;
+
+            // Edit the display properties of the textbox so the placeholder text looks correct
             tb.Text = "";
             tb.ForeColor = ForeColor;
+
+            // Reapply the password character if it has been applied
             if (UsePasswordChar) tb.UseSystemPasswordChar = true;
         }
     }
@@ -295,6 +311,7 @@ public partial class CustomTextbox : UserControl {
 
     #region Enums
 
+    // An enum that represents the border style
     [Flags]
     public enum CustomTextboxBorderStyle {
         None,

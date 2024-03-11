@@ -8,7 +8,7 @@ public partial class ImprovedTextbox : TextBox {
     public ImprovedTextbox() { }
 
     protected override void WndProc(ref Message m) {
-        // If the textbox recieves the show tooltip message return
+        // If the textbox recieves the show tooltip message return so it is not shown
         if (m.Msg == EM_SHOWBALLOONTIP) {
             m.Result = 0;
             return;
