@@ -5,25 +5,26 @@ using System.Text.RegularExpressions;
 namespace AS_Coursework.Model.Quiz;
 public static class QuestionDataManager {
     private const string PATH_SETTNGS = "Questions/QuizSettings.txt";
-    public static int QuestionCount { get; private set; }
+    public static int QuestionCount { get; set; }
 
     // Question data fields
     private const string PATH_MULTIPLECHOICE = "Questions/MultipleChoice.txt";
     public static List<Question> MultipleChoice { get; private set; } = ReadInMultipleChoice();
-    public static int MultipleChoiceExperienceAllocation { get; private set; }
+    public static int MultipleChoiceExperienceAllocation { get; set; }
     private const string PATH_TYPING = "Questions/Typing.txt";
     public static List<Question> Typing { get; private set; } = ReadInTyping();
-    public static int TypingExperienceAllocation { get; private set; }
+    public static int TypingExperienceAllocation { get; set; }
     private const string PATH_FLASHCARD = "Questions/Flashcard.txt";
     public static List<Question> Flashcard { get; private set; } = ReadInFlashcard();
-    public static int FlashcardExperienceAllocation { get; private set; }
+    public static int FlashcardExperienceAllocation { get; set; }
     private const string PATH_MATCHING = "Questions/Matching.txt";
     public static List<Question> Matching { get; private set; } = ReadInMatching();
-    public static int MatchingExperienceAllocation { get; private set; }
+    public static int MatchingExperienceAllocation { get; set; }
     private const string PATH_EQUATIONS = "Questions/Equation.txt";
     public static List<Question> Equation { get; private set; } = ReadInEquation();
-    public static int EquationExperienceAllocation { get; private set; }
+    public static int EquationExperienceAllocation { get; set; }
 
+    // The all list is all the question lists combined
     public static List<Question> All {
         get {
             List<Question> result = new();
@@ -45,10 +46,12 @@ public static class QuestionDataManager {
     #region Reading
 
     private static void ReadInSettings() {
+        // Read the settings file
         using StreamReader reader = new(PATH_SETTNGS);
 
         string text = reader.ReadToEnd();
 
+        // Read in the settings based on the regular experssions
         Regex QuestionCounter = new(@"Question count : (\d+)");
         QuestionCount = int.Parse(QuestionCounter.Match(text).Groups[1].Value);
 
@@ -221,7 +224,33 @@ public static class QuestionDataManager {
         // Save the questions to the file
 
         using(StreamWriter writer = new(PATH_EQUATIONS)) {
+            foreach(Question question in Equation) {
+                writer.Write(question.ToString() + "\n");
+            }
+        }
+        
+        using(StreamWriter writer = new(PATH_FLASHCARD)) {
+            foreach(Question question in Flashcard) {
+                writer.Write(question.ToString() + "\n");
+            }
+        }
 
+        using(StreamWriter writer = new(PATH_MATCHING)) {
+            foreach(Question question in Matching) {
+                writer.Write(question.ToString() + "\n");
+            }
+        }
+
+        using(StreamWriter writer = new(PATH_MULTIPLECHOICE)) {
+            foreach(Question question in MultipleChoice) {
+                writer.Write(question.ToString() + "\n");
+            }
+        }
+
+        using(StreamWriter writer = new(PATH_TYPING)) {
+            foreach(Question question in Typing) {
+                writer.Write(question.ToString() + "\n");
+            }
         }
     }
 

@@ -37,7 +37,11 @@ public partial class formMainMenu : Form {
         SetStyle(ControlStyles.UserPaint | ControlStyles.OptimizedDoubleBuffer | ControlStyles.AllPaintingInWmPaint, true);
 
         // Only show the admin page if the current user is an admin
-        if (!User.ActiveUser!.AuthenticationDetails.IsAdmin) miAdmin.Hide();
+        if (!User.ActiveUser!.AuthenticationDetails.IsAdmin) {
+            miAdmin.Hide();
+            miQuizData.Hide();
+        }
+
 
         // Display the initial use form
         DisplayUserForm(startupForm ?? new formHome());
@@ -80,12 +84,6 @@ public partial class formMainMenu : Form {
 
         if (_menuMinimised) MinimiseMenu();
         else MaximiseMenu();
-    }
-
-    protected override void OnResizeEnd(EventArgs e) {
-        base.OnResizeEnd(e);
-
-        MessageBox.Show("Test");
     }
 
     #region Menu formatting
@@ -162,6 +160,10 @@ public partial class formMainMenu : Form {
 
     private void miHelp_MenuClick(object sender, EventArgs e) {
         if (UserForm is not formHelp) DisplayUserForm(new formHelp());
+    }
+
+    private void miQuizData_Load(object sender, EventArgs e) {
+        if (UserForm is not formQuizSettings) DisplayUserForm(new formQuizSettings());
     }
 
     #endregion

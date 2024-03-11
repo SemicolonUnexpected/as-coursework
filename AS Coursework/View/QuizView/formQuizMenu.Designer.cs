@@ -73,8 +73,6 @@
             lblQuizInfo.ForeColor = Color.White;
             lblQuizInfo.Location = new Point(320, 131);
             lblQuizInfo.Margin = new Padding(18, 0, 18, 0);
-            lblQuizInfo.MaximumSize = new Size(420, 90);
-            lblQuizInfo.MinimumSize = new Size(420, 90);
             lblQuizInfo.Name = "lblQuizInfo";
             lblQuizInfo.Size = new Size(420, 90);
             lblQuizInfo.TabIndex = 6;

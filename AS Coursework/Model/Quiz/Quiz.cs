@@ -5,8 +5,8 @@ public class Quiz {
     private readonly List<Question> _questions;
     private int _index = 0;
 
-    public Quiz(QuizStyle quizStyle, int questionCount = 10) {
-        _questions = PopulateQuiz(quizStyle, questionCount);
+    public Quiz(QuizStyle quizStyle) {
+        _questions = PopulateQuiz(quizStyle, QuestionDataManager.QuestionCount);
     }
 
     public int AmountCorrect => _questions.Count(x => x.Correct is true);

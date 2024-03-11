@@ -1,6 +1,6 @@
-Question count : 10
+Question count : 5
 Multiple choice : 4
-Matching : 2
+Matching : 3
 Typing : 6
-Equation : 5
-Flashcard : 5
+Equation : 6
+Flashcard : 0

@@ -18,6 +18,7 @@ public partial class formHelp : Form {
         The quiz page allows you to start a quiz. Each quiz has 10 questions and the type of quiz can be selected from the buttons on this page.
 
         For each type of question, experience is allocated as follows...
+
         Multiple choice - {QuestionDataManager.MultipleChoiceExperienceAllocation} xp
         Matching - {QuestionDataManager.MatchingExperienceAllocation} xp
         Typing - {QuestionDataManager.TypingExperienceAllocation} xp

@@ -24,6 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             pnlMenuStrip = new Panel();
+            miQuizData = new Custom_Controls.MenuItem();
             menuItemHelp = new Custom_Controls.MenuItem();
             miSignOut = new Custom_Controls.MenuItem();
             miAdmin = new Custom_Controls.MenuItem();
@@ -41,6 +42,7 @@
             // pnlMenuStrip
             // 
             pnlMenuStrip.BackColor = Color.FromArgb(40, 40, 90);
+            pnlMenuStrip.Controls.Add(miQuizData);
             pnlMenuStrip.Controls.Add(menuItemHelp);
             pnlMenuStrip.Controls.Add(miSignOut);
             pnlMenuStrip.Controls.Add(miAdmin);
@@ -58,6 +60,22 @@
             pnlMenuStrip.TabIndex = 0;
             pnlMenuStrip.MouseEnter += MainMenuMouseMove;
             pnlMenuStrip.MouseLeave += MainMenuMouseMove;
+            // 
+            // miQuizData
+            // 
+            miQuizData.BackColor = Color.FromArgb(40, 40, 90);
+            miQuizData.BaseColor = Color.FromArgb(40, 40, 90);
+            miQuizData.Dock = DockStyle.Top;
+            miQuizData.HoverColour = Color.FromArgb(50, 50, 100);
+            miQuizData.Image = Resources.Icons.Icons.File_edit;
+            miQuizData.ImagePadding = 10;
+            miQuizData.Location = new Point(0, 292);
+            miQuizData.Margin = new Padding(1);
+            miQuizData.MenuText = "Edit quiz";
+            miQuizData.Name = "miQuizData";
+            miQuizData.Size = new Size(140, 48);
+            miQuizData.TabIndex = 8;
+            miQuizData.MenuClick += miQuizData_Load;
             // 
             // menuItemHelp
             // 
@@ -277,5 +295,6 @@
         private Custom_Controls.MenuItem miRanks;
         private Custom_Controls.CustomScrollBar sb;
         private Custom_Controls.MenuItem menuItemHelp;
+        private Custom_Controls.MenuItem miQuizData;
     }
 }
