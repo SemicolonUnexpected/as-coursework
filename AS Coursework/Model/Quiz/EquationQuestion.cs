@@ -8,6 +8,7 @@ namespace AS_Coursework.Model.Quiz;
 public class EquationQuestion : Question {
     public Equation Equation { get; private init; }
     public string Question { get; private init; }
+    public override string QuestionDescription => base.QuestionDescription + " - " + Question;
 
     public EquationQuestion(string questionName, string question, Equation equation) : base(questionName) {
         Equation = equation;

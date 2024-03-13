@@ -6,6 +6,7 @@ public class MultipleChoiceQuestion : Question {
     public string Question { get; private init; }
     public string CorrectAnswer { get; private init; }
     public string[] IncorrectAnswers { get; private init; }
+    public override string QuestionDescription => base.QuestionDescription + " - " + Question;
 
     public MultipleChoiceQuestion(string questionName, string question, string correctAnswer, params string[] incorrectAnswers) : base(questionName) {
         Question = question;

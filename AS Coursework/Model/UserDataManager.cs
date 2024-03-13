@@ -93,15 +93,15 @@ internal static class UserDataManager {
             CustomMessageBox.Show("Error", "There was an error loading user data, please contact an admin");
         }
 
-        // Add the root user if they dont exist
+        // Add the root user if they don't exist
         if (!_users.Any(x => x.AuthenticationDetails.Username == "root")) _users.Add(new User("root",
             Convert.FromHexString("12C493A8FF8694D8C18B03FF3DF3074659F53C4B17A06844FE75C97C7D2FFC7C0EB196ACE4B5632F32CFC7AC41E97A81EB986F956DEC3B9836387789EF5D3F17"),
             Convert.FromHexString("A428A3CDA544043B31391B857E0A9A935151A101C262E1D9EF3C7FB41583F6CEF59F93C3B1625CF46EB80061A73A68140C3455316F18820367A9CBC4CF9B88A0"),
             true,
-            555,
-            1,
-            10,
-            9,
+            0,
+            0,
+            0,
+            0,
             "",
             "",
             new MailAddress("root@gmail"),
@@ -112,9 +112,6 @@ internal static class UserDataManager {
     }
 
     public static void Write() {
-        // Prevent user data being overwritten if there is an error
-        if (_users.Count <= 1) return;
-
         using StreamWriter writer = new(PATH, false);
 
         string output = string.Empty;

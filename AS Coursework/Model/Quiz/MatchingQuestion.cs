@@ -5,6 +5,7 @@ using System.Text;
 
 namespace AS_Coursework.Model.Quiz;
 public class MatchingQuestion : Question {
+    public override string QuestionDescription => base.QuestionDescription + " - " + string.Join(", ", _answerPairs.Keys);
     private readonly Dictionary<string, string> _answerPairs;
     public MatchingQuestion(string questionName, Dictionary<string, string> answerPairs) : base(questionName) {
         _answerPairs = answerPairs;

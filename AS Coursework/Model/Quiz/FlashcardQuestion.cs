@@ -5,6 +5,7 @@ namespace AS_Coursework.Model.Quiz;
 public class FlashcardQuestion : Question {
     public string FrontSide { get; private init; } 
     public string BackSide { get; private init; } 
+    public override string QuestionDescription => base.QuestionDescription + " - " + FrontSide;
 
     public FlashcardQuestion(string questionName, string frontSide, string backSide) : base(questionName) {
         FrontSide = frontSide;

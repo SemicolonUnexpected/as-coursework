@@ -7,6 +7,7 @@ public class TypingQuestion : Question {
     private readonly Regex _correctAnswerRegex;
     public string Question { get; init; }
     public string CorrectAnswer { get; init; }
+    public override string QuestionDescription => base.QuestionDescription + " - " + Question;
 
     public TypingQuestion(string questionName, string question, string correctAnswer, Regex correctAnswerRegex) : base(questionName) {
         Question = question;

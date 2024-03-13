@@ -85,6 +85,10 @@ public partial class formSettings : Form {
     private void btnChangeUsername_Click(object? sender, EventArgs e) {
         string newUsername = tbNewUsername.Text;
 
+        if (_user.AuthenticationDetails.Username == "root") {
+            CustomMessageBox.Show("", "The root user cannot change their username");
+            return;
+        }
         if (string.IsNullOrWhiteSpace(newUsername)) {
             lblChangeUsernameError.Text = "Please fill in a username";
             lblChangeUsernameError.CenterX();
