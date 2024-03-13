@@ -23,9 +23,7 @@ public partial class formHome : Form {
         pbLevel.Progress = (float)user.FunctionalDetails.LeftOverExperience / 100;
         lblLevel.Text = user.FunctionalDetails.Level.ToString();
 
-        lblAnswers.Text = $"Questions answered - {user.FunctionalDetails.QuestionsAnswered}";
-        lblCorrect.Text = $"Questions correct - {user.FunctionalDetails.QuestionsCorrect}";
-        lblPercentageAccuracy.Text = $"Percentage accuracy - {user.FunctionalDetails.PercentageAccuracy} %";
+        lblAnswers.Text = $"Questions answered\n{user.FunctionalDetails.QuestionsAnswered}\nQuestions correct\n{user.FunctionalDetails.QuestionsCorrect}\nPercentage accuracy\n{user.FunctionalDetails.PercentageAccuracy} %";
 
         lblRank.Text = $"#{UserDataManager.GetUserRank(user)}";
     }

@@ -24,8 +24,8 @@
         /// </summary>
         private void InitializeComponent() {
             pnlMenuStrip = new Panel();
-            miAddQuestion = new Custom_Controls.MenuItem();
-            miQuizData = new Custom_Controls.MenuItem();
+            miEditQuiz = new Custom_Controls.MenuItem();
+            miScoring = new Custom_Controls.MenuItem();
             menuItemHelp = new Custom_Controls.MenuItem();
             miSignOut = new Custom_Controls.MenuItem();
             miAdmin = new Custom_Controls.MenuItem();
@@ -44,8 +44,8 @@
             // 
             pnlMenuStrip.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             pnlMenuStrip.BackColor = Color.FromArgb(40, 40, 90);
-            pnlMenuStrip.Controls.Add(miAddQuestion);
-            pnlMenuStrip.Controls.Add(miQuizData);
+            pnlMenuStrip.Controls.Add(miEditQuiz);
+            pnlMenuStrip.Controls.Add(miScoring);
             pnlMenuStrip.Controls.Add(menuItemHelp);
             pnlMenuStrip.Controls.Add(miSignOut);
             pnlMenuStrip.Controls.Add(miAdmin);
@@ -61,37 +61,37 @@
             pnlMenuStrip.Size = new Size(50, 600);
             pnlMenuStrip.TabIndex = 0;
             // 
-            // miAddQuestion
+            // miEditQuiz
             // 
-            miAddQuestion.BackColor = Color.FromArgb(40, 40, 90);
-            miAddQuestion.BaseColor = Color.FromArgb(40, 40, 90);
-            miAddQuestion.Dock = DockStyle.Top;
-            miAddQuestion.HoverColour = Color.FromArgb(50, 50, 100);
-            miAddQuestion.Image = Resources.Icons.Icons.Layer_plus;
-            miAddQuestion.ImagePadding = 10;
-            miAddQuestion.Location = new Point(0, 340);
-            miAddQuestion.Margin = new Padding(1);
-            miAddQuestion.MenuText = "Add";
-            miAddQuestion.Name = "miAddQuestion";
-            miAddQuestion.Size = new Size(50, 48);
-            miAddQuestion.TabIndex = 9;
-            miAddQuestion.MenuClick += miAddQuestion_MenuClick;
+            miEditQuiz.BackColor = Color.FromArgb(40, 40, 90);
+            miEditQuiz.BaseColor = Color.FromArgb(40, 40, 90);
+            miEditQuiz.Dock = DockStyle.Top;
+            miEditQuiz.HoverColour = Color.FromArgb(50, 50, 100);
+            miEditQuiz.Image = Resources.Icons.Icons.Layer_plus;
+            miEditQuiz.ImagePadding = 10;
+            miEditQuiz.Location = new Point(0, 340);
+            miEditQuiz.Margin = new Padding(1);
+            miEditQuiz.MenuText = "Edit quiz";
+            miEditQuiz.Name = "miEditQuiz";
+            miEditQuiz.Size = new Size(50, 48);
+            miEditQuiz.TabIndex = 9;
+            miEditQuiz.MenuClick += miAddQuestion_MenuClick;
             // 
-            // miQuizData
+            // miScoring
             // 
-            miQuizData.BackColor = Color.FromArgb(40, 40, 90);
-            miQuizData.BaseColor = Color.FromArgb(40, 40, 90);
-            miQuizData.Dock = DockStyle.Top;
-            miQuizData.HoverColour = Color.FromArgb(50, 50, 100);
-            miQuizData.Image = Resources.Icons.Icons.File_edit;
-            miQuizData.ImagePadding = 10;
-            miQuizData.Location = new Point(0, 292);
-            miQuizData.Margin = new Padding(1);
-            miQuizData.MenuText = "Edit quiz";
-            miQuizData.Name = "miQuizData";
-            miQuizData.Size = new Size(50, 48);
-            miQuizData.TabIndex = 8;
-            miQuizData.MenuClick += miQuizData_MenuClick;
+            miScoring.BackColor = Color.FromArgb(40, 40, 90);
+            miScoring.BaseColor = Color.FromArgb(40, 40, 90);
+            miScoring.Dock = DockStyle.Top;
+            miScoring.HoverColour = Color.FromArgb(50, 50, 100);
+            miScoring.Image = Resources.Icons.Icons.File_edit;
+            miScoring.ImagePadding = 10;
+            miScoring.Location = new Point(0, 292);
+            miScoring.Margin = new Padding(1);
+            miScoring.MenuText = "Scoring";
+            miScoring.Name = "miScoring";
+            miScoring.Size = new Size(50, 48);
+            miScoring.TabIndex = 8;
+            miScoring.MenuClick += miQuizData_MenuClick;
             // 
             // menuItemHelp
             // 
@@ -293,7 +293,7 @@
         private Custom_Controls.MenuItem miRanks;
         private Custom_Controls.CustomScrollBar sb;
         private Custom_Controls.MenuItem menuItemHelp;
-        private Custom_Controls.MenuItem miQuizData;
-        private Custom_Controls.MenuItem miAddQuestion;
+        private Custom_Controls.MenuItem miScoring;
+        private Custom_Controls.MenuItem miEditQuiz;
     }
 }

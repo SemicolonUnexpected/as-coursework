@@ -1,8 +1,5 @@
 ﻿using AS_Coursework._Helpers;
-using System;
 using System.Diagnostics;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace AS_Coursework;
 
@@ -22,7 +19,7 @@ public partial class formSplash : Form {
     }
 
     // Load for the time in milliseconds
-    public async Task SimulateLoading(int duration = 1000) {
+    public async Task SimulateLoading(int duration = 5000) {
         // Create the stopwatch and start it
         Stopwatch stopwatch = Stopwatch.StartNew();
         stopwatch.Start();

@@ -1,5 +1,6 @@
 ﻿using AS_Coursework.Custom_Controls;
 using AS_Coursework.Model.Users;
+using AS_Coursework.View.Admin;
 using AS_Coursework.View.QuizView;
 
 namespace AS_Coursework.View;
@@ -8,7 +9,6 @@ public partial class formMainMenu : Form {
     private const int MENU_WIDTH = 140;
     private const int MINIMISED_MENU_WIDTH = 50;
 
-    private bool _menuMinimised = true;
     private Form? _userForm;
     private int? _userFormBaseHeight;
 
@@ -39,7 +39,8 @@ public partial class formMainMenu : Form {
         // Only show the admin page if the current user is an admin
         if (!User.ActiveUser!.AuthenticationDetails.IsAdmin) {
             miAdmin.Hide();
-            miQuizData.Hide();
+            miScoring.Hide();
+            miEditQuiz.Hide();
         }
 
         // Setup menu sizing

@@ -266,5 +266,13 @@ public static class QuestionDataManager {
         WriteQuestions();
     }
 
+    public static void RemoveQuestion(Question question) {
+        if (question is MultipleChoiceQuestion) MultipleChoice.Remove(question);
+        if (question is MatchingQuestion) Matching.Remove(question);
+        if (question is TypingQuestion) Typing.Remove(question);
+        if (question is EquationQuestion) Equation.Remove(question);
+        if (question is FlashcardQuestion) Flashcard.Remove(question);
+    }
+
     #endregion
 }

@@ -36,8 +36,6 @@
             lblUsername = new Label();
             pnlAccuracy = new Custom_Controls.CustomRectangle();
             lblAccuracyTitle = new Label();
-            lblPercentageAccuracy = new Label();
-            lblCorrect = new Label();
             lblAnswers = new Label();
             pnlLevel.SuspendLayout();
             pnlRank.SuspendLayout();
@@ -209,8 +207,6 @@
             pnlAccuracy.BorderColor = Color.White;
             pnlAccuracy.BorderWidth = 0;
             pnlAccuracy.Controls.Add(lblAccuracyTitle);
-            pnlAccuracy.Controls.Add(lblPercentageAccuracy);
-            pnlAccuracy.Controls.Add(lblCorrect);
             pnlAccuracy.Controls.Add(lblAnswers);
             pnlAccuracy.CornerRadius = 20;
             pnlAccuracy.Location = new Point(270, 345);
@@ -233,32 +229,6 @@
             lblAccuracyTitle.TabIndex = 2;
             lblAccuracyTitle.Text = "Accuracy";
             // 
-            // lblPercentageAccuracy
-            // 
-            lblPercentageAccuracy.Anchor = AnchorStyles.Left;
-            lblPercentageAccuracy.AutoEllipsis = true;
-            lblPercentageAccuracy.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblPercentageAccuracy.ForeColor = Color.White;
-            lblPercentageAccuracy.Location = new Point(10, 133);
-            lblPercentageAccuracy.Margin = new Padding(10, 5, 10, 5);
-            lblPercentageAccuracy.Name = "lblPercentageAccuracy";
-            lblPercentageAccuracy.Size = new Size(190, 25);
-            lblPercentageAccuracy.TabIndex = 2;
-            lblPercentageAccuracy.Text = "Percentage accuracy - ";
-            // 
-            // lblCorrect
-            // 
-            lblCorrect.Anchor = AnchorStyles.Left;
-            lblCorrect.AutoEllipsis = true;
-            lblCorrect.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            lblCorrect.ForeColor = Color.White;
-            lblCorrect.Location = new Point(10, 98);
-            lblCorrect.Margin = new Padding(10, 5, 10, 5);
-            lblCorrect.Name = "lblCorrect";
-            lblCorrect.Size = new Size(190, 25);
-            lblCorrect.TabIndex = 2;
-            lblCorrect.Text = "Questions correct - ";
-            // 
             // lblAnswers
             // 
             lblAnswers.Anchor = AnchorStyles.Left;
@@ -268,9 +238,10 @@
             lblAnswers.Location = new Point(10, 63);
             lblAnswers.Margin = new Padding(10, 5, 10, 5);
             lblAnswers.Name = "lblAnswers";
-            lblAnswers.Size = new Size(190, 25);
+            lblAnswers.Size = new Size(190, 142);
             lblAnswers.TabIndex = 2;
             lblAnswers.Text = "Questions answered - ";
+            lblAnswers.TextAlign = ContentAlignment.TopCenter;
             // 
             // formHome
             // 
@@ -311,8 +282,6 @@
         private Custom_Controls.CustomRectangle pnlAccuracy;
         private Label lblAccuracyTitle;
         private Label lblRank;
-        private Label lblPercentageAccuracy;
-        private Label lblCorrect;
         private Label lblAnswers;
         private Label lblLevel;
         private Panel pnl;

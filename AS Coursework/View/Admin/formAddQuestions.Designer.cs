@@ -1,4 +1,4 @@
-﻿namespace AS_Coursework.View {
+﻿namespace AS_Coursework.View.Admin {
     partial class formAddQuestions {
         /// <summary>
         /// Required designer variable.
@@ -31,9 +31,7 @@
             btnDeleteQuesiton = new Custom_Controls.CustomButton();
             lbQuestionSelector = new ListBox();
             btnAddQuesiton = new Custom_Controls.CustomButton();
-            comboBox1 = new ComboBox();
-            comboBox2 = new ComboBox();
-            label1 = new Label();
+            cbQuestionType = new ComboBox();
             SuspendLayout();
             // 
             // lblAdminInfo
@@ -143,11 +141,10 @@
             lbQuestionSelector.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lbQuestionSelector.FormattingEnabled = true;
             lbQuestionSelector.ItemHeight = 23;
-            lbQuestionSelector.Location = new Point(80, 216);
+            lbQuestionSelector.Location = new Point(80, 193);
             lbQuestionSelector.Name = "lbQuestionSelector";
-            lbQuestionSelector.Size = new Size(493, 257);
+            lbQuestionSelector.Size = new Size(493, 280);
             lbQuestionSelector.TabIndex = 7;
-            lbQuestionSelector.SelectedIndexChanged += listBox1_SelectedIndexChanged;
             // 
             // btnAddQuesiton
             // 
@@ -169,46 +166,20 @@
             btnAddQuesiton.TabIndex = 5;
             btnAddQuesiton.Text = "Add question";
             btnAddQuesiton.UseVisualStyleBackColor = false;
-            btnAddQuesiton.Click += btnDeleteQuestion_Click;
+            btnAddQuesiton.Click += btnAddQuesiton_Click;
             // 
-            // comboBox1
+            // cbQuestionType
             // 
-            comboBox1.Anchor = AnchorStyles.None;
-            comboBox1.BackColor = Color.White;
-            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox1.FlatStyle = FlatStyle.Flat;
-            comboBox1.Font = new Font("Bahnschrift", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(80, 545);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(367, 33);
-            comboBox1.TabIndex = 6;
-            // 
-            // comboBox2
-            // 
-            comboBox2.Anchor = AnchorStyles.None;
-            comboBox2.BackColor = Color.White;
-            comboBox2.DropDownStyle = ComboBoxStyle.DropDownList;
-            comboBox2.FlatStyle = FlatStyle.Flat;
-            comboBox2.Font = new Font("Bahnschrift", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(213, 177);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(360, 33);
-            comboBox2.TabIndex = 8;
-            // 
-            // label1
-            // 
-            label1.Anchor = AnchorStyles.None;
-            label1.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.ForeColor = Color.White;
-            label1.Location = new Point(60, 180);
-            label1.Margin = new Padding(2, 0, 2, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(145, 26);
-            label1.TabIndex = 9;
-            label1.Text = "Question type:";
-            label1.TextAlign = ContentAlignment.MiddleCenter;
+            cbQuestionType.Anchor = AnchorStyles.None;
+            cbQuestionType.BackColor = Color.White;
+            cbQuestionType.DropDownStyle = ComboBoxStyle.DropDownList;
+            cbQuestionType.FlatStyle = FlatStyle.Flat;
+            cbQuestionType.Font = new Font("Bahnschrift", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            cbQuestionType.FormattingEnabled = true;
+            cbQuestionType.Location = new Point(80, 545);
+            cbQuestionType.Name = "cbQuestionType";
+            cbQuestionType.Size = new Size(367, 33);
+            cbQuestionType.TabIndex = 6;
             // 
             // formAddQuestions
             // 
@@ -216,10 +187,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(20, 20, 50);
             ClientSize = new Size(650, 600);
-            Controls.Add(label1);
-            Controls.Add(comboBox2);
             Controls.Add(lbQuestionSelector);
-            Controls.Add(comboBox1);
+            Controls.Add(cbQuestionType);
             Controls.Add(btnAddQuesiton);
             Controls.Add(btnDeleteQuesiton);
             Controls.Add(tbSearch);
@@ -230,7 +199,6 @@
             Margin = new Padding(2);
             Name = "formAddQuestions";
             Text = "formUserHome";
-            Load += formAddQuestions_Load;
             ResumeLayout(false);
         }
 
@@ -243,8 +211,6 @@
         private Custom_Controls.CustomButton btnDeleteQuesiton;
         private ListBox lbQuestionSelector;
         private Custom_Controls.CustomButton btnAddQuesiton;
-        private ComboBox comboBox1;
-        private ComboBox comboBox2;
-        private Label label1;
+        private ComboBox cbQuestionType;
     }
 }

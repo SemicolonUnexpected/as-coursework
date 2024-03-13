@@ -59,6 +59,8 @@ public partial class formHelp : Form {
         C_{n}H_{2n + 1} corresponds to CₙH₂ₙ₊₂
         Al^{3+} corresponds to Al³⁺
         F^{-} corresponds to F⁻
+        -> corresponds to →
+        <-> corresponds to ⇌
         """;
 
     public formHelp() {

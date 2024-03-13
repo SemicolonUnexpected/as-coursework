@@ -17,7 +17,7 @@ public class FunctionalDetails {
     public double PercentageAccuracy {
         get {
             if (QuestionsAnswered == 0) return 0;
-            return Math.Round((double)QuestionsCorrect/ QuestionsAnswered * 100, 2);
+            return Math.Round((double)QuestionsCorrect/ QuestionsAnswered * 100, 1);
         }
     }
 
