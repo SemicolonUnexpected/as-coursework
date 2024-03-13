@@ -5,6 +5,7 @@ namespace AS_Coursework.Model.Quiz;
 // The base class from which all the question classes inherit
 public abstract class Question {
     public string QuestionName { get; protected init; }
+    public virtual string QuestionDescription => QuestionName; 
     public int AllocatedExperience { get; protected set; }
 
     // Represents whether the question has been answered correctly

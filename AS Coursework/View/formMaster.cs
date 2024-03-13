@@ -8,6 +8,10 @@ public partial class formMaster : Form {
     public Form? ChildView { get; private set; }
 
     public formMaster() {
+        // Ensure that the data has been read in as soon as the quiz starts
+        UserDataManager.ReadIn();
+        QuestionDataManager.ReadIn();
+
         InitializeComponent();
 
         DisplayFormAfterSplash(new formLogin());

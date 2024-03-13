@@ -24,6 +24,7 @@
         /// </summary>
         private void InitializeComponent() {
             pnlMenuStrip = new Panel();
+            miAddQuestion = new Custom_Controls.MenuItem();
             miQuizData = new Custom_Controls.MenuItem();
             menuItemHelp = new Custom_Controls.MenuItem();
             miSignOut = new Custom_Controls.MenuItem();
@@ -41,7 +42,9 @@
             // 
             // pnlMenuStrip
             // 
+            pnlMenuStrip.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             pnlMenuStrip.BackColor = Color.FromArgb(40, 40, 90);
+            pnlMenuStrip.Controls.Add(miAddQuestion);
             pnlMenuStrip.Controls.Add(miQuizData);
             pnlMenuStrip.Controls.Add(menuItemHelp);
             pnlMenuStrip.Controls.Add(miSignOut);
@@ -52,14 +55,27 @@
             pnlMenuStrip.Controls.Add(miHome);
             pnlMenuStrip.Controls.Add(pnlMenuDivider);
             pnlMenuStrip.Controls.Add(miMenu);
-            pnlMenuStrip.Dock = DockStyle.Left;
             pnlMenuStrip.Location = new Point(0, 0);
             pnlMenuStrip.Margin = new Padding(2);
             pnlMenuStrip.Name = "pnlMenuStrip";
-            pnlMenuStrip.Size = new Size(140, 600);
+            pnlMenuStrip.Size = new Size(50, 600);
             pnlMenuStrip.TabIndex = 0;
-            pnlMenuStrip.MouseEnter += MainMenuMouseMove;
-            pnlMenuStrip.MouseLeave += MainMenuMouseMove;
+            // 
+            // miAddQuestion
+            // 
+            miAddQuestion.BackColor = Color.FromArgb(40, 40, 90);
+            miAddQuestion.BaseColor = Color.FromArgb(40, 40, 90);
+            miAddQuestion.Dock = DockStyle.Top;
+            miAddQuestion.HoverColour = Color.FromArgb(50, 50, 100);
+            miAddQuestion.Image = Resources.Icons.Icons.Layer_plus;
+            miAddQuestion.ImagePadding = 10;
+            miAddQuestion.Location = new Point(0, 340);
+            miAddQuestion.Margin = new Padding(1);
+            miAddQuestion.MenuText = "Add";
+            miAddQuestion.Name = "miAddQuestion";
+            miAddQuestion.Size = new Size(50, 48);
+            miAddQuestion.TabIndex = 9;
+            miAddQuestion.MenuClick += miAddQuestion_MenuClick;
             // 
             // miQuizData
             // 
@@ -73,9 +89,9 @@
             miQuizData.Margin = new Padding(1);
             miQuizData.MenuText = "Edit quiz";
             miQuizData.Name = "miQuizData";
-            miQuizData.Size = new Size(140, 48);
+            miQuizData.Size = new Size(50, 48);
             miQuizData.TabIndex = 8;
-            miQuizData.MenuClick += miQuizData_Load;
+            miQuizData.MenuClick += miQuizData_MenuClick;
             // 
             // menuItemHelp
             // 
@@ -89,11 +105,9 @@
             menuItemHelp.Margin = new Padding(1);
             menuItemHelp.MenuText = "Help";
             menuItemHelp.Name = "menuItemHelp";
-            menuItemHelp.Size = new Size(140, 48);
+            menuItemHelp.Size = new Size(50, 48);
             menuItemHelp.TabIndex = 7;
             menuItemHelp.MenuClick += miHelp_MenuClick;
-            menuItemHelp.MouseEnter += MainMenuMouseMove;
-            menuItemHelp.MouseLeave += MainMenuMouseMove;
             // 
             // miSignOut
             // 
@@ -107,11 +121,9 @@
             miSignOut.Margin = new Padding(1);
             miSignOut.MenuText = "Sign out";
             miSignOut.Name = "miSignOut";
-            miSignOut.Size = new Size(140, 48);
+            miSignOut.Size = new Size(50, 48);
             miSignOut.TabIndex = 6;
             miSignOut.MenuClick += miSignOut_MenuClick;
-            miSignOut.MouseEnter += MainMenuMouseMove;
-            miSignOut.MouseLeave += MainMenuMouseMove;
             // 
             // miAdmin
             // 
@@ -125,11 +137,9 @@
             miAdmin.Margin = new Padding(1);
             miAdmin.MenuText = "Admin";
             miAdmin.Name = "miAdmin";
-            miAdmin.Size = new Size(140, 48);
+            miAdmin.Size = new Size(50, 48);
             miAdmin.TabIndex = 5;
             miAdmin.MenuClick += miAdmin_MenuClick;
-            miAdmin.MouseEnter += MainMenuMouseMove;
-            miAdmin.MouseLeave += MainMenuMouseMove;
             // 
             // miSettings
             // 
@@ -140,14 +150,12 @@
             miSettings.Image = Resources.Icons.Icons.Settings;
             miSettings.ImagePadding = 10;
             miSettings.Location = new Point(0, 196);
-            miSettings.Margin = new Padding(1);
+            miSettings.Margin = new Padding(2);
             miSettings.MenuText = "Settings";
             miSettings.Name = "miSettings";
-            miSettings.Size = new Size(140, 48);
-            miSettings.TabIndex = 4;
+            miSettings.Size = new Size(50, 48);
+            miSettings.TabIndex = 10;
             miSettings.MenuClick += miSettings_MenuClick;
-            miSettings.MouseEnter += MainMenuMouseMove;
-            miSettings.MouseLeave += MainMenuMouseMove;
             // 
             // miRanks
             // 
@@ -161,11 +169,9 @@
             miRanks.Margin = new Padding(1);
             miRanks.MenuText = "Ranks";
             miRanks.Name = "miRanks";
-            miRanks.Size = new Size(140, 48);
+            miRanks.Size = new Size(50, 48);
             miRanks.TabIndex = 3;
             miRanks.MenuClick += miRanks_Click;
-            miRanks.MouseEnter += MainMenuMouseMove;
-            miRanks.MouseLeave += MainMenuMouseMove;
             // 
             // miQuiz
             // 
@@ -179,11 +185,9 @@
             miQuiz.Margin = new Padding(1);
             miQuiz.MenuText = "Quiz";
             miQuiz.Name = "miQuiz";
-            miQuiz.Size = new Size(140, 48);
+            miQuiz.Size = new Size(50, 48);
             miQuiz.TabIndex = 2;
             miQuiz.MenuClick += miQuiz_MenuClick;
-            miQuiz.MouseEnter += MainMenuMouseMove;
-            miQuiz.MouseLeave += MainMenuMouseMove;
             // 
             // miHome
             // 
@@ -197,11 +201,9 @@
             miHome.Margin = new Padding(1);
             miHome.MenuText = "Home";
             miHome.Name = "miHome";
-            miHome.Size = new Size(140, 48);
+            miHome.Size = new Size(50, 48);
             miHome.TabIndex = 1;
             miHome.MenuClick += miHome_MenuClick;
-            miHome.MouseEnter += MainMenuMouseMove;
-            miHome.MouseLeave += MainMenuMouseMove;
             // 
             // pnlMenuDivider
             // 
@@ -210,10 +212,8 @@
             pnlMenuDivider.Location = new Point(0, 48);
             pnlMenuDivider.Margin = new Padding(2);
             pnlMenuDivider.Name = "pnlMenuDivider";
-            pnlMenuDivider.Size = new Size(140, 4);
+            pnlMenuDivider.Size = new Size(50, 4);
             pnlMenuDivider.TabIndex = 2;
-            pnlMenuDivider.MouseEnter += MainMenuMouseMove;
-            pnlMenuDivider.MouseLeave += MainMenuMouseMove;
             // 
             // miMenu
             // 
@@ -227,18 +227,16 @@
             miMenu.Margin = new Padding(1);
             miMenu.MenuText = "Menu";
             miMenu.Name = "miMenu";
-            miMenu.Size = new Size(140, 48);
+            miMenu.Size = new Size(50, 48);
             miMenu.TabIndex = 0;
-            miMenu.MouseEnter += MainMenuMouseMove;
-            miMenu.MouseLeave += MainMenuMouseMove;
             // 
             // pnlUserViewHolder
             // 
-            pnlUserViewHolder.Dock = DockStyle.Fill;
-            pnlUserViewHolder.Location = new Point(140, 0);
+            pnlUserViewHolder.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pnlUserViewHolder.Location = new Point(51, 0);
             pnlUserViewHolder.Margin = new Padding(2);
             pnlUserViewHolder.Name = "pnlUserViewHolder";
-            pnlUserViewHolder.Size = new Size(650, 600);
+            pnlUserViewHolder.Size = new Size(739, 600);
             pnlUserViewHolder.TabIndex = 0;
             // 
             // sb
@@ -269,9 +267,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(20, 20, 50);
             ClientSize = new Size(800, 600);
-            Controls.Add(pnlUserViewHolder);
             Controls.Add(sb);
             Controls.Add(pnlMenuStrip);
+            Controls.Add(pnlUserViewHolder);
             DoubleBuffered = true;
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(2);
@@ -296,5 +294,6 @@
         private Custom_Controls.CustomScrollBar sb;
         private Custom_Controls.MenuItem menuItemHelp;
         private Custom_Controls.MenuItem miQuizData;
+        private Custom_Controls.MenuItem miAddQuestion;
     }
 }

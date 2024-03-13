@@ -9,19 +9,19 @@ public static class QuestionDataManager {
 
     // Question data fields
     private const string PATH_MULTIPLECHOICE = "Questions/MultipleChoice.txt";
-    public static List<Question> MultipleChoice { get; private set; } = ReadInMultipleChoice();
+    public static List<Question> MultipleChoice { get; private set; } = new List<Question>();
     public static int MultipleChoiceExperienceAllocation { get; set; }
     private const string PATH_TYPING = "Questions/Typing.txt";
-    public static List<Question> Typing { get; private set; } = ReadInTyping();
+    public static List<Question> Typing { get; private set; } = new List<Question>();
     public static int TypingExperienceAllocation { get; set; }
     private const string PATH_FLASHCARD = "Questions/Flashcard.txt";
-    public static List<Question> Flashcard { get; private set; } = ReadInFlashcard();
+    public static List<Question> Flashcard { get; private set; } = new List<Question>();
     public static int FlashcardExperienceAllocation { get; set; }
     private const string PATH_MATCHING = "Questions/Matching.txt";
-    public static List<Question> Matching { get; private set; } = ReadInMatching();
+    public static List<Question> Matching { get; private set; } = new List<Question>();
     public static int MatchingExperienceAllocation { get; set; }
     private const string PATH_EQUATIONS = "Questions/Equation.txt";
-    public static List<Question> Equation { get; private set; } = ReadInEquation();
+    public static List<Question> Equation { get; private set; } = new List<Question>();
     public static int EquationExperienceAllocation { get; set; }
 
     // The all list is all the question lists combined
@@ -39,11 +39,18 @@ public static class QuestionDataManager {
         }
     }
 
-    static QuestionDataManager() {
-        ReadInSettings();
-    }
-
     #region Reading
+
+    public static void ReadIn() {
+        ReadInSettings();
+
+        // Read in all the questions
+        MultipleChoice = ReadInMultipleChoice();
+        Matching = ReadInMatching();
+        Typing = ReadInTyping();
+        Equation = ReadInEquation();
+        Flashcard = ReadInFlashcard();
+    }
 
     private static void ReadInSettings() {
         // Read the settings file

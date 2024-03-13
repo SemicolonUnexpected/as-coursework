@@ -5,6 +5,7 @@ namespace AS_Coursework.View.QuizView;
 public partial class formQuiz : Form {
     private readonly Quiz _quiz;
     private IQuestionForm _questionForm;
+
     public formQuiz(Quiz.QuizStyle quizStyle) {
         InitializeComponent();
 

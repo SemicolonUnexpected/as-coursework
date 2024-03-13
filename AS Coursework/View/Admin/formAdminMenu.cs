@@ -19,7 +19,10 @@ public partial class formAdminMenu : Form {
     }
 
     private void btnViewUser_Click(object sender, EventArgs e) {
-        if (clbUserSelector.SelectedValue is null) return;
+        if (clbUserSelector.SelectedValue is null) {
+            CustomMessageBox.Show("", "No user selected");
+            return;
+        }
         if ((string)clbUserSelector.SelectedValue == User.ActiveUser!.AuthenticationDetails.Username) {
             CustomMessageBox.Show("", "You cannot view yourself here, go to your own settings page to see this");
             return;

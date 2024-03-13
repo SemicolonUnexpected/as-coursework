@@ -42,6 +42,18 @@ public partial class formMainMenu : Form {
             miQuizData.Hide();
         }
 
+        // Setup menu sizing
+        System.Windows.Forms.Timer timer = new() {
+            Interval = 100
+        };
+
+        timer.Start();
+
+        // This method maximises the menu if the user hovers over it and minimises it otherwise
+        timer.Tick += (_, _) => {
+            if (pnlMenuStrip.ClientRectangle.Contains(PointToClient(MousePosition))) MaximiseMenu();
+            else MinimiseMenu();
+        };
 
         // Display the initial use form
         DisplayUserForm(startupForm ?? new formHome());
@@ -81,9 +93,6 @@ public partial class formMainMenu : Form {
         }
 
         UserForm.Width = Width - MINIMISED_MENU_WIDTH;
-
-        if (_menuMinimised) MinimiseMenu();
-        else MaximiseMenu();
     }
 
     #region Menu formatting
@@ -92,15 +101,12 @@ public partial class formMainMenu : Form {
         pnlMenuStrip.Width = MINIMISED_MENU_WIDTH;
 
         if (UserForm is null) return;
-        UserForm.Location = new Point(0, 0);
     }
 
     private void MaximiseMenu() {
         pnlMenuStrip.Width = MENU_WIDTH;
 
         if (UserForm is null) return;
-        UserForm.Location = new Point(MINIMISED_MENU_WIDTH - MENU_WIDTH, 0);
-
         Refresh();
     }
 
@@ -118,7 +124,7 @@ public partial class formMainMenu : Form {
         UserForm.Enabled = true;
         UserForm.Visible = true;
         UserForm.Width = Width - MINIMISED_MENU_WIDTH;
-        UserForm.Location = _menuMinimised ? new Point(0, 0) : new Point(MINIMISED_MENU_WIDTH - MENU_WIDTH, 0);
+        UserForm.Location = new Point(0, 0);
 
         // Display in panel
         pnlUserViewHolder.Controls.Clear();
@@ -162,8 +168,12 @@ public partial class formMainMenu : Form {
         if (UserForm is not formHelp) DisplayUserForm(new formHelp());
     }
 
-    private void miQuizData_Load(object sender, EventArgs e) {
+    private void miQuizData_MenuClick(object sender, EventArgs e) {
         if (UserForm is not formQuizSettings) DisplayUserForm(new formQuizSettings());
+    }
+
+    private void miAddQuestion_MenuClick(object sender, EventArgs e) {
+        if (UserForm is not formAddQuestions) DisplayUserForm(new formAddQuestions());
     }
 
     #endregion
@@ -175,12 +185,7 @@ public partial class formMainMenu : Form {
 
     private void sb_ValueChanged(object sender, EventArgs e) {
         if (UserForm is null) return;
-        UserForm.Location = new Point(_menuMinimised ? 0 : -125, -sb.Value);
+        UserForm.Location = new Point(0, -sb.Value);
         Refresh();
-    }
-
-    private void MainMenuMouseMove(object sender, EventArgs e) {
-        if (pnlMenuStrip.ClientRectangle.Contains(PointToClient(MousePosition))) MaximiseMenu();
-        else MinimiseMenu();
     }
 }

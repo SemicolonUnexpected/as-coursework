@@ -51,11 +51,7 @@ internal static class UserDataManager {
 
     #endregion
 
-    static UserDataManager() {
-        ReadIn();
-    }
-
-    private static void ReadIn() {
+    public static void ReadIn() {
         // ensure the file exists
         if (!File.Exists(PATH)) File.Create(PATH);
 
