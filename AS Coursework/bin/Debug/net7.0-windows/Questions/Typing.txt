@@ -1,4 +1,3 @@
 Ions,What is an anion?,Negative ion,^a? negative ion$
 Bonding,What is a covalent bond?,The electrostatic attraction between a shared pair of electrons and the nuclei of the covalently bonded atoms,^(?:the +)?electrostatic attraction between(?: a) shared pair of electrons and the nuclei of the (?:covalently bonded atoms)|(atoms in a covalent bond)$
 Alkenes,What is a nucleophile?,a molecule or ion that attacks a region of high electron density,$(?:[Aa] )?molecule or ion that attacks a region of high electron density$
-
