@@ -57,7 +57,7 @@
             lblQuizInfo.Name = "lblQuizInfo";
             lblQuizInfo.Size = new Size(420, 90);
             lblQuizInfo.TabIndex = 6;
-            lblQuizInfo.Text = "Here are the quiz settings. You can adjust these as you see fit. Changes will be applied instantly";
+            lblQuizInfo.Text = "Here are the quiz settings. You can adjust these as you see fit. Changes will be applied instantly.";
             lblQuizInfo.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // upDownMultipleChoice

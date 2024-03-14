@@ -142,7 +142,7 @@
             tbPassword.Location = new Point(43, 279);
             tbPassword.Margin = new Padding(19, 21, 19, 21);
             tbPassword.Name = "tbPassword";
-            tbPassword.Padding = new Padding(5, 6, 26, 6);
+            tbPassword.Padding = new Padding(5, 6, 30, 6);
             tbPassword.PlaceholderText = "Password";
             tbPassword.PlaceholderTextColor = Color.White;
             tbPassword.ShortcutEnabled = false;
@@ -153,11 +153,10 @@
             // 
             // pbPasswordView
             // 
-            pbPasswordView.Anchor = AnchorStyles.None;
             pbPasswordView.Image = Resources.Icons.Icons.Eye;
-            pbPasswordView.Location = new Point(300, 8);
+            pbPasswordView.Location = new Point(196, 4);
             pbPasswordView.Name = "pbPasswordView";
-            pbPasswordView.Size = new Size(30, 30);
+            pbPasswordView.Size = new Size(25, 25);
             pbPasswordView.SizeMode = PictureBoxSizeMode.StretchImage;
             pbPasswordView.TabIndex = 1;
             pbPasswordView.TabStop = false;

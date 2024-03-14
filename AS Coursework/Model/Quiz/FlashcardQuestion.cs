@@ -14,7 +14,7 @@ public class FlashcardQuestion : Question {
 
     public void Answered(bool isCorrect) {
         Correct = isCorrect;
-        AllocatedExperience = isCorrect ? 1 : 0;
+        AllocatedExperience = isCorrect ? QuestionDataManager.FlashcardExperienceAllocation : 0;
     }
 
     public override Form DisplayQuestion() {

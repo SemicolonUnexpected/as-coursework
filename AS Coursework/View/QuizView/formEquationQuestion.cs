@@ -10,6 +10,8 @@ public partial class formEquationQuestion : Form, IQuestionForm {
         _question = question;
 
         lblQuestionText.Text = _question.Question;
+        lblQuestionTitle.Text = _question.QuestionName;
+        lblIsCorrect.Text = "";
     }
 
     public event EventHandler? NextQuestion;

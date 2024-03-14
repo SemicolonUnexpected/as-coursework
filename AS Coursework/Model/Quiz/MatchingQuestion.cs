@@ -37,7 +37,7 @@ public class MatchingQuestion : Question {
             return false;
         }
         else if (_answerPairs[key] == value) {
-            AllocatedExperience += 5;
+            AllocatedExperience += QuestionDataManager.MatchingExperienceAllocation;
             return true;
         }
         else return false;

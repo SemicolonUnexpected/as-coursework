@@ -1,2 +1,2 @@
-Halogens,Which of the following halogens has the greatest oxidising power?,Fluorine,Iodine,Bromine,Chlorine
-Halogens,Which of the following halogens has the greatest reducing power?,Iodine,Chlorine,Bromine,Iodine,Fluorine
+Halogens,Which of the following halogens has the greatest reducing power?,Iodine,Bromine,Fluorine,Iodine,Chlorine
+Halogens,Which of the following halogens has the greatest oxidising power?,Fluorine,Iodine,Chlorine,Bromine

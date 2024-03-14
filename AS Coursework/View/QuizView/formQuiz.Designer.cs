@@ -38,7 +38,7 @@
             // 
             // btnExit
             // 
-            btnExit.Anchor = AnchorStyles.None;
+            btnExit.Anchor = AnchorStyles.Top;
             btnExit.BackColor = Color.FromArgb(20, 20, 50);
             btnExit.BorderColor = Color.WhiteSmoke;
             btnExit.BorderWidth = 0;

@@ -101,6 +101,7 @@ public partial class formSettings : Form {
         }
 
         _user.AuthenticationDetails.Username = newUsername;
+        tbNewUsername.Text = "";
         PopulateDataDisplay();
     }
 
@@ -114,6 +115,7 @@ public partial class formSettings : Form {
         }
 
         _user.MiscDetails.Email = newEmail;
+        tbNewEmail.Text = "";
         PopulateDataDisplay();
     }
 
@@ -127,19 +129,21 @@ public partial class formSettings : Form {
         }
 
         _user.MiscDetails.Forename = newForename;
+        tbNewForename.Text = "";
         PopulateDataDisplay();
     }
 
     private void btnChangeSurname_Click(object? sender, EventArgs e) {
-        string newSurname = tbNewForename.Text;
+        string newSurname = tbNewSurname.Text;
 
         if (string.IsNullOrWhiteSpace(newSurname)) {
-            lblChangeSurnameError.Text = "Please fill in a forename";
+            lblChangeSurnameError.Text = "Please fill in a surname";
             lblChangeSurnameError.CenterX();
             return;
         }
 
         _user.MiscDetails.Surname = newSurname;
+        tbNewSurname.Text = "";
         PopulateDataDisplay();
     }
 
@@ -158,7 +162,20 @@ public partial class formSettings : Form {
         }
 
         _user.MiscDetails.DateOfBirth = dtpDateOfBirth.Value;
+        lblChangeDateOfBirthError.Text = "";
         CustomMessageBox.Show("Date of birth", "Date of birth changed");
+    }
+
+    private void dtpDateOfBirth_ValueChanged(object sender, EventArgs e) {
+        // Set the text to error text if the date of birth would make the user too young
+        if (!DataValidator.IsUserOldEnough(dtpDateOfBirth.Value)) {
+            lblChangeDateOfBirthError.Text = $"You must be {DataValidator.MINIMUM_USER_AGE} to have an account";
+            lblChangeDateOfBirthError.CenterX();
+            return;
+        }
+
+        lblChangeDateOfBirthError.Text = "";
+        _user.MiscDetails.DateOfBirth = dtpDateOfBirth.Value;
     }
 
     private void btnReset_Click(object? sender, EventArgs e) {
@@ -175,6 +192,7 @@ public partial class formSettings : Form {
             (ActiveForm as formMaster)?.DisplayForm(_openedAsAdmin ? new formMainMenu(new formAdminMenu()) : new formLogin());
         }
     }
+
     private bool CheckPasswordOk() {
         string passwordError = "";
 
@@ -217,6 +235,9 @@ public partial class formSettings : Form {
 
             CustomMessageBox.Show("Password changed", "Your password has been updated. Do not forget it.");
         }
+
+        tbNewPassword.Text = "";
+        tbConfirmPassword.Text = "";
     }
 
     #endregion

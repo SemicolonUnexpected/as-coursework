@@ -33,15 +33,17 @@
             btnReturnToLogin.BackColor = Color.FromArgb(0, 150, 255);
             btnReturnToLogin.BorderColor = Color.White;
             btnReturnToLogin.BorderWidth = 2;
-            btnReturnToLogin.CornerRadius = 20;
+            btnReturnToLogin.CornerRadius = 10;
             btnReturnToLogin.FlatAppearance.BorderSize = 0;
             btnReturnToLogin.FlatStyle = FlatStyle.Flat;
             btnReturnToLogin.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             btnReturnToLogin.ForeColor = Color.White;
-            btnReturnToLogin.Location = new Point(111, 498);
-            btnReturnToLogin.Margin = new Padding(28, 31, 28, 31);
+            btnReturnToLogin.Image = null;
+            btnReturnToLogin.ImageSize = new Size(150, 40);
+            btnReturnToLogin.Location = new Point(78, 299);
+            btnReturnToLogin.Margin = new Padding(20, 19, 20, 19);
             btnReturnToLogin.Name = "btnReturnToLogin";
-            btnReturnToLogin.Size = new Size(244, 62);
+            btnReturnToLogin.Size = new Size(171, 37);
             btnReturnToLogin.TabIndex = 2;
             btnReturnToLogin.Text = "Return to login";
             btnReturnToLogin.UseVisualStyleBackColor = false;
@@ -53,24 +55,25 @@
             lblCreateAccount.AutoSize = true;
             lblCreateAccount.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblCreateAccount.ForeColor = Color.White;
-            lblCreateAccount.Location = new Point(29, 52);
-            lblCreateAccount.MaximumSize = new Size(416, 0);
+            lblCreateAccount.Location = new Point(20, 31);
+            lblCreateAccount.Margin = new Padding(2, 0, 2, 0);
+            lblCreateAccount.MaximumSize = new Size(291, 0);
             lblCreateAccount.Name = "lblCreateAccount";
-            lblCreateAccount.Size = new Size(375, 58);
+            lblCreateAccount.Size = new Size(289, 38);
             lblCreateAccount.TabIndex = 4;
             lblCreateAccount.Text = "Your account has been created. Return to the login screen to login";
             lblCreateAccount.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // formRegisterCreateAccount
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(20, 20, 50);
-            ClientSize = new Size(456, 600);
+            ClientSize = new Size(319, 360);
             Controls.Add(btnReturnToLogin);
             Controls.Add(lblCreateAccount);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
+            Margin = new Padding(2, 2, 2, 2);
             Name = "formRegisterCreateAccount";
             Text = "RegisterCreateAccountView";
             ResumeLayout(false);

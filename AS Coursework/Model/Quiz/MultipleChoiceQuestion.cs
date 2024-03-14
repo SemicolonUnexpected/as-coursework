@@ -18,7 +18,7 @@ public class MultipleChoiceQuestion : Question {
     public bool CheckAnswer(string answer) {
         bool isCorrect = answer == CorrectAnswer;
         Correct = isCorrect;
-        AllocatedExperience = isCorrect ? 3 : 0;
+        AllocatedExperience = isCorrect ? QuestionDataManager.MultipleChoiceExperienceAllocation : 0;
         return isCorrect;
     }
 

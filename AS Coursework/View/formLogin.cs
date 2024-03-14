@@ -6,7 +6,7 @@ namespace AS_Coursework.View;
 public partial class formLogin : Form {
     public formLogin() {
         InitializeComponent();
-        
+
         DoubleBuffered = true;
 
         // Set the unacceptable keys in the textboxes
@@ -113,5 +113,9 @@ public partial class formLogin : Form {
         }
 
         lblError.CenterX();
+    }
+
+    private void pbViewPassword_Click(object sender, EventArgs e) {
+
     }
 }

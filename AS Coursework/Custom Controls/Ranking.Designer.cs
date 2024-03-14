@@ -49,15 +49,13 @@
             // 
             lblExperience.Anchor = AnchorStyles.Right;
             lblExperience.AutoEllipsis = true;
-            lblExperience.AutoSize = true;
             lblExperience.BackColor = Color.FromArgb(20, 20, 50);
             lblExperience.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lblExperience.ForeColor = Color.White;
-            lblExperience.Location = new Point(309, 11);
+            lblExperience.Location = new Point(349, 11);
             lblExperience.Margin = new Padding(18, 0, 18, 0);
-            lblExperience.MinimumSize = new Size(140, 11);
             lblExperience.Name = "lblExperience";
-            lblExperience.Size = new Size(140, 23);
+            lblExperience.Size = new Size(100, 23);
             lblExperience.TabIndex = 5;
             lblExperience.Text = "24901 xp";
             lblExperience.TextAlign = ContentAlignment.MiddleRight;
@@ -66,7 +64,6 @@
             // 
             lblUsername.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             lblUsername.AutoEllipsis = true;
-            lblUsername.AutoSize = true;
             lblUsername.BackColor = Color.FromArgb(20, 20, 50);
             lblUsername.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lblUsername.ForeColor = Color.White;
@@ -74,7 +71,7 @@
             lblUsername.Margin = new Padding(18, 0, 18, 0);
             lblUsername.MinimumSize = new Size(245, 20);
             lblUsername.Name = "lblUsername";
-            lblUsername.Size = new Size(245, 23);
+            lblUsername.Size = new Size(319, 23);
             lblUsername.TabIndex = 5;
             lblUsername.Text = "Username";
             // 
@@ -84,11 +81,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(30, 30, 80);
             Controls.Add(rect1);
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "Ranking";
             Size = new Size(462, 42);
             rect1.ResumeLayout(false);
-            rect1.PerformLayout();
             ResumeLayout(false);
         }
 

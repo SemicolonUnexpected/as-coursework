@@ -84,6 +84,7 @@
             pnlFlashcard.Name = "pnlFlashcard";
             pnlFlashcard.Size = new Size(560, 330);
             pnlFlashcard.TabIndex = 19;
+            pnlFlashcard.Click += btnSwitchSides_Click;
             // 
             // lblFlashcardText
             // 
@@ -99,6 +100,7 @@
             lblFlashcardText.TabIndex = 12;
             lblFlashcardText.Text = "Flashcard side one";
             lblFlashcardText.TextAlign = ContentAlignment.MiddleCenter;
+            lblFlashcardText.Click += btnSwitchSides_Click;
             // 
             // btnKnown
             // 

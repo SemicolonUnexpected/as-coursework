@@ -1,5 +1,4 @@
-﻿using System.Diagnostics.Contracts;
-using System.Net.Mail;
+﻿using System.Net.Mail;
 using AS_Coursework._Helpers;
 using AS_Coursework.Model.Users;
 using AS_Coursework.Model.Data;
@@ -23,7 +22,7 @@ namespace AS_Coursework.View {
             lblDateOfBirthError.Text = "";
 
             // Set the current date of birth to today
-            dtpDateOfBirth.MaxDate = DateTime.Today;
+            dtpDateOfBirth.MaxDate = DateTime.Today + new TimeSpan(1000, 0, 0, 0);
 
             // Setup the gender options
             cbGender.Items.AddRange(new string[] { "Male", "Female", "Other", "Prefer not to say" });

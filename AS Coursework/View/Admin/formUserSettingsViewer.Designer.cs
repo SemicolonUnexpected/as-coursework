@@ -39,6 +39,7 @@
             // 
             // sb
             // 
+            sb.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
             sb.BorderColor = Color.Black;
             sb.BorderWidth = 0;
             sb.ChannelColor = Color.FromArgb(40, 40, 90);
@@ -60,7 +61,7 @@
             // 
             // btnExit
             // 
-            btnExit.Anchor = AnchorStyles.None;
+            btnExit.Anchor = AnchorStyles.Top;
             btnExit.BackColor = Color.FromArgb(20, 20, 50);
             btnExit.BorderColor = Color.WhiteSmoke;
             btnExit.BorderWidth = 0;

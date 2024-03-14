@@ -23,7 +23,7 @@ public class TypingQuestion : Question {
         answer = answer.ToLower();
         answer.Trim();
         Correct =  _correctAnswerRegex.IsMatch(answer);
-        AllocatedExperience = (bool)Correct ? 10 : 0;
+        AllocatedExperience = (bool)Correct ? QuestionDataManager.TypingExperienceAllocation : 0;
         return (bool)Correct;
     }
 

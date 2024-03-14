@@ -23,7 +23,7 @@ public class EquationQuestion : Question {
 
             // Check the equation matches and allocate experience accordingly
             Correct = equation == Equation;
-            AllocatedExperience = equation == Equation ? 0 : 1;
+            AllocatedExperience = equation == Equation ? 0 : QuestionDataManager.EquationExperienceAllocation;
         }
         catch(EquationSyntaxException) {
             Correct = false;

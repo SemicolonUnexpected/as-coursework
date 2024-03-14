@@ -394,13 +394,12 @@
             lblSurnameDetail.AutoEllipsis = true;
             lblSurnameDetail.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lblSurnameDetail.ForeColor = Color.White;
-            lblSurnameDetail.Location = new Point(16, 138);
+            lblSurnameDetail.Location = new Point(10, 138);
             lblSurnameDetail.Margin = new Padding(12, 4, 12, 4);
             lblSurnameDetail.Name = "lblSurnameDetail";
-            lblSurnameDetail.Size = new Size(332, 20);
+            lblSurnameDetail.Size = new Size(340, 23);
             lblSurnameDetail.TabIndex = 1;
             lblSurnameDetail.Text = "Surname :";
-            lblSurnameDetail.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // lblForenameDetail
             // 
@@ -408,13 +407,12 @@
             lblForenameDetail.AutoEllipsis = true;
             lblForenameDetail.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lblForenameDetail.ForeColor = Color.White;
-            lblForenameDetail.Location = new Point(14, 110);
+            lblForenameDetail.Location = new Point(10, 110);
             lblForenameDetail.Margin = new Padding(12, 4, 12, 4);
             lblForenameDetail.Name = "lblForenameDetail";
-            lblForenameDetail.Size = new Size(332, 20);
+            lblForenameDetail.Size = new Size(340, 23);
             lblForenameDetail.TabIndex = 1;
             lblForenameDetail.Text = "Forename :";
-            lblForenameDetail.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // lblEmailDetail
             // 
@@ -422,13 +420,12 @@
             lblEmailDetail.AutoEllipsis = true;
             lblEmailDetail.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lblEmailDetail.ForeColor = Color.White;
-            lblEmailDetail.Location = new Point(16, 82);
+            lblEmailDetail.Location = new Point(10, 82);
             lblEmailDetail.Margin = new Padding(12, 4, 12, 4);
             lblEmailDetail.Name = "lblEmailDetail";
-            lblEmailDetail.Size = new Size(332, 20);
+            lblEmailDetail.Size = new Size(340, 23);
             lblEmailDetail.TabIndex = 1;
-            lblEmailDetail.Text = "Email : ";
-            lblEmailDetail.TextAlign = ContentAlignment.MiddleLeft;
+            lblEmailDetail.Text = "Email : djfksallllllllllllllllllllllllllllllllllllllllllldfsssssssssssssssssssssssssssssssssssss\r\nsssssssssssssssssssssssssssssssssssssssssssss\r\n\r\n";
             // 
             // lblUsernameDetail
             // 
@@ -436,13 +433,12 @@
             lblUsernameDetail.AutoEllipsis = true;
             lblUsernameDetail.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lblUsernameDetail.ForeColor = Color.White;
-            lblUsernameDetail.Location = new Point(16, 54);
+            lblUsernameDetail.Location = new Point(10, 54);
             lblUsernameDetail.Margin = new Padding(12, 4, 12, 4);
             lblUsernameDetail.Name = "lblUsernameDetail";
-            lblUsernameDetail.Size = new Size(334, 20);
+            lblUsernameDetail.Size = new Size(340, 23);
             lblUsernameDetail.TabIndex = 1;
             lblUsernameDetail.Text = "Username : ";
-            lblUsernameDetail.TextAlign = ContentAlignment.MiddleLeft;
             // 
             // lblChangeUsernameTitle
             // 
@@ -886,6 +882,7 @@
             dtpDateOfBirth.Name = "dtpDateOfBirth";
             dtpDateOfBirth.Size = new Size(203, 27);
             dtpDateOfBirth.TabIndex = 9;
+            dtpDateOfBirth.ValueChanged += dtpDateOfBirth_ValueChanged;
             dtpDateOfBirth.Leave += dtpDateOfBirth_CloseUp;
             // 
             // lblDateOfBirth

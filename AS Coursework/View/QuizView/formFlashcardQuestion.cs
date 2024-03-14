@@ -14,6 +14,7 @@ public partial class formFlashcardQuestion : Form, IQuestionForm {
 
         // Initialise text
         lblFlashcardText.Text = _question.FrontSide;
+        lblQuestionTitle.Text = _question.QuestionName;
     }
 
     protected override void OnResize(EventArgs e) {
