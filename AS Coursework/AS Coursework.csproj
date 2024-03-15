@@ -30,6 +30,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>UserProfileImages.resx</DependentUpon>
     </Compile>
+    <Compile Update="View\Admin\formAddFlashcardQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\Admin\formAddEquationQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="View\formRanks.cs" />
   </ItemGroup>
 

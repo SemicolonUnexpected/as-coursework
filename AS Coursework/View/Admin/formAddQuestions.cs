@@ -50,6 +50,25 @@ public partial class formAddQuestions : Form {
     }
 
     private void btnAddQuesiton_Click(object sender, EventArgs e) {
+        switch (cbQuestionType.Text) {
+            case "Multiple choice":
+                break;
+            case "Matching":
+                break;
+            case "Typing":
+                (ActiveForm as formMaster)?.DisplayForm(new formAddTypingQuestion());
+                break;
+            case "Equation":
+                (ActiveForm as formMaster)?.DisplayForm(new formAddEquationQuestion());
+                break;
+            case "Flashcard":
+                break;
+            default:
+                throw new NotImplementedException("This is not a question type");
+        }
+    }
 
+    private void tbSearch_KeyDown(object sender, KeyEventArgs e) {
+        if (e.KeyCode == Keys.Enter) btnSearch_Click(sender, e);
     }
 }

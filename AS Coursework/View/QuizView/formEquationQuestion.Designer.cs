@@ -31,7 +31,7 @@
             lblAnswerTitle = new Label();
             tbAnswer = new Custom_Controls.CustomTextbox();
             lblQuestionText = new Label();
-            chemistryCharachterKeypad1 = new Custom_Controls.ChemistryCharachterKeypad();
+            chemistryCharachterKeypad1 = new Custom_Controls.ChemistryCharacterKeypad();
             pnlAnswer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pbIsCorrect).BeginInit();
             SuspendLayout();
@@ -209,6 +209,6 @@
         private Label lblAnswerTitle;
         private Custom_Controls.CustomTextbox tbAnswer;
         private Label lblQuestionText;
-        private Custom_Controls.ChemistryCharachterKeypad chemistryCharachterKeypad1;
+        private Custom_Controls.ChemistryCharacterKeypad chemistryCharachterKeypad1;
     }
 }

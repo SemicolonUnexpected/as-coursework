@@ -40,6 +40,7 @@ public class Equation : IEquatable<Equation> {
     }
 
     public bool Equals(Equation? other) {
-        return _tokens == other?._tokens;
+        if (other is null) return false;
+        return _tokens.SequenceEqual(other._tokens);
     }
 }

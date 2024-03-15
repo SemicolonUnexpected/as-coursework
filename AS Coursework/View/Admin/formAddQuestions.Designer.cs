@@ -88,8 +88,9 @@
             tbSearch.PlaceholderTextColor = Color.White;
             tbSearch.ShortcutEnabled = true;
             tbSearch.Size = new Size(367, 31);
-            tbSearch.TabIndex = 1;
+            tbSearch.TabIndex = 0;
             tbSearch.UsePasswordChar = false;
+            tbSearch.KeyDown += tbSearch_KeyDown;
             // 
             // btnSearch
             // 
@@ -108,7 +109,7 @@
             btnSearch.Margin = new Padding(5);
             btnSearch.Name = "btnSearch";
             btnSearch.Size = new Size(125, 40);
-            btnSearch.TabIndex = 2;
+            btnSearch.TabIndex = 1;
             btnSearch.Text = "Search";
             btnSearch.UseVisualStyleBackColor = false;
             btnSearch.Click += btnSearch_Click;
@@ -130,7 +131,7 @@
             btnDeleteQuesiton.Margin = new Padding(5);
             btnDeleteQuesiton.Name = "btnDeleteQuesiton";
             btnDeleteQuesiton.Size = new Size(186, 40);
-            btnDeleteQuesiton.TabIndex = 5;
+            btnDeleteQuesiton.TabIndex = 3;
             btnDeleteQuesiton.Text = "Delete Question";
             btnDeleteQuesiton.UseVisualStyleBackColor = false;
             btnDeleteQuesiton.Click += btnDeleteQuestion_Click;
@@ -144,7 +145,7 @@
             lbQuestionSelector.Location = new Point(80, 193);
             lbQuestionSelector.Name = "lbQuestionSelector";
             lbQuestionSelector.Size = new Size(493, 280);
-            lbQuestionSelector.TabIndex = 7;
+            lbQuestionSelector.TabIndex = 2;
             // 
             // btnAddQuesiton
             // 
@@ -163,7 +164,7 @@
             btnAddQuesiton.Margin = new Padding(5);
             btnAddQuesiton.Name = "btnAddQuesiton";
             btnAddQuesiton.Size = new Size(144, 40);
-            btnAddQuesiton.TabIndex = 5;
+            btnAddQuesiton.TabIndex = 6;
             btnAddQuesiton.Text = "Add question";
             btnAddQuesiton.UseVisualStyleBackColor = false;
             btnAddQuesiton.Click += btnAddQuesiton_Click;
@@ -179,7 +180,7 @@
             cbQuestionType.Location = new Point(80, 545);
             cbQuestionType.Name = "cbQuestionType";
             cbQuestionType.Size = new Size(367, 33);
-            cbQuestionType.TabIndex = 6;
+            cbQuestionType.TabIndex = 5;
             // 
             // formAddQuestions
             // 

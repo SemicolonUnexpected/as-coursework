@@ -1,2 +1,0 @@
-Flame tests,Why is nichrome wire used?,It is unreactive and has a high melting point
-Test2,\,\,\,\,\,,\\\\\\\n\\

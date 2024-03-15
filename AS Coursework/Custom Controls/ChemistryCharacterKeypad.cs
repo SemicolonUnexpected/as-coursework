@@ -1,6 +1,6 @@
 ﻿namespace AS_Coursework.Custom_Controls; 
-public partial class ChemistryCharachterKeypad : UserControl {
-    public ChemistryCharachterKeypad() {
+public partial class ChemistryCharacterKeypad : UserControl {
+    public ChemistryCharacterKeypad() {
         InitializeComponent();
     }
 

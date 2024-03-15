@@ -22,8 +22,8 @@ public class EquationQuestion : Question {
             Equation equation = new(answer);
 
             // Check the equation matches and allocate experience accordingly
-            Correct = equation == Equation;
-            AllocatedExperience = equation == Equation ? 0 : QuestionDataManager.EquationExperienceAllocation;
+            Correct = equation.Equals(Equation);
+            AllocatedExperience = equation.Equals(Equation) ? 0 : QuestionDataManager.EquationExperienceAllocation;
         }
         catch(EquationSyntaxException) {
             Correct = false;

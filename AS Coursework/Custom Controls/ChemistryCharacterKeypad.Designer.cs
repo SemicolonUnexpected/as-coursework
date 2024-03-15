@@ -1,5 +1,5 @@
 ﻿namespace AS_Coursework.Custom_Controls {
-    partial class ChemistryCharachterKeypad {
+    partial class ChemistryCharacterKeypad {
         /// <summary> 
         /// Required designer variable.
         /// </summary>

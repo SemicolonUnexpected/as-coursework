@@ -100,6 +100,7 @@
             tbNewUsername.Size = new Size(367, 31);
             tbNewUsername.TabIndex = 1;
             tbNewUsername.UsePasswordChar = false;
+            tbNewUsername.KeyDown += tbNewUsername_KeyDown;
             // 
             // btnSearch
             // 

@@ -50,7 +50,7 @@ public partial class formAdminMenu : Form {
         clbUserSelector.ItemCheck -= clbUserSelector_ItemCheck;
 
         CheckedListBox.ObjectCollection collection = clbUserSelector.Items;
-        for (int i = 0; i < collection.Count; i++) { 
+        for (int i = 0; i < collection.Count; i++) {
             if (collection[i] is null) continue;
 
             string username = (string)collection[i];
@@ -60,5 +60,9 @@ public partial class formAdminMenu : Form {
         }
 
         clbUserSelector.ItemCheck += clbUserSelector_ItemCheck;
+    }
+
+    private void tbNewUsername_KeyDown(object sender, KeyEventArgs e) {
+        if (e.KeyCode == Keys.Enter) btnSearch_Click(sender, e);
     }
 }
