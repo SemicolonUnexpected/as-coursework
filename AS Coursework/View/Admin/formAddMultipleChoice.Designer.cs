@@ -31,8 +31,10 @@
             tbAnswer = new Custom_Controls.CustomTextbox();
             tbQuestionTitle = new Custom_Controls.CustomTextbox();
             tbQuestion = new Custom_Controls.CustomTextbox();
-            dataGridView1 = new DataGridView();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            btnAdd = new Custom_Controls.CustomButton();
+            btnDelete = new Custom_Controls.CustomButton();
+            dataGridView = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView).BeginInit();
             SuspendLayout();
             // 
             // lblAdminInfo
@@ -44,7 +46,7 @@
             lblAdminInfo.Location = new Point(11, 9);
             lblAdminInfo.Margin = new Padding(2, 0, 2, 0);
             lblAdminInfo.Name = "lblAdminInfo";
-            lblAdminInfo.Size = new Size(628, 76);
+            lblAdminInfo.Size = new Size(628, 36);
             lblAdminInfo.TabIndex = 0;
             lblAdminInfo.Text = "To create a multiple choice question, fill the fields below.";
             lblAdminInfo.TextAlign = ContentAlignment.MiddleCenter;
@@ -103,7 +105,7 @@
             tbRegex.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             tbRegex.ForeColor = Color.White;
             tbRegex.IsMultiline = false;
-            tbRegex.Location = new Point(140, 208);
+            tbRegex.Location = new Point(137, 157);
             tbRegex.Margin = new Padding(10);
             tbRegex.Name = "tbRegex";
             tbRegex.Padding = new Padding(6, 5, 6, 5);
@@ -120,7 +122,7 @@
             lblError.AutoEllipsis = true;
             lblError.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblError.ForeColor = Color.Red;
-            lblError.Location = new Point(11, 422);
+            lblError.Location = new Point(11, 515);
             lblError.Margin = new Padding(2, 0, 2, 0);
             lblError.Name = "lblError";
             lblError.Size = new Size(628, 20);
@@ -139,7 +141,7 @@
             tbAnswer.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             tbAnswer.ForeColor = Color.White;
             tbAnswer.IsMultiline = false;
-            tbAnswer.Location = new Point(140, 157);
+            tbAnswer.Location = new Point(137, 106);
             tbAnswer.Margin = new Padding(10);
             tbAnswer.Name = "tbAnswer";
             tbAnswer.Padding = new Padding(6, 5, 6, 5);
@@ -161,7 +163,7 @@
             tbQuestionTitle.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             tbQuestionTitle.ForeColor = Color.White;
             tbQuestionTitle.IsMultiline = false;
-            tbQuestionTitle.Location = new Point(140, 106);
+            tbQuestionTitle.Location = new Point(137, 55);
             tbQuestionTitle.Margin = new Padding(10);
             tbQuestionTitle.Name = "tbQuestionTitle";
             tbQuestionTitle.Padding = new Padding(6, 5, 6, 5);
@@ -183,7 +185,7 @@
             tbQuestion.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             tbQuestion.ForeColor = Color.White;
             tbQuestion.IsMultiline = true;
-            tbQuestion.Location = new Point(140, 261);
+            tbQuestion.Location = new Point(137, 210);
             tbQuestion.Margin = new Padding(25);
             tbQuestion.Name = "tbQuestion";
             tbQuestion.Padding = new Padding(7);
@@ -194,13 +196,65 @@
             tbQuestion.TabIndex = 3;
             tbQuestion.UsePasswordChar = false;
             // 
-            // dataGridView1
+            // btnAdd
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(192, 325);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(240, 150);
-            dataGridView1.TabIndex = 18;
+            btnAdd.Anchor = AnchorStyles.None;
+            btnAdd.BackColor = Color.FromArgb(0, 150, 255);
+            btnAdd.BorderColor = Color.White;
+            btnAdd.BorderWidth = 2;
+            btnAdd.CornerRadius = 15;
+            btnAdd.FlatAppearance.BorderSize = 0;
+            btnAdd.FlatStyle = FlatStyle.Flat;
+            btnAdd.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAdd.ForeColor = Color.White;
+            btnAdd.Image = null;
+            btnAdd.ImageSize = new Size(150, 40);
+            btnAdd.Location = new Point(440, 387);
+            btnAdd.Margin = new Padding(5);
+            btnAdd.Name = "btnAdd";
+            btnAdd.Size = new Size(144, 40);
+            btnAdd.TabIndex = 5;
+            btnAdd.Text = "Add";
+            btnAdd.UseVisualStyleBackColor = false;
+            btnAdd.Click += btnAdd_Click;
+            // 
+            // btnDelete
+            // 
+            btnDelete.Anchor = AnchorStyles.None;
+            btnDelete.BackColor = Color.FromArgb(0, 150, 255);
+            btnDelete.BorderColor = Color.White;
+            btnDelete.BorderWidth = 2;
+            btnDelete.CornerRadius = 15;
+            btnDelete.FlatAppearance.BorderSize = 0;
+            btnDelete.FlatStyle = FlatStyle.Flat;
+            btnDelete.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            btnDelete.ForeColor = Color.White;
+            btnDelete.Image = null;
+            btnDelete.ImageSize = new Size(150, 40);
+            btnDelete.Location = new Point(440, 437);
+            btnDelete.Margin = new Padding(5);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(144, 40);
+            btnDelete.TabIndex = 5;
+            btnDelete.Text = "Delete";
+            btnDelete.UseVisualStyleBackColor = false;
+            btnDelete.Click += btnDelete_Click;
+            // 
+            // dataGridView
+            // 
+            dataGridView.Anchor = AnchorStyles.None;
+            dataGridView.BackgroundColor = Color.White;
+            dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView.ColumnHeadersVisible = false;
+            dataGridView.GridColor = Color.Black;
+            dataGridView.Location = new Point(40, 362);
+            dataGridView.MultiSelect = false;
+            dataGridView.Name = "dataGridView";
+            dataGridView.RowHeadersVisible = false;
+            dataGridView.RowTemplate.Height = 25;
+            dataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView.Size = new Size(392, 150);
+            dataGridView.TabIndex = 1;
             // 
             // formAddMultipleChoiceQuestion
             // 
@@ -208,9 +262,11 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(20, 20, 50);
             ClientSize = new Size(650, 600);
-            Controls.Add(dataGridView1);
+            Controls.Add(dataGridView);
             Controls.Add(tbQuestion);
             Controls.Add(lblError);
+            Controls.Add(btnAdd);
+            Controls.Add(btnDelete);
             Controls.Add(btnCancel);
             Controls.Add(btnAddQuestion);
             Controls.Add(tbRegex);
@@ -221,7 +277,7 @@
             Margin = new Padding(2);
             Name = "formAddMultipleChoiceQuestion";
             Text = "formUserHome";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridView).EndInit();
             ResumeLayout(false);
         }
 
@@ -235,6 +291,8 @@
         private Custom_Controls.CustomTextbox tbAnswer;
         private Custom_Controls.CustomTextbox tbQuestionTitle;
         private Custom_Controls.CustomTextbox tbQuestion;
-        private DataGridView dataGridView1;
+        private Custom_Controls.CustomButton btnAdd;
+        private Custom_Controls.CustomButton btnDelete;
+        private DataGridView dataGridView;
     }
 }
