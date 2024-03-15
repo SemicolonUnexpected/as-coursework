@@ -1,5 +1,5 @@
 ﻿namespace AS_Coursework.View.Admin {
-    partial class formAddFlashcard {
+    partial class formAddFlashcardQuestion {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -38,7 +38,7 @@
             lblAdminInfo.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lblAdminInfo.ForeColor = Color.White;
             lblAdminInfo.ImageAlign = ContentAlignment.TopCenter;
-            lblAdminInfo.Location = new Point(11, 9);
+            lblAdminInfo.Location = new Point(36, 9);
             lblAdminInfo.Margin = new Padding(2, 0, 2, 0);
             lblAdminInfo.Name = "lblAdminInfo";
             lblAdminInfo.Size = new Size(628, 39);
@@ -57,7 +57,7 @@
             tbQuestionTitle.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             tbQuestionTitle.ForeColor = Color.White;
             tbQuestionTitle.IsMultiline = false;
-            tbQuestionTitle.Location = new Point(140, 56);
+            tbQuestionTitle.Location = new Point(165, 56);
             tbQuestionTitle.Margin = new Padding(10);
             tbQuestionTitle.Name = "tbQuestionTitle";
             tbQuestionTitle.Padding = new Padding(6, 5, 6, 5);
@@ -81,7 +81,7 @@
             btnAddQuesiton.ForeColor = Color.White;
             btnAddQuesiton.Image = null;
             btnAddQuesiton.ImageSize = new Size(150, 40);
-            btnAddQuesiton.Location = new Point(492, 540);
+            btnAddQuesiton.Location = new Point(517, 540);
             btnAddQuesiton.Margin = new Padding(5);
             btnAddQuesiton.Name = "btnAddQuesiton";
             btnAddQuesiton.Size = new Size(144, 40);
@@ -103,7 +103,7 @@
             btnCancel.ForeColor = Color.White;
             btnCancel.Image = null;
             btnCancel.ImageSize = new Size(150, 40);
-            btnCancel.Location = new Point(338, 540);
+            btnCancel.Location = new Point(363, 540);
             btnCancel.Margin = new Padding(5);
             btnCancel.Name = "btnCancel";
             btnCancel.Size = new Size(144, 40);
@@ -118,10 +118,10 @@
             lblError.AutoEllipsis = true;
             lblError.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblError.ForeColor = Color.Red;
-            lblError.Location = new Point(11, 512);
+            lblError.Location = new Point(0, 512);
             lblError.Margin = new Padding(2, 0, 2, 0);
             lblError.Name = "lblError";
-            lblError.Size = new Size(628, 20);
+            lblError.Size = new Size(699, 23);
             lblError.TabIndex = 17;
             lblError.Text = "Error";
             lblError.TextAlign = ContentAlignment.MiddleCenter;
@@ -137,11 +137,11 @@
             tbBack.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             tbBack.ForeColor = Color.White;
             tbBack.IsMultiline = true;
-            tbBack.Location = new Point(140, 321);
+            tbBack.Location = new Point(165, 321);
             tbBack.Margin = new Padding(25);
             tbBack.Name = "tbBack";
             tbBack.Padding = new Padding(7);
-            tbBack.PlaceholderText = "Question";
+            tbBack.PlaceholderText = "Back of the flashcard...";
             tbBack.PlaceholderTextColor = Color.White;
             tbBack.ShortcutEnabled = true;
             tbBack.Size = new Size(367, 183);
@@ -159,23 +159,23 @@
             tbFront.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             tbFront.ForeColor = Color.White;
             tbFront.IsMultiline = true;
-            tbFront.Location = new Point(140, 112);
+            tbFront.Location = new Point(165, 112);
             tbFront.Margin = new Padding(25);
             tbFront.Name = "tbFront";
             tbFront.Padding = new Padding(7);
-            tbFront.PlaceholderText = "Question";
+            tbFront.PlaceholderText = "Front of the flashcard...";
             tbFront.PlaceholderTextColor = Color.White;
             tbFront.ShortcutEnabled = true;
             tbFront.Size = new Size(367, 183);
             tbFront.TabIndex = 2;
             tbFront.UsePasswordChar = false;
             // 
-            // formAddFlashcard
+            // formAddFlashcardQuestion
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(20, 20, 50);
-            ClientSize = new Size(650, 600);
+            ClientSize = new Size(700, 600);
             Controls.Add(tbFront);
             Controls.Add(tbBack);
             Controls.Add(lblError);
@@ -185,7 +185,7 @@
             Controls.Add(lblAdminInfo);
             FormBorderStyle = FormBorderStyle.None;
             Margin = new Padding(2);
-            Name = "formAddFlashcard";
+            Name = "formAddFlashcardQuestion";
             Text = "formUserHome";
             ResumeLayout(false);
         }
@@ -197,7 +197,6 @@
         private Custom_Controls.CustomTextbox tbQuestionTitle;
         private Custom_Controls.CustomButton btnAddQuesiton;
         private Custom_Controls.CustomButton btnCancel;
-        private Custom_Controls.CustomTextbox tbAnswer;
         private Label lblFilePath;
         private Label lblError;
         private Custom_Controls.CustomTextbox tbBack;

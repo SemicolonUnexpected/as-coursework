@@ -87,8 +87,8 @@ public partial class CustomButton : Button {
         int smoothSize = BorderWidth > 0 ? BorderWidth : 2;
 
         if (CornerRadius > 2) {
-            using GraphicsPath pathSurface = CustomControlGraphics.GetRoundedRectGraphicPath(rectangleSurface, CornerRadius);
-            using GraphicsPath pathBorder = CustomControlGraphics.GetRoundedRectGraphicPath(borders, CornerRadius - BorderWidth);
+            using GraphicsPath pathSurface = CustomControlGraphics.GetRoundedRectangleGraphicsPath(rectangleSurface, CornerRadius);
+            using GraphicsPath pathBorder = CustomControlGraphics.GetRoundedRectangleGraphicsPath(borders, CornerRadius - BorderWidth);
             using Pen penSurface = new(Parent.BackColor, smoothSize);
             using Pen penBorder = new(BorderColor, BorderWidth);
 

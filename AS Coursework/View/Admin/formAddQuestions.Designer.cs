@@ -142,9 +142,9 @@
             lbQuestionSelector.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lbQuestionSelector.FormattingEnabled = true;
             lbQuestionSelector.ItemHeight = 23;
-            lbQuestionSelector.Location = new Point(80, 193);
+            lbQuestionSelector.Location = new Point(11, 193);
             lbQuestionSelector.Name = "lbQuestionSelector";
-            lbQuestionSelector.Size = new Size(493, 280);
+            lbQuestionSelector.Size = new Size(627, 280);
             lbQuestionSelector.TabIndex = 2;
             // 
             // btnAddQuesiton

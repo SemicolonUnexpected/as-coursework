@@ -9,7 +9,7 @@ public partial class formHelp : Form {
         """;
 
     private const string RANKS_HELP = """
-        The ranks page provides an overview of where you are placed on the leaderboard. To access it from the side menu click the podium icon.
+        The ranks page provides an overview of where you are placed on the leaderboard. To access it from the side menu click the medal icon.
 
         Users are ranked by their experience points and the top 10 users appear on the podium. You can see your experience level and your own rank in the panel at the side
         """;

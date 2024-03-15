@@ -184,12 +184,14 @@
             // lblFilePath
             // 
             lblFilePath.Anchor = AnchorStyles.None;
+            lblFilePath.AutoEllipsis = true;
             lblFilePath.Font = new Font("Bahnschrift", 16F, FontStyle.Regular, GraphicsUnit.Point);
             lblFilePath.ForeColor = Color.White;
-            lblFilePath.Location = new Point(140, 508);
+            lblFilePath.Location = new Point(0, 508);
             lblFilePath.Name = "lblFilePath";
-            lblFilePath.Size = new Size(367, 23);
+            lblFilePath.Size = new Size(650, 23);
             lblFilePath.TabIndex = 6;
+            lblFilePath.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblError
             // 

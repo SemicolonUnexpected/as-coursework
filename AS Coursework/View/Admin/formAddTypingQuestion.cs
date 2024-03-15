@@ -58,8 +58,13 @@ public partial class formAddTypingQuestion : Form {
         if (_filePath == "") {
             using OpenFileDialog ofd = new();
 
+            // Only allow image files to be picked
+            ofd.Filter = "Images (*.BMP;*.JPG;*.GIF,*.PNG,)|*.BMP;*.JPG;*.GIF;*.PNG;";
+
             ofd.ShowDialog();
             _filePath = ofd.FileName;
+
+            
             lblFilePath.Text = $"File path: {_filePath}";
             btnAddImage.Text = "Remove image";
         }

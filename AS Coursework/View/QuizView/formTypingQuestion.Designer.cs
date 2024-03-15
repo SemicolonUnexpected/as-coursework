@@ -59,6 +59,7 @@
             tbAnswer.Size = new Size(364, 32);
             tbAnswer.TabIndex = 0;
             tbAnswer.UsePasswordChar = false;
+            tbAnswer.KeyDown += tbAnswer_KeyDown;
             // 
             // lblAnswerTitle
             // 

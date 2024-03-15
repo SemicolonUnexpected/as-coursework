@@ -52,8 +52,10 @@ public partial class formAddQuestions : Form {
     private void btnAddQuesiton_Click(object sender, EventArgs e) {
         switch (cbQuestionType.Text) {
             case "Multiple choice":
+                (ActiveForm as formMaster)?.DisplayForm(new formAddMultipleChoiceQuestion());
                 break;
             case "Matching":
+                (ActiveForm as formMaster)?.DisplayForm(new formAddMatchingQuestion());
                 break;
             case "Typing":
                 (ActiveForm as formMaster)?.DisplayForm(new formAddTypingQuestion());
@@ -62,6 +64,7 @@ public partial class formAddQuestions : Form {
                 (ActiveForm as formMaster)?.DisplayForm(new formAddEquationQuestion());
                 break;
             case "Flashcard":
+                (ActiveForm as formMaster)?.DisplayForm(new formAddFlashcardQuestion());
                 break;
             default:
                 throw new NotImplementedException("This is not a question type");

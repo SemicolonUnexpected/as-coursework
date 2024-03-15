@@ -3,8 +3,8 @@ using Chem;
 using System.Globalization;
 
 namespace AS_Coursework.View.Admin;
-public partial class formAddFlashcard : Form {
-    public formAddFlashcard() {
+public partial class formAddFlashcardQuestion : Form {
+    public formAddFlashcardQuestion() {
         InitializeComponent();
 
         lblError.Text = "";
@@ -18,8 +18,8 @@ public partial class formAddFlashcard : Form {
         List<string> errors = new();
 
         if (tbQuestionTitle.Text == "") errors.Add("fill in the question title");
-        if (tbFront.Text == "") errors.Add("fill in the question");
-        if (tbBack.Text == "") errors.Add("fill in an equation answer");
+        if (tbFront.Text == "") errors.Add("fill in the front of the flashcard");
+        if (tbBack.Text == "") errors.Add("fill in the back of the flashcard");
 
         if (errors.Count > 0) {
             CultureInfo culture = CultureInfo.InvariantCulture;
@@ -30,7 +30,7 @@ public partial class formAddFlashcard : Form {
             return;
         }
         else {
-            QuestionDataManager.Equation.Add(new EquationQuestion(tbQuestionTitle.Text, tbBack.Text, new Equation(tbAnswer.Text)));
+            QuestionDataManager.Flashcard.Add(new FlashcardQuestion(tbQuestionTitle.Text, tbFront.Text, tbBack.Text));
         }
 
         (ActiveForm as formMaster)?.DisplayForm(new formMainMenu(new formAddQuestions()));

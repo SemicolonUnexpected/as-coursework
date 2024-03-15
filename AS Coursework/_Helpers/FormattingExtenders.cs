@@ -1,7 +1,4 @@
-﻿using System.Drawing;
-using System.Windows.Forms;
-
-namespace AS_Coursework._Helpers; 
+﻿namespace AS_Coursework._Helpers;
 internal static class FormattingExtenders {
 
     public static void CenterX(this Control control, Control parent) {

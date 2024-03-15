@@ -49,4 +49,8 @@ public partial class formEquationQuestion : Form, IQuestionForm {
     private void chemistryCharachterKeypad1_CharacterClicked(object sender, string e) {
         tbAnswer.Text += e;
     }
+
+    private void tbAnswer_KeyDown(object sender, KeyEventArgs e) {
+        if (e.KeyCode == Keys.Enter) btnSubmitNext_Click(sender, e);
+    }
 }

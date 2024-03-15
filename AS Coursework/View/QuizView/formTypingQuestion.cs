@@ -81,4 +81,8 @@ public partial class formTypingQuestion : Form, IQuestionForm {
             NextQuestion?.Invoke(sender, EventArgs.Empty);
         }
     }
+
+    private void tbAnswer_KeyDown(object sender, KeyEventArgs e) {
+        if (e.KeyCode == Keys.Enter) btnSubmitNext_Click(sender, e);
+    }
 }
