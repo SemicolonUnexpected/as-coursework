@@ -32,8 +32,9 @@ public partial class formAdminMenu : Form {
     }
 
     private void btnSearch_Click(object sender, EventArgs e) {
-        if (tbNewUsername.Text == "") _userList.Sort();
-        else _userList = _userList.OrderBy(x => Helpers.LevensteinDistanceRecursive(tbNewUsername.Text, x)).ToList();
+        if (tbNewUsername.Text == "") _userList.Sort((x, y) => string.Compare(x.ToString(), y.ToString()));
+
+        else _userList = _userList.OrderBy(x => Helpers.LevensteinDistance(tbNewUsername.Text, x)).ToList();
 
         clbUserSelector.DataSource = new BindingList<string>(_userList);
 

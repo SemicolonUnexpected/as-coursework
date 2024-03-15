@@ -19,8 +19,8 @@ public partial class formAddQuestions : Form {
     }
 
     private void btnSearch_Click(object sender, EventArgs e) {
-        if (tbSearch.Text == "") _questions.Sort();
-        else _questions = _questions.OrderBy(x => Helpers.LevensteinDistanceRecursive(tbSearch.Text, x.QuestionName)).ToList();
+        if (tbSearch.Text == "") _questions.Sort((x, y) => string.Compare(x.ToString(), y.ToString()));
+        else _questions = _questions.OrderBy(x => Helpers.LevensteinDistance(tbSearch.Text, x.QuestionName)).ToList();
 
         lbQuestionSelector.DataSource = new BindingList<Question>(_questions);
     }
