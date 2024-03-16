@@ -23,12 +23,12 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             lblAdminInfo = new Label();
             btnAddQuestion = new Custom_Controls.CustomButton();
             btnCancel = new Custom_Controls.CustomButton();
-            tbRegex = new Custom_Controls.CustomTextbox();
             lblError = new Label();
-            tbAnswer = new Custom_Controls.CustomTextbox();
+            tbCorrectAnswer = new Custom_Controls.CustomTextbox();
             tbQuestionTitle = new Custom_Controls.CustomTextbox();
             tbQuestion = new Custom_Controls.CustomTextbox();
             btnAdd = new Custom_Controls.CustomButton();
@@ -46,9 +46,9 @@
             lblAdminInfo.Location = new Point(11, 9);
             lblAdminInfo.Margin = new Padding(2, 0, 2, 0);
             lblAdminInfo.Name = "lblAdminInfo";
-            lblAdminInfo.Size = new Size(628, 36);
+            lblAdminInfo.Size = new Size(628, 50);
             lblAdminInfo.TabIndex = 0;
-            lblAdminInfo.Text = "To create a multiple choice question, fill the fields below.";
+            lblAdminInfo.Text = "To create a multiple choice question, fill the fields below. Add at last three incorretc answers to the table.";
             lblAdminInfo.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btnAddQuestion
@@ -71,6 +71,7 @@
             btnAddQuestion.TabIndex = 6;
             btnAddQuestion.Text = "Add question";
             btnAddQuestion.UseVisualStyleBackColor = false;
+            btnAddQuestion.Click += btnAddQuestion_Click;
             // 
             // btnCancel
             // 
@@ -94,63 +95,41 @@
             btnCancel.UseVisualStyleBackColor = false;
             btnCancel.Click += btnCancel_Click;
             // 
-            // tbRegex
-            // 
-            tbRegex.Anchor = AnchorStyles.None;
-            tbRegex.BackColor = Color.FromArgb(20, 20, 50);
-            tbRegex.BorderColor = Color.White;
-            tbRegex.BorderFocusColor = Color.White;
-            tbRegex.BorderSize = 2;
-            tbRegex.CustomBorderStyle = Custom_Controls.CustomTextbox.CustomTextboxBorderStyle.Underlined;
-            tbRegex.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            tbRegex.ForeColor = Color.White;
-            tbRegex.IsMultiline = false;
-            tbRegex.Location = new Point(137, 157);
-            tbRegex.Margin = new Padding(10);
-            tbRegex.Name = "tbRegex";
-            tbRegex.Padding = new Padding(6, 5, 6, 5);
-            tbRegex.PlaceholderText = "Correct answer regex";
-            tbRegex.PlaceholderTextColor = Color.White;
-            tbRegex.ShortcutEnabled = true;
-            tbRegex.Size = new Size(367, 34);
-            tbRegex.TabIndex = 2;
-            tbRegex.UsePasswordChar = false;
-            // 
             // lblError
             // 
             lblError.Anchor = AnchorStyles.None;
             lblError.AutoEllipsis = true;
             lblError.Font = new Font("Bahnschrift", 12F, FontStyle.Regular, GraphicsUnit.Point);
             lblError.ForeColor = Color.Red;
-            lblError.Location = new Point(11, 515);
+            lblError.Location = new Point(11, 495);
             lblError.Margin = new Padding(2, 0, 2, 0);
             lblError.Name = "lblError";
-            lblError.Size = new Size(628, 20);
+            lblError.Size = new Size(628, 40);
             lblError.TabIndex = 17;
             lblError.Text = "Error";
             lblError.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // tbAnswer
+            // tbCorrectAnswer
             // 
-            tbAnswer.Anchor = AnchorStyles.None;
-            tbAnswer.BackColor = Color.FromArgb(20, 20, 50);
-            tbAnswer.BorderColor = Color.White;
-            tbAnswer.BorderFocusColor = Color.White;
-            tbAnswer.BorderSize = 2;
-            tbAnswer.CustomBorderStyle = Custom_Controls.CustomTextbox.CustomTextboxBorderStyle.Underlined;
-            tbAnswer.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            tbAnswer.ForeColor = Color.White;
-            tbAnswer.IsMultiline = false;
-            tbAnswer.Location = new Point(137, 106);
-            tbAnswer.Margin = new Padding(10);
-            tbAnswer.Name = "tbAnswer";
-            tbAnswer.Padding = new Padding(6, 5, 6, 5);
-            tbAnswer.PlaceholderText = "Correct answer";
-            tbAnswer.PlaceholderTextColor = Color.White;
-            tbAnswer.ShortcutEnabled = true;
-            tbAnswer.Size = new Size(367, 34);
-            tbAnswer.TabIndex = 1;
-            tbAnswer.UsePasswordChar = false;
+            tbCorrectAnswer.Anchor = AnchorStyles.None;
+            tbCorrectAnswer.BackColor = Color.FromArgb(20, 20, 50);
+            tbCorrectAnswer.BorderColor = Color.White;
+            tbCorrectAnswer.BorderFocusColor = Color.White;
+            tbCorrectAnswer.BorderSize = 2;
+            tbCorrectAnswer.CustomBorderStyle = Custom_Controls.CustomTextbox.CustomTextboxBorderStyle.Underlined;
+            tbCorrectAnswer.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            tbCorrectAnswer.ForeColor = Color.White;
+            tbCorrectAnswer.IsMultiline = false;
+            tbCorrectAnswer.Location = new Point(137, 120);
+            tbCorrectAnswer.Margin = new Padding(10);
+            tbCorrectAnswer.Name = "tbCorrectAnswer";
+            tbCorrectAnswer.Padding = new Padding(6, 5, 6, 5);
+            tbCorrectAnswer.PlaceholderText = "Correct answer";
+            tbCorrectAnswer.PlaceholderTextColor = Color.White;
+            tbCorrectAnswer.ShortcutEnabled = true;
+            tbCorrectAnswer.Size = new Size(367, 34);
+            tbCorrectAnswer.TabIndex = 1;
+            tbCorrectAnswer.UsePasswordChar = false;
             // 
             // tbQuestionTitle
             // 
@@ -163,7 +142,7 @@
             tbQuestionTitle.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             tbQuestionTitle.ForeColor = Color.White;
             tbQuestionTitle.IsMultiline = false;
-            tbQuestionTitle.Location = new Point(137, 55);
+            tbQuestionTitle.Location = new Point(137, 69);
             tbQuestionTitle.Margin = new Padding(10);
             tbQuestionTitle.Name = "tbQuestionTitle";
             tbQuestionTitle.Padding = new Padding(6, 5, 6, 5);
@@ -185,7 +164,7 @@
             tbQuestion.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             tbQuestion.ForeColor = Color.White;
             tbQuestion.IsMultiline = true;
-            tbQuestion.Location = new Point(137, 210);
+            tbQuestion.Location = new Point(137, 173);
             tbQuestion.Margin = new Padding(25);
             tbQuestion.Name = "tbQuestion";
             tbQuestion.Padding = new Padding(7);
@@ -209,7 +188,7 @@
             btnAdd.ForeColor = Color.White;
             btnAdd.Image = null;
             btnAdd.ImageSize = new Size(150, 40);
-            btnAdd.Location = new Point(440, 387);
+            btnAdd.Location = new Point(442, 357);
             btnAdd.Margin = new Padding(5);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(144, 40);
@@ -231,7 +210,7 @@
             btnDelete.ForeColor = Color.White;
             btnDelete.Image = null;
             btnDelete.ImageSize = new Size(150, 40);
-            btnDelete.Location = new Point(440, 437);
+            btnDelete.Location = new Point(442, 407);
             btnDelete.Margin = new Padding(5);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(144, 40);
@@ -242,12 +221,28 @@
             // 
             // dataGridView
             // 
+            dataGridView.AllowUserToAddRows = false;
+            dataGridView.AllowUserToDeleteRows = false;
+            dataGridView.AllowUserToResizeColumns = false;
+            dataGridView.AllowUserToResizeRows = false;
             dataGridView.Anchor = AnchorStyles.None;
+            dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView.BackgroundColor = Color.White;
+            dataGridView.BorderStyle = BorderStyle.None;
+            dataGridView.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView.ColumnHeadersVisible = false;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = SystemColors.Window;
+            dataGridViewCellStyle1.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = Color.Black;
+            dataGridViewCellStyle1.Padding = new Padding(0, 0, 0, 4);
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(0, 150, 255);
+            dataGridViewCellStyle1.SelectionForeColor = Color.White;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.False;
+            dataGridView.DefaultCellStyle = dataGridViewCellStyle1;
             dataGridView.GridColor = Color.Black;
-            dataGridView.Location = new Point(40, 362);
+            dataGridView.Location = new Point(40, 331);
             dataGridView.MultiSelect = false;
             dataGridView.Name = "dataGridView";
             dataGridView.RowHeadersVisible = false;
@@ -269,8 +264,7 @@
             Controls.Add(btnDelete);
             Controls.Add(btnCancel);
             Controls.Add(btnAddQuestion);
-            Controls.Add(tbRegex);
-            Controls.Add(tbAnswer);
+            Controls.Add(tbCorrectAnswer);
             Controls.Add(tbQuestionTitle);
             Controls.Add(lblAdminInfo);
             FormBorderStyle = FormBorderStyle.None;
@@ -286,9 +280,8 @@
         private Label lblAdminInfo;
         private Custom_Controls.CustomButton btnAddQuestion;
         private Custom_Controls.CustomButton btnCancel;
-        private Custom_Controls.CustomTextbox tbRegex;
         private Label lblError;
-        private Custom_Controls.CustomTextbox tbAnswer;
+        private Custom_Controls.CustomTextbox tbCorrectAnswer;
         private Custom_Controls.CustomTextbox tbQuestionTitle;
         private Custom_Controls.CustomTextbox tbQuestion;
         private Custom_Controls.CustomButton btnAdd;
