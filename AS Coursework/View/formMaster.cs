@@ -19,6 +19,8 @@ public partial class formMaster : Form {
 
     protected override void OnClosing(CancelEventArgs e) {
         base.OnClosing(e);
+
+        // Write all the data to file storage when the quiz closes
         UserDataManager.Write();
         QuestionDataManager.Write();
     }
@@ -63,12 +65,15 @@ public partial class formMaster : Form {
     }
 
     public async void DisplayFormAfterSplash(Form form) {
+        // Display the splash screen on top
         formSplash splashScreen = new formSplash();
         DisplayForm(splashScreen);
         DisplayFormInBackground(form);
 
-        await splashScreen.SimulateLoading(500);
+        // Start the loading process and wait until it is finished
+        await splashScreen.SimulateLoading(2000);
 
+        // Remove the splash screen and put the next form on top
         form.BringToFront();
         pnlFormHolder.Controls.Remove(splashScreen);
 

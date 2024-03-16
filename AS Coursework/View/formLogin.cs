@@ -7,6 +7,7 @@ public partial class formLogin : Form {
     public formLogin() {
         InitializeComponent();
 
+        // Use double buffering to limit the amount of flickering
         DoubleBuffered = true;
 
         // Set the unacceptable keys in the textboxes
@@ -112,10 +113,7 @@ public partial class formLogin : Form {
                 break;
         }
 
+        // Recenter the error text
         lblError.CenterX();
-    }
-
-    private void pbViewPassword_Click(object sender, EventArgs e) {
-
     }
 }

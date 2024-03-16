@@ -48,7 +48,7 @@
             lblAdminInfo.Name = "lblAdminInfo";
             lblAdminInfo.Size = new Size(628, 50);
             lblAdminInfo.TabIndex = 0;
-            lblAdminInfo.Text = "To create a multiple choice question, fill the fields below. Add at last three incorretc answers to the table.";
+            lblAdminInfo.Text = "To create a multiple choice question, fill the fields below. Add at last three incorrect answers to the table.";
             lblAdminInfo.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btnAddQuestion
