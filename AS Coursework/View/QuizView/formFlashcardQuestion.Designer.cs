@@ -37,14 +37,12 @@
             // lblQuestionTitle
             // 
             lblQuestionTitle.Anchor = AnchorStyles.None;
-            lblQuestionTitle.AutoSize = true;
             lblQuestionTitle.Font = new Font("Bahnschrift", 20F, FontStyle.Regular, GraphicsUnit.Point);
             lblQuestionTitle.ForeColor = Color.White;
-            lblQuestionTitle.Location = new Point(250, 50);
-            lblQuestionTitle.Margin = new Padding(18, 15, 18, 15);
-            lblQuestionTitle.MaximumSize = new Size(315, 0);
+            lblQuestionTitle.Location = new Point(0, 50);
+            lblQuestionTitle.Margin = new Padding(0);
             lblQuestionTitle.Name = "lblQuestionTitle";
-            lblQuestionTitle.Size = new Size(180, 33);
+            lblQuestionTitle.Size = new Size(700, 33);
             lblQuestionTitle.TabIndex = 11;
             lblQuestionTitle.Text = "Question Title";
             lblQuestionTitle.TextAlign = ContentAlignment.MiddleCenter;
@@ -173,7 +171,6 @@
             pnlFlashcard.PerformLayout();
             pnlButtons.ResumeLayout(false);
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion

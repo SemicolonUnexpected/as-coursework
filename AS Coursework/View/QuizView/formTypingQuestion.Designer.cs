@@ -126,10 +126,10 @@
             lblQuestionTitle.Anchor = AnchorStyles.None;
             lblQuestionTitle.Font = new Font("Bahnschrift", 20F, FontStyle.Regular, GraphicsUnit.Point);
             lblQuestionTitle.ForeColor = Color.White;
-            lblQuestionTitle.Location = new Point(249, 24);
+            lblQuestionTitle.Location = new Point(14, 24);
             lblQuestionTitle.Margin = new Padding(18, 15, 18, 15);
             lblQuestionTitle.Name = "lblQuestionTitle";
-            lblQuestionTitle.Size = new Size(180, 39);
+            lblQuestionTitle.Size = new Size(672, 39);
             lblQuestionTitle.TabIndex = 11;
             lblQuestionTitle.Text = "Question Title";
             lblQuestionTitle.TextAlign = ContentAlignment.MiddleCenter;
