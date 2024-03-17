@@ -126,7 +126,7 @@ public partial class PictureFrame : Control {
                     }
 
                     // Draw a border around the form that is the same colour as the background to achieve a smooth border
-                    // This strange arragement of graphics operations is required to remove any artefacts, which I deem unacceptable
+                    // This strange arrangement of graphics operations is required to remove any artefacts, which I deem unacceptable
                     using Pen smoothingPen = new(Parent!.BackColor, 2);
                     using Pen backingPen = new(Parent!.BackColor, 2);
                     graphics.DrawEllipse(smoothingPen, Rectangle.Inflate(DisplayRectangle, -1, -1));
