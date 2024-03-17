@@ -17,7 +17,7 @@ public class EquationQuestion : Question {
 
     public void CheckAnswer(string answer) {
         // Attempt to create an equation object
-        // If it is not a valid euqtion the answer is incorrect
+        // If it is not a valid equation the answer is incorrect
         try {
             Equation equation = new(answer);
 
