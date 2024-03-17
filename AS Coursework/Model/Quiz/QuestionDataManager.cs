@@ -58,7 +58,7 @@ public static class QuestionDataManager {
 
         string text = reader.ReadToEnd();
 
-        // Read in the settings based on the regular experssions
+        // Read in the settings based on the regular expressions
         Regex QuestionCounter = new(@"Question count : (\d+)");
         QuestionCount = int.Parse(QuestionCounter.Match(text).Groups[1].Value);
 
