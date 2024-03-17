@@ -76,6 +76,7 @@ public partial class CustomButton : Button {
         ImageSize = Size;
     }
 
+    // This method control the drawing of the button
     protected override void OnPaint(PaintEventArgs e) {
         base.OnPaint(e);
 
@@ -84,22 +85,30 @@ public partial class CustomButton : Button {
         Rectangle rectangleSurface = ClientRectangle;
         Rectangle borders = Rectangle.Inflate(rectangleSurface, -BorderWidth, -BorderWidth);
 
+        // The size of the brush that will do the smoothing. This is required to remove the jagged edge.
         int smoothSize = BorderWidth > 0 ? BorderWidth : 2;
 
+        // Draw a rounded border if the corner radius is greater than two
         if (CornerRadius > 2) {
+            // This is the path which composes the control's region
             using GraphicsPath pathSurface = CustomControlGraphics.GetRoundedRectangleGraphicsPath(rectangleSurface, CornerRadius);
             using GraphicsPath pathBorder = CustomControlGraphics.GetRoundedRectangleGraphicsPath(borders, CornerRadius - BorderWidth);
+            // The pen below will be used to remove the jagged edge
             using Pen penSurface = new(Parent.BackColor, smoothSize);
             using Pen penBorder = new(BorderColor, BorderWidth);
 
+            // Use antialiasing on the border
             graphics.SmoothingMode = SmoothingMode.AntiAlias;
 
             Region = new Region(pathSurface);
 
             graphics.DrawPath(penSurface, pathSurface);
 
+            // Draw another border around the outside of the control in the same colour as the parent control's back colour.
+            // This is the code that finally gives the promised smooth edge
             if (BorderWidth >= 1) graphics.DrawPath(penBorder, pathBorder);
         }
+        // Draw a rectangle instead
         else {
             graphics.SmoothingMode = SmoothingMode.None;
             Region = new Region(rectangleSurface);
