@@ -38,6 +38,9 @@ public partial class formEquationQuestion : Form, IQuestionForm {
 
             DisplayAnswerCorrectness((bool)_question.Correct!);
             btnSubmitNext.Text = "Next";
+
+            // Unsubscribe from the event to prevent typing in the textbox after the question has been answered
+            chemistryCharachterKeypad1.CharacterClicked -= chemistryCharachterKeypad1_CharacterClicked;
         }
         else {
             // Tell listeners that the next question has been requested
@@ -46,7 +49,7 @@ public partial class formEquationQuestion : Form, IQuestionForm {
     }
 
     // Add the character passed from the keypad to the answer line
-    private void chemistryCharachterKeypad1_CharacterClicked(object sender, string e) {
+    private void chemistryCharachterKeypad1_CharacterClicked(object? sender, string e) {
         tbAnswer.Text += e;
     }
 

@@ -25,6 +25,13 @@ public class Quiz {
         }
     }
 
+    public void Reset() {
+        foreach (Question question in _questions) {
+            question.AllocatedExperience = 0;
+            question.Correct = null;
+        }
+    }
+
     private List<Question> PopulateQuiz(QuizStyle quizStyle, int questionCount) => quizStyle switch {
         QuizStyle.All => PickQuestions(QuestionDataManager.All, questionCount),
         QuizStyle.MultipleChoice => PickQuestions(QuestionDataManager.MultipleChoice, questionCount),

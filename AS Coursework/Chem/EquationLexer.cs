@@ -100,7 +100,12 @@ internal class EquationLexer {
                 if (char.IsAsciiDigit(current)) {
                     int start = _index - 1;
                     while (Peek() is not null && char.IsAsciiDigit((char)Peek()!)) Next();
-                    AddToken(Number, int.Parse(_equation.Substring(start, _index - start)));
+                    try {
+                        AddToken(Number, int.Parse(_equation.Substring(start, _index - start)));
+                    }
+                    catch {
+                        Error("Could not parse the number");
+                    }
                     break;
                 }
 

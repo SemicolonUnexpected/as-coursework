@@ -1,6 +1,6 @@
 ﻿using AS_Coursework._Helpers;
 
-namespace AS_Coursework.View; 
+namespace AS_Coursework.View;
 public partial class formRegisterCreateAccount : Form {
     public formRegisterCreateAccount() {
         InitializeComponent();

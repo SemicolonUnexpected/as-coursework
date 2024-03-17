@@ -213,7 +213,7 @@
             // 
             lblExperience.Anchor = AnchorStyles.None;
             lblExperience.AutoEllipsis = true;
-            lblExperience.Font = new Font("Bahnschrift", 40F, FontStyle.Regular, GraphicsUnit.Point);
+            lblExperience.Font = new Font("Bahnschrift", 20F, FontStyle.Regular, GraphicsUnit.Point);
             lblExperience.ForeColor = Color.White;
             lblExperience.Location = new Point(18, 426);
             lblExperience.Margin = new Padding(5);
@@ -227,7 +227,7 @@
             // 
             lblRank.Anchor = AnchorStyles.None;
             lblRank.AutoEllipsis = true;
-            lblRank.Font = new Font("Bahnschrift", 40F, FontStyle.Regular, GraphicsUnit.Point);
+            lblRank.Font = new Font("Bahnschrift", 20F, FontStyle.Regular, GraphicsUnit.Point);
             lblRank.ForeColor = Color.White;
             lblRank.Location = new Point(18, 310);
             lblRank.Margin = new Padding(5);

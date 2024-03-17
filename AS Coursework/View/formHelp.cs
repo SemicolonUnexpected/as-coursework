@@ -11,7 +11,7 @@ public partial class formHelp : Form {
     private const string RANKS_HELP = """
         The ranks page provides an overview of where you are placed on the leaderboard. To access it from the side menu click the medal icon.
 
-        Users are ranked by their experience points and the top 10 users appear on the podium. You can see your experience level and your own rank in the panel at the side
+        Users are ranked by their experience points and the top 10 users appear on the podium. You can see your experience level and your own rank in the panel at the side.
         """;
 
     private string QUIZ_PAGE_HELP => $"""
@@ -53,7 +53,7 @@ public partial class formHelp : Form {
     private const string EQUATION = """
         To answer this question, read the question then type the equation defective, balancing it unless otherwise stated. Put the reactants and products in the order they are described in the question.
 
-        Any special characters can be inserted from the keypad. Alternatively you can use the following syntax...
+        Any special characters can be inserted from the keypad. Alternatively you can use the following...
 
         H_{2}SO_{4} corresponds to H₂SO₄
         C_{n}H_{2n + 1} corresponds to CₙH₂ₙ₊₂

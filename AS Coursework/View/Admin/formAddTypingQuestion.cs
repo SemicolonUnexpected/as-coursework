@@ -42,12 +42,12 @@ public partial class formAddTypingQuestion : Form {
             return;
         }
         else if (tbRegex.Text == "") {
-            if (_filePath != "") QuestionDataManager.Typing.Add(new ImageTypingQuestion(tbQuestionTitle.Text, tbQuestion.Text, tbAnswer.Text, new Regex(tbAnswer.Text), _filePath));
-            else QuestionDataManager.Typing.Add(new TypingQuestion(tbQuestionTitle.Text, tbQuestion.Text, tbAnswer.Text, new Regex(tbAnswer.Text)));
+            if (_filePath != "") QuestionDataManager.Typing.Add(new ImageTypingQuestion(tbQuestionTitle.Text, tbQuestion.Text, tbAnswer.Text, $"^{tbAnswer.Text}$", _filePath));
+            else QuestionDataManager.Typing.Add(new TypingQuestion(tbQuestionTitle.Text, tbQuestion.Text, $"^{tbAnswer.Text}$", tbAnswer.Text));
         }
         else {
-            if (_filePath != "") QuestionDataManager.Typing.Add(new ImageTypingQuestion(tbQuestionTitle.Text, tbQuestion.Text, tbAnswer.Text, new Regex(tbRegex.Text), _filePath));
-            else QuestionDataManager.Typing.Add(new TypingQuestion(tbQuestionTitle.Text, tbQuestion.Text, tbAnswer.Text, new Regex(tbRegex.Text)));
+            if (_filePath != "") QuestionDataManager.Typing.Add(new ImageTypingQuestion(tbQuestionTitle.Text, tbQuestion.Text, tbAnswer.Text, tbRegex.Text, _filePath));
+            else QuestionDataManager.Typing.Add(new TypingQuestion(tbQuestionTitle.Text, tbQuestion.Text, tbAnswer.Text, tbRegex.Text));
         }
 
         (ActiveForm as formMaster)?.DisplayForm(new formMainMenu(new formAddQuestions()));

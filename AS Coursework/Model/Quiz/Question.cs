@@ -6,11 +6,11 @@ namespace AS_Coursework.Model.Quiz;
 public abstract class Question {
     public string QuestionName { get; protected init; }
     public virtual string QuestionDescription => QuestionName; 
-    public int AllocatedExperience { get; protected set; }
+    public int AllocatedExperience { get; set; }
 
     // Represents whether the question has been answered correctly
     // If it is "null" the question has not been answered
-    public bool? Correct { get; protected set; } = null;
+    public bool? Correct { get; set; } = null;
 
     public Question(string questionName) {
         QuestionName = questionName;

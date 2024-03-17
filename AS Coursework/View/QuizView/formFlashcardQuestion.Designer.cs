@@ -26,11 +26,13 @@
             lblQuestionTitle = new Label();
             btnNext = new Custom_Controls.CustomButton();
             pnlFlashcard = new Custom_Controls.CustomRectangle();
-            lblFlashcardText = new Label();
+            pnl = new Panel();
+            lblText = new Label();
             btnKnown = new Custom_Controls.CustomButton();
             pnlButtons = new Panel();
             btnSwitchSides = new Custom_Controls.CustomButton();
             pnlFlashcard.SuspendLayout();
+            pnl.SuspendLayout();
             pnlButtons.SuspendLayout();
             SuspendLayout();
             // 
@@ -75,7 +77,7 @@
             pnlFlashcard.BackColor = Color.FromArgb(30, 30, 70);
             pnlFlashcard.BorderColor = Color.White;
             pnlFlashcard.BorderWidth = 0;
-            pnlFlashcard.Controls.Add(lblFlashcardText);
+            pnlFlashcard.Controls.Add(pnl);
             pnlFlashcard.CornerRadius = 20;
             pnlFlashcard.Location = new Point(64, 100);
             pnlFlashcard.Margin = new Padding(14, 12, 14, 12);
@@ -84,21 +86,30 @@
             pnlFlashcard.TabIndex = 19;
             pnlFlashcard.Click += btnSwitchSides_Click;
             // 
-            // lblFlashcardText
+            // pnl
             // 
-            lblFlashcardText.AutoSize = true;
-            lblFlashcardText.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            lblFlashcardText.ForeColor = Color.White;
-            lblFlashcardText.Location = new Point(14, 12);
-            lblFlashcardText.Margin = new Padding(18, 15, 18, 12);
-            lblFlashcardText.MaximumSize = new Size(532, 306);
-            lblFlashcardText.MinimumSize = new Size(532, 306);
-            lblFlashcardText.Name = "lblFlashcardText";
-            lblFlashcardText.Size = new Size(532, 306);
-            lblFlashcardText.TabIndex = 12;
-            lblFlashcardText.Text = "Flashcard side one";
-            lblFlashcardText.TextAlign = ContentAlignment.MiddleCenter;
-            lblFlashcardText.Click += btnSwitchSides_Click;
+            pnl.Controls.Add(lblText);
+            pnl.Location = new Point(10, 10);
+            pnl.Margin = new Padding(10);
+            pnl.Name = "pnl";
+            pnl.Size = new Size(540, 310);
+            pnl.TabIndex = 1;
+            pnl.Click += btnSwitchSides_Click;
+            // 
+            // lblText
+            // 
+            lblText.AutoSize = true;
+            lblText.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
+            lblText.ForeColor = Color.White;
+            lblText.Location = new Point(0, 0);
+            lblText.Margin = new Padding(0);
+            lblText.MaximumSize = new Size(540, 0);
+            lblText.Name = "lblText";
+            lblText.Padding = new Padding(0, 0, 10, 0);
+            lblText.Size = new Size(68, 23);
+            lblText.TabIndex = 0;
+            lblText.Text = "label1";
+            lblText.Click += btnSwitchSides_Click;
             // 
             // btnKnown
             // 
@@ -168,7 +179,8 @@
             Name = "formFlashcardQuestion";
             Text = "TextQuestion";
             pnlFlashcard.ResumeLayout(false);
-            pnlFlashcard.PerformLayout();
+            pnl.ResumeLayout(false);
+            pnl.PerformLayout();
             pnlButtons.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -178,9 +190,10 @@
         private Label lblQuestionTitle;
         private Custom_Controls.CustomButton btnNext;
         private Custom_Controls.CustomRectangle pnlFlashcard;
-        private Label lblFlashcardText;
         private Custom_Controls.CustomButton btnKnown;
         private Panel pnlButtons;
         private Custom_Controls.CustomButton btnSwitchSides;
+        private Panel pnl;
+        private Label lblText;
     }
 }

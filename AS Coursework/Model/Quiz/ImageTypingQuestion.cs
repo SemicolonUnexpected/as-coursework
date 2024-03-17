@@ -1,5 +1,4 @@
-﻿using System.Text.RegularExpressions;
-using AS_Coursework.View.QuizView;
+﻿using AS_Coursework.View.QuizView;
 
 namespace AS_Coursework.Model.Quiz;
 // A class that can display an image with a text question
@@ -17,7 +16,7 @@ public class ImageTypingQuestion : TypingQuestion {
         }
     }
 
-    public ImageTypingQuestion(string questionName, string question, string correctAnswer, Regex correctAnswerRegex, string imagePath) : base(questionName, question, correctAnswer, correctAnswerRegex) {
+    public ImageTypingQuestion(string questionName, string question, string correctAnswer, string correctAnswerRegex, string imagePath) : base(questionName, question, correctAnswer, correctAnswerRegex) {
         _imagePath = imagePath;
     }
 

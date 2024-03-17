@@ -160,8 +160,7 @@
             pbPasswordView.SizeMode = PictureBoxSizeMode.StretchImage;
             pbPasswordView.TabIndex = 1;
             pbPasswordView.TabStop = false;
-            pbPasswordView.MouseDown += pbPasswordView_MouseDown;
-            pbPasswordView.MouseUp += pbPasswordView_MouseUp;
+            pbPasswordView.Click += pbPasswordView_Click;
             // 
             // tbUsername
             // 

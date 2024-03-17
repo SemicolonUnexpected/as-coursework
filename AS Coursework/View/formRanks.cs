@@ -36,6 +36,10 @@ public partial class formRanks : Form {
         lblExperience.Text = user.FunctionalDetails.Experience.ToString() + " xp";
         lblRank.Text = $"#{UserDataManager.GetUserRank(user)}";
 
+        // Hide some details if the user is an admin
+        lblRank.Hide();
+        lblRankTitle.Hide();
+
         DisplayRanks();
 
         OnResize(EventArgs.Empty);
@@ -57,12 +61,14 @@ public partial class formRanks : Form {
     }
 
     private void DisplayRanks() {
-        for (int i = 0; i < _rankViews.Count; i++) {
-            Ranking rankView = _rankViews[i];
-            UserDataManager.GetUser(i, out User? user);
+        List<User> topTenPlayers = UserDataManager.GetTopPlayers(10).ToList();
 
-            rankView.UsernameText = user is null ? "" : $"#{UserDataManager.GetUserRank(user)} {user.AuthenticationDetails.Username}";
-            rankView.ExperienceText = user is null ? "" : user.FunctionalDetails.Experience.ToString() + " xp";
+        for (int i = 0; i < topTenPlayers.Count(); i++) {
+            Ranking rankView = _rankViews[i];
+            User user = topTenPlayers[i];
+
+            rankView.UsernameText = $"#{UserDataManager.GetUserRank(user)} {user.AuthenticationDetails.Username}";
+            rankView.ExperienceText = user.FunctionalDetails.Experience.ToString() + " xp";
         }
     }
 }

@@ -92,7 +92,7 @@
             customButton2.Margin = new Padding(4, 3, 4, 3);
             customButton2.Name = "customButton2";
             customButton2.Size = new Size(52, 45);
-            customButton2.TabIndex = 0;
+            customButton2.TabIndex = 6;
             customButton2.Text = "¹";
             customButton2.UseVisualStyleBackColor = false;
             customButton2.Click += btnClick;
@@ -113,7 +113,7 @@
             btnTwoWayArrow.Margin = new Padding(4, 3, 4, 3);
             btnTwoWayArrow.Name = "btnTwoWayArrow";
             btnTwoWayArrow.Size = new Size(52, 45);
-            btnTwoWayArrow.TabIndex = 0;
+            btnTwoWayArrow.TabIndex = 1;
             btnTwoWayArrow.Text = "⇌";
             btnTwoWayArrow.UseVisualStyleBackColor = false;
             btnTwoWayArrow.Click += btnClick;
@@ -134,7 +134,7 @@
             btnPlusTop.Margin = new Padding(4, 3, 4, 3);
             btnPlusTop.Name = "btnPlusTop";
             btnPlusTop.Size = new Size(52, 45);
-            btnPlusTop.TabIndex = 0;
+            btnPlusTop.TabIndex = 2;
             btnPlusTop.Text = "⁺";
             btnPlusTop.UseVisualStyleBackColor = false;
             btnPlusTop.Click += btnClick;
@@ -155,7 +155,7 @@
             customButton5.Margin = new Padding(4, 3, 4, 3);
             customButton5.Name = "customButton5";
             customButton5.Size = new Size(52, 45);
-            customButton5.TabIndex = 0;
+            customButton5.TabIndex = 8;
             customButton5.Text = "²";
             customButton5.UseVisualStyleBackColor = false;
             customButton5.Click += btnClick;
@@ -176,7 +176,7 @@
             customButton6.Margin = new Padding(4, 3, 4, 3);
             customButton6.Name = "customButton6";
             customButton6.Size = new Size(52, 45);
-            customButton6.TabIndex = 0;
+            customButton6.TabIndex = 7;
             customButton6.Text = "₁";
             customButton6.UseVisualStyleBackColor = false;
             customButton6.Click += btnClick;
@@ -197,7 +197,7 @@
             customButton7.Margin = new Padding(4, 3, 4, 3);
             customButton7.Name = "customButton7";
             customButton7.Size = new Size(52, 45);
-            customButton7.TabIndex = 0;
+            customButton7.TabIndex = 4;
             customButton7.Text = "⁻";
             customButton7.UseVisualStyleBackColor = false;
             customButton7.Click += btnClick;
@@ -218,7 +218,7 @@
             customButton8.Margin = new Padding(4, 3, 4, 3);
             customButton8.Name = "customButton8";
             customButton8.Size = new Size(52, 45);
-            customButton8.TabIndex = 0;
+            customButton8.TabIndex = 9;
             customButton8.Text = "₂";
             customButton8.UseVisualStyleBackColor = false;
             customButton8.Click += btnClick;
@@ -239,7 +239,7 @@
             customButton9.Margin = new Padding(4, 3, 4, 3);
             customButton9.Name = "customButton9";
             customButton9.Size = new Size(52, 45);
-            customButton9.TabIndex = 0;
+            customButton9.TabIndex = 11;
             customButton9.Text = "₃";
             customButton9.UseVisualStyleBackColor = false;
             customButton9.Click += btnClick;
@@ -260,7 +260,7 @@
             customButton10.Margin = new Padding(4, 3, 4, 3);
             customButton10.Name = "customButton10";
             customButton10.Size = new Size(52, 45);
-            customButton10.TabIndex = 0;
+            customButton10.TabIndex = 3;
             customButton10.Text = "₊";
             customButton10.UseVisualStyleBackColor = false;
             customButton10.Click += btnClick;
@@ -281,7 +281,7 @@
             customButton11.Margin = new Padding(4, 3, 4, 3);
             customButton11.Name = "customButton11";
             customButton11.Size = new Size(52, 45);
-            customButton11.TabIndex = 0;
+            customButton11.TabIndex = 10;
             customButton11.Text = "³";
             customButton11.UseVisualStyleBackColor = false;
             customButton11.Click += btnClick;
@@ -302,7 +302,7 @@
             customButton12.Margin = new Padding(4, 3, 4, 3);
             customButton12.Name = "customButton12";
             customButton12.Size = new Size(52, 45);
-            customButton12.TabIndex = 0;
+            customButton12.TabIndex = 5;
             customButton12.Text = "₋";
             customButton12.UseVisualStyleBackColor = false;
             customButton12.Click += btnClick;
@@ -323,7 +323,7 @@
             customButton13.Margin = new Padding(4, 3, 4, 3);
             customButton13.Name = "customButton13";
             customButton13.Size = new Size(52, 45);
-            customButton13.TabIndex = 0;
+            customButton13.TabIndex = 12;
             customButton13.Text = "⁴";
             customButton13.UseVisualStyleBackColor = false;
             customButton13.Click += btnClick;
@@ -344,7 +344,7 @@
             customButton14.Margin = new Padding(4, 3, 4, 3);
             customButton14.Name = "customButton14";
             customButton14.Size = new Size(52, 45);
-            customButton14.TabIndex = 0;
+            customButton14.TabIndex = 15;
             customButton14.Text = "₅";
             customButton14.UseVisualStyleBackColor = false;
             customButton14.Click += btnClick;
@@ -365,7 +365,7 @@
             customButton15.Margin = new Padding(4, 3, 4, 3);
             customButton15.Name = "customButton15";
             customButton15.Size = new Size(52, 45);
-            customButton15.TabIndex = 0;
+            customButton15.TabIndex = 18;
             customButton15.Text = "⁷";
             customButton15.UseVisualStyleBackColor = false;
             customButton15.Click += btnClick;
@@ -386,7 +386,7 @@
             customButton16.Margin = new Padding(4, 3, 4, 3);
             customButton16.Name = "customButton16";
             customButton16.Size = new Size(52, 45);
-            customButton16.TabIndex = 0;
+            customButton16.TabIndex = 21;
             customButton16.Text = "₈";
             customButton16.UseVisualStyleBackColor = false;
             customButton16.Click += btnClick;
@@ -407,7 +407,7 @@
             customButton17.Margin = new Padding(4, 3, 4, 3);
             customButton17.Name = "customButton17";
             customButton17.Size = new Size(52, 45);
-            customButton17.TabIndex = 0;
+            customButton17.TabIndex = 20;
             customButton17.Text = "⁸";
             customButton17.UseVisualStyleBackColor = false;
             customButton17.Click += btnClick;
@@ -428,7 +428,7 @@
             customButton18.Margin = new Padding(4, 3, 4, 3);
             customButton18.Name = "customButton18";
             customButton18.Size = new Size(52, 45);
-            customButton18.TabIndex = 0;
+            customButton18.TabIndex = 23;
             customButton18.Text = "₉";
             customButton18.UseVisualStyleBackColor = false;
             customButton18.Click += btnClick;
@@ -449,7 +449,7 @@
             customButton19.Margin = new Padding(4, 3, 4, 3);
             customButton19.Name = "customButton19";
             customButton19.Size = new Size(52, 45);
-            customButton19.TabIndex = 0;
+            customButton19.TabIndex = 13;
             customButton19.Text = "₄";
             customButton19.UseVisualStyleBackColor = false;
             customButton19.Click += btnClick;
@@ -470,7 +470,7 @@
             customButton20.Margin = new Padding(4, 3, 4, 3);
             customButton20.Name = "customButton20";
             customButton20.Size = new Size(52, 45);
-            customButton20.TabIndex = 0;
+            customButton20.TabIndex = 16;
             customButton20.Text = "⁶";
             customButton20.UseVisualStyleBackColor = false;
             customButton20.Click += btnClick;
@@ -491,7 +491,7 @@
             customButton21.Margin = new Padding(4, 3, 4, 3);
             customButton21.Name = "customButton21";
             customButton21.Size = new Size(52, 45);
-            customButton21.TabIndex = 0;
+            customButton21.TabIndex = 19;
             customButton21.Text = "₇";
             customButton21.UseVisualStyleBackColor = false;
             customButton21.Click += btnClick;
@@ -512,7 +512,7 @@
             customButton22.Margin = new Padding(4, 3, 4, 3);
             customButton22.Name = "customButton22";
             customButton22.Size = new Size(52, 45);
-            customButton22.TabIndex = 0;
+            customButton22.TabIndex = 22;
             customButton22.Text = "⁹";
             customButton22.UseVisualStyleBackColor = false;
             customButton22.Click += btnClick;
@@ -533,7 +533,7 @@
             customButton23.Margin = new Padding(4, 3, 4, 3);
             customButton23.Name = "customButton23";
             customButton23.Size = new Size(52, 45);
-            customButton23.TabIndex = 0;
+            customButton23.TabIndex = 14;
             customButton23.Text = "⁵";
             customButton23.UseVisualStyleBackColor = false;
             customButton23.Click += btnClick;
@@ -554,7 +554,7 @@
             customButton24.Margin = new Padding(4, 3, 4, 3);
             customButton24.Name = "customButton24";
             customButton24.Size = new Size(52, 45);
-            customButton24.TabIndex = 0;
+            customButton24.TabIndex = 17;
             customButton24.Text = "₆";
             customButton24.UseVisualStyleBackColor = false;
             customButton24.Click += btnClick;
@@ -575,7 +575,7 @@
             customButton1.Margin = new Padding(4, 3, 4, 3);
             customButton1.Name = "customButton1";
             customButton1.Size = new Size(52, 45);
-            customButton1.TabIndex = 0;
+            customButton1.TabIndex = 24;
             customButton1.Text = "ⁿ";
             customButton1.UseVisualStyleBackColor = false;
             customButton1.Click += btnClick;
@@ -596,7 +596,7 @@
             customButton3.Margin = new Padding(4, 3, 4, 3);
             customButton3.Name = "customButton3";
             customButton3.Size = new Size(52, 45);
-            customButton3.TabIndex = 0;
+            customButton3.TabIndex = 27;
             customButton3.Text = "∆";
             customButton3.UseVisualStyleBackColor = false;
             customButton3.Click += btnClick;
@@ -617,7 +617,7 @@
             customButton4.Margin = new Padding(4, 3, 4, 3);
             customButton4.Name = "customButton4";
             customButton4.Size = new Size(52, 45);
-            customButton4.TabIndex = 0;
+            customButton4.TabIndex = 26;
             customButton4.Text = "°";
             customButton4.UseVisualStyleBackColor = false;
             customButton4.Click += btnClick;
@@ -638,7 +638,7 @@
             customButton25.Margin = new Padding(4, 3, 4, 3);
             customButton25.Name = "customButton25";
             customButton25.Size = new Size(52, 45);
-            customButton25.TabIndex = 0;
+            customButton25.TabIndex = 29;
             customButton25.Text = "←";
             customButton25.UseVisualStyleBackColor = false;
             customButton25.Click += btnClick;
@@ -659,7 +659,7 @@
             customButton26.Margin = new Padding(4, 3, 4, 3);
             customButton26.Name = "customButton26";
             customButton26.Size = new Size(52, 45);
-            customButton26.TabIndex = 0;
+            customButton26.TabIndex = 25;
             customButton26.Text = "ₙ";
             customButton26.UseVisualStyleBackColor = false;
             customButton26.Click += btnClick;
@@ -680,12 +680,12 @@
             customButton27.Margin = new Padding(4, 3, 4, 3);
             customButton27.Name = "customButton27";
             customButton27.Size = new Size(52, 45);
-            customButton27.TabIndex = 0;
+            customButton27.TabIndex = 28;
             customButton27.Text = "ε";
             customButton27.UseVisualStyleBackColor = false;
             customButton27.Click += btnClick;
             // 
-            // ChemistryCharachterKeypad
+            // ChemistryCharacterKeypad
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -722,7 +722,7 @@
             Controls.Add(btnArrow);
             ForeColor = Color.White;
             Margin = new Padding(4, 3, 4, 3);
-            Name = "ChemistryCharachterKeypad";
+            Name = "ChemistryCharacterKeypad";
             Padding = new Padding(4, 3, 4, 3);
             Size = new Size(364, 261);
             ResumeLayout(false);

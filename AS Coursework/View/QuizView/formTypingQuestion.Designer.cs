@@ -49,14 +49,14 @@
             tbAnswer.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             tbAnswer.ForeColor = Color.White;
             tbAnswer.IsMultiline = false;
-            tbAnswer.Location = new Point(75, 8);
+            tbAnswer.Location = new Point(86, 8);
             tbAnswer.Margin = new Padding(0, 4, 0, 4);
             tbAnswer.Name = "tbAnswer";
             tbAnswer.Padding = new Padding(5, 4, 5, 4);
             tbAnswer.PlaceholderText = "";
             tbAnswer.PlaceholderTextColor = Color.White;
             tbAnswer.ShortcutEnabled = true;
-            tbAnswer.Size = new Size(364, 32);
+            tbAnswer.Size = new Size(353, 32);
             tbAnswer.TabIndex = 0;
             tbAnswer.UsePasswordChar = false;
             tbAnswer.KeyDown += tbAnswer_KeyDown;
@@ -66,13 +66,13 @@
             lblAnswerTitle.Anchor = AnchorStyles.None;
             lblAnswerTitle.Font = new Font("Bahnschrift", 14F, FontStyle.Regular, GraphicsUnit.Point);
             lblAnswerTitle.ForeColor = Color.White;
-            lblAnswerTitle.Location = new Point(7, 6);
+            lblAnswerTitle.Location = new Point(0, 6);
             lblAnswerTitle.Margin = new Padding(7, 6, 7, 6);
             lblAnswerTitle.MaximumSize = new Size(315, 0);
             lblAnswerTitle.Name = "lblAnswerTitle";
-            lblAnswerTitle.Size = new Size(61, 38);
+            lblAnswerTitle.Size = new Size(88, 38);
             lblAnswerTitle.TabIndex = 11;
-            lblAnswerTitle.Text = "Ans:";
+            lblAnswerTitle.Text = "Answer :";
             lblAnswerTitle.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // pnlAnswer

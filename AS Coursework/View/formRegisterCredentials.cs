@@ -69,6 +69,7 @@ namespace AS_Coursework.View {
             pbSpecialCharacters.Image = requirements.Contains(DataValidator.PasswordRequirements.SpecialChars) ? Resources.Icons.Icons.Green_Tick_Circle : Resources.Icons.Icons.Red_Cross_Circle;
         }
 
+        // Format the form
         protected override void OnResize(EventArgs e) {
             base.OnResize(e);
 
@@ -97,16 +98,12 @@ namespace AS_Coursework.View {
         }
 
         // Allow the user to see their password by clicking the eye icon in the picturebox
-        private void pbPasswordView_MouseDown(object sender, MouseEventArgs e) {
-            pbPasswordView.Image = Resources.Icons.Icons.Eye_crossed;
-            tbPassword.UsePasswordChar = false;
+        private void pbPasswordView_Click(object sender, EventArgs e) {
+            tbPassword.UsePasswordChar = !tbPassword.UsePasswordChar;
+            pbPasswordView.Image = tbPassword.UsePasswordChar ? Resources.Icons.Icons.Eye : Resources.Icons.Icons.Eye_crossed;
         }
 
-        private void pbPasswordView_MouseUp(object sender, MouseEventArgs e) {
-            pbPasswordView.Image = Resources.Icons.Icons.Eye;
-            tbPassword.UsePasswordChar = true;
-        }
-
+        // Recheck the field when the user exits it
         private void tbPassword_Leave(object sender, EventArgs e) => CheckPasswordOk();
 
         private void tbUsername_Leave(object sender, EventArgs e) => CheckUsernameOk();

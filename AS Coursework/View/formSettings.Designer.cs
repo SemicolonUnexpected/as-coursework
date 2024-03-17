@@ -692,12 +692,13 @@
             // pbPasswordView
             // 
             pbPasswordView.Image = Resources.Icons.Icons.Eye;
-            pbPasswordView.Location = new Point(300, 8);
+            pbPasswordView.Location = new Point(209, 2);
             pbPasswordView.Name = "pbPasswordView";
-            pbPasswordView.Size = new Size(30, 30);
+            pbPasswordView.Size = new Size(25, 25);
             pbPasswordView.SizeMode = PictureBoxSizeMode.StretchImage;
             pbPasswordView.TabIndex = 2;
             pbPasswordView.TabStop = false;
+            pbPasswordView.Click += pbPasswordView_Click;
             // 
             // tbConfirmPassword
             // 

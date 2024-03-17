@@ -76,7 +76,7 @@
             lblQuizInfo.Name = "lblQuizInfo";
             lblQuizInfo.Size = new Size(420, 90);
             lblQuizInfo.TabIndex = 6;
-            lblQuizInfo.Text = "Welcome to the quiz. Select a quiz below to begin. You gain expeience for each question you answer correctly";
+            lblQuizInfo.Text = "Welcome to the quiz. Select a quiz below to begin. You gain expeience for each question you answer correctly.";
             lblQuizInfo.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btnAll

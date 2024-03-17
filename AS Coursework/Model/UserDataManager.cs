@@ -27,10 +27,14 @@ internal static class UserDataManager {
         // Sort the users by rank first
         _users.Sort();
 
-        // Create a hash set of all the experience values
-        HashSet<int> rankScores = _users.Select(x => x.FunctionalDetails.Experience).ToHashSet();
+        // Create a hash set of all the experience values, not including the admins
+        HashSet<int> rankScores = _users.Where(x => !x.AuthenticationDetails.IsAdmin).Select(x => x.FunctionalDetails.Experience).ToHashSet();
 
         return 1 + rankScores.Count(x => x > user.FunctionalDetails.Experience);
+    }
+
+    public static IEnumerable<User> GetTopPlayers(int count) {
+        return _users.Where(x => !x.AuthenticationDetails.IsAdmin).Take(count);
     }
 
     public static User? GetUser(int index) {

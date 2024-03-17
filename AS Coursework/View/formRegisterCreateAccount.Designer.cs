@@ -44,7 +44,7 @@
             btnReturnToLogin.Margin = new Padding(20, 19, 20, 19);
             btnReturnToLogin.Name = "btnReturnToLogin";
             btnReturnToLogin.Size = new Size(171, 37);
-            btnReturnToLogin.TabIndex = 2;
+            btnReturnToLogin.TabIndex = 0;
             btnReturnToLogin.Text = "Return to login";
             btnReturnToLogin.UseVisualStyleBackColor = false;
             btnReturnToLogin.Click += btnCreateAccount_Click;
@@ -73,7 +73,7 @@
             Controls.Add(btnReturnToLogin);
             Controls.Add(lblCreateAccount);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(2, 2, 2, 2);
+            Margin = new Padding(2);
             Name = "formRegisterCreateAccount";
             Text = "RegisterCreateAccountView";
             ResumeLayout(false);

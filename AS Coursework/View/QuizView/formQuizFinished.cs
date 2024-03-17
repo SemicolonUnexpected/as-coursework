@@ -23,6 +23,8 @@ public partial class formQuizFinished : Form {
         user.FunctionalDetails.QuestionsAnswered += quiz.AmountAnswered;
         user.FunctionalDetails.QuestionsCorrect += quiz.AmountCorrect;
 
+        // Reset the quiz
+        quiz.Reset();
     }
 
     protected override void OnResize(EventArgs e) {

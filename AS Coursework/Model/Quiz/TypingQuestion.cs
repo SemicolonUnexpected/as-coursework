@@ -9,10 +9,10 @@ public class TypingQuestion : Question {
     public string CorrectAnswer { get; init; }
     public override string QuestionDescription => base.QuestionDescription + " - " + Question;
 
-    public TypingQuestion(string questionName, string question, string correctAnswer, Regex correctAnswerRegex) : base(questionName) {
+    public TypingQuestion(string questionName, string question, string correctAnswer, string correctAnswerRegex) : base(questionName) {
         Question = question;
         CorrectAnswer = correctAnswer;
-        _correctAnswerRegex = correctAnswerRegex;
+        _correctAnswerRegex = new Regex(correctAnswerRegex, RegexOptions.IgnoreCase);
     }
 
     public override Form DisplayQuestion() {
@@ -21,7 +21,7 @@ public class TypingQuestion : Question {
 
     public bool CheckAnswer(string answer) {
         answer = answer.ToLower();
-        answer.Trim();
+        answer = answer.Trim();
         Correct =  _correctAnswerRegex.IsMatch(answer);
         AllocatedExperience = (bool)Correct ? QuestionDataManager.TypingExperienceAllocation : 0;
         return (bool)Correct;

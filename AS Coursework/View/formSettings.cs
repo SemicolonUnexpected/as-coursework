@@ -251,4 +251,11 @@ public partial class formSettings : Form {
         _user.FunctionalDetails.ProfileImageIndex = _user.FunctionalDetails.ProfileImageIndex == UserProfileImage.Images.Count - 1 ? 0 : _user.FunctionalDetails.ProfileImageIndex + 1;
         pbUserProfile.Image = _user.FunctionalDetails.ProfileImage.Image;
     }
+
+
+    // Allow the user to see their password by clicking the eye icon in the picturebox
+    private void pbPasswordView_Click(object sender, EventArgs e) {
+        tbNewPassword.UsePasswordChar = !tbNewPassword.UsePasswordChar;
+        pbPasswordView.Image = tbNewPassword.UsePasswordChar ? Resources.Icons.Icons.Eye : Resources.Icons.Icons.Eye_crossed;
+    }
 }

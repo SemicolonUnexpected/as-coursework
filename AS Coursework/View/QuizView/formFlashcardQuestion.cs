@@ -10,11 +10,19 @@ public partial class formFlashcardQuestion : Form, IQuestionForm {
     public formFlashcardQuestion(FlashcardQuestion flashcardQuestion) {
         InitializeComponent();
 
+        
+
         _question = flashcardQuestion;
 
         // Initialise text
-        lblFlashcardText.Text = _question.FrontSide;
+        lblText.Text = _question.FrontSide;
         lblQuestionTitle.Text = _question.QuestionName;
+
+        // Ensure the form is correctly formatted
+        OnResize(EventArgs.Empty);
+
+        pnl.HorizontalScroll.Maximum = 0;
+        pnl.AutoScroll = true;
     }
 
     protected override void OnResize(EventArgs e) {
@@ -24,6 +32,8 @@ public partial class formFlashcardQuestion : Form, IQuestionForm {
         pnlFlashcard.CenterX();
         btnSwitchSides.CenterX();
         pnlButtons.CenterX();
+
+        lblText.CenterX();
     }
 
     public event EventHandler? NextQuestion;
@@ -32,11 +42,14 @@ public partial class formFlashcardQuestion : Form, IQuestionForm {
         _isFrontSide = !_isFrontSide;
 
         if (_isFrontSide) {
-            lblFlashcardText.Text = _question.FrontSide;
+            lblText.Text = _question.FrontSide;
         }
         else {
-            lblFlashcardText.Text = _question.BackSide;
+            lblText.Text = _question.BackSide;
         }
+
+        // Ensure the form is correctly formatted
+        OnResize(EventArgs.Empty);
     }
 
     private void btnKnown_Click(object sender, EventArgs e) {
