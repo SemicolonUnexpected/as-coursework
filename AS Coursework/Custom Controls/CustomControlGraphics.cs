@@ -2,7 +2,7 @@
 
 namespace AS_Coursework.Custom_Controls; 
 public static class CustomControlGraphics {
-    // Create a rounded rectange graphics path
+    // Create a rounded rectangle graphics path
     public static GraphicsPath GetRoundedRectangleGraphicsPath(RectangleF rectangle, float cornerRadius) {
         GraphicsPath path = new();
         float curveSize = cornerRadius * 2f;
