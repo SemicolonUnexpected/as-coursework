@@ -32,12 +32,14 @@ public partial class PicturePanel : Control {
         }
     }
     public PicturePanel() {
+        // Use double buffering to remove any flickering
         DoubleBuffered = true;
     }
 
     protected override void OnPaint(PaintEventArgs e) {
         base.OnPaint(e);
 
+        // If the image is not null and a portion of it has been selected, draw it
         if (_image is null || _imagePortion is null) return;
 
         e.Graphics.DrawImage(_image, DisplayRectangle, (Rectangle)ImagePortion!, GraphicsUnit.Pixel);
