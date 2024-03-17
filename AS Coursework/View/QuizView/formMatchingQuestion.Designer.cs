@@ -322,7 +322,7 @@
             lblQuestion.Name = "lblQuestion";
             lblQuestion.Size = new Size(663, 41);
             lblQuestion.TabIndex = 20;
-            lblQuestion.Text = "Match all the options below";
+            lblQuestion.Text = "Match all the options below...";
             lblQuestion.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // formMatchingQuestion

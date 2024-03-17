@@ -37,8 +37,10 @@ public partial class formRanks : Form {
         lblRank.Text = $"#{UserDataManager.GetUserRank(user)}";
 
         // Hide some details if the user is an admin
-        lblRank.Hide();
-        lblRankTitle.Hide();
+        if (user.AuthenticationDetails.IsAdmin) {
+            lblRank.Hide();
+            lblRankTitle.Hide();
+        }
 
         DisplayRanks();
 
