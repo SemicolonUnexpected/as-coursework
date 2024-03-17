@@ -13,6 +13,7 @@ public partial class ImprovedTextbox : TextBox {
             m.Result = 0;
             return;
         }
+        
         base.WndProc(ref m);
     }
 }
