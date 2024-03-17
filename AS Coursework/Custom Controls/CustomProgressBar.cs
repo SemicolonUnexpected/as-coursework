@@ -11,6 +11,7 @@ public partial class CustomProgressBar : Control {
     private int _angle;
 
     public CustomProgressBar() {
+        // Use double buffering to prevent flickering
         DoubleBuffered = true;
     }
 
@@ -74,6 +75,7 @@ public partial class CustomProgressBar : Control {
         using Pen backingPen = new(BackingColor, Height / 2);
         using Pen progressPen = new(new LinearGradientBrush(DisplayRectangle, StartColor, EndColor, Angle), Height / 2);
 
+        // Use start and end caps to set the round edges
         backingPen.StartCap = LineCap.Round;
         backingPen.EndCap = LineCap.Round;
         progressPen.StartCap = LineCap.Round;
@@ -86,7 +88,9 @@ public partial class CustomProgressBar : Control {
 
         PointF progressLineEnd = new(lineStart.X + maxProgressWidth * Progress, Height / 2);
 
+        // Draw the background
         graphics.DrawLine(backingPen, lineStart, lineEnd);
+        // Draw the progess bar part that moves
         graphics.DrawLine(progressPen, lineStart, progressLineEnd);
     }
 }
