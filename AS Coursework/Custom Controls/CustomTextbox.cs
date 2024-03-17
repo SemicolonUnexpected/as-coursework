@@ -221,7 +221,7 @@ public partial class CustomTextbox : UserControl {
 
     #endregion
 
-    #region Overriden methods
+    #region Overridden methods
 
     // The most important method - This is responsible for drawing the custom textbox
     protected override void OnPaint(PaintEventArgs e) {
