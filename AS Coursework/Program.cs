@@ -1,4 +1,5 @@
 using AS_Coursework.View;
+using AS_Coursework.Model;
 
 namespace AS_Coursework;
 internal static class Program {
@@ -9,6 +10,13 @@ internal static class Program {
     static void Main() {
         // To customize application configuration such as set high DPI settings or default font,
         // see https://aka.ms/applicationconfiguration.
-        Application.Run(new formMaster());
+        try {
+            Application.Run(new formMaster());
+        }
+        catch (Exception e) {
+            ExceptionLogger.Log(e);
+
+            CustomMessageBox.Show("Error", "Oops, there was an error");
+        }
     }
 }
