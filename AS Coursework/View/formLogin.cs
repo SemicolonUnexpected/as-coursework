@@ -10,12 +10,6 @@ public partial class formLogin : Form {
         // Use double buffering to limit the amount of flickering
         DoubleBuffered = true;
 
-        // Set the unacceptable keys in the textboxes
-        tbUsername.NotAcceptedKeys = new Keys[] {
-            Keys.Space,
-            Keys.Tab,
-        };
-
         // Call the OnResize event to ensure that the form is formatted correctly
         OnResize(new EventArgs());
     }

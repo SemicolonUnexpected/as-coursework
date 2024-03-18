@@ -94,6 +94,11 @@ public partial class formSettings : Form {
             lblChangeUsernameError.CenterX();
             return;
         }
+        else if (!DataValidator.UsernamePasswordRegex().Match(tbNewUsername.Text).Success) {
+            lblChangeUsernameError.Text = "Invalid username";
+            lblChangeUsernameError.CenterX();
+            return;
+        }
         if (UserDataManager.UserExists(newUsername)) {
             lblChangeUsernameError.Text = "This username is already taken";
             lblChangeUsernameError.CenterX();
@@ -101,6 +106,7 @@ public partial class formSettings : Form {
         }
 
         _user.AuthenticationDetails.Username = newUsername;
+        lblChangeUsernameError.Text = "";
         tbNewUsername.Text = "";
         PopulateDataDisplay();
     }
@@ -116,6 +122,7 @@ public partial class formSettings : Form {
 
         _user.MiscDetails.Email = newEmail;
         tbNewEmail.Text = "";
+        lblChangeEmailError.Text = "";
         PopulateDataDisplay();
     }
 
@@ -130,6 +137,7 @@ public partial class formSettings : Form {
 
         _user.MiscDetails.Forename = newForename;
         tbNewForename.Text = "";
+        lblChangeForenameError.Text = "";
         PopulateDataDisplay();
     }
 
@@ -144,6 +152,7 @@ public partial class formSettings : Form {
 
         _user.MiscDetails.Surname = newSurname;
         tbNewSurname.Text = "";
+        lblChangeSurnameError.Text = "";
         PopulateDataDisplay();
     }
 
@@ -198,6 +207,7 @@ public partial class formSettings : Form {
 
         // Set the text to error text if the password field is empty or the password requirements are not met
         if (string.IsNullOrWhiteSpace(tbNewPassword.Text)) passwordError = "Please create a password";
+        else if (!DataValidator.UsernamePasswordRegex().Match(tbNewPassword.Text).Success) passwordError = "Invalid username";
         else if (DataValidator.GetPasswordRequirements(tbNewPassword.Text).Count < Enum.GetNames(typeof(DataValidator.PasswordRequirements)).Length) passwordError = "Please pick a stronger password";
 
         lblPasswordError.Text = passwordError;

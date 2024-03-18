@@ -11,6 +11,8 @@ public static partial class DataValidator {
     private static partial Regex SpecialCharacter();
     [GeneratedRegex(@"\d")]
     private static partial Regex NumberCharacter();
+    [GeneratedRegex("^[A-Za-z0-9!\"\\/`!?<>;:@'~#¬`!£$%^&*()-_+={}[\\],\\.]+$")]
+    public static partial Regex UsernamePasswordRegex();
 
     public static bool IsUserOldEnough(DateTime dateOfBirth) {
         return CalculateAge(dateOfBirth) >= MINIMUM_USER_AGE;

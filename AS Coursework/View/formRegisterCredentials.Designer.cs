@@ -198,7 +198,7 @@
             btnBack.Margin = new Padding(5);
             btnBack.Name = "btnBack";
             btnBack.Size = new Size(70, 30);
-            btnBack.TabIndex = 2;
+            btnBack.TabIndex = 4;
             btnBack.Text = "Back";
             btnBack.UseVisualStyleBackColor = false;
             btnBack.Click += btnBack_Click;
@@ -222,7 +222,7 @@
             tbConfirmPassword.PlaceholderTextColor = Color.White;
             tbConfirmPassword.ShortcutEnabled = true;
             tbConfirmPassword.Size = new Size(230, 30);
-            tbConfirmPassword.TabIndex = 1;
+            tbConfirmPassword.TabIndex = 2;
             tbConfirmPassword.UsePasswordChar = true;
             tbConfirmPassword.Leave += tbConfirmPassword_Leave;
             // 
@@ -281,7 +281,7 @@
             tbUsername.PlaceholderTextColor = Color.White;
             tbUsername.ShortcutEnabled = true;
             tbUsername.Size = new Size(230, 30);
-            tbUsername.TabIndex = 1;
+            tbUsername.TabIndex = 0;
             tbUsername.UsePasswordChar = false;
             tbUsername.Leave += tbUsername_Leave;
             // 
@@ -302,7 +302,7 @@
             btnDone.Margin = new Padding(5);
             btnDone.Name = "btnDone";
             btnDone.Size = new Size(70, 30);
-            btnDone.TabIndex = 0;
+            btnDone.TabIndex = 3;
             btnDone.Text = "Done";
             btnDone.UseVisualStyleBackColor = false;
             btnDone.Click += btnDone_Click;
