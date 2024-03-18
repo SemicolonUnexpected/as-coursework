@@ -1,5 +1,6 @@
 using AS_Coursework.View;
 using AS_Coursework.Model;
+using AS_Coursework.Custom_Controls;
 
 namespace AS_Coursework;
 internal static class Program {
@@ -14,7 +15,7 @@ internal static class Program {
             Application.Run(new formMaster());
         }
         catch (Exception e) {
-            ExceptionLogger.Log(e);
+            ExceptionLogger.LogException(e);
 
             CustomMessageBox.Show("Error", "Oops, there was an error");
         }
