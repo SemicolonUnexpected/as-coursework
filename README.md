@@ -1,10 +1,10 @@
 # AS Coursework
 
-I hate AS Coursework
+I love AS Coursework
 
-### The admin details
+### The admin details...
 
-```python
+```
 Username: root
 Password: root
 ```
